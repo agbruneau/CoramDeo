@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coram Deo — Devant la face de Dieu</title>
+  <meta name="description" content="Coram Deo : cartographie théologique réformée — Évangile, Trinité-Providence, Pensum, Disciple, Doxologie. Vivre devant la face de Dieu." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Coram Deo — Devant la face de Dieu" />
+  <meta property="og:description" content="Cartographie théologique réformée francophone : Évangile, Trinité-Providence, Pensum, Disciple, Doxologie." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="Coram Deo" />
+
+  <!-- Preconnect & fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap" />
+
+  <!-- Favicon inline (croix orange) -->
+  <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%230F0F10'/><rect x='28' y='10' width='8' height='44' fill='%23EA580C'/><rect x='14' y='24' width='36' height='8' fill='%23EA580C'/></svg>" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Coram Deo — Devant la face de Dieu",
+    "description": "Cartographie théologique réformée francophone : Évangile, Trinité-Providence, Pensum, Disciple, Doxologie.",
+    "inLanguage": "fr-FR"
+  }
+  </script>
+
+  <style>
+    /* =========================================================
+       RESET & BASE
+       ========================================================= */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background-color: #0F0F10;
+      color: #F5F5F4;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 400;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Subtle noise texture overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.025;
+      z-index: 1;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+      mix-blend-mode: overlay;
+    }
+
+    img, svg { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    :focus-visible {
+      outline: 2px solid #F97316;
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    /* =========================================================
+       TYPOGRAPHIE
+       ========================================================= */
+    h1, h2, h3, h4, .serif {
+      font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      color: #F5F5F4;
+      margin: 0 0 0.5em;
+    }
+    h1 { font-weight: 500; }
+    h2 { font-size: clamp(2rem, 4.5vw, 3rem); letter-spacing: 0.06em; }
+    h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); color: #FED7AA; }
+    h4 { font-size: 1.1rem; color: #F97316; letter-spacing: 0.05em; text-transform: uppercase; }
+
+    p { margin: 0 0 1rem; }
+    em { font-style: italic; }
+    .latin { font-family: 'Cormorant Garamond', serif; font-style: italic; }
+
+    /* =========================================================
+       LAYOUT
+       ========================================================= */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 clamp(1.25rem, 4vw, 3rem);
+      position: relative;
+      z-index: 2;
+    }
+
+    section {
+      padding: clamp(4rem, 10vw, 8rem) 0;
+      position: relative;
+    }
+
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: #F97316;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .divider {
+      width: min(70%, 360px);
+      margin: 0 auto 3rem;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(249,115,22,0.35), transparent);
+      border: 0;
+    }
+
+    /* =========================================================
+       NAVIGATION
+       ========================================================= */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 50;
+      padding: 1rem 0;
+      transition: background-color 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease;
+      border-bottom: 1px solid transparent;
+    }
+    .nav.scrolled {
+      background: rgba(15, 15, 16, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom-color: #27272A;
+    }
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .nav__brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.25rem;
+      letter-spacing: 0.25em;
+      color: #F5F5F4;
+    }
+    .nav__brand span { color: #F97316; }
+
+    .nav__list {
+      list-style: none;
+      display: flex;
+      gap: clamp(1rem, 2.5vw, 2rem);
+      margin: 0; padding: 0;
+    }
+    .nav__link {
+      font-size: 0.82rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #A1A1AA;
+      position: relative;
+      padding: 0.25rem 0;
+      transition: color 0.25s ease;
+    }
+    .nav__link::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 100%;
+      bottom: -2px;
+      height: 1px;
+      background: #F97316;
+      transition: right 0.3s ease;
+    }
+    .nav__link:hover { color: #FB923C; }
+    .nav__link:hover::after { right: 0; }
+
+    @media (max-width: 767px) {
+      .nav__list { display: none; }
+    }
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 8rem 1.25rem 4rem;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(249,115,22,0.07) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero__eyebrow {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+      color: #FED7AA;
+      letter-spacing: 0.08em;
+      margin-bottom: 2rem;
+    }
+    .hero__title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: clamp(3rem, 11vw, 8rem);
+      letter-spacing: 0.18em;
+      line-height: 1;
+      margin: 0;
+      color: #F5F5F4;
+    }
+    .hero__title .amp { color: #EA580C; }
+    .hero__subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.15rem, 2.4vw, 1.75rem);
+      color: #A1A1AA;
+      margin-top: 1.5rem;
+      letter-spacing: 0.04em;
+    }
+    .hero__rule {
+      width: 80px;
+      height: 1px;
+      background: #EA580C;
+      margin: 2.5rem auto;
+      border: 0;
+    }
+    .hero__quote {
+      max-width: 640px;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: #FED7AA;
+      line-height: 1.7;
+      padding-left: 1rem;
+      border-left: 2px solid #F97316;
+      text-align: left;
+    }
+    .hero__quote cite {
+      display: block;
+      margin-top: 0.75rem;
+      font-style: normal;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      color: #F97316;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    .hero__scroll {
+      margin-top: 3.5rem;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: #A1A1AA;
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      transition: color 0.25s ease;
+    }
+    .hero__scroll:hover { color: #FB923C; }
+    .hero__scroll-arrow {
+      width: 1px; height: 40px;
+      background: linear-gradient(180deg, #F97316, transparent);
+      animation: scrollPulse 2.4s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+      50% { opacity: 1; transform: scaleY(1); }
+    }
+
+    /* =========================================================
+       SECTION HEADING (commun)
+       ========================================================= */
+    .section-head {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .section-head h2 {
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    .section-head .lede {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: #A1A1AA;
+      font-size: clamp(1rem, 1.6vw, 1.2rem);
+      max-width: 620px;
+      margin: 0.5rem auto 0;
+    }
+
+    /* =========================================================
+       CARDS (générique)
+       ========================================================= */
+    .card {
+      background: #1A1A1D;
+      border: 1px solid #27272A;
+      border-radius: 4px;
+      padding: 2rem 1.75rem;
+      transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+      position: relative;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(249,115,22,0.5);
+      box-shadow: 0 12px 30px -18px rgba(249,115,22,0.35);
+    }
+    .card__eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      color: #F97316;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .card__title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      color: #F5F5F4;
+    }
+    .card__ref {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: #FED7AA;
+      font-size: 0.95rem;
+    }
+    .card__body p { color: #A1A1AA; font-size: 0.95rem; }
+
+    .sublist {
+      list-style: none;
+      margin: 1rem 0 0;
+      padding: 0;
+      border-left: 1px solid rgba(249,115,22,0.25);
+    }
+    .sublist li {
+      padding: 0.35rem 0 0.35rem 1rem;
+      color: #D4D4D8;
+      font-size: 0.95rem;
+    }
+    .sublist li .ref {
+      color: #FED7AA;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 0.9rem;
+      margin-left: 0.4rem;
+    }
+
+    /* =========================================================
+       ÉVANGILE
+       ========================================================= */
+    .evangile-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 1023px) {
+      .evangile-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 767px) {
+      .evangile-grid { grid-template-columns: 1fr; }
+    }
+    .evangile-card h4 {
+      margin-top: 1.25rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      color: #F97316;
+    }
+
+    /* =========================================================
+       TRINITÉ — SVG
+       ========================================================= */
+    .trinite {
+      background:
+        radial-gradient(ellipse at top, rgba(234,88,12,0.06), transparent 60%),
+        #0F0F10;
+    }
+    .trinite__wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .trinite__svg {
+      width: 100%;
+      height: auto;
+      max-height: 78vh;
+      display: block;
+      margin: 0 auto;
+    }
+    .trinite__legend {
+      margin-top: 2.5rem;
+      text-align: center;
+      color: #A1A1AA;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+    }
+
+    /* =========================================================
+       PENSUM
+       ========================================================= */
+    .pensum-list {
+      list-style: none;
+      margin: 0; padding: 0;
+      display: grid;
+      gap: 1rem;
+    }
+    .pensum-item {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 1.5rem;
+      align-items: start;
+      padding: 1.5rem 1.5rem;
+      background: #1A1A1D;
+      border: 1px solid #27272A;
+      border-left: 2px solid #F97316;
+      border-radius: 3px;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+    .pensum-item:hover {
+      border-color: rgba(249,115,22,0.5);
+      border-left-color: #FB923C;
+      transform: translateX(2px);
+    }
+    .pensum-item__name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      color: #F5F5F4;
+      font-weight: 600;
+    }
+    .pensum-item__desc {
+      color: #D4D4D8;
+      font-size: 0.98rem;
+    }
+    .pensum-item__desc .emph {
+      color: #F97316;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+    .acsid {
+      margin-top: 0.6rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .acsid li {
+      list-style: none;
+      padding: 0.3rem 0.75rem;
+      border: 1px solid rgba(249,115,22,0.35);
+      border-radius: 2px;
+      font-size: 0.82rem;
+      color: #FED7AA;
+      letter-spacing: 0.05em;
+    }
+    @media (max-width: 767px) {
+      .pensum-item { grid-template-columns: 1fr; gap: 0.75rem; }
+    }
+
+    /* =========================================================
+       DISCIPLE
+       ========================================================= */
+    .disciple-grid {
+      display: grid;
+      gap: 3rem;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 1023px) { .disciple-grid { grid-template-columns: 1fr; } }
+
+    .trinity-roles {
+      display: grid;
+      gap: 1rem;
+    }
+    .role {
+      padding: 1.25rem 1.5rem;
+      background: #1A1A1D;
+      border: 1px solid #27272A;
+      border-radius: 3px;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+    .role:hover { border-color: rgba(249,115,22,0.5); transform: translateY(-2px); }
+    .role__name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      color: #EA580C;
+      margin-bottom: 0.35rem;
+    }
+    .role__desc { color: #D4D4D8; font-size: 0.95rem; margin: 0; }
+
+    .homme-list {
+      list-style: none;
+      counter-reset: homme;
+      padding: 0; margin: 0;
+      display: grid;
+      gap: 0.75rem;
+    }
+    .homme-list li {
+      counter-increment: homme;
+      padding: 1rem 1.25rem 1rem 3.5rem;
+      background: #1A1A1D;
+      border: 1px solid #27272A;
+      border-radius: 3px;
+      position: relative;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      color: #F5F5F4;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+    .homme-list li::before {
+      content: counter(homme, decimal-leading-zero);
+      position: absolute;
+      left: 1.25rem; top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #F97316;
+    }
+    .homme-list li:hover {
+      border-color: rgba(249,115,22,0.5);
+      transform: translateX(3px);
+    }
+
+    /* =========================================================
+       DOXOLOGIE
+       ========================================================= */
+    .doxologie {
+      text-align: center;
+      background:
+        radial-gradient(ellipse at center, rgba(234,88,12,0.10) 0%, transparent 65%),
+        #0F0F10;
+      padding: clamp(5rem, 12vw, 10rem) 0;
+    }
+    .doxologie__title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: clamp(2.2rem, 6vw, 4.5rem);
+      letter-spacing: 0.06em;
+      color: #F5F5F4;
+      margin-bottom: 0.5rem;
+    }
+    .doxologie__title::before,
+    .doxologie__title::after {
+      content: "«";
+      color: #EA580C;
+      margin-right: 0.5rem;
+    }
+    .doxologie__title::after { content: "»"; margin: 0 0 0 0.5rem; }
+    .doxologie__ref {
+      color: #F97316;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
+    }
+    .doxologie__text {
+      max-width: 780px;
+      margin: 0 auto;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.15rem, 2.2vw, 1.65rem);
+      color: #FED7AA;
+      line-height: 1.8;
+      padding: 0 1.5rem;
+      border-left: 2px solid #F97316;
+      text-align: left;
+    }
+    .doxologie__sdg {
+      margin-top: 3.5rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-variant: small-caps;
+      letter-spacing: 0.2em;
+      color: #EA580C;
+      font-size: 1.1rem;
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+    .footer {
+      background: #0A0A0B;
+      border-top: 1px solid #27272A;
+      padding: 3rem 0 2rem;
+      color: #A1A1AA;
+      font-size: 0.88rem;
+    }
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 2fr 2fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2rem;
+    }
+    .footer h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      color: #F97316;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .footer ul { list-style: none; padding: 0; margin: 0; }
+    .footer li { padding: 0.2rem 0; color: #A1A1AA; font-family: 'Cormorant Garamond', serif; font-style: italic; }
+    .footer__bottom {
+      border-top: 1px solid #27272A;
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.8rem;
+    }
+    .footer__top-link {
+      color: #F97316;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      transition: color 0.25s ease;
+    }
+    .footer__top-link:hover { color: #FB923C; }
+    @media (max-width: 767px) {
+      .footer__grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+
+    /* =========================================================
+       ANIMATIONS scroll-reveal
+       ========================================================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+      will-change: opacity, transform;
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+      .hero__scroll-arrow { animation: none; }
+    }
+
+    /* =========================================================
+       SVG styles internes
+       ========================================================= */
+    .trinite-svg text { font-family: 'Cormorant Garamond', serif; }
+    .trinite-svg .vertex-label {
+      font-size: 30px;
+      font-weight: 600;
+      fill: #EA580C;
+      letter-spacing: 0.08em;
+    }
+    .trinite-svg .edge-label {
+      font-size: 18px;
+      fill: #FED7AA;
+      font-style: italic;
+      letter-spacing: 0.1em;
+    }
+    .trinite-svg .base-label {
+      font-size: 20px;
+      fill: #F97316;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+    }
+    .trinite-svg .inner-label {
+      font-size: 18px;
+      fill: #F5F5F4;
+      font-family: 'Cormorant Garamond', serif;
+      letter-spacing: 0.08em;
+    }
+    .trinite-svg .ref-float {
+      font-size: 14px;
+      fill: #A1A1AA;
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .trinite-svg .triangle-line {
+      stroke: #F97316;
+      stroke-width: 2.5;
+      fill: none;
+      stroke-linecap: round;
+    }
+    .trinite-svg .cross { fill: #EA580C; }
+    .trinite-svg .inner-rect {
+      fill: rgba(26,26,29,0.85);
+      stroke: rgba(249,115,22,0.35);
+      stroke-width: 1;
+    }
+    .trinite-svg .vertex-dot { fill: #F97316; }
+    .trinite-svg .interactive { cursor: help; transition: opacity 0.25s ease; }
+    .trinite-svg .interactive:hover { opacity: 0.82; }
+
+  </style>
+</head>
+<body>
+
+  <!-- =========================================================
+       NAVIGATION
+       ========================================================= -->
+  <header class="nav" id="nav" role="banner">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__brand" aria-label="Coram Deo — retour en haut">
+        Coram <span>Deo</span>
+      </a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#evangile">Évangile</a></li>
+          <li><a class="nav__link" href="#trinite">Trinité</a></li>
+          <li><a class="nav__link" href="#pensum">Pensum</a></li>
+          <li><a class="nav__link" href="#disciple">Disciple</a></li>
+          <li><a class="nav__link" href="#doxologie">Doxologie</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- =========================================================
+         HERO
+         ========================================================= -->
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="hero__eyebrow">— locution latine —</p>
+      <h1 id="hero-title" class="hero__title">CORAM&nbsp;DEO</h1>
+      <p class="hero__subtitle">« Devant la face de Dieu »</p>
+      <hr class="hero__rule" />
+      <blockquote class="hero__quote">
+        « Écoutons la fin du discours&nbsp;: Crains Dieu et observe ses commandements. C'est là ce que doit faire tout homme. Car Dieu amènera toute œuvre en jugement, au sujet de tout ce qui est caché, soit bien, soit mal. »
+        <cite>Ecclésiaste 12.13-14</cite>
+      </blockquote>
+      <a href="#evangile" class="hero__scroll" aria-label="Commencer la lecture">
+        <span>Entrer</span>
+        <span class="hero__scroll-arrow" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- =========================================================
+         I — ÉVANGILE
+         ========================================================= -->
+    <section id="evangile" aria-labelledby="evangile-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-label">I — Fondement</p>
+          <h2 id="evangile-title">L'Évangile</h2>
+          <p class="lede">Vision, mission, pérégrination : la trame biblique d'une vie rachetée.</p>
+        </div>
+        <hr class="divider" />
+
+        <div class="evangile-grid">
+
+          <!-- VISION -->
+          <article class="card evangile-card reveal">
+            <p class="card__eyebrow">Vision</p>
+            <h3 class="card__title">Luc</h3>
+            <p class="card__ref">Évangile de la grâce universelle</p>
+
+            <h4>Christologie ⇒ Emmanuel</h4>
+            <ul class="sublist">
+              <li>Prophète</li>
+              <li>Sacrificateur</li>
+              <li>Roi / Seigneur</li>
+              <li><span class="ref">Référence : Hébreux</span></li>
+            </ul>
+
+            <h4>Ecclésiologie ⇒ Corps du Christ</h4>
+            <ul class="sublist">
+              <li>Anthropologie <span class="ref">Romains 7</span></li>
+              <li>Sotériologie <span class="ref">Romains 8</span></li>
+              <li>Eschatologie <span class="ref">Apocalypse 21</span></li>
+            </ul>
+          </article>
+
+          <!-- MISSION -->
+          <article class="card evangile-card reveal">
+            <p class="card__eyebrow">Mission</p>
+            <h3 class="card__title">Actes</h3>
+            <p class="card__ref">Les Actes du Seigneur ressuscité</p>
+
+            <h4>Les deux commandements <span class="card__ref" style="font-size:0.82rem">Matthieu 22.37-40</span></h4>
+            <ul class="sublist">
+              <li>Aime ton Dieu</li>
+              <li>Aime ton prochain</li>
+            </ul>
+
+            <h4>La Grande Commission <span class="card__ref" style="font-size:0.82rem">Matthieu 28.19-20</span></h4>
+            <ul class="sublist">
+              <li>Faire des disciples</li>
+              <li>Enseigner, mentorer</li>
+            </ul>
+          </article>
+
+          <!-- PÉRÉGRINATION -->
+          <article class="card evangile-card reveal">
+            <p class="card__eyebrow">Pérégrination</p>
+            <h3 class="card__title">Hébreux · Romains</h3>
+            <p class="card__ref">Étrangers et voyageurs sur la terre</p>
+
+            <div class="card__body">
+              <p>La vie chrétienne est un <em>pèlerinage</em>&nbsp;: une marche de foi entre l'appel d'Abraham et la cité à venir. Le croyant confesse avec les patriarches qu'il est « étranger et voyageur sur la terre ».</p>
+              <p>L'Épître aux Hébreux scande la persévérance. L'Épître aux Romains en déploie la logique&nbsp;: de la condamnation à la glorification, par la seule justice de Christ.</p>
+            </div>
+
+            <ul class="sublist">
+              <li>Foi, espérance et persévérance <span class="ref">Hébreux 11–12</span></li>
+              <li>Justification et sanctification <span class="ref">Romains 5–8</span></li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         II — TRINITÉ-PROVIDENCE
+         ========================================================= -->
+    <section id="trinite" class="trinite" aria-labelledby="trinite-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-label">II — Cœur</p>
+          <h2 id="trinite-title">La Trinité-Providence</h2>
+          <p class="lede">Un seul Dieu en trois personnes, révélé par la Parole et par le Paraclet.</p>
+        </div>
+        <hr class="divider" />
+
+        <div class="trinite__wrap reveal">
+          <svg
+            class="trinite__svg trinite-svg"
+            viewBox="0 0 800 720"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-labelledby="trinite-svg-title trinite-svg-desc">
+            <title id="trinite-svg-title">Diagramme de la Trinité-Providence</title>
+            <desc id="trinite-svg-desc">Triangle équilatéral reliant le Père (sommet haut), le Fils (sommet bas-gauche) et le Saint-Esprit (sommet bas-droit). L'arête gauche est la Parole, l'arête droite le Paraclet. Au centre, une croix latine orange ; à l'intérieur, trois disciplines : Prédication, Prière, Piété. Des références bibliques flottent autour.</desc>
+
+            <!-- Références flottantes (gauche) -->
+            <g class="interactive">
+              <title>Genèse 1 à 11 — les fondations de la création, de la chute et de l'alliance.</title>
+              <text class="ref-float" x="60" y="260">Genèse</text>
+              <text class="ref-float" x="60" y="282">1 à 11</text>
+            </g>
+
+            <!-- Références flottantes (droite) -->
+            <g class="interactive">
+              <title>Psaume 19 — « Les cieux racontent la gloire de Dieu. »</title>
+              <text class="ref-float" x="680" y="250">Psaume 19</text>
+            </g>
+            <g class="interactive">
+              <title>Psaume 119 — méditation sur la loi parfaite de l'Éternel.</title>
+              <text class="ref-float" x="680" y="280">Psaume 119</text>
+            </g>
+
+            <!-- Triangle : Père (haut) 400,90 · Fils (bas-gauche) 140,560 · Saint-Esprit (bas-droit) 660,560 -->
+            <polygon
+              class="triangle-line"
+              points="400,90 140,560 660,560" />
+
+            <!-- Sommets (points décoratifs) -->
+            <circle class="vertex-dot" cx="400" cy="90" r="5" />
+            <circle class="vertex-dot" cx="140" cy="560" r="5" />
+            <circle class="vertex-dot" cx="660" cy="560" r="5" />
+
+            <!-- Croix orange au-dessus du Père -->
+            <g aria-hidden="true">
+              <rect class="cross" x="394" y="26" width="12" height="46" />
+              <rect class="cross" x="380" y="40" width="40" height="12" />
+            </g>
+
+            <!-- Étiquettes sommets -->
+            <g class="interactive">
+              <title>Père — origine, architecte, souverain de toute providence.</title>
+              <text class="vertex-label" x="400" y="118" text-anchor="middle">PÈRE</text>
+            </g>
+            <g class="interactive">
+              <title>Fils — médiateur et exécuteur du dessein éternel, Parole faite chair.</title>
+              <text class="vertex-label" x="140" y="600" text-anchor="middle">FILS</text>
+            </g>
+            <g class="interactive">
+              <title>Saint-Esprit — Paraclet : applicateur, consolateur, vérificateur.</title>
+              <text class="vertex-label" x="660" y="600" text-anchor="middle">SAINT-ESPRIT</text>
+            </g>
+
+            <!-- Arête gauche : PAROLE (Père ↔ Fils) -->
+            <g class="interactive">
+              <title>Parole — Jean 1.1 : « La Parole était Dieu. »</title>
+              <text class="edge-label"
+                x="220" y="330"
+                transform="rotate(-62 220 330)"
+                text-anchor="middle">Parole</text>
+            </g>
+
+            <!-- Arête droite : PARACLET (Père ↔ Saint-Esprit) -->
+            <g class="interactive">
+              <title>Paraclet — Jean 14.16 : l'Esprit de vérité.</title>
+              <text class="edge-label"
+                x="580" y="330"
+                transform="rotate(62 580 330)"
+                text-anchor="middle">Paraclet</text>
+            </g>
+
+            <!-- Rectangle intérieur -->
+            <rect class="inner-rect" x="310" y="330" width="180" height="150" rx="3" />
+
+            <!-- Croix intérieure (centrée sur le triangle) -->
+            <g aria-hidden="true">
+              <rect class="cross" x="395" y="348" width="10" height="46" />
+              <rect class="cross" x="380" y="363" width="40" height="10" />
+            </g>
+
+            <!-- Disciplines dans le rectangle -->
+            <text class="inner-label" x="400" y="422" text-anchor="middle">Prédication</text>
+            <text class="inner-label" x="400" y="446" text-anchor="middle">Prière</text>
+            <text class="inner-label" x="400" y="470" text-anchor="middle">Piété</text>
+
+            <!-- Base : Trinité-Providence -->
+            <text class="base-label" x="400" y="640" text-anchor="middle">Trinité — Providence</text>
+
+            <!-- Ornement : accolade gauche manuscrite discrète -->
+            <path d="M 35 150 Q 20 360 35 570"
+                  stroke="#F97316" stroke-width="1" fill="none" opacity="0.45"/>
+            <path d="M 35 150 Q 48 155 50 160" stroke="#F97316" stroke-width="1" fill="none" opacity="0.45"/>
+            <path d="M 35 570 Q 48 565 50 560" stroke="#F97316" stroke-width="1" fill="none" opacity="0.45"/>
+          </svg>
+
+          <p class="trinite__legend">
+            <em>« Les cieux racontent la gloire de Dieu, et l'étendue manifeste l'œuvre de ses mains. »</em>
+            — Psaume 19.1
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         III — PENSUM
+         ========================================================= -->
+    <section id="pensum" aria-labelledby="pensum-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-label">III — Disciplines</p>
+          <h2 id="pensum-title">Le Pensum</h2>
+          <p class="lede">Cinq disciplines que le Seigneur assigne à son disciple pour le conformer à l'image du Fils.</p>
+        </div>
+        <hr class="divider" />
+
+        <ul class="pensum-list">
+          <li class="pensum-item reveal">
+            <span class="pensum-item__name">Parole</span>
+            <div class="pensum-item__desc">
+              <span class="emph">⇒ Théologie Systématique.</span>
+              Lecture, étude, méditation et mémorisation des Écritures, armature doctrinale de toute la vie chrétienne.
+            </div>
+          </li>
+
+          <li class="pensum-item reveal">
+            <span class="pensum-item__name">Prédication</span>
+            <div class="pensum-item__desc">
+              <span class="emph">⇒ Expositoire / Thématique.</span>
+              Proclamation fidèle du texte sacré, verset par verset ou thème par thème, pour la gloire de Dieu et l'édification de l'Église.
+            </div>
+          </li>
+
+          <li class="pensum-item reveal">
+            <span class="pensum-item__name">Prière</span>
+            <div class="pensum-item__desc">
+              <span class="emph">⇒ A.C.S.I.D.</span> — cinq actes de l'âme devant le trône.
+              <ul class="acsid" aria-label="Les cinq actes de la prière">
+                <li>Adoration</li>
+                <li>Confession</li>
+                <li>Supplication</li>
+                <li>Intercession</li>
+                <li>Doxologie</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="pensum-item reveal">
+            <span class="pensum-item__name">Piété</span>
+            <div class="pensum-item__desc">
+              <span class="emph">⇒ Orthodoxie / Orthopraxie.</span>
+              La Foi et les Œuvres tenues ensemble : croire droit et marcher droit, coram Deo.
+            </div>
+          </li>
+
+          <li class="pensum-item reveal">
+            <span class="pensum-item__name">Paraclet</span>
+            <div class="pensum-item__desc">
+              <span class="emph">⇒ Appelé à côté du disciple.</span>
+              L'Esprit Saint agit en trois offices :
+              <ul class="sublist">
+                <li>Convaincre le monde <span class="ref">Jean 16.8</span></li>
+                <li>Enseigner et rappeler <span class="ref">Jean 14.26</span></li>
+                <li>Intercéder et consoler <span class="ref">Romains 8.26</span></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         IV — DISCIPLE
+         ========================================================= -->
+    <section id="disciple" aria-labelledby="disciple-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-label">IV — Le racheté</p>
+          <h2 id="disciple-title">Le Disciple</h2>
+          <p class="lede">Communion avec la Trinité et quatre relations restaurées.</p>
+        </div>
+        <hr class="divider" />
+
+        <div class="disciple-grid">
+
+          <div class="reveal">
+            <h3 style="color:#F5F5F4; letter-spacing:0.06em;">Communion avec la Trinité</h3>
+            <p style="color:#A1A1AA; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.05rem;">
+              Trois personnes, trois rôles, une seule œuvre salvatrice.
+            </p>
+            <div class="trinity-roles">
+              <article class="role">
+                <h4 class="role__name">Père</h4>
+                <p class="role__desc">Origine, architecte, souverain — il a conçu le dessein éternel avant la fondation du monde.</p>
+              </article>
+              <article class="role">
+                <h4 class="role__name">Fils</h4>
+                <p class="role__desc">Médiateur, exécuteur — il accomplit le dessein du Père par son obéissance, sa croix et sa résurrection.</p>
+              </article>
+              <article class="role">
+                <h4 class="role__name">Saint-Esprit</h4>
+                <p class="role__desc">Applicateur, vérificateur — il scelle, sanctifie et atteste que nous sommes enfants de Dieu.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="reveal">
+            <h3 style="color:#F5F5F4; letter-spacing:0.06em;">Homme racheté</h3>
+            <p style="color:#A1A1AA; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.05rem;">
+              Quatre relations, un même homme nouveau.
+            </p>
+            <ol class="homme-list" role="list">
+              <li>Homme pieux avec son Dieu</li>
+              <li>Homme pieux avec les autres</li>
+              <li>Homme pieux et son travail</li>
+              <li>Homme pieux et sa fin</li>
+            </ol>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         V — DOXOLOGIE
+         ========================================================= -->
+    <section id="doxologie" class="doxologie" aria-labelledby="doxologie-title">
+      <div class="container">
+        <div class="reveal">
+          <p class="section-label" style="text-align:center;">V — Doxologie</p>
+          <h2 id="doxologie-title" class="doxologie__title">Révérer l'Éternel</h2>
+          <p class="doxologie__ref">Ecclésiaste 12.13-14</p>
+
+          <blockquote class="doxologie__text">
+            « Écoutons la fin du discours&nbsp;: Crains Dieu et observe ses commandements. C'est là ce que doit faire tout homme. Car Dieu amènera toute œuvre en jugement, au sujet de tout ce qui est caché, soit bien, soit mal. »
+          </blockquote>
+
+          <p class="doxologie__sdg">Soli Deo Gloria</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <h4>Coram Deo</h4>
+          <p style="font-family:'Cormorant Garamond',serif; font-style:italic; color:#A1A1AA;">
+            Vivre, penser et servir devant la face de Dieu —
+            cartographie théologique réformée francophone.
+          </p>
+        </div>
+        <div>
+          <h4>Références bibliques</h4>
+          <ul>
+            <li>Genèse 1 à 11</li>
+            <li>Psaume 19 · Psaume 119</li>
+            <li>Matthieu 22.37-40 · 28.19-20</li>
+            <li>Romains 7–8 · Hébreux 11–12</li>
+            <li>Apocalypse 21 · Ecclésiaste 12.13-14</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Inspiration</h4>
+          <ul>
+            <li>R.C. Sproul</li>
+            <li>John MacArthur</li>
+            <li>Westminster (1647)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>Coram Deo &copy; 2026 — <em class="latin">Soli Deo Gloria</em></span>
+        <a href="#top" class="footer__top-link" aria-label="Retour en haut de page">↑ Retour en haut</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       SCRIPTS
+       ========================================================= -->
+  <script>
+    (function () {
+      'use strict';
+
+      var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // --- Nav scrolled state ---------------------------------
+      var nav = document.getElementById('nav');
+      var onScroll = function () {
+        if (window.scrollY > 40) nav.classList.add('scrolled');
+        else nav.classList.remove('scrolled');
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      // --- Reveal on scroll -----------------------------------
+      var revealEls = document.querySelectorAll('.reveal');
+      if (prefersReduced || !('IntersectionObserver' in window)) {
+        revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      } else {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        revealEls.forEach(function (el) { io.observe(el); });
+      }
+    })();
+  </script>
+</body>
+</html>
