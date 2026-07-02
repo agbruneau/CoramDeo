@@ -118,7 +118,7 @@ Selon l'enseignement biblique sur l'amour fraternel, cet amour est un amour de c
 
 **Pour votre assemblée**
 
-Selon la doctrine des dons spirituels, un don est une capacité surnaturelle donnée par grâce, qui ne peut être gagnée ni provoquée mais seulement reçue, et dont le croyant n'est que l'intendant. Pour votre assemblée, cela exclut le prestige personnel et l'oisiveté spirituelle : aucun membre n'est sans don, aucun don n'est pour soi, et chacun rendra compte de la gérance des grâces que Dieu lui a confiées.
+Selon la doctrine des dons spirituels, un don est une capacité surnaturelle donnée par grâce, qui ne peut être gagnée ni provoquée mais seulement reçue, et dont le croyant n'est que l'intendant. Pour votre assemblée, cela exclut le prestige personnel et l'oisiveté spirituelle : aucun membre n'est sans don, aucun don n'est pour soi, et chacun rendra compte de la gérance des grâces que Dieu lui a confiées. Les dons de la parole visés au verset 11, comme les dons miraculeux et révélatoires liés à l'authentification apostolique, ont cessé avec la clôture du canon ; annoncer aujourd'hui « les oracles de Dieu », c'est prêcher fidèlement l'Écriture déjà donnée, non recevoir une nouvelle révélation.
 
 ### La gloire de Dieu par Jésus-Christ, finalité de tout service
 
