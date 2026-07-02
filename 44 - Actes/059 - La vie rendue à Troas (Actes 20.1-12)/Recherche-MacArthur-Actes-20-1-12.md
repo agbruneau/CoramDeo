@@ -68,7 +68,7 @@ Les apôtres se consacrent à la prière et au ministère de la Parole; explique
 
 **Colossiens 2.16-17** · _Lien thématique_
 
-Le sabbat n'est qu'une ombre des choses à venir, le corps étant en Christ; soutient le passage du sabbat au jour du Seigneur sous la nouvelle alliance.
+Le sabbat n'est qu'une ombre des choses à venir, le corps étant en Christ; soutient le passage du sabbat au jour dominical sous la nouvelle alliance.
 
 ## Thèmes théologiques
 
@@ -102,7 +102,7 @@ Luc le médecin atteste qu'on releva Eutychus mort (20.9), puis que le jeune hom
 
 La foi chrétienne ne s'accommode pas d'une démythologisation qui ferait du miracle un simple malentendu médical. Le Dieu qui ressuscite les morts est le même qui a ressuscité Christ et ressuscitera son peuple; nier la mort réelle d'Eutychus, c'est affaiblir la puissance qui s'y déploie.
 
-### Le jour du Seigneur et le culte de la nouvelle alliance
+### Le jour dominical et le culte de la nouvelle alliance
 
 **Dans le texte**
 
