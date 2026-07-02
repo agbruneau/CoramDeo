@@ -6,10 +6,14 @@
 > MacArthur**, au sens tranché par `00 - Avant-propos/NEG - MacArthur.pdf` et par la grille de
 > `CLAUDE.md`. Byline : `AGB · EBC`. *Soli Deo Gloria.*
 >
-> **ÉTAT (2026-07-02, Fable 5)** : bootstrap fait, passe 0 pilote sur `59 - Jacques` terminée —
-> **13/13 `VERIFIE`** (14 constats, tous `MINEUR`, corrigés et ré-audités). Ledger : 13 `VERIFIE`,
-> 904 `PENDING`. **Toute reprise (Sonnet 5 ou autre) doit lire le §12** : état d'exécution,
-> outillage construit, amendements au protocole et gotchas d'environnement y sont consignés.
+> **ÉTAT (2026-07-02) : PASSE 0 COMPLÈTE — 917/917 en états terminaux (916 `VERIFIE`,
+> 1 `REVUE_HUMAINE`).** Pilote Jacques (Fable 5) puis campagne complète des 30 autres shards
+> (Sonnet 5, workflow `campaign.workflow.js`). ~48 corrections, toutes `MINEUR`, en transaction
+> triple `.md`+`.html`+`.pdf` ; 0 `BLOQUANT`/`MAJEUR`. Le seul `REVUE_HUMAINE` (Luc 19.28-40 :
+> attribution d'un calcul de Daniel 9 non couvert par le digest Luc, I4) et le **rapport final
+> détaillé** sont dans `.claude/loops/macarthur-conformity/journal.md`. Condition de couverture du
+> point fixe (§6.1) atteinte ; la **passe de stabilité delta-nul (§6.2) reste à lancer** pour le
+> point fixe stricto sensu. Reprise / détails d'outillage : §12.
 
 **Ce que la boucle garantit.** Convergence vers un **point fixe** : elle s'arrête quand une passe
 complète sur les 917 fichiers ne produit **plus aucune non-conformité et plus aucune correction**
