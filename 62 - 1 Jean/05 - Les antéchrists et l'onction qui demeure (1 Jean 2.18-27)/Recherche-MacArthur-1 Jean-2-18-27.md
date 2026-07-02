@@ -96,7 +96,7 @@ Vous avez reçu l'onction de la part de celui qui est saint, et vous avez tous d
 
 **Pour votre assemblée**
 
-Selon la pneumatologie réformée, le Saint-Esprit donné à la conversion illumine le croyant et le préserve de l'erreur; il n'y a pas de caste d'initiés détenant une connaissance secrète. Pour votre assemblée, chaque vrai croyant, et non une élite, possède le discernement de l'Esprit par la Parole; cela fonde une saine méfiance envers tout enseignement qui prétend dépasser ou corriger l'Ecriture, et appelle à valoriser le don d'enseignement sans jamais le substituer à l'oeuvre souveraine de l'Esprit.
+Selon la pneumatologie cessationniste, le Saint-Esprit donné à la conversion illumine le croyant et le préserve de l'erreur; il n'y a pas de caste d'initiés détenant une connaissance secrète. Pour votre assemblée, chaque vrai croyant, et non une élite, possède le discernement de l'Esprit par la Parole; cela fonde une saine méfiance envers tout enseignement qui prétend dépasser ou corriger l'Ecriture, et appelle à valoriser le don d'enseignement sans jamais le substituer à l'oeuvre souveraine de l'Esprit.
 
 ### La confession du Fils, frontière de la vérité
 
