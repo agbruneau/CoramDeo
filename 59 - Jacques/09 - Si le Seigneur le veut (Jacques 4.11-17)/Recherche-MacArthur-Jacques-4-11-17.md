@@ -24,11 +24,11 @@ Un troisième détail tient à l'honneur et à la vantardise dans la culture mé
 
 | Français | Translit. | Sens littéral | Champ sémantique | Traductions comparées |
 |---|---|---|---|---|
-| **** | __ |  |  | _S21_ ne dites pas de mal · _NEG79_ ne médisez pas · _Darby_ ne parlez pas l'un contre l'autre · _LSG_ ne parlez point mal · _KJF_ ne médisez pas |
-| **** | __ |  |  | _S21_ législateur · _NEG79_ le seul législateur · _Darby_ qui a donné la loi · _LSG_ celui qui a donné la loi · _KJF_ il y a un seul législateur |
-| **** | __ |  |  | _S21_ une vapeur · _NEG79_ une vapeur · _Darby_ une vapeur · _LSG_ une vapeur · _KJF_ une vapeur |
-| **** | __ |  |  | _S21_ votre orgueil · _NEG79_ votre orgueil · _Darby_ vanteries · _LSG_ votre orgueil · _KJF_ vos vanteries |
-| **** | __ |  |  | _S21_ péché · _NEG79_ péché · _Darby_ péché · _LSG_ péché · _KJF_ péché |
+| **médire** | _katalaleō_ | parler contre, dénigrer, dire du mal de quelqu'un derrière lui | Le verbe ouvre la péricope (4.11) : médire d'un frère, c'est se placer au-dessus de la loi royale qui ordonne d'aimer son prochain (Jacques 2.8; Lévitique 19.18). Celui qui dénigre cesse d'être observateur de la loi pour s'en faire le juge, usurpant ainsi le siège du seul Législateur. | _S21_ ne dites pas de mal · _NEG79_ ne médisez pas · _Darby_ ne parlez pas l'un contre l'autre · _LSG_ ne parlez point mal · _KJF_ ne médisez pas |
+| **législateur** | _nomothetēs_ | celui qui pose la loi; le seul donateur et juge de la loi | Terme rare du Nouveau Testament (4.12). Dieu seul est Législateur et Juge, « celui qui peut sauver et perdre » (sōsai kai apolesai). Cette prérogative absolue de souveraineté interdit à l'homme de s'ériger en juge de la valeur d'autrui : nul tribunal humain ne peut renverser le verdict éternel de Dieu. | _S21_ législateur · _NEG79_ le seul législateur · _Darby_ qui a donné la loi · _LSG_ celui qui a donné la loi · _KJF_ il y a un seul législateur |
+| **vapeur** | _atmis_ | buée, brume, vapeur qui paraît un instant puis se dissipe | Image de la fragilité de la vie (4.14) : le souffle de l'existence est suspendu à la volonté de Dieu, non possédé par l'homme. Le marchand qui présume de demain ignore que sa vie même lui échappe (comparer Psaume 39.5-6; Luc 12.16-21). La providence souveraine encadre tout projet humain. | _S21_ une vapeur · _NEG79_ une vapeur · _Darby_ une vapeur · _LSG_ une vapeur · _KJF_ une vapeur |
+| **orgueil (jactance)** | _alazoneia_ | vantardise, fanfaronnade arrogante, prétention vaine | Le péché nommé en 4.16 : se glorifier dans son orgueil, jactance « mauvaise » par nature. La culture méditerranéenne valorisait cette autopromotion; Jacques la déclare péché. C'est la forme verbale de l'orgueil que 4.6 oppose à l'humilité, et qui dresse la créature contre le Maître de l'histoire. | _S21_ votre orgueil · _NEG79_ votre orgueil · _Darby_ vanteries · _LSG_ votre orgueil · _KJF_ vos vanteries |
+| **péché** | _hamartia_ | manquement à la cible; transgression, y compris le bien omis | Le mot ferme la péricope (4.17) : « celui qui sait faire le bien, et qui ne le fait pas, commet un péché. » MacArthur y voit la définition du péché d'omission, qu'il rattache aux marchands présomptueux : les péchés d'omission mènent directement aux péchés de commission. Connaître l'humble dépendance et ne pas la vivre est une offense réelle. | _S21_ péché · _NEG79_ péché · _Darby_ péché · _LSG_ péché · _KJF_ péché |
 
 ## Apports des commentateurs
 
@@ -44,21 +44,39 @@ Le verset 17 est le coup de grâce: « celui qui sait faire le bien, et qui ne l
 
 **Proverbes 27.1** · _Arrière-plan AT_
 
+« Ne te vante pas du lendemain, car tu ne sais pas ce qu'un jour peut enfanter » : la sagesse vétérotestamentaire qui sous-tend mot pour mot l'avertissement de Jacques 4.13-14 contre la présomption.
+
 **Luc 12.16-21** · _Lien thématique_
+
+La parabole du riche insensé qui planifie ses greniers pour de longues années et meurt la nuit même : le type parfait du marchand présomptueux de Jacques 4.13-14, qui présume de l'avenir sans tenir compte de Dieu.
 
 **Matthieu 7.1-2** · _Parallèle direct_
 
+« Ne jugez point, afin que vous ne soyez point jugés » : la parole du Seigneur sur le jugement censorieux fonde directement la condamnation du médisant qui se fait juge de son frère en Jacques 4.11-12.
+
 **Romains 14.4, 10-13** · _Lien thématique_
+
+« Qui es-tu, toi qui juges le serviteur d'autrui ? » : Paul réserve à Dieu seul le tribunal devant lequel chacun comparaîtra, écho de l'unique Législateur et Juge de Jacques 4.12.
 
 **Lévitique 19.18** · _Arrière-plan AT_
 
+« Tu aimeras ton prochain comme toi-même » : la loi royale (Jacques 2.8) que viole le médisant en jugeant son frère, et qu'il prétend ainsi suspendre en Jacques 4.11.
+
 **Psaume 39.5-6** · _Arrière-plan AT_
+
+« Tu as donné à mes jours la largeur de la main... l'homme se promène comme une ombre » : l'image vétérotestamentaire de la vie fugitive qui nourrit la vie-vapeur (atmis) de Jacques 4.14.
 
 **Proverbes 16.9** · _Arrière-plan AT_
 
+« Le cœur de l'homme médite sa voie, mais c'est l'Éternel qui dirige ses pas » : la souveraineté divine sur les projets humains, qui fonde la posture du « si le Seigneur le veut » de Jacques 4.15.
+
 **Actes 18.21** · _Parallèle direct_
 
+« Je reviendrai vers vous, si Dieu le veut » : Paul met en pratique la clause de soumission que Jacques 4.15 exige, la conditio Jacobaea vécue comme disposition du cœur et non formule machinale.
+
 ## Thèmes théologiques
+
+### Dieu seul, Législateur et Juge
 
 **Dans le texte**
 
@@ -68,6 +86,8 @@ Le verset 12 déclare qu'il n'y a qu'un seul Législateur et Juge, celui qui peu
 
 Cette vérité touche la theology proper: la souveraineté de Dieu sur le salut et la perdition. Pour l'assemblée, elle déloge l'esprit critique qui se fait tribunal sur les frères. Refuser de juger censurément n'est pas de la mollesse; c'est rendre à Dieu la prérogative qui n'appartient qu'à lui et reposer dans le fait que c'est lui, non nous, qui prononce le verdict éternel.
 
+### Le décret et la providence : le test de la dépendance
+
 **Dans le texte**
 
 Les versets 13-15 opposent le plan détaillé du marchand à l'ignorance du lendemain et à la vie-vapeur, pour aboutir à: « si le Seigneur le veut, nous vivrons et nous ferons ceci ou cela. »
@@ -75,6 +95,8 @@ Les versets 13-15 opposent le plan détaillé du marchand à l'ignorance du lend
 **Pour votre assemblée**
 
 Le décret et la providence de Dieu, exposés dans Biblical Doctrine, encadrent chaque heure de l'existence. C'est le coeur du test de la dépendance: planifier n'est pas un péché, mais planifier sans Dieu l'est. La dépendance n'est pas une clause verbale à ajouter aux projets; c'est une disposition du coeur qui reconnaît que le souffle même de la vie est suspendu à la volonté du Maître de l'histoire.
+
+### L'orgueil, racine de la révolte de la créature
 
 **Dans le texte**
 
@@ -84,6 +106,8 @@ Le médisant qui se fait juge (4.11) et le marchand qui se glorifie dans son org
 
 Cette vérité relève de l'anthropologie de la dépravation: l'orgueil est la forme première de la révolte de la créature. MacArthur traite la médisance (4.11-12) et la présomption (4.13-17) comme deux tests distincts, la compromission avec le monde et la dépendance; mais la présente recherche observe que l'un et l'autre prolongent le refus de l'humilité commandée en 4.10. Pour l'assemblée, la repentance vise donc la racine, l'orgueil, et non seulement les fruits que sont la langue qui dénigre et le coeur qui présume du lendemain.
 
+### Le péché d'omission
+
 **Dans le texte**
 
 Le verset 17 conclut: « celui qui sait faire le bien, et qui ne le fait pas, commet un péché. »
@@ -91,6 +115,8 @@ Le verset 17 conclut: « celui qui sait faire le bien, et qui ne le fait pas, co
 **Pour votre assemblée**
 
 La hamartiologie de MacArthur enseigne que le péché n'est pas seulement le mal commis mais aussi le bien omis. Dans sa note, MacArthur ajoute que les péchés d'omission mènent directement aux péchés de commission, et rattache ce verset aux marchands présomptueux (« ils ») de 4.13-16. Pour l'assemblée, cela ferme la porte à la conscience tranquille de qui se contente de ne rien faire de mal: connaître l'appel à l'humble dépendance de Dieu et ne pas le vivre est une offense réelle qui débouche sur des actes mauvais commis. L'obéissance jaillit de l'union avec Christ, non d'un simple effort moral.
+
+### La foi qui agit : la sotériologie du Lordship
 
 **Dans le texte**
 

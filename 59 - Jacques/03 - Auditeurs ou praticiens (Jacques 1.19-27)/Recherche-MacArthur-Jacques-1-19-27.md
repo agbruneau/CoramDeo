@@ -8,7 +8,7 @@
 
 L'épître porte en exergue le nom de Jacques (Iakôbos), que la tradition de l'Église ancienne et la lecture de John MacArthur identifient à Jacques le Juste, demi-frère du Seigneur Jésus, fils de Marie et de Joseph, devenu après la résurrection le pilier de l'assemblée de Jérusalem (Galates 1.19; Actes 15.13). Incrédule durant le ministère terrestre de Jésus (Jean 7.5), il fut transformé par une apparition du Ressuscité (1 Corinthiens 15.7). Il écrit non comme un théoricien, mais comme un pasteur juif converti, à des chrétiens hébreux dispersés. La salutation initiale s'adresse aux « douze tribus qui sont dans la dispersion » (Jacques 1.1), c'est à dire des croyants juifs chassés de la Terre par la persécution, vivant en diaspora. Selon la lecture de MacArthur, cette épître est probablement le tout premier écrit du Nouveau Testament, rédigé avant le concile de Jérusalem (vers 44 à 49 apr. J.-C.), ce qui explique son ton très juif, son enracinement dans la tradition de sagesse et son écho constant du Sermon sur la montagne.
 
-Le genre de Jacques relève de la parénèse, l'exhortation morale, et de la littérature de sagesse de filiation vétérotestamentaire (Proverbes, Siracide), refondue à la lumière de l'enseignement de Jésus. L'épître n'argumente pas en chaînes doctrinales serrées comme Romains; elle accumule des impératifs concrets, des images vives et des sentences tranchantes. Notre péricope, Jacques 1.19-27, conclut le premier chapitre et opère le pivot de toute l'épître. Elle prolonge directement Jacques 1.18, où Dieu « nous a engendrés par la parole de la vérité ». La logique est nette: puisque Dieu régénère par la Parole, le croyant régénéré doit recevoir cette Parole et la pratiquer. Le texte énonce ainsi le principe qui gouverne le reste de l'épître: la foi authentique se prouve par les œuvres.
+Le genre de Jacques relève de la parénèse, l'exhortation morale, et de la littérature de sagesse vétérotestamentaire (Proverbes), avec des parallèles dans la littérature juive extracanonique (Siracide), refondue à la lumière de l'enseignement de Jésus. L'épître n'argumente pas en chaînes doctrinales serrées comme Romains; elle accumule des impératifs concrets, des images vives et des sentences tranchantes. Notre péricope, Jacques 1.19-27, conclut le premier chapitre et opère le pivot de toute l'épître. Elle prolonge directement Jacques 1.18, où Dieu « nous a engendrés par la parole de la vérité ». La logique est nette: puisque Dieu régénère par la Parole, le croyant régénéré doit recevoir cette Parole et la pratiquer. Le texte énonce ainsi le principe qui gouverne le reste de l'épître: la foi authentique se prouve par les œuvres.
 
 Les bornes de la péricope sont franches. Au verset 19, la formule « sachez le, mes frères bien aimés » ouvre une nouvelle unité. Les versets 19 à 20 posent le triple impératif (prompt à écouter, lent à parler, lent à la colère); les versets 21 à 25 développent la réception de la Parole implantée et le contraste entre l'auditeur et le praticien au moyen de l'image du miroir; les versets 26 à 27 concluent par une définition de la religion pure: maîtrise de la langue, compassion envers orphelins et veuves, séparation d'avec le monde. Ce passage énonce en germe ce que Jacques 2.14-26 déploiera en argument serré: une foi qui n'agit pas est morte et incapable de sauver.
 
@@ -24,11 +24,11 @@ Enfin, la communauté visée connaissait l'épreuve, les tensions sociales et, c
 
 | Français | Translit. | Sens littéral | Champ sémantique | Traductions comparées |
 |---|---|---|---|---|
-| **** | _tachys / bradys_ | tachys: rapide, prompt; bradys: lent, tardif |  | _S21_ prompt à écouter, lent à parler, lent à se mettre en colère · _NEG79_ prompt à écouter, lent à parler, lent à se mettre en colère · _Darby_ prompt à écouter, lent à parler, lent à la colère · _LSG_ prompt à écouter, lent à parler, lent à se mettre en colère · _KJF_ prompt à écouter, lent à parler, lent à la colère |
-| **** | _emphytos_ | implanté, inné, greffé en (de en + phyô, faire pousser) |  | _S21_ la parole qui a été plantée en vous · _NEG79_ la parole qui a été plantée en vous · _Darby_ la parole implantée · _LSG_ la parole qui a été plantée en vous · _KJF_ la parole greffée |
-| **** | _poiêtês logou_ | poiêtês: celui qui fait, l'auteur, l'exécutant; littéralement « faiseur de parole » |  | _S21_ Mettez en pratique la parole et ne vous contentez pas de l'écouter · _NEG79_ Mettez en pratique la parole, et ne vous bornez pas à l'écouter · _Darby_ Mais mettez la parole en pratique, et ne l'écoutez pas seulement · _LSG_ Mettez en pratique la parole, et ne vous bornez pas à l'écouter · _KJF_ Mais soyez des observateurs de la parole, et non des auditeurs seulement |
-| **** | _paralogizomai_ | tromper par un faux raisonnement, induire en erreur par un calcul fallacieux |  | _S21_ en vous trompant vous-mêmes par de faux raisonnements · _NEG79_ en vous trompant vous-mêmes par de faux raisonnements · _Darby_ vous séduisant vous-mêmes · _LSG_ en vous trompant vous-mêmes par de faux raisonnements · _KJF_ vous trompant vous-mêmes |
-| **** | _thrêskeia / thrêskos_ | thrêskeia: pratique religieuse extérieure, culte, dévotion; thrêskos: religieux, dévot dans l'observance |  | _S21_ La religion pure et sans tache devant Dieu · _NEG79_ La religion pure et sans tache, devant Dieu · _Darby_ Le service religieux pur et sans tache devant Dieu · _LSG_ La religion pure et sans tache, devant Dieu · _KJF_ La religion pure et sans souillure devant Dieu |
+| **prompt / lent** | _tachys / bradys_ | tachys: rapide, prompt; bradys: lent, tardif | Le triple impératif de 1.19 ordonne une disposition du cœur : prompt à écouter la Parole, lent à parler et à se poser en maître, lent à la colère qui « n'accomplit pas la justice de Dieu » (1.20). L'écoute docile précède et discipline la parole. | _S21_ prompt à écouter, lent à parler, lent à se mettre en colère · _NEG79_ prompt à écouter, lent à parler, lent à se mettre en colère · _Darby_ prompt à écouter, lent à parler, lent à la colère · _LSG_ prompt à écouter, lent à parler, lent à se mettre en colère · _KJF_ prompt à écouter, lent à parler, lent à la colère |
+| **implantée (parole)** | _emphytos_ | implanté, inné, greffé en (de en + phyô, faire pousser) | La Parole reçue « avec douceur » n'est pas extérieure : elle est greffée dans le croyant régénéré et « peut sauver vos âmes » (1.21). L'image agricole rejoint la régénération par « la parole de la vérité » (1.18) : ce que Dieu a semé doit porter du fruit. | _S21_ la parole qui a été plantée en vous · _NEG79_ la parole qui a été plantée en vous · _Darby_ la parole implantée · _LSG_ la parole qui a été plantée en vous · _KJF_ la parole greffée |
+| **praticien de la parole** | _poiêtês logou_ | poiêtês: celui qui fait, l'auteur, l'exécutant; littéralement « faiseur de parole » | Le cœur de la péricope (1.22) : être un faiseur de la Parole, non un simple auditeur. Le contraste structure l'image du miroir (1.23-25); il anticipe Jacques 2.14-26, où la foi sans les œuvres est morte. Obéir n'ajoute rien au salut : c'en est la preuve. | _S21_ Mettez en pratique la parole et ne vous contentez pas de l'écouter · _NEG79_ Mettez en pratique la parole, et ne vous bornez pas à l'écouter · _Darby_ Mais mettez la parole en pratique, et ne l'écoutez pas seulement · _LSG_ Mettez en pratique la parole, et ne vous bornez pas à l'écouter · _KJF_ Mais soyez des observateurs de la parole, et non des auditeurs seulement |
+| **se tromper soi-même** | _paralogizomai_ | tromper par un faux raisonnement, induire en erreur par un calcul fallacieux | L'auditeur qui ne pratique pas « se trompe lui-même » (1.22) par un calcul faux : croire que l'écoute suffit. Ce danger n'est pas l'incrédulité avouée mais la fausse assurance, l'auto-illusion religieuse que l'image du miroir et le test de la langue (1.26) viennent démasquer. | _S21_ en vous trompant vous-mêmes par de faux raisonnements · _NEG79_ en vous trompant vous-mêmes par de faux raisonnements · _Darby_ vous séduisant vous-mêmes · _LSG_ en vous trompant vous-mêmes par de faux raisonnements · _KJF_ vous trompant vous-mêmes |
+| **religion / dévot** | _thrêskeia / thrêskos_ | thrêskeia: pratique religieuse extérieure, culte, dévotion; thrêskos: religieux, dévot dans l'observance | Le mot vise le culte visible, l'observance extérieure. Jacques la qualifie : vaine si la langue n'est pas tenue en bride (1.26); « pure et sans tache » quand elle se prouve par la compassion envers les vulnérables et la séparation d'avec le monde (1.27). La piété se mesure à son fruit. | _S21_ La religion pure et sans tache devant Dieu · _NEG79_ La religion pure et sans tache, devant Dieu · _Darby_ Le service religieux pur et sans tache devant Dieu · _LSG_ La religion pure et sans tache, devant Dieu · _KJF_ La religion pure et sans souillure devant Dieu |
 
 ## Apports des commentateurs
 
@@ -58,6 +58,8 @@ Les versets 21 et 26 à 27 encadrent l'exhortation par deux gestes décisifs. Au
 
 ## Thèmes théologiques
 
+### La Parole qui régénère et sauve
+
 **Dans le texte**
 
 La Parole « implantée » peut « sauver les âmes » (v.21); elle est le miroir et la loi parfaite qui révèle le cœur et conduit à l'obéissance (vv.23-25). Elle prolonge le v.18, où Dieu engendre par la parole de la vérité.
@@ -65,6 +67,8 @@ La Parole « implantée » peut « sauver les âmes » (v.21); elle est le miroi
 **Pour votre assemblée**
 
 Pour une assemblée tentée de chercher la transformation ailleurs (expériences, techniques, programmes), le texte recentre tout sur la Parole reçue avec docilité. C'est l'Esprit qui, par elle, régénère et sanctifie; la confiance du croyant repose sur la suffisance de l'Écriture, non sur ses propres ressources.
+
+### La foi vivante porte du fruit
 
 **Dans le texte**
 
@@ -74,6 +78,8 @@ Pour une assemblée tentée de chercher la transformation ailleurs (expériences
 
 Selon la doctrine de la persévérance des saints, la foi authentique porte du fruit. L'assemblée est appelée non à mériter le salut par ses œuvres, mais à vérifier la réalité de sa foi par une vie transformée. L'absence totale de fruit doit alarmer; sa présence rassure, sans jamais devenir une base de fierté.
 
+### L'auto-tromperie et la fausse assurance
+
 **Dans le texte**
 
 L'auditeur non praticien « se trompe lui même » (v.22); celui qui ne bride pas sa langue « se trompe son propre cœur » et sa religion est vaine (v.26).
@@ -82,6 +88,8 @@ L'auditeur non praticien « se trompe lui même » (v.22); celui qui ne bride pa
 
 Le plus grand danger n'est pas l'incrédulité avouée mais la fausse assurance. Le texte oblige chacun à s'examiner: ma religion est elle culte extérieur ou foi qui obéit? Cette mise en garde reprend l'avertissement de Jésus contre ceux qui disent « Seigneur, Seigneur » sans faire la volonté du Père (Matthieu 7.21-23).
 
+### Recevoir la Parole et rompre avec le péché
+
 **Dans le texte**
 
 Recevoir la Parole « avec douceur » suppose de « rejeter toute souillure et tout excès de malice » (v.21).
@@ -89,6 +97,8 @@ Recevoir la Parole « avec douceur » suppose de « rejeter toute souillure et t
 **Pour votre assemblée**
 
 La docilité à la Parole et la rupture avec le péché sont un seul mouvement. Conformément à l'enseignement sur le salut de seigneurie, on ne reçoit pas le Christ sans se détourner du péché; la foi et la repentance ne se séparent pas. L'assemblée apprend que recevoir la Parole n'est jamais neutre: cela exige un cœur qui se dépouille.
+
+### La religion pure : compassion et sainteté
 
 **Dans le texte**
 

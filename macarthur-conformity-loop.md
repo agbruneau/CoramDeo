@@ -5,6 +5,11 @@
 > dépôt jusqu'à ce que **tout leur contenu théologique soit conforme à la théologie de John
 > MacArthur**, au sens tranché par `00 - Avant-propos/NEG - MacArthur.pdf` et par la grille de
 > `CLAUDE.md`. Byline : `AGB · EBC`. *Soli Deo Gloria.*
+>
+> **ÉTAT (2026-07-02, Fable 5)** : bootstrap fait, passe 0 pilote sur `59 - Jacques` terminée —
+> **13/13 `VERIFIE`** (14 constats, tous `MINEUR`, corrigés et ré-audités). Ledger : 13 `VERIFIE`,
+> 904 `PENDING`. **Toute reprise (Sonnet 5 ou autre) doit lire le §12** : état d'exécution,
+> outillage construit, amendements au protocole et gotchas d'environnement y sont consignés.
 
 **Ce que la boucle garantit.** Convergence vers un **point fixe** : elle s'arrête quand une passe
 complète sur les 917 fichiers ne produit **plus aucune non-conformité et plus aucune correction**
@@ -319,3 +324,120 @@ et n'invente jamais de position MacArthur : silence oracle ⇒ REVUE_HUMAINE. Pr
 Lancer d'abord la boucle sur **un seul livre déjà stable** (`59 - Jacques`, gabarit d'or, 13
 `index.html`) : si la passe 0 y produit peu ou pas de constats, cela **calibre le taux de dérive**
 et arbitre entre boucle complète et spot-check (§7, condition 1) avant d'engager les 917 fichiers.
+
+> **Fait le 2026-07-02** — voir §12 pour les résultats et le verdict de calibration.
+
+---
+
+## 12. État d'exécution et directives de reprise (2026-07-02, Fable 5)
+
+Section ajoutée après exécution du pilote. **Elle fait autorité sur les §3 et §4.3 là où elle les
+amende** (l'exécution a validé des choix plus sûrs que la spec initiale).
+
+### 12.1 Travail accompli
+
+- **Bootstrap (§3)** : `ledger.json` initialisé — 917 fichiers, 31 shards (30 livres + `RACINE`,
+  l'`index.html` racine, navigation pure). **Amendement au §3.2** : les digests oracle ne sont PAS
+  ré-extraits du PDF ; ce sont des **copies des `JMA - <Livre>.md`** versionnés (extraction propre
+  de `NEG - MacArthur.pdf` par `extract_nt.py`/`extract_at.py`, flux séparés par police — qualité
+  supérieure à `get_text()` brut). 30 digests dans `oracle/`, indexés par `oracle/_index.json`
+  (clé = nom du dossier de livre).
+- **Passe 0 pilote sur `59 - Jacques`** (§11) : audit par 4 agents parallèles (3-4 fichiers
+  chacun) → 10 `NONCONFORME` / 3 `VERIFIE`, 14 constats **tous `MINEUR`** (détail par locus dans
+  `journal.md`). Corrections par 3 agents parallèles (transaction triple §4.3), ré-audit
+  indépendant par 2 agents à l'œil neuf → **13/13 `VERIFIE`**, 0 `REVUE_HUMAINE`.
+- **Checkpoint** : commit git du shard Jacques (convention §4.5).
+
+### 12.2 Verdict de calibration (§7)
+
+- Dérive fichiers : 77 % (10/13) → condition de renversement 1 (« < 3 % ») **non remplie** : la
+  machinerie complète (ledger + oracle + shard + ré-audit) **reste requise** pour les 904 restants.
+- Gravité : aucun constat > `MINEUR`. Deux familles : **parité `.md` ↔ `.html`** (5/14 — tableaux
+  de mots-clés vides, renvois sans descriptions, thèmes sans titres côté `.md` ; le HTML est la
+  version riche) et **micro-dérives de fond** contre les notes de l'oracle (9/14 — ex. Ja 5.19-20
+  lu comme restauration d'un vrai croyant, imminence relativisée, Siracide sous filiation
+  vétérotestamentaire). Condition 3 : **pondérer l'audit vers la parité SANS abandonner l'oracle**
+  (la parité seule n'aurait pas attrapé les 3 constats sotériologiques).
+
+### 12.3 Outillage construit (tout sous `.claude/loops/macarthur-conformity/`, non versionné)
+
+| Artefact | Rôle |
+|---|---|
+| `ledger.json` | État I1 : 917 entrées (path, book, sha256, state, findings, retries, last_pass) |
+| `oracle/<livre>.md` + `_index.json` | Digests I2 (copies des `JMA - <Livre>.md`) |
+| `journal.md` | Registre des passes, constats par locus, observations hors périmètre |
+| `md2json.py` | Parseur inverse `Recherche-*.md` → JSON du skill `sermon-JMA` (échec bruyant sur format inattendu) |
+| `gen_pdf.py` | Wrapper : enregistre les polices maison puis délègue à `~/.claude/skills/sermon-JMA/generate-pdf.py` |
+| `pass0/*.json` | Sorties d'audit persistées de la passe 0 |
+| `work/A..C/` | Répertoires temporaires de génération des agents |
+
+Polices maison (celles des 848 PDF existants) : `~/.claude/shared/fonts/`
+(CrimsonPro-Regular/Bold/Italic + ArsenalSC-Regular, OFL, récupérées du skill canvas-design).
+Sans le wrapper, `pdf_utils` retombe sur Times New Roman : **toujours passer par `gen_pdf.py`**.
+
+### 12.4 Protocole de régénération PDF (amendement au §4.3 — OBLIGATOIRE)
+
+Le trio `.md`/`.pdf` naît du même JSON ; le `.pdf` ne se rapièce pas, il se **régénère** :
+
+1. Éditer le `.md` (et le `.html` en parité doctrinale).
+2. `PYTHONUTF8=1 python ".claude/loops/macarthur-conformity/md2json.py" "<le .md>" "<temp>/x.json"`
+3. `PYTHONUTF8=1 python ".claude/loops/macarthur-conformity/gen_pdf.py" "<temp>/x.json" "<temp>/x.pdf"`
+4. `diff "<le .md>" "<temp>/x.md"` → **doit être vide** (round-trip ; prouvé au diff nul sur les
+   12 péricopes de Jacques AVANT toute correction — refaire ce test à blanc au premier fichier de
+   chaque livre pour attraper une variation de format).
+5. Déplacer `<temp>/x.pdf` sur le `.pdf` original (python `shutil.move`).
+
+**Jamais** générer directement dans le dossier de péricope : le générateur écrit le `.md` jumeau à
+côté du PDF de sortie et écraserait la source.
+
+### 12.5 Patron d'orchestration validé (par shard = livre)
+
+1. **AUDIT** : agents parallèles, 3-4 fichiers chacun ; chaque prompt embarque : chemin du digest
+   oracle, zones à charge (§4.2), grille des 7 loci (§5), flashpoints du corpus (`CLAUDE.md`),
+   gravités, règle I4, exigence de parité `.md`↔`.html`, sortie JSON stricte
+   `[{path, state, findings:[{locus, gravite, extrait_html, appui_oracle, correction}], notes}]`.
+2. **Persister** chaque lot dans `pass<N>/`, merger au ledger (état + findings + last_pass).
+3. **CORRECTION** : agents parallèles par lots de 3-4 fichiers, corrections MINIMALES ancrées sur
+   les findings du ledger, protocole §12.4, règles d'édition de `CLAUDE.md` (aucun tiret cadratin,
+   `&nbsp;`/`<i>` côté HTML, français canadien accentué, jamais de citation inventée).
+4. **VERIFY** : ré-audit par agents à l'œil neuf (ne pas présumer les corrections bonnes) :
+   constat levé + aucune dérive introduite + parité + PDF porteur des corrections (PyMuPDF) +
+   densité d'accents (25-33/Ko ; < 15 = accents manquants). `retries ≥ 3` ⇒ `REVUE_HUMAINE`.
+5. **CHECKPOINT** : recalcul des `sha256`, écriture du ledger, commit git **sélectif** (le dossier
+   du livre seulement — PAS `git add -A` : le dépôt peut porter des modifications étrangères à la
+   campagne), message : `conformité MacArthur — <NN Livre> : N corrigés, M vérifiés, K en revue [passe P]`.
+   Journaliser dans `journal.md`.
+
+### 12.6 Gotchas d'environnement (constatés à l'exécution)
+
+- Toujours `PYTHONUTF8=1` (sinon `UnicodeEncodeError` cp1252 sur `→`, `é`, etc. dans les prints).
+- Heredoc bash + python : `'\\'` peut être mangé — préférer `os.sep` / chemins bruts `r'...'`.
+- `curl` en **hard deny** ; `rm`/`Remove-Item` refusés (nettoyage via python `os.remove`/`shutil`).
+- PyMuPDF (`pip install pymupdf`) requis pour vérifier les PDF ; `reportlab` requis pour générer.
+- `.claude/` est gitignoré : ledger, oracle, journal et outillage sont **locaux à cette machine**.
+- Dossiers de péricope à padding **3 chiffres** pour Luc (`001`-`130`) et Actes ; 2 chiffres ailleurs.
+- `RACINE` (index.html racine) : navigation pure, sans contenu doctrinal — audit trivial en fin de
+  campagne.
+
+### 12.7 Reprise (ordre de traitement restant)
+
+Ordre canonique des 30 shards restants : `01 - Genèse` (13), `19 - Psaume 119` (23),
+`19 - Psaume 19` (5), `40 - Matthieu` (90), `41 - Marc` (83), `42 - Luc` (130), `43 - Jean` (54),
+`44 - Actes` (78), `45 - Romains` (48), `46 - 1 Corinthiens` (56), `47 - 2 Corinthiens` (43),
+`48 - Galates` (24), `49 - Éphésiens` (25), `50 - Philippiens` (16), `51 - Colossiens` (15),
+`52 - 1 Thessaloniciens` (12), `53 - 2 Thessaloniciens` (8), `54 - 1 Timothée` (19),
+`55 - 2 Timothée` (14), `56 - Tite` (9), `57 - Philémon` (5), `58 - Hébreux` (40),
+`60 - 1 Pierre` (18), `61 - 2 Pierre` (11), `62 - 1 Jean` (17), `63 - 2 Jean` (5),
+`64 - 3 Jean` (5), `65 - Jude` (8), `66 - Apocalypse` (29), puis `RACINE` (1).
+`59 - Jacques` (13) : **fait**. Après couverture complète : **passe de stabilité** (§6, delta nul)
+avant de déclarer le point fixe, puis rapport final (§6).
+
+Prompt de reprise (Sonnet 5) :
+
+```
+Reprends macarthur-conformity-loop.md sur Discipulat-EBC depuis son §12 (état : Jacques 13/13
+VERIFIE, 904 PENDING). Charge .claude/loops/macarthur-conformity/ledger.json, traite les shards
+restants dans l'ordre du §12.7 avec le patron du §12.5 et le protocole PDF du §12.4, checkpointe
+par commit git à chaque livre, n'invente jamais de position MacArthur (silence oracle ⇒
+REVUE_HUMAINE), et termine par la passe de stabilité et le rapport final du §6.
+```
