@@ -64,7 +64,7 @@ Nous sommes son ouvrage, créés en Jésus-Christ pour de bonnes oeuvres que Die
 
 La foi sans les oeuvres est morte : éclaire le qu'ils ne soient pas sans fruit (akarpos). Pour MacArthur (Lordship), une foi authentique produit nécessairement du fruit ; la stérilité durable révèle une foi morte, non une foi immature.
 
-**Matthieu 7.16-20** · _Arrière-plan AT_
+**Matthieu 7.16-20** · _Lien thématique_
 
 C'est à leurs fruits que vous les reconnaîtrez ; tout arbre qui ne porte pas de bon fruit est coupé : l'image agricole derrière akarpos (sans fruit). Le fruit est le critère visible de la réalité intérieure, écho du diagnostic de Tite 1.16.
 
