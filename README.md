@@ -190,7 +190,6 @@ une connexion Internet améliore le rendu, mais la page reste lisible hors ligne
 ```
 .
 ├── README.md
-├── CLAUDE.md
 ├── index.html                                Index de navigation racine (les 30 livres + Coram Christo)
 ├── LogoEBC.avif                              Logo référencé par l'index racine
 │
