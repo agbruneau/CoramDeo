@@ -51,8 +51,9 @@ toutes les séries.
   second niveau facultatif) : fruit nécessaire de la régénération, suivre Christ comme Seigneur
   (*Lordship Salvation*), nourri par la Parole suffisante, vécu dans l'Église locale et transmis
   par le mentorat, en vue de la conformité à Christ. Cadre MacArthur, sources documentées.
-- **[`Coram Christo.pdf`](<00 - Avant-propos/Coram Christo.pdf>)** : ressource d'accompagnement
-  pastoral (une page).
+- **[`Coram Deo.pdf`](<00 - Avant-propos/Coram Deo.pdf>)** : ressource d'accompagnement pastoral
+  (deux pages). *(Elle remplace `Coram Christo.pdf`, retiré du dépôt le 11 juillet 2026 —
+  commits `ce7c098` et `72578e4`.)*
 - **[`Vallée de la Vision/`](<00 - Avant-propos/Vallée de la Vision>)** : *La Vallée de la Vision*
   (`Vallée de la Vision.pdf`), le recueil de prières et de méditations puritaines (édition
   française, Publications Chrétiennes, 2023), soutien de la vie de prière personnelle et pastorale,
@@ -60,7 +61,12 @@ toutes les séries.
 - **[`Puritains/`](<00 - Avant-propos/Puritains>)** : ressources complémentaires sur la
   spiritualité puritaine, un essai (`Essai - Les puritains.docx`), une synthèse
   (`Synthèse - Puritains.docx`) et une présentation
-  (`Puritain - Toute la vie pour la gloire de Dieu.pptx`).
+  (`Puritain - Toute la vie pour la gloire de Dieu.pptx`). Le dossier porte aussi
+  **[`Guide Étude Biblique.md`](<00 - Avant-propos/Puritains/Guide Étude Biblique.md>)**
+  (déposé le 25 juillet 2026) : une méthode d'étude personnelle — lecture quotidienne, notes
+  manuscrites en Bible à marges larges, archivage en Bible intercalaire, langues originales.
+  ⚠ *Ce guide décrit une méthode de travail ; il ne fait autorité sur aucun point doctrinal —
+  cette autorité reste au `NEG - MacArthur.pdf`.*
 
 ### Outillage de production
 
@@ -177,7 +183,7 @@ Le modèle de référence est
 Un **index de navigation** [`index.html`](index.html) à la racine du dépôt fédère l'ensemble : il
 relie les 30 pages de présentation des livres, regroupées par sections (Ancien Testament,
 Évangiles, Histoire, épîtres pauliniennes, épîtres générales, Apocalypse), et pointe vers la
-ressource *Coram Christo*. La navigation est **aller-retour** : chaque page de présentation renvoie
+ressource *Coram Deo*. La navigation est **aller-retour** : chaque page de présentation renvoie
 à cet index (« Tous les livres ») et chaque péricope renvoie à la présentation de son livre.
 
 **Pour consulter une page :** l'ouvrir dans un navigateur (les polices proviennent de Google Fonts ;
@@ -190,16 +196,16 @@ une connexion Internet améliore le rendu, mais la page reste lisible hors ligne
 ```
 .
 ├── README.md
-├── index.html                                Index de navigation racine (les 30 livres + Coram Christo)
+├── index.html                                Index de navigation racine (les 30 livres + Coram Deo)
 ├── LogoEBC.avif                              Logo référencé par l'index racine
 │
 ├── 00 - Avant-propos/                        Fondations : références, doctrine, piété, outillage
 │   ├── NEG - MacArthur.pdf                    La Bible d'étude MacArthur (NEG) : arbitre de conformité
 │   ├── Confession de foi-EBC.pdf             Confession de foi de l'Église (rév. 2016)
 │   ├── PrecisDicipulat.md / .pdf             Précis du discipulat chrétien
-│   ├── Coram Christo.pdf                     Ressource d'accompagnement pastoral
+│   ├── Coram Deo.pdf                         Ressource d'accompagnement pastoral (2 p.)
 │   ├── Vallée de la Vision/                  Recueil de prières puritaines (PDF + étude PowerPoint)
-│   ├── Puritains/                            Ressources complémentaires sur les puritains
+│   ├── Puritains/                            Ressources puritaines + Guide Étude Biblique.md
 │   └── extract_nt.py, extract_at.py, md-to-pdf.py   Outillage de production
 │
 ├── 01 - Genèse/                              Ancien Testament : Genèse 1 à 11 (série complète)
