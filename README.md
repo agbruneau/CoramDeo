@@ -52,7 +52,8 @@ toutes les séries.
   (*Lordship Salvation*), nourri par la Parole suffisante, vécu dans l'Église locale et transmis
   par le mentorat, en vue de la conformité à Christ. Cadre MacArthur, sources documentées.
 - **[`Coram Deo.pdf`](<00 - Avant-propos/Coram Deo.pdf>)** : ressource d'accompagnement pastoral
-  (deux pages). *(Elle remplace `Coram Christo.pdf`, retiré du dépôt le 11 juillet 2026 —
+  — une page unique au format affiche (685 × 1391 pt), sans couche texte : c'est une image.
+  *(Elle remplace `Coram Christo.pdf`, retiré du dépôt le 11 juillet 2026 —
   commits `ce7c098` et `72578e4`.)*
 - **[`Vallée de la Vision/`](<00 - Avant-propos/Vallée de la Vision>)** : *La Vallée de la Vision*
   (`Vallée de la Vision.pdf`), le recueil de prières et de méditations puritaines (édition
@@ -73,7 +74,11 @@ toutes les séries.
 - **`extract_nt.py`** et **`extract_at.py`** : régénèrent les fichiers de référence
   `NEG - <Livre>.md` / `JMA - <Livre>.md` depuis `NEG - MacArthur.pdf` (séparation des flux texte
   biblique / notes d'étude par police et taille ; exigent PyMuPDF).
-- **`md-to-pdf.py`** : conversion d'un document markdown en PDF mis en page.
+- **`md-to-pdf.py`** : rend un `.md` en PDF au style maison, noir et orange (exige reportlab).
+  Usage : `python md-to-pdf.py <fichier.md> [sortie.pdf]`. Ce n'est **pas un parseur Markdown
+  général** : il ne couvre que les constructions présentes dans `PrecisDicipulat.md` (`#`, `##`,
+  `###`, citations `>`, listes `-`, tableaux `|`, `**`, `*`) et insère une signature datée fixe
+  sous le sous-titre. C'est l'outil qui a produit `PrecisDicipulat.pdf`.
 
 ---
 
@@ -152,8 +157,11 @@ gty.org et *Biblical Doctrine* (MacArthur et Mayhue).
 
 Chaque dossier de livre (`NN - <Livre>/`) contient :
 
-- **`NEG - <Livre>.md`** : le **texte biblique** (NEG 1979), organisé par titres de péricopes,
-  renvois marginaux et versets numérotés (notation `chapitre.verset`).
+- **`NEG - <Livre>.md`** : le **texte biblique** (NEG 1979), découpé en `## Chapitre N` puis en
+  titres de section repris du plan MacArthur (`### I. Le test de la persévérance… (1: 2-12)`),
+  chaque verset ouvert par son numéro en gras (`**2**`). Pas d'appareil de renvois marginaux.
+  Les quatre livres à chapitre unique — Philémon, 2 Jean, 3 Jean, Jude — n'ont pas de niveau
+  `## Chapitre` : leur texte s'ouvre directement sur le premier `### `.
 - **`JMA - <Livre>.md`** : les **notes d'étude de *La Bible d'étude MacArthur*** (introduction du
   livre, plan, puis notes verset par verset). Ces deux fichiers sont **tirés exclusivement** de
   `NEG - MacArthur.pdf` et ne portent que sur le livre de leur dossier.
@@ -161,8 +169,10 @@ Chaque dossier de livre (`NN - <Livre>/`) contient :
   du livre (`Recherche.md` / `.pdf`), la **page d'accueil** (`index.html`) et le logo
   (`LogoEBC.avif`).
 - **`NN - <titre> (Réf c.v-v)/`** : un dossier par semaine de prédication (péricope), contenant la
-  recherche exégétique (`Recherche-MacArthur-<Livre>-<réf>.md` plus son `.pdf`) et une page web
-  `index.html`. Le numéro de semaine `NN` est sur deux chiffres (trois pour Luc et Actes).
+  recherche exégétique (`Recherche-MacArthur-<Livre>-<c>-<v>-<v>.md` plus son `.pdf` : dans le nom
+  de fichier, la référence s'écrit tout en traits d'union — `Recherche-MacArthur-Jacques-2-14-26.md`
+  pour le dossier `05 - La foi qui agit (Jacques 2.14-26)`) et une page web `index.html`. Le numéro
+  de semaine `NN` est sur deux chiffres (trois pour Luc et Actes).
 
 **Gabarit d'une recherche exégétique** : Contexte du passage ; Arrière-plan historique et culturel ;
 Étude des mots-clés (tableau de traductions comparées S21 / NEG79 / Darby / LSG / KJF) ; Apports des
@@ -186,8 +196,10 @@ relie les 30 pages de présentation des livres, regroupées par sections (Ancien
 ressource *Coram Deo*. La navigation est **aller-retour** : chaque page de présentation renvoie
 à cet index (« Tous les livres ») et chaque péricope renvoie à la présentation de son livre.
 
-**Pour consulter une page :** l'ouvrir dans un navigateur (les polices proviennent de Google Fonts ;
-une connexion Internet améliore le rendu, mais la page reste lisible hors ligne).
+**Pour consulter une page :** l'ouvrir dans un navigateur. Aucune page n'appelle de ressource
+externe (ni feuille de style, ni script, ni fonte distante) : *Cormorant Garamond* et *EB Garamond*
+sont simplement déclarées en CSS avec repli sur Georgia et Times New Roman. Tout fonctionne hors
+ligne.
 
 ---
 
@@ -203,13 +215,14 @@ une connexion Internet améliore le rendu, mais la page reste lisible hors ligne
 │   ├── NEG - MacArthur.pdf                    La Bible d'étude MacArthur (NEG) : arbitre de conformité
 │   ├── Confession de foi-EBC.pdf             Confession de foi de l'Église (rév. 2016)
 │   ├── PrecisDicipulat.md / .pdf             Précis du discipulat chrétien
-│   ├── Coram Deo.pdf                         Ressource d'accompagnement pastoral (2 p.)
+│   ├── Coram Deo.pdf                         Ressource d'accompagnement pastoral (1 p., affiche image)
 │   ├── Vallée de la Vision/                  Recueil de prières puritaines (PDF + étude PowerPoint)
 │   ├── Puritains/                            Ressources puritaines + Guide Étude Biblique.md
 │   └── extract_nt.py, extract_at.py, md-to-pdf.py   Outillage de production
 │
-├── 01 - Genèse/                              Ancien Testament : Genèse 1 à 11 (série complète)
-├── 19 - Psaume 19/  19 - Psaume 119/         Ancien Testament : séries de Psaumes
+├── 01 - Genèse/                              AT : Genèse 1 à 11 (série complète)
+├── 19 - Psaume 19/  19 - Psaume 119/         AT : séries de Psaumes
+│                                             (les 3 dossiers AT ont l'arborescence interne ci-dessous)
 │
 ├── 40 - Matthieu/ … 66 - Apocalypse/         Nouveau Testament : les 27 livres (complets)
 │   ├── NEG - <Livre>.md                       Texte biblique (NEG 1979)
