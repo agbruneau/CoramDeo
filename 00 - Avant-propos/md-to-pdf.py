@@ -27,7 +27,7 @@ CREAM  = HexColor("#faf3ec")   # fond des encadres
 MUTE   = HexColor("#8a7f72")   # byline, labels
 RULE   = HexColor("#c9c2ba")
 
-BYLINE = "21 juin 2026  ·  AGB  ·  EBC"
+BYLINE = os.environ.get("MD2PDF_BYLINE", "21 juin 2026  ·  AGB  ·  EBC")
 
 S = {
     "title":  ParagraphStyle("title", fontName="Times-Bold", fontSize=23, leading=27,

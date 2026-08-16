@@ -1,0 +1,4 @@
+# Les PDF produits par reportlab n'ont pas d'octet nul en tete : git les
+# detecte comme du texte et injecte des CRLF a la sortie, ce qui decale les
+# offsets du xref et corrompt le fichier.
+*.pdf binary
