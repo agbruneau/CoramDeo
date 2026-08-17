@@ -26,8 +26,6 @@ Coleman prévient toutefois de deux illusions symétriques. La première est de 
 
 Dernière précaution, essentielle pour lire correctement ce qui suit : **les huit étapes ne forment pas une séquence rigide**. Coleman le dit explicitement — chacune est impliquée dans les autres, et toutes commencent, à quelque degré, avec la première. Le plan progresse, mais il ne procède pas par paliers étanches. C'est une structure concentrique, non un escalier.
 
-<!-- pagebreak -->
-
 ## Premier principe — La sélection : des hommes, non des programmes
 
 *« Il en choisit douze » (Lc 6:13).*
@@ -73,8 +71,6 @@ Le bilan quantitatif est saisissant : Jésus a passé plus de temps avec ses dis
 Le jugement porté sur la pratique ecclésiale est sévère. Prêcher aux foules, dit Coleman, ne suffira jamais à préparer des conducteurs ; ni les réunions de prière occasionnelles, ni les cours de formation. Former des personnes exige une attention personnelle et continue, comme celle d'un père envers ses enfants : **on n'élève pas des enfants par procuration**. Une classe de confirmation d'une heure par semaine pendant un mois, puis plus rien : voilà, dit-il, pourquoi environ la moitié de ceux qui font profession de foi et rejoignent l'Église finissent par se détacher ou perdre l'éclat de leur expérience. Et il pose la question qui clôt le débat : si Jésus, Fils de Dieu, a jugé nécessaire de rester presque constamment avec quelques hommes durant trois ans — et que l'un d'eux fut malgré tout perdu —, comment une Église peut-elle espérer faire ce travail à la chaîne, quelques jours par année ?
 
 **L'application** est simple à énoncer, coûteuse à vivre : que chaque converti reçoive un ami chrétien qui l'accompagne jusqu'à ce qu'il puisse en accompagner un autre — étudier la Bible et prier avec lui, répondre à ses questions, clarifier la vérité, et chercher ensemble à en aider d'autres. Si une Église n'a pas de tels accompagnateurs, qu'elle en forme ; et la seule façon de les former est de leur donner quelqu'un à suivre.
-
-<!-- pagebreak -->
 
 ## Troisième principe — La consécration : l'obéissance comme mode d'apprentissage
 
@@ -139,8 +135,6 @@ Coleman souligne le contraste avec notre époque de techniques professionnelles 
 **La classe ne fermait jamais.** Si l'approche n'était pas claire, il suffisait de demander : après la parabole du semeur, les disciples interrogent, et Jésus consacre à l'explication environ trois fois le temps qu'avait pris la leçon initiale donnée à la foule (Mt 13:10-23 ; Mc 4:10-25 ; Lc 8:9-18). Quand ils hésitaient à avouer leur perplexité, il prenait l'initiative : après le départ du jeune homme riche, c'est lui qui ouvre la conversation et en tire l'application (Mc 10:23-31).
 
 **L'application** est exigeante et honnête. Ceux qui forment doivent être prêts à ce qu'on les suive, comme eux-mêmes suivent Christ (1 Co 11:1) : « nous sommes la pièce exposée » (Ph 3:17 ; 1 Th 2:7-8 ; 2 Tm 1:13), et les gens feront ce qu'ils entendent et voient en nous (Ph 4:9). Cela rend vulnérable : nous ne sommes pas parfaits, et ceux à qui nous ouvrons notre vie verront nos manques. Coleman répond que la solution n'est pas de se cacher, mais de laisser voir aussi la promptitude à confesser le péché et à demander pardon. **Nos faiblesses ne ruinent pas le discipulat lorsque transparaît à travers elles une sincérité manifeste à suivre Christ.** Et il conclut par une phrase que le livre a rendue célèbre : les gens cherchent une démonstration, non une explication.
-
-<!-- pagebreak -->
 
 ## Sixième principe — La délégation : l'assignation du travail
 
@@ -209,8 +203,6 @@ Coleman rappelle la question de Dawson Trotman — « Où sont nos hommes ? » �
 **L'histoire a fait la preuve.** Les premiers disciples ont donné l'Évangile aux foules tout en bâtissant la communion de ceux qui croyaient, et les Actes ne sont, dit Coleman, que le déploiement dans la vie de l'Église naissante des principes déjà tracés dans la vie du Christ. Avant la fin du premier siècle, la société païenne avait été ébranlée jusque dans ses fondements. Puis les temps ont changé : les principes coûteux — formation de conducteurs, reproduction — ont été submergés par la stratégie plus facile du recrutement de masse, et l'objectif à courte vue de la reconnaissance populaire a pris le pas sur le but à long terme. **Le plan de Jésus n'a pas été désavoué ; il a simplement été ignoré** — vénéré comme un souvenir, non pris au sérieux comme règle de conduite.
 
 Le chapitre s'achève sur la thèse centrale du livre, empruntée à E. M. Bounds : **« les hommes sont la méthode de Dieu ».** L'évangélisation ne se fait pas par quelque chose, mais par quelqu'un, parce qu'elle est l'expression de l'amour de Dieu, et que Dieu est une personne. Les comités organisent et dirigent — ils sont nécessaires —, mais l'œuvre elle-même se fait quand des personnes atteignent d'autres personnes pour Christ. Ce dont l'Église a besoin, ce ne sont pas de meilleures méthodes, mais de meilleurs hommes et de meilleures femmes : qui connaissent leur Rédempteur par expérience personnelle, qui voient sa vision et partagent sa passion, et qui acceptent de n'être rien pour qu'il soit tout.
-
-<!-- pagebreak -->
 
 ## L'architecture d'ensemble : huit principes, un seul mouvement
 

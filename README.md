@@ -51,6 +51,15 @@ toutes les séries.
   second niveau facultatif) : fruit nécessaire de la régénération, suivre Christ comme Seigneur
   (*Lordship Salvation*), nourri par la Parole suffisante, vécu dans l'Église locale et transmis
   par le mentorat, en vue de la conformité à Christ. Cadre MacArthur, sources documentées.
+- **[`PlanEvangélisation.md`](<00 - Avant-propos/PlanEvangélisation.md>)** (et son `.pdf`) : un essai
+  sur *The Master Plan of Evangelism* de Robert E. Coleman (1963, rév. 1993). Il expose les **huit
+  principes** de la stratégie du Maître selon Coleman — sélection, association, consécration,
+  impartation, démonstration, délégation, supervision, reproduction — leur articulation en un seul
+  mouvement, le guide d'étude de Roy J. Fish, puis ce que le livre exige concrètement.
+  ⚠ *Coleman écrit depuis la tradition wesleyenne de sainteté ; l'essai comporte une section
+  « limites et points de vigilance » qui redresse notamment son vocabulaire pneumatologique (second
+  baptême de l'Esprit) au regard du cadre du dépôt. C'est un résumé critique, non une autorité
+  doctrinale — cette autorité reste au `NEG - MacArthur.pdf`.*
 - **[`Coram Deo.pdf`](<00 - Avant-propos/Coram Deo.pdf>)** : ressource d'accompagnement pastoral
   — une page unique au format affiche (685 × 1391 pt), sans couche texte : c'est une image.
   *(Elle remplace `Coram Christo.pdf`, retiré du dépôt le 11 juillet 2026 —
@@ -77,8 +86,10 @@ toutes les séries.
 - **`md-to-pdf.py`** : rend un `.md` en PDF au style maison, noir et orange (exige reportlab).
   Usage : `python md-to-pdf.py <fichier.md> [sortie.pdf]`. Ce n'est **pas un parseur Markdown
   général** : il ne couvre que les constructions présentes dans `PrecisDicipulat.md` (`#`, `##`,
-  `###`, citations `>`, listes `-`, tableaux `|`, `**`, `*`) et insère une signature datée fixe
-  sous le sous-titre. C'est l'outil qui a produit `PrecisDicipulat.pdf`.
+  `###`, citations `>`, listes `-`, tableaux `|`, `**`, `*`, plus `<!-- pagebreak -->` pour forcer
+  un saut de page ; les filets `---` sont ignorés) et insère une signature datée sous le sous-titre,
+  surchargeable par la variable d'environnement `MD2PDF_BYLINE`. C'est l'outil qui a produit
+  `PrecisDicipulat.pdf` et `PlanEvangélisation.pdf`.
 
 ---
 
@@ -215,6 +226,7 @@ ligne.
 │   ├── NEG - MacArthur.pdf                    La Bible d'étude MacArthur (NEG) : arbitre de conformité
 │   ├── Confession de foi-EBC.pdf             Confession de foi de l'Église (rév. 2016)
 │   ├── PrecisDicipulat.md / .pdf             Précis du discipulat chrétien
+│   ├── PlanEvangélisation.md / .pdf          Essai sur The Master Plan of Evangelism (Coleman)
 │   ├── Coram Deo.pdf                         Ressource d'accompagnement pastoral (1 p., affiche image)
 │   ├── Vallée de la Vision/                  Recueil de prières puritaines (PDF + étude PowerPoint)
 │   ├── Puritains/                            Ressources puritaines + Guide Étude Biblique.md

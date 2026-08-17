@@ -37,7 +37,7 @@ S = {
     "byline": ParagraphStyle("byline", fontName="Times-Roman", fontSize=9, leading=12,
                              textColor=MUTE, alignment=TA_CENTER, spaceAfter=2),
     "h2":     ParagraphStyle("h2", fontName="Times-Bold", fontSize=14.5, leading=18,
-                             textColor=BROWN, spaceBefore=16, spaceAfter=4),
+                             textColor=BROWN, spaceBefore=11, spaceAfter=4),
     "body":   ParagraphStyle("body", fontName="Times-Roman", fontSize=10.5, leading=15,
                              textColor=INK, alignment=TA_JUSTIFY, spaceAfter=6),
     "bullet": ParagraphStyle("bullet", fontName="Times-Roman", fontSize=10.5, leading=15,
@@ -111,8 +111,8 @@ def is_sep(line):
 def build(md_path, pdf_path):
     raw = open(md_path, encoding="utf-8").read().splitlines()
     doc = SimpleDocTemplate(pdf_path, pagesize=letter,
-                            leftMargin=0.95 * inch, rightMargin=0.95 * inch,
-                            topMargin=0.9 * inch, bottomMargin=0.9 * inch)
+                            leftMargin=0.5 * inch, rightMargin=0.5 * inch,
+                            topMargin=0.5 * inch, bottomMargin=0.5 * inch)
     cw = doc.width
     story, i, first_h = [], 0, True
     while i < len(raw):
