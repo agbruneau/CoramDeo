@@ -38,6 +38,8 @@ S = {
                              textColor=MUTE, alignment=TA_CENTER, spaceAfter=2),
     "h2":     ParagraphStyle("h2", fontName="Times-Bold", fontSize=14.5, leading=18,
                              textColor=BROWN, spaceBefore=11, spaceAfter=4),
+    "h3":     ParagraphStyle("h3", fontName="Times-BoldItalic", fontSize=11.5, leading=15,
+                             textColor=BROWN, spaceBefore=9, spaceAfter=3),
     "body":   ParagraphStyle("body", fontName="Times-Roman", fontSize=10.5, leading=15,
                              textColor=INK, alignment=TA_JUSTIFY, spaceAfter=6),
     "bullet": ParagraphStyle("bullet", fontName="Times-Roman", fontSize=10.5, leading=15,
@@ -123,11 +125,15 @@ def build(md_path, pdf_path):
         if line.startswith("# "):
             story.append(Paragraph(inline(line[2:]), S["title"]))
         elif line.startswith("### "):
-            story.append(Paragraph(inline(line[4:]), S["sub"]))
-            story.append(Spacer(1, 4))
-            story.append(Paragraph(BYLINE, S["byline"]))
-            story.append(HRFlowable(width="40%", thickness=0.8, color=ORANGE,
-                                    spaceBefore=8, spaceAfter=4, hAlign="CENTER"))
+            if first_h:                       # le premier ### est le sous-titre + byline
+                story.append(Paragraph(inline(line[4:]), S["sub"]))
+                story.append(Spacer(1, 4))
+                story.append(Paragraph(BYLINE, S["byline"]))
+                story.append(HRFlowable(width="40%", thickness=0.8, color=ORANGE,
+                                        spaceBefore=8, spaceAfter=4, hAlign="CENTER"))
+                first_h = False
+            else:                             # les suivants sont des sous-sections
+                story.append(Paragraph(inline(line[4:]), S["h3"]))
         elif line.startswith("## "):
             story.append(Paragraph(inline(line[3:]), S["h2"]))
             story.append(HRFlowable(width="100%", thickness=0.8, color=ORANGE,

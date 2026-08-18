@@ -246,44 +246,6 @@ Coleman y ajoute plusieurs précisions pratiques qui, prises ensemble, forment u
 
 La conclusion de l'épilogue est une question, et c'est celle que le livre laisse au lecteur : le monde cherche désespérément quelqu'un à suivre ; qu'il suive quelqu'un est certain — mais sera-ce quelqu'un qui connaît le chemin du Christ, ou quelqu'un qui le conduira dans de plus profondes ténèbres ?
 
-## Le guide d'étude de Roy J. Fish
-
-Ajouté en 1972, le guide en treize leçons traduit le livre en programme de formation, ce qui en dit long sur la nature de l'ouvrage : il n'a pas été conçu pour être lu, mais pour être appliqué. Ses quatre objectifs déclarés — explorer les Évangiles à la recherche de la stratégie de Jésus, en revoir le sens et la valeur, conduire à un engagement plus profond envers ce plan, et conduire à sa mise en œuvre — sont eux-mêmes une illustration du principe de délégation appliqué à la lecture.
-
-Chaque leçon suit le même schéma : résumé du chapitre, procédures d'apprentissage (questions de recherche dans le texte biblique et dans le livre), suggestions de discussion et d'activité de groupe, objectifs de réalisation personnelle, pistes de recherche complémentaire. Les quatre dernières leçons, consacrées à « votre plan », sont des exercices de mise en œuvre : rédiger et mémoriser son témoignage personnel en 150 à 200 mots ; énumérer les occasions concrètes de rencontrer la personne qu'on accompagne ; lister les assignations à confier au début, puis à mesure de la maturité ; déterminer à quel moment expliquer la stratégie ; établir des objectifs à court et à long terme pour l'Église locale.
-
-Deux illustrations du guide méritent d'être retenues, parce qu'elles rendent visible ce que l'exposé de Coleman démontre par l'analyse. La première est la démonstration en auditoire : deux pasteurs, l'un gagnant des personnes une à une — dix personnes après dix aller-retour —, l'autre formant ceux qu'il gagne à gagner et à former — trente-deux personnes après cinq aller-retour seulement, et mille vingt-quatre s'il en avait fait dix. **C'est la différence entre l'addition et la multiplication.** La formule que Fish en tire est brutale de clarté : il est plus important de former un gagneur d'âmes que de gagner une âme.
-
-La seconde est l'anecdote, imaginaire mais juste, de Gabriel interrogeant le Christ à son retour au ciel sur son plan pour que le message atteigne tous les hommes. « Je l'ai laissé entre les mains d'une douzaine d'hommes. » — « Douze hommes ! Et s'ils échouent ? » — **« Je n'ai pas d'autre plan. »**
-
-## Ce que le livre ne dit pas : limites et points de vigilance
-
-Un essai honnête doit signaler où l'ouvrage demande un complément ou une correction. Les remarques qui suivent sont ma lecture, non celle de Coleman ; elles ne remettent pas en cause la thèse du livre, mais la manière dont certains passages seront reçus.
-
-**Le vocabulaire de l'expérience pneumatologique.** Coleman parle d'un « baptême personnel du Saint-Esprit » à recevoir, d'une « plénitude » à obtenir par une reddition nouvelle, d'un « revêtement de puissance d'en haut » que les disciples devaient attendre. Le langage appartient à la tradition wesleyenne de sainteté dont l'auteur est issu, et il porte l'idée d'une seconde œuvre de grâce distincte de la conversion. Le texte du Nouveau Testament situe plutôt le baptême de l'Esprit à la conversion — « nous avons tous été baptisés dans un seul Esprit, pour former un seul corps » (1 Co 12:13) —, l'événement de la Pentecôte étant unique et inaugural, tandis que la plénitude de l'Esprit (Ép 5:18) désigne un état à renouveler, non un second baptême. Ce que Coleman *décrit* — dépendance totale, reddition, puissance qui n'est pas la nôtre — reste juste ; c'est la catégorie qui demande à être précisée.
-
-**La formule sur l'initiative humaine.** Commentant Mt 16:18, Coleman souligne la place de l'initiative humaine dans la victoire annoncée et localise l'expérience de la révélation dans la « chair et le sang » de Pierre. Il prend soin de rappeler, avec le texte, que ce n'est pas la chair et le sang qui ont révélé cela (Mt 16:17), et il affirme ailleurs sans ambiguïté que tout est œuvre de l'Esprit. Il reste que le fondement de l'Église est le Christ lui-même, pierre angulaire, avec les apôtres et les prophètes pour fondement (Ép 2:20-22) — ce que Coleman reconnaît d'ailleurs en citant 1 P 2:4-8. La formulation, isolée, prête à une lecture plus anthropocentrique que l'ensemble du livre ne le permet.
-
-**Le risque du raisonnement par l'efficacité.** Coleman argumente en un endroit que le principe de sélection et de concentration « est gravé dans l'univers » et produira des résultats quel que soit celui qui le pratique, en citant les programmes de formation en entreprise, dans l'armée, et l'exemple — daté de 1963 — des cadres communistes. L'observation est juste sociologiquement, mais elle est faible théologiquement : ce qui rend le principe obligatoire n'est pas qu'il fonctionne, c'est qu'il est celui du Maître. Une stratégie ne devient pas biblique parce qu'elle réussit.
-
-**Le contenu doctrinal reste sous-déterminé.** Le livre décrit magistralement le *comment* de la transmission, et très peu le *quoi*. Or le mandat de Mt 28:20 porte sur « tout ce que je vous ai prescrit », et Paul confie à Timothée « ce que tu as entendu de moi » pour qu'il le transmette à des hommes fidèles capables de l'enseigner (2 Tm 2:2), en gouvernant tout le modèle de formation par « ce qui est conforme à la saine doctrine » (Tt 2:1). Une mise en œuvre fidèle du plan de Coleman suppose donc un corps d'enseignement défini, et non seulement une relation intense. Sans ce contenu, la méthode risque de reproduire le formateur plutôt que le Maître.
-
-**La grammaire du mandat missionnaire.** Le point de Coleman sur Mt 28:19-20 est exact : « faites des disciples » est le verbe principal. Il ne faudrait pas en tirer que « allez » serait facultatif ; le participe y a valeur de circonstance concomitante et porte la force de l'impératif. L'argument de Coleman vise la réduction du mandat au déplacement et au baptême, non l'abandon de l'envoi.
-
-**Le rapport à l'Église locale.** Coleman place explicitement le petit groupe « dans le cadre de l'Église » et refuse tout rôle de gourou. C'est la sauvegarde décisive, et elle mérite d'être soulignée, car la postérité du livre — la multiplication des cellules et des relations de mentorat — a parfois produit des structures parallèles, échappant à la supervision des anciens et à la discipline ecclésiale (Mt 18:15-17). Le discipulat que le Nouveau Testament connaît s'exerce dans un corps ordonné, sous des conducteurs donnés « pour le perfectionnement des saints en vue de l'œuvre du ministère » (Ép 4:11-13).
-
-## Ce que le livre exige, concrètement
-
-Si l'on prend l'ouvrage au sérieux, la liste des décisions qu'il impose est courte et coûteuse.
-
-- **Choisir.** Nommer, dès maintenant, deux ou trois personnes sur lesquelles concentrer temps et attention, non pas les plus impressionnantes mais les plus enseignables — celles qui avouent leur besoin et cherchent Dieu réellement.
-- **Ouvrir sa vie.** Les emmener dans ce qu'on fait déjà plutôt que d'ajouter des réunions ; accepter la vulnérabilité que crée la proximité, et laisser voir la repentance autant que la compétence.
-- **Appeler à l'obéissance dès le début.** Ne pas différer l'exigence de la seigneurie du Christ au nom de la douceur pastorale ; la vérité s'apprend en obéissant à ce qu'on connaît déjà.
-- **Montrer avant d'expliquer.** Prier devant eux, ouvrir l'Écriture devant eux, témoigner devant eux — puis expliquer ce qu'ils ont vu.
-- **Assigner et attendre.** Confier des tâches précises, croissantes, avec une reddition de comptes réelle et bienveillante.
-- **Vérifier.** Revoir avec eux ce qui s'est passé, corriger tôt, encourager, et refuser à la fois la satisfaction prématurée et le découragement.
-- **Mesurer autrement.** Remplacer les indicateurs de fréquentation par une seule question : combien, parmi ceux que j'ai formés, forment aujourd'hui quelqu'un d'autre ?
-
 ## Conclusion
 
 La force de *The Master Plan of Evangelism* tient à ce qu'il ne propose rien de neuf. Il décrit ce que les Évangiles montrent, et laisse le contraste avec nos pratiques faire son travail. Sa thèse tient en une phrase : **le Christ a choisi des personnes plutôt que des programmes, et il a investi sa vie dans quelques-unes afin que les multitudes soient atteintes.** Tout le reste — présence, obéissance, don de soi, exemple, envoi, supervision — sert cette économie, et le fruit reproducteur en est la seule vérification.
