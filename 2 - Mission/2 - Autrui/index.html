@@ -1,0 +1,990 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autrui · L’homme racheté et son prochain · Église Baptiste de Charlesbourg</title>
+<meta name="description" content="L’homme racheté et son prochain : parents, célibat, épouse, direction de la famille, discipulat des enfants, culte familial, amitiés et témoignage, exposés dans le cadre théologique de John MacArthur. Église Baptiste de Charlesbourg.">
+<meta name="author" content="Église Baptiste de Charlesbourg">
+<style>
+  :root{
+    --nuit:#0a0a0a;
+    --nuit-1:#121212;
+    --nuit-2:#1b1b1b;
+    --encre:#f3f0ec;
+    --encre-doux:#c9c2ba;
+    --or:#e8843c;
+    --or-clair:#f6a85c;
+    --feuille:#f0b659;
+    --feuille-vif:#f7c97a;
+    --filet:rgba(232,132,60,.28);
+    --filet-fort:rgba(232,132,60,.52);
+    --max:max(58rem,84vw);
+  }
+
+  *{box-sizing:border-box;}
+  html{
+    scroll-behavior:smooth;-webkit-text-size-adjust:100%;
+    scrollbar-color:var(--or) var(--nuit);scrollbar-width:thin;
+  }
+  body{
+    margin:0;
+    font-family:"EB Garamond",Georgia,"Times New Roman",serif;
+    font-size:clamp(1.2rem,.95rem + .85vw,1.45rem);
+    line-height:1.85;
+    color:var(--encre);
+    background:var(--nuit);
+    background-image:
+      radial-gradient(120% 80% at 50% -10%, rgba(240,182,89,.10), transparent 55%),
+      radial-gradient(90% 60% at 85% 8%, rgba(232,132,60,.06), transparent 60%),
+      radial-gradient(100% 70% at 12% 35%, rgba(232,132,60,.05), transparent 58%);
+    background-attachment:fixed;
+    overflow-x:hidden;
+  }
+  .grain{
+    position:fixed;inset:0;z-index:3;pointer-events:none;
+    opacity:.03;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .vignette{
+    position:fixed;inset:0;z-index:1;pointer-events:none;
+    background:radial-gradient(135% 105% at 50% 35%, transparent 56%, rgba(0,0,0,.42) 100%);
+  }
+
+  a{color:var(--feuille);text-decoration:none;}
+  a:focus-visible,.nav__links a:focus-visible{outline:2px solid var(--or);outline-offset:3px;border-radius:3px;}
+  ::selection{background:rgba(232,132,60,.34);color:#fff;}
+  ::-webkit-scrollbar{width:12px;}
+  ::-webkit-scrollbar-track{background:var(--nuit);}
+  ::-webkit-scrollbar-thumb{background:linear-gradient(var(--or),#7a4218);border:3px solid var(--nuit);border-radius:10px;}
+  ::-webkit-scrollbar-thumb:hover{background:var(--or-clair);}
+
+  .progress{
+    position:fixed;top:0;left:0;height:3px;width:0;z-index:60;
+    background:linear-gradient(90deg,var(--or),var(--or-clair),var(--feuille));
+    box-shadow:0 0 12px rgba(232,132,60,.6);
+    transition:width .1s linear;
+  }
+
+  .nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    display:flex;align-items:center;gap:1.5rem;
+    padding:.85rem clamp(1rem,4vw,2.5rem);
+    background:rgba(10,10,10,.82);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--filet);
+    transform:translateY(-110%);
+    transition:transform .45s cubic-bezier(.2,.7,.2,1);
+  }
+  .nav.show{transform:translateY(0);}
+  .nav__progress{
+    position:absolute;left:0;bottom:-1px;height:2px;width:0;
+    background:linear-gradient(90deg,var(--or),var(--or-clair),var(--feuille));
+    box-shadow:0 0 10px rgba(232,132,60,.55);
+    transition:width .1s linear;
+  }
+  .nav__logo{flex:none;display:block;}
+  .nav__logo img{height:clamp(2.2rem,2rem + 1vw,2.9rem);width:auto;display:block;}
+  .nav__brand{
+    font-family:"Cormorant Garamond",serif;font-size:1.55rem;font-weight:600;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--or-clair);
+    white-space:nowrap;
+  }
+  .nav__links{
+    display:flex;gap:.15rem;margin-left:auto;
+    overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .nav__links::-webkit-scrollbar{display:none;}
+  .nav__links a{
+    position:relative;
+    font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--encre-doux);padding:.5rem .8rem;border-radius:2px;
+    white-space:nowrap;transition:color .25s;
+  }
+  .nav__links a::after{
+    content:"";position:absolute;left:.8rem;right:.8rem;bottom:.18rem;height:1px;
+    background:var(--or);transform:scaleX(0);transform-origin:left;transition:transform .3s;
+  }
+  .nav__links a:hover{color:var(--or-clair);}
+  .nav__links a:hover::after{transform:scaleX(1);}
+
+  .pill{
+    display:inline-block;padding:.7rem 1.7rem;
+    border:1px solid var(--filet-fort);border-radius:999px;
+    color:var(--or-clair);font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;
+    transition:border-color .3s,color .3s;
+  }
+  .pill:hover{border-color:var(--or);color:var(--feuille-vif);}
+
+  .hero{
+    position:relative;min-height:100svh;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:6rem 1.4rem 4rem;
+  }
+  .hero__frame{
+    position:absolute;inset:clamp(.9rem,3.5vw,2.4rem);
+    border:1px solid var(--filet);pointer-events:none;
+    opacity:0;animation:frameIn 1.5s ease .15s forwards;
+  }
+  .hero__frame::before,.hero__frame::after{
+    content:"";position:absolute;width:16px;height:16px;
+  }
+  .hero__frame::before{top:-1px;left:-1px;border-top:2px solid var(--or);border-left:2px solid var(--or);}
+  .hero__frame::after{bottom:-1px;right:-1px;border-bottom:2px solid var(--or);border-right:2px solid var(--or);}
+  .hero__logo{
+    height:clamp(5.5rem,12vw,8rem);width:auto;margin:0 auto 1.8rem;
+    opacity:0;animation:riseIn .95s cubic-bezier(.2,.7,.2,1) .1s forwards;
+    filter:drop-shadow(0 0 26px rgba(240,182,89,.22));
+  }
+  .hero__kicker{
+    font-size:clamp(.85rem,.65rem + .6vw,1rem);
+    letter-spacing:.42em;text-transform:uppercase;
+    color:var(--or);margin:0 0 .2em .42em;
+  }
+  .hero__title{
+    font-family:"Cormorant Garamond",serif;
+    font-weight:600;
+    font-size:clamp(3rem,6vw + 1rem,6.6rem);
+    line-height:1.02;letter-spacing:.03em;margin:0;
+    padding:.06em .08em .2em;
+    background:linear-gradient(176deg,#f9e1bb 0%,var(--or-clair) 45%,var(--or) 100%);
+    -webkit-background-clip:text;background-clip:text;
+    color:transparent;-webkit-text-fill-color:transparent;
+    filter:drop-shadow(0 0 34px rgba(240,182,89,.30)) drop-shadow(0 2px 3px rgba(0,0,0,.5));
+    text-wrap:balance;
+  }
+  .ornament{
+    display:flex;align-items:center;justify-content:center;gap:1rem;
+    margin:1.7rem 0;color:var(--or);width:min(22rem,80%);
+  }
+  .ornament::before,.ornament::after{
+    content:"";height:1px;flex:1;
+    background:linear-gradient(90deg,transparent,var(--filet-fort),transparent);
+  }
+  .ornament span{font-size:.8rem;}
+  .hero__verse{
+    font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-weight:500;
+    font-size:clamp(1.4rem,1.1rem + 1.3vw,2.05rem);
+    line-height:1.55;color:var(--encre);
+    max-width:max(46rem,72vw);margin:0 auto;
+    text-wrap:balance;
+  }
+  .hero__verse .q{color:var(--or);font-style:normal;}
+  .hero__ref{
+    margin-top:1.7rem;font-size:.95rem;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--or);
+  }
+  .hero__series{
+    margin-top:2.6rem;font-size:.88rem;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--encre-doux);text-wrap:balance;
+    max-width:42rem;
+  }
+  .hero__series b{color:var(--feuille);font-weight:600;}
+  .scrollcue{
+    position:absolute;bottom:1.7rem;left:50%;transform:translateX(-50%);
+    color:var(--or);font-size:1.3rem;opacity:.75;
+    animation:bob 2.4s ease-in-out infinite;
+  }
+  @keyframes bob{0%,100%{transform:translate(-50%,0);}50%{transform:translate(-50%,7px);}}
+  @keyframes riseIn{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
+  @keyframes frameIn{from{opacity:0;}to{opacity:1;}}
+  .hero__kicker,.hero__title,.ornament,.hero__verse,.hero__ref,.hero__series{
+    opacity:0;animation:riseIn .95s cubic-bezier(.2,.7,.2,1) forwards;
+  }
+  .hero__kicker{animation-delay:.2s;}
+  .hero__title{animation-delay:.32s;}
+  .ornament{animation-delay:.6s;}
+  .hero__verse{animation-delay:.75s;}
+  .hero__ref{animation-delay:1s;}
+  .hero__series{animation-delay:1.15s;}
+
+  main{position:relative;z-index:2;}
+  .section{
+    max-width:var(--max);margin:0 auto;
+    padding:clamp(3rem,7vw,5.5rem) clamp(1.4rem,5vw,2rem);
+    scroll-margin-top:5rem;
+  }
+  .sec-head{text-align:center;margin-bottom:2.2rem;}
+  .kicker{
+    font-size:.95rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--or);margin:0 0 .65rem;
+  }
+  .sec-title{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:clamp(2.1rem,1.4rem + 2.6vw,3.2rem);line-height:1.12;
+    color:var(--or-clair);margin:0;text-wrap:balance;
+  }
+  .sec-head .sec-title::after{
+    content:"";display:block;width:2.6rem;height:1px;
+    background:var(--filet-fort);margin:1.2rem auto 0;
+  }
+
+  .livres{
+    list-style:none;margin:0;padding:0;
+    display:grid;gap:1.1rem;
+    grid-template-columns:repeat(auto-fill,minmax(min(100%,20rem),1fr));
+  }
+  .livre{margin:0;}
+  .livre a{
+    display:flex;flex-direction:column;gap:.5rem;height:100%;
+    padding:1.4rem 1.5rem 1.5rem;
+    background:linear-gradient(180deg,rgba(232,132,60,.07),rgba(232,132,60,.03));
+    border:1px solid var(--filet);border-left:3px solid var(--or);
+    border-radius:0 6px 6px 0;color:var(--encre);
+    transition:border-left-color .3s,transform .3s,background .3s,box-shadow .3s;
+  }
+  .livre a:hover{
+    border-left-color:var(--or-clair);transform:translateY(-3px);
+    background:linear-gradient(180deg,rgba(232,132,60,.13),rgba(232,132,60,.05));
+    box-shadow:0 8px 26px rgba(0,0,0,.32);
+  }
+  .livre a:focus-visible{outline:2px solid var(--or);outline-offset:3px;}
+  .livre__num{
+    font-family:"Cormorant Garamond",serif;font-size:.8rem;letter-spacing:.26em;
+    text-transform:uppercase;color:var(--or);
+  }
+  .livre__titre{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:1.6rem;line-height:1.12;color:var(--encre);
+    transition:color .3s;
+  }
+  .livre a:hover .livre__titre{color:var(--or-clair);}
+  .livre__theme{
+    font-size:1rem;line-height:1.45;color:var(--encre-doux);
+    font-style:italic;
+  }
+  .livre__ref{
+    margin-top:auto;display:flex;align-items:center;gap:.6rem;
+    font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--encre-doux);padding-top:.4rem;
+  }
+  .livre__go{
+    margin-left:auto;color:var(--or);font-size:1.05em;
+    transition:transform .3s;
+  }
+  .livre a:hover .livre__go{transform:translateX(4px);}
+
+  /* ---- corps du texte ---- */
+  .section p{margin:0 0 1.15em;text-wrap:pretty;}
+  .section h3{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:clamp(1.75rem,1.3rem + 1.5vw,2.4rem);line-height:1.15;
+    color:var(--or-clair);margin:2.8rem 0 1.1rem;
+    padding-bottom:.5rem;border-bottom:1px solid var(--filet);
+    scroll-margin-top:5rem;text-wrap:balance;
+  }
+  .section h4{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:clamp(1.35rem,1.1rem + .8vw,1.7rem);line-height:1.2;
+    color:var(--feuille);margin:2rem 0 .7rem;
+    scroll-margin-top:5rem;text-wrap:balance;
+  }
+  .sommaire{
+    list-style:none;margin:0 0 2.6rem;padding:1.2rem 1.5rem;
+    border:1px solid var(--filet);border-left:3px solid var(--or);border-radius:0 6px 6px 0;
+    background:linear-gradient(180deg,rgba(232,132,60,.06),rgba(232,132,60,.02));
+    display:flex;flex-wrap:wrap;gap:.4rem 1.6rem;
+  }
+  .sommaire li{font-size:.95rem;letter-spacing:.02em;}
+  .sommaire a{color:var(--encre-doux);}
+  .sommaire a:hover{color:var(--or-clair);}
+  .liste{margin:0 0 1.4rem;padding-left:1.6rem;}
+  .liste li{margin:0 0 .55rem;}
+  .liste li::marker{color:var(--or);}
+  blockquote{
+    margin:1.6rem 0;padding:.4rem 0 .4rem 1.6rem;
+    border-left:2px solid var(--filet-fort);
+    color:var(--encre-doux);font-size:.96em;
+  }
+  blockquote.vers{
+    font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-size:1.05em;line-height:1.6;color:var(--encre);
+    text-align:left;
+  }
+  .encadre{
+    margin:2.2rem 0;padding:1.5rem 1.7rem;
+    border:1px solid var(--filet);border-radius:6px;
+    background:linear-gradient(180deg,rgba(232,132,60,.08),rgba(232,132,60,.02));
+  }
+  .encadre h4{margin-top:0;color:var(--or-clair);}
+  .encadre p:last-child,.encadre .liste:last-child{margin-bottom:0;}
+
+  .tableau{margin:2.4rem 0;padding:0;}
+  .tableau figcaption{
+    font-family:"Cormorant Garamond",serif;font-size:1.15rem;font-weight:600;
+    letter-spacing:.04em;color:var(--or-clair);margin-bottom:.8rem;
+  }
+  .tableau__scroll{overflow-x:auto;border:1px solid var(--filet);border-radius:6px;}
+  .tableau table{
+    border-collapse:collapse;width:100%;
+    font-size:.82rem;line-height:1.5;
+  }
+  .tableau th,.tableau td{
+    padding:.6rem .85rem;text-align:left;vertical-align:top;
+    border-bottom:1px solid rgba(232,132,60,.16);
+  }
+  .tableau th{
+    font-family:"Cormorant Garamond",serif;font-size:.9rem;font-weight:600;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--or);
+    background:rgba(232,132,60,.10);border-bottom:1px solid var(--filet-fort);
+  }
+  .tableau tbody tr:nth-child(even){background:rgba(255,255,255,.018);}
+  .tableau tbody tr:hover{background:rgba(232,132,60,.07);}
+  .tableau td{color:var(--encre-doux);}
+  .tableau td:first-child{color:var(--encre);}
+  .tableau tr.t-sect td{
+    font-family:"Cormorant Garamond",serif;font-size:.95rem;font-weight:600;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--feuille);
+    background:rgba(232,132,60,.09);
+  }
+
+  .divider{
+    display:flex;align-items:center;justify-content:center;gap:1.4rem;
+    max-width:var(--max);margin:0 auto;
+    padding:0 2rem;color:var(--or);
+  }
+  .divider::before,.divider::after{
+    content:"";height:1px;width:min(7rem,22%);
+    background:linear-gradient(90deg,transparent,var(--filet-fort),transparent);
+  }
+  .divider span{font-size:.8rem;}
+
+  .footer{
+    position:relative;z-index:2;text-align:center;
+    border-top:1px solid var(--filet);
+    margin-top:2rem;padding:3.6rem 1.4rem 3.2rem;
+    background:linear-gradient(180deg,transparent,rgba(16,16,16,.7));
+  }
+  .footer__logo{
+    display:block;width:auto;
+    height:clamp(5rem,12vw,7rem);
+    margin:0 auto 1.6rem;
+  }
+  .footer__church{
+    font-family:"Cormorant Garamond",serif;font-size:1.7rem;font-weight:600;
+    letter-spacing:.04em;color:var(--encre);margin:0 0 .3rem;
+  }
+  .footer__line{font-size:1rem;color:var(--encre-doux);margin:.2rem 0;}
+  .footer__source{
+    max-width:42rem;margin:1.4rem auto 0;
+    font-size:.88rem;font-style:italic;color:var(--encre-doux);line-height:1.5;
+  }
+  .footer__sdg{
+    margin-top:1.8rem;font-size:.86rem;letter-spacing:.36em;
+    text-transform:uppercase;color:var(--or);
+  }
+
+  @media (max-width:560px){
+    .nav__brand{font-size:1.3rem;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .scrollcue{animation:none;}
+    .hero__logo,.hero__kicker,.hero__title,.ornament,.hero__verse,.hero__ref,.hero__series,.hero__frame{
+      opacity:1;animation:none;
+    }
+  }
+  .logos{
+    display:flex;align-items:center;justify-content:center;
+    gap:clamp(1.2rem,4vw,2.8rem);flex-wrap:wrap;
+    margin:0 auto 1.7rem;
+  }
+  .logos img{margin:0;}
+  .logos__fts{
+    display:block;width:auto;
+    height:clamp(2.8rem,6.6vw,4.2rem);
+  }
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="nav__progress" id="navProgress" aria-hidden="true"></div>
+  <a class="nav__logo" href="#hero" aria-label="Église Baptiste de Charlesbourg, haut de page">
+    <img src="../../LogoEBC.avif" width="80" height="250" alt="" decoding="async">
+  </a>
+  <span class="nav__brand">EBC</span>
+  <nav class="nav__links" aria-label="Sections">
+    <a href="#honore-ses-parents">Ses parents</a>
+    <a href="#vit-le-celibat">Le célibat</a>
+    <a href="#aime-son-epouse">Son épouse</a>
+    <a href="#dirige-sa-famille">Sa famille</a>
+    <a href="#disciples">Ses enfants</a>
+    <a href="#culte-familial">Le culte familial</a>
+    <a href="#amities">Ses amitiés</a>
+    <a href="#temoigne">Son témoignage</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ============ PAGE-TITRE ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__frame" aria-hidden="true"></div>
+    <p style="margin:0 0 1.6rem;">
+      <a href="../../index.html" class="pill">&#8598;&nbsp;Études bibliques</a>
+    </p>
+    <div class="logos">
+      <a href="https://www.ebcharlesbourg.com/" target="_blank" rel="noopener" aria-label="Site de l’Église Baptiste de Charlesbourg"><img class="hero__logo" src="../../LogoEBC.avif" width="80" height="250" alt="" decoding="async"></a>
+      <a href="https://ftscriptura.com/" target="_blank" rel="noopener" aria-label="Faculté de Théologie Scriptura"><img class="logos__fts" src="../../LogoScriptura.webp" width="600" height="216" alt="" decoding="async"></a>
+    </div>
+    <p class="hero__kicker">L’homme racheté</p>
+    <h1 class="hero__title">Autrui</h1>
+    <div class="ornament" aria-hidden="true"><span>&#9670;</span></div>
+    <p class="hero__verse"><span class="q">&laquo;</span>&nbsp;Marchez dans l’amour, à l’exemple de Christ, qui nous a aimés, et qui s’est livré lui-même à Dieu pour nous.&nbsp;<span class="q">&raquo;</span></p>
+    <p class="hero__ref">Éphésiens 5.2 · NEG</p>
+    <p class="hero__series">Les relations de l’homme pieux avec <b>autrui</b></p>
+    <div class="scrollcue" aria-hidden="true">&#8595;</div>
+  </section>
+
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+
+  <article class="section" id="sommaire">
+    <header class="sec-head">
+      <p class="kicker">Plan</p>
+      <h2 class="sec-title">Les huit chapitres</h2>
+    </header>
+    <p class="lead">La piété d’un homme se vérifie là où il est le plus connu : dans sa maison, dans ses amitiés, devant ceux qui ne croient pas.</p>
+    <ul class="livres">
+      <li class="livre"><a href="#honore-ses-parents">
+        <span class="livre__num">05</span>
+        <span class="livre__titre">Il honore ses parents</span>
+        <span class="livre__theme">Le cinquième commandement · Obéir et honorer · Le devoir du fils adulte</span>
+        <span class="livre__ref">Lire<span class="livre__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
+      <li class="livre"><a href="#vit-le-celibat">
+        <span class="livre__num">06</span>
+        <span class="livre__titre">Il vit le célibat</span>
+        <span class="livre__theme">Un don, non un défaut · Pureté · Service sans distraction</span>
+        <span class="livre__ref">Lire<span class="livre__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
+      <li class="livre"><a href="#aime-son-epouse">
+        <span class="livre__num">07</span>
+        <span class="livre__titre">Il aime son épouse</span>
+        <span class="livre__theme">Aimer comme Christ · Se livrer · Habiter avec elle avec sagesse</span>
+        <span class="livre__ref">Lire<span class="livre__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
+      <li class="livre"><a href="#dirige-sa-famille">
+        <span class="livre__num">08</span>
+        <span class="livre__titre">Il dirige sa famille</span>
+        <span class="livre__theme">L’ordre établi · Responsabilité · Ni tyrannie ni abdication</span>
+        <span class="livre__ref">Lire<span class="livre__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
+      <li class="livre"><a href="#disciples">
+        <span class="livre__num">09</span>
+        <span class="livre__titre">Il fait de ses enfants des disciples</span>
+        <span class="livre__theme">Évangéliser · Instruire · Corriger · Ne pas décourager</span>
+        <span class="livre__ref">Lire<span class="livre__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
+      <li class="livre"><a href="#culte-familial">
+        <span class="livre__num">10</span>
+        <span class="livre__titre">Il progresse dans le culte familial</span>
+        <span class="livre__theme">Lire · Prier · Chanter · Persévérer</span>
+        <span class="livre__ref">Lire<span class="livre__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
+      <li class="livre"><a href="#amities">
+        <span class="livre__num">11</span>
+        <span class="livre__titre">Il cultive ses amitiés</span>
+        <span class="livre__theme">L’amitié selon Christ · Redevabilité · L’isolement masculin</span>
+        <span class="livre__ref">Lire<span class="livre__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
+      <li class="livre"><a href="#temoigne">
+        <span class="livre__num">12</span>
+        <span class="livre__titre">Il témoigne auprès des incroyants</span>
+        <span class="livre__theme">Ambassadeur · Contenu de l’Évangile · Douceur et respect</span>
+        <span class="livre__ref">Lire<span class="livre__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
+    </ul>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+
+  <article class="section" id="introduction">
+    <header class="sec-head">
+      <p class="kicker">Introduction</p>
+      <h2 class="sec-title">La piété se vérifie à la maison</h2>
+    </header>
+    <p>Un homme peut donner une impression irréprochable à l’Église pendant deux heures le dimanche. Sa femme, ses enfants, ses parents vieillissants et ses collègues, eux, le voient le reste de la semaine. C’est là que la doctrine devient vérifiable.</p>
+    <p>Le Seigneur a lié les deux grands commandements sans permettre de les séparer : aimer Dieu de tout son cœur, et « tu aimeras ton prochain comme toi-même. Il n’y a pas d’autre commandement plus grand que ceux-là » (Marc 12.30-31). L’amour du prochain n’est pas une application facultative de l’amour de Dieu : c’en est la preuve. Jean est catégorique — celui qui n’aime pas son frère qu’il voit ne peut aimer Dieu qu’il ne voit pas (1 Jean 4.20).</p>
+    <p>Ce qui suit ne relève donc pas de la sociologie familiale ni du développement personnel. C’est de la théologie appliquée : parce que Dieu est Créateur, il a établi un ordre ; parce que Christ a aimé l’Église et s’est livré pour elle, le mari sait comment aimer ; parce que Dieu est Père, un homme apprend à en être un ; parce que Christ a appelé ses disciples ses amis, un homme sait ce qu’est une amitié ; et parce que Dieu réconcilie des pécheurs, un homme a quelque chose à dire à ses voisins.</p>
+    <div class="encadre">
+      <h4>Ce qui suit et sous quelle lentille</h4>
+      <p>Les intitulés des huit chapitres sont ceux de la table des matières de <i>The Redeemed Man</i> (Richard D. Phillips, dir.), retenus ici comme plan de travail. L’exposition est rédigée sous la <b>seule lentille de John MacArthur</b>, conformément au cadre du dépôt et à la confession de foi de l’Église : herméneutique grammatico-historique, complémentarité des rôles fondée sur la création, baptême des croyants par immersion (les enfants de croyants ne sont pas présumés régénérés), suffisance de l’Écriture, cessationnisme.</p>
+      <p style="margin-bottom:0;">Ce chapitre suppose acquis ce qui précède : un homme ne peut aimer personne comme Dieu le demande avant d’avoir été lui-même racheté. Citations bibliques : Nouvelle Édition de Genève 1979 (NEG).</p>
+    </div>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+
+  <article class="section" id="honore-ses-parents">
+    <header class="sec-head">
+      <p class="kicker">Chapitre 5 · Terry Johnson</p>
+      <h2 class="sec-title">L’homme racheté honore ses parents</h2>
+    </header>
+    <ul class="sommaire">
+      <li><a href="#h-commandement">Le premier commandement avec une promesse</a></li>
+      <li><a href="#h-obeir-honorer">Obéir, puis honorer</a></li>
+      <li><a href="#h-corban">Le piège du corban</a></li>
+      <li><a href="#h-difficiles">Des parents difficiles, absents ou incroyants</a></li>
+      <li><a href="#h-limites">Les limites de l’honneur</a></li>
+    </ul>
+
+    <p>La première relation humaine qu’un homme a connue est celle qu’il n’a pas choisie. Avant d’être époux, père ou travailleur, il a été le fils de quelqu’un — et il le reste jusqu’à la mort de ses parents, souvent au moment où ceux-ci deviennent une charge plutôt qu’un appui.</p>
+
+    <h3 id="h-commandement">Le premier commandement avec une promesse</h3>
+    <p>« Honore ton père et ta mère, afin que tes jours se prolongent dans le pays que l’Éternel, ton Dieu, te donne » (Exode 20.12). Paul reprend ce commandement pour les chrétiens et souligne sa singularité :</p>
+    <blockquote class="vers">Enfants, obéissez à vos parents, selon le Seigneur, car cela est juste. Honore ton père et ta mère (c’est le premier commandement avec une promesse), afin que tu sois heureux et que tu vives longtemps sur la terre. (Éphésiens 6.1-3)</blockquote>
+    <p>Sa position est significative : il ouvre la seconde table de la loi, celle qui règle les rapports humains. L’autorité parentale est la première autorité qu’un homme rencontre, et l’apprentissage qu’il en fait détermine son rapport à toutes les autres — celle de l’État, celle de l’employeur, celle des anciens de son Église, et finalement celle de Dieu. Un homme qui méprise ses parents a rarement du respect pour quoi que ce soit d’autre.</p>
+
+    <h3 id="h-obeir-honorer">Obéir, puis honorer</h3>
+    <p>Le commandement demande deux choses distinctes, et les confondre cause beaucoup de dégâts.</p>
+    <figure class="tableau">
+      <figcaption>Deux devoirs, deux saisons</figcaption>
+      <div class="tableau__scroll">
+      <table>
+        <thead><tr><th></th><th>Obéir</th><th>Honorer</th></tr></thead>
+        <tbody>
+          <tr><td>Qui</td><td>L’enfant sous le toit parental</td><td>Le fils, à tout âge, jusqu’à la mort de ses parents</td></tr>
+          <tr><td>Durée</td><td>Une saison</td><td>Toute la vie</td></tr>
+          <tr><td>Contenu</td><td>Se soumettre aux directives</td><td>Respect, parole, reconnaissance, soutien concret</td></tr>
+          <tr><td>Texte</td><td>Éphésiens 6.1 ; Colossiens 3.20</td><td>Exode 20.12 ; Matthieu 15.4 ; 1 Timothée 5.4</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </figure>
+    <p>L’homme marié n’est plus sous l’autorité de ses parents : « l’homme quittera son père et sa mère, s’attachera à sa femme, et les deux deviendront une seule chair » (Éphésiens 5.31). Quitter est un ordre. Un homme qui gouverne encore son ménage d’après les avis de sa mère n’honore pas ses parents ; il désobéit à Dieu et blesse sa femme. Mais quitter ne signifie jamais abandonner : l’autorité cesse, l’honneur demeure.</p>
+
+    <h3 id="h-corban">Le piège du corban</h3>
+    <blockquote class="vers">Car Dieu a dit : Honore ton père et ta mère […]. Mais vous, vous dites : Celui qui dira à son père ou à sa mère : Ce dont j’aurais pu t’assister est une offrande à Dieu, n’est pas tenu d’honorer son père ou sa mère. Vous annulez ainsi la parole de Dieu au profit de votre tradition. (Matthieu 15.4-6)</blockquote>
+    <p>Les pharisiens avaient trouvé le moyen de paraître pieux tout en abandonnant leurs parents : consacrer à Dieu ce qui aurait dû les nourrir. Jésus appelle cela annuler la Parole de Dieu. La version contemporaine du corban est facile à reconnaître : un homme trop occupé par son ministère, son travail ou ses projets pour visiter, appeler, soutenir financièrement ou prendre soin d’un parent âgé.</p>
+    <blockquote class="vers">Si une veuve a des enfants ou des petits-enfants, qu’ils apprennent avant tout à exercer la piété envers leur propre famille, et à rendre à leurs parents ce qu’ils ont reçu d’eux ; car cela est agréable à Dieu. […] Si quelqu’un n’a pas soin des siens, et principalement de ceux de sa famille, il a renié la foi, et il est pire qu’un infidèle. (1 Timothée 5.4,8)</blockquote>
+    <p>Le langage est brutal, et Paul l’a voulu ainsi. Le soin des parents vieillissants n’est pas une option de tempérament : c’est une obligation chrétienne, dont l’Église elle-même n’a pas à se charger tant que la famille peut le faire.</p>
+
+    <h3 id="h-difficiles">Des parents difficiles, absents ou incroyants</h3>
+    <p>Le commandement ne comporte aucune clause de mérite : il ne dit pas « honore tes parents s’ils l’ont mérité ». Beaucoup d’hommes portent des blessures réelles — un père absent, violent, alcoolique, ou une mère manipulatrice. Honorer, dans ces cas-là, ne veut pas dire réécrire le passé ni feindre que le mal n’a pas eu lieu. Cela veut dire :</p>
+    <ul class="liste">
+      <li>pardonner comme on a été pardonné (Colossiens 3.13), sans attendre des excuses qui ne viendront peut-être jamais ;</li>
+      <li>refuser l’amertume et la médisance — un fils chrétien ne fait pas le procès public de son père ;</li>
+      <li>pourvoir au nécessaire quand le besoin se présente, même si l’affection n’a jamais été rendue ;</li>
+      <li>prier pour leur salut et saisir les occasions de leur annoncer l’Évangile ;</li>
+      <li>rompre la chaîne : devenir pour ses propres enfants le père qu’il n’a pas eu.</li>
+    </ul>
+
+    <h3 id="h-limites">Les limites de l’honneur</h3>
+    <div class="encadre">
+      <h4>Quand un parent exige ce que Dieu interdit</h4>
+      <p>L’honneur dû aux parents est réel, mais il n’est pas absolu. Aucune autorité humaine ne peut exiger la désobéissance à Dieu : « Il faut obéir à Dieu plutôt qu’aux hommes » (Actes 5.29). Et Christ revendique une préséance qu’aucun lien de sang ne conteste : « Celui qui aime son père ou sa mère plus que moi n’est pas digne de moi » (Matthieu 10.37).</p>
+      <p style="margin-bottom:0;">Un homme peut donc avoir à décevoir ses parents — sur son Église, sur l’éducation de ses enfants, sur sa fidélité conjugale, sur un péché qu’ils lui demandent de couvrir. Il le fera avec respect, sans arrogance, sans rompre le lien s’il peut l’éviter. Refuser d’obéir n’autorise jamais à cesser d’honorer.</p>
+    </div>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+
+  <article class="section" id="vit-le-celibat">
+    <header class="sec-head">
+      <p class="kicker">Chapitre 6 · Curt Daniel</p>
+      <h2 class="sec-title">L’homme racheté vit le célibat</h2>
+    </header>
+    <ul class="sommaire">
+      <li><a href="#ce-don">Un don, non un défaut</a></li>
+      <li><a href="#ce-avantage">L’avantage du célibat</a></li>
+      <li><a href="#ce-purete">La pureté, sans laquelle rien ne tient</a></li>
+      <li><a href="#ce-famille">Le célibataire n’est pas seul</a></li>
+      <li><a href="#ce-deux-erreurs">Deux erreurs symétriques</a></li>
+    </ul>
+
+    <p>Tous les hommes rachetés ne se marieront pas. Certains y sont appelés pour un temps, d’autres pour toute leur vie ; d’autres encore le vivent sans l’avoir choisi — par deuil, par abandon, ou simplement parce que le mariage ne s’est pas présenté. L’Écriture ne traite aucun d’eux comme un chrétien de seconde classe.</p>
+
+    <h3 id="ce-don">Un don, non un défaut</h3>
+    <blockquote class="vers">Je voudrais que tous les hommes soient comme moi ; mais chacun tient de Dieu un don particulier, l’un d’une manière, l’autre d’une autre. À ceux qui ne sont pas mariés et aux veuves, je dis qu’il leur est bon de rester comme moi. Mais s’ils manquent de maîtrise d’eux-mêmes, qu’ils se marient ; car il vaut mieux se marier que de brûler. (1 Corinthiens 7.7-9)</blockquote>
+    <p>Paul, célibataire, ne présente ni le mariage ni le célibat comme supérieur en soi : les deux sont des dons, et chacun reçoit le sien. Jésus dit la même chose de ceux qui « se sont rendus eux-mêmes eunuques, à cause du royaume des cieux » et ajoute : « Que celui qui peut comprendre comprenne » (Matthieu 19.12).</p>
+    <p>Le critère pratique donné par Paul est d’une sobriété désarmante : la maîtrise de soi. Un homme qui ne peut vivre la continence sans être consumé doit se marier ; ce n’est pas un échec spirituel, c’est le remède que Dieu a prévu. Inversement, un homme qui vit paisiblement le célibat n’a aucune raison de le considérer comme une salle d’attente.</p>
+
+    <h3 id="ce-avantage">L’avantage du célibat</h3>
+    <blockquote class="vers">Celui qui n’est pas marié s’inquiète des choses du Seigneur, des moyens de plaire au Seigneur ; et celui qui est marié s’inquiète des choses du monde, des moyens de plaire à sa femme. […] Je dis cela dans votre intérêt ; ce n’est pas pour vous prendre au piège, c’est pour vous porter à ce qui est bienséant et propre à vous attacher au Seigneur sans distraction. (1 Corinthiens 7.32-35)</blockquote>
+    <p>Le mariage crée des obligations légitimes qui prennent du temps, de l’argent et de l’attention. Le célibataire dispose d’une liberté que l’homme marié n’a pas : disponibilité pour le service, mobilité pour la mission, souplesse d’horaire pour la formation, capacité de donner. Un célibataire chrétien qui consacre cette liberté à lui-même gaspille précisément ce qui fait la valeur de son état.</p>
+
+    <h3 id="ce-purete">La pureté, sans laquelle rien ne tient</h3>
+    <blockquote class="vers">Ce que Dieu veut, c’est votre sanctification ; c’est que vous vous absteniez de la débauche ; c’est que chacun de vous sache posséder son corps dans la sainteté et l’honnêteté, sans vous livrer à une convoitise passionnée, comme font les païens qui ne connaissent pas Dieu. (1 Thessaloniciens 4.3-5)</blockquote>
+    <p>La norme du Nouveau Testament ne connaît qu’une alternative : la fidélité dans le mariage entre un homme et une femme, ou l’abstinence hors du mariage. Et elle atteint le regard avant les actes : « quiconque regarde une femme pour la convoiter a déjà commis un adultère avec elle dans son cœur » (Matthieu 5.28). À l’ère de la pornographie disponible en permanence, cette parole n’a rien perdu de son tranchant — elle a simplement changé d’échelle.</p>
+    <p>Concrètement, un homme sérieux au sujet de sa pureté agit avant la tentation, non pendant : filtres et redevabilité réelle sur ses appareils, refus des situations d’isolement avec une femme, discipline du sommeil et de l’ennui — deux terrains classiques de la chute —, service et travail qui occupent utilement l’énergie, et un frère à qui il dit la vérité.</p>
+
+    <h3 id="ce-famille">Le célibataire n’est pas seul</h3>
+    <p>L’Église locale est une famille, et Paul la décrit en termes domestiques : traiter « les jeunes gens comme des frères, les femmes âgées comme des mères, celles qui sont jeunes comme des sœurs, en toute pureté » (1 Timothée 5.1-2). Un homme célibataire y a des frères, des sœurs, des pères et des mères spirituels ; il y a aussi une place à tenir. Les familles de l’assemblée, de leur côté, ont la responsabilité de ne pas laisser les célibataires en marge de leur table et de leur vie.</p>
+
+    <h3 id="ce-deux-erreurs">Deux erreurs symétriques</h3>
+    <div class="encadre">
+      <h4>Ni obligation, ni mépris</h4>
+      <p><b>Imposer le célibat</b> est explicitement dénoncé comme une doctrine de démons : ceux qui « prescrivent de ne pas se marier » abandonnent la foi (1 Timothée 4.1-3). Aucun ministère chrétien n’a le droit d’exiger le célibat de ses serviteurs.</p>
+      <p style="margin-bottom:0;"><b>Mépriser le célibat</b> est l’erreur inverse, plus répandue dans nos milieux : traiter l’homme non marié comme un adolescent prolongé, un projet à régler ou un cas à plaindre. Le Seigneur Jésus lui-même n’a pas été marié, et Paul non plus. Le mariage est un bien immense ; il n’est ni le sommet de la vie chrétienne ni la mesure de la maturité d’un homme.</p>
+    </div>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+  <article class="section" id="aime-son-epouse">
+    <header class="sec-head">
+      <p class="kicker">Chapitre 7 · Joel R. Beeke</p>
+      <h2 class="sec-title">L’homme racheté aime son épouse</h2>
+    </header>
+    <ul class="sommaire">
+      <li><a href="#e-modele">Le modèle : Christ et l’Église</a></li>
+      <li><a href="#e-livrer">Se livrer lui-même pour elle</a></li>
+      <li><a href="#e-sanctifier">La sanctifier par l’eau de la parole</a></li>
+      <li><a href="#e-nourrir">La nourrir et en prendre soin</a></li>
+      <li><a href="#e-sagesse">Habiter avec elle avec sagesse</a></li>
+      <li><a href="#e-aigrir">Ne pas s’aigrir contre elle</a></li>
+    </ul>
+
+    <p>Aucun commandement adressé aux maris n’est plus exigeant que celui-ci, parce qu’aucun n’a un étalon plus élevé. Dieu ne demande pas au mari d’aimer sa femme comme il le peut, ni comme son père l’a fait, ni comme la culture le suggère, mais comme Christ a aimé l’Église.</p>
+
+    <h3 id="e-modele">Le modèle : Christ et l’Église</h3>
+    <blockquote class="vers">Maris, que chacun aime sa femme, comme Christ a aimé l’Église, et s’est livré lui-même pour elle, afin de la sanctifier en la purifiant et en la lavant par l’eau de la parole, pour faire paraître devant lui cette Église glorieuse, sans tache, ni ride, ni rien de semblable, mais sainte et irréprochable. (Éphésiens 5.25-27)</blockquote>
+    <p>Paul ajoute que le mariage est un « mystère » qui parle « par rapport à Christ et à l’Église » (v. 32). Le mariage chrétien n’est donc pas d’abord un arrangement destiné au bonheur des conjoints : c’est une image publique de l’Évangile. Un mari qui traite mal sa femme ne se contente pas de la blesser ; il donne du Christ une représentation mensongère à ses enfants et à ses voisins.</p>
+    <p>Trois verbes structurent le passage, et chacun décrit une facette du même amour.</p>
+
+    <h3 id="e-livrer">Se livrer lui-même pour elle</h3>
+    <p>Le premier mouvement de l’amour du Christ est le sacrifice : il « s’est livré lui-même ». L’autorité que le Nouveau Testament reconnaît au mari n’est jamais un privilège à consommer ; c’est une charge à payer. Le chef, dans ce texte, est celui qui meurt.</p>
+    <figure class="tableau">
+      <figcaption>« Aimer comme Christ a aimé » : ce que cela coûte en pratique</figcaption>
+      <div class="tableau__scroll">
+      <table>
+        <thead><tr><th>Christ envers l’Église</th><th>Le mari envers sa femme</th></tr></thead>
+        <tbody>
+          <tr><td>Il a aimé le premier, sans mérite de notre part</td><td>Il aime sans conditionner son amour à ce qu’il reçoit</td></tr>
+          <tr><td>Il s’est livré lui-même</td><td>Il renonce à son confort, son temps, ses projets, sa tranquillité</td></tr>
+          <tr><td>Il la purifie par la parole</td><td>Il prend l’initiative spirituelle : Écriture, prière, culte</td></tr>
+          <tr><td>Il la nourrit et en prend soin</td><td>Il pourvoit, protège, écoute, connaît ses besoins réels</td></tr>
+          <tr><td>Il ne l’abandonne jamais</td><td>Il tient parole, y compris dans la maladie et l’échec</td></tr>
+          <tr><td>Il la présentera glorieuse</td><td>Il travaille au bien de sa femme, non à sa propre image</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </figure>
+
+    <h3 id="e-sanctifier">La sanctifier par l’eau de la parole</h3>
+    <p>Christ agit sur son Église par sa Parole, et le mari est appelé à la même direction — sans jamais se substituer au Seigneur. Cela suppose qu’il connaisse lui-même l’Écriture : un homme ne peut conduire sa femme là où il ne va pas.</p>
+    <p>Concrètement : il prie avec elle et pour elle, il lit la Bible en famille, il l’encourage dans son propre attachement au Seigneur, il ramène les décisions et les conflits devant le texte plutôt que devant son opinion. Ce que Paul décrit ici est un mari qui rend sa femme plus sainte, non un mari qui la surveille.</p>
+
+    <h3 id="e-nourrir">La nourrir et en prendre soin</h3>
+    <blockquote class="vers">C’est ainsi que le mari doit aimer sa femme comme son propre corps. Celui qui aime sa femme s’aime lui-même. Car jamais personne n’a haï sa propre chair, mais il la nourrit et en prend soin, comme Christ le fait pour l’Église. (Éphésiens 5.28-29)</blockquote>
+    <p>L’argument est d’une simplicité redoutable : un homme s’occupe de son propre corps sans y penser — il le nourrit, le soigne, le repose, le protège. Sa femme est « une seule chair » avec lui. La négliger, c’est se négliger. La tendresse n’est pas ici un supplément de tempérament : elle est commandée.</p>
+
+    <h3 id="e-sagesse">Habiter avec elle avec sagesse</h3>
+    <blockquote class="vers">Maris, montrez à votre tour de la sagesse dans vos rapports avec votre femme, comme avec un sexe plus faible ; honorez-la, comme devant aussi hériter avec vous de la grâce de la vie. Qu’il en soit ainsi, afin que rien ne vienne faire obstacle à vos prières. (1 Pierre 3.7)</blockquote>
+    <p>Trois exigences en un verset. <b>La connaissance</b> : un mari doit étudier sa femme — ce qui la porte, ce qui l’épuise, ce qui la blesse — plutôt que de la traiter selon des généralités. <b>L’honneur</b> : la délicatesse due à ce qui est précieux, non le mépris ; « plus faible » ne désigne ni l’intelligence ni la valeur, mais la constitution physique et la vulnérabilité qu’un mari a mandat de protéger. <b>L’égalité devant Dieu</b> : elle est cohéritière de la même grâce ; la différence de rôle n’implique aucune différence de dignité.</p>
+    <p>La sanction attachée est unique dans l’Écriture : les prières du mari sont entravées. Un homme qui traite durement sa femme ne peut pas compenser par une vie de dévotion ; Dieu refuse la transaction.</p>
+
+    <h3 id="e-aigrir">Ne pas s’aigrir contre elle</h3>
+    <blockquote class="vers">Maris, que chacun aime sa femme et ne s’aigrisse pas contre elle. (Colossiens 3.19)</blockquote>
+    <p>L’amertume est le péché conjugal typiquement masculin. Elle s’installe lentement : une déception non dite, une comparaison, une rancune tenue en réserve, un ton devenu sec, un silence qui punit. Elle passe souvent inaperçue à celui qui la nourrit, jamais à celle qui la subit.</p>
+    <p>Le remède est celui de tout péché : le nommer, le confesser à Dieu et à elle, et revêtir ce que Paul commande quelques versets plus haut — « compassion, bonté, humilité, douceur, patience […] pardonnez-vous réciproquement. De même que Christ vous a pardonné, pardonnez-vous aussi » (Colossiens 3.12-13). Un mari qui demande pardon à sa femme devant ses enfants leur enseigne davantage sur l’Évangile qu’une année de leçons.</p>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+
+  <article class="section" id="dirige-sa-famille">
+    <header class="sec-head">
+      <p class="kicker">Chapitre 8 · Jason Helopoulos</p>
+      <h2 class="sec-title">L’homme racheté dirige sa famille</h2>
+    </header>
+    <ul class="sommaire">
+      <li><a href="#d-ordre">L’ordre établi par Dieu</a></li>
+      <li><a href="#d-nature">Ce qu’est cette direction</a></li>
+      <li><a href="#d-echecs">Les deux échecs</a></li>
+      <li><a href="#d-eglise">La maison, terrain d’essai du service</a></li>
+    </ul>
+
+    <h3 id="d-ordre">L’ordre établi par Dieu</h3>
+    <blockquote class="vers">Je veux cependant que vous sachiez que Christ est le chef de tout homme, que l’homme est le chef de la femme, et que Dieu est le chef de Christ. (1 Corinthiens 11.3)</blockquote>
+    <p>L’analogie est décisive et elle règle d’avance la question de la dignité. Le Fils est pleinement égal au Père en essence, en gloire et en éternité ; il se soumet pourtant volontairement à lui dans l’économie de la rédemption. Il n’y a donc aucune infériorité dans la soumission, et aucune supériorité dans la fonction de chef.</p>
+    <p>Cet ordre n’est pas un produit de la chute ni d’une culture ancienne : Paul le fonde sur la création (1 Timothée 2.13). Le péché n’a pas créé la structure ; il l’a corrompue, en produisant d’un côté la domination et de l’autre la rébellion (Genèse 3.16). La rédemption ne supprime pas la structure : elle la restaure.</p>
+
+    <h3 id="d-nature">Ce qu’est cette direction</h3>
+    <ul class="liste">
+      <li><b>Une responsabilité, pas un privilège.</b> Dieu a interpellé Adam le premier, bien que Ève ait mangé la première (Genèse 3.9). Le chef est celui qui répond.</li>
+      <li><b>Une initiative spirituelle.</b> C’est lui qui décide que la famille lit l’Écriture, prie, se lève le dimanche, sert dans l’assemblée — non parce que sa femme le lui rappelle.</li>
+      <li><b>Une protection.</b> Physique, financière, mais surtout doctrinale et morale : ce qui entre dans la maison, ce qui occupe les écrans, ce qui influence les enfants.</li>
+      <li><b>Un pourvoi.</b> « Si quelqu’un n’a pas soin des siens […] il a renié la foi » (1 Timothée 5.8).</li>
+      <li><b>Un exemple.</b> Sa manière de parler, de perdre son sang-froid, de traiter un employé ou de réagir à une contrariété enseigne davantage que ses discours.</li>
+      <li><b>Une consultation réelle.</b> Diriger n’est pas décider seul : un homme sage écoute sa femme, dont le discernement lui manque souvent, et n’use de la décision finale que lorsqu’il le faut.</li>
+    </ul>
+
+    <h3 id="d-echecs">Les deux échecs</h3>
+    <div class="encadre">
+      <h4>L’abdicataire et le tyran</h4>
+      <p><b>L’abdication</b> est l’échec d’Adam, qui était là, silencieux, pendant que sa femme parlait avec le serpent (Genèse 3.6). Sa forme moderne est banale : un homme présent physiquement, absent spirituellement, qui laisse à sa femme la charge de la foi de la maison et se réfugie dans le travail, les écrans ou ses loisirs.</p>
+      <p><b>La tyrannie</b> est l’échec inverse : l’homme qui invoque son autorité pour se faire servir, impose sans écouter, humilie, ou traite l’obéissance de sa femme comme un dû. L’Écriture ne lui donne aucun appui : le chef, selon Éphésiens 5, est celui qui se livre lui-même.</p>
+      <p style="margin-bottom:0;">Éli offre le troisième cas, plus subtil : un homme pieux par ailleurs, mais qui n’a pas repris ses fils. Dieu le tient pour responsable de les avoir honorés plus que lui (1 Samuel 2.29). La faiblesse paternelle est traitée comme une faute, pas comme un trait de caractère.</p>
+    </div>
+
+    <h3 id="d-eglise">La maison, terrain d’essai du service</h3>
+    <blockquote class="vers">Il faut qu’il dirige bien sa propre maison, et qu’il tienne ses enfants dans la soumission et dans une parfaite honnêteté ; car si quelqu’un ne sait pas diriger sa propre maison, comment prendra-t-il soin de l’Église de Dieu ? (1 Timothée 3.4-5)</blockquote>
+    <p>Dieu a fixé lui-même l’ordre de vérification : la maison d’abord, l’assemblée ensuite. Un homme dont le foyer est en désordre n’est pas qualifié pour diriger l’Église, quels que soient ses talents. Et l’inverse est vrai : la fidélité domestique, invisible et sans applaudissements, est exactement l’école où Dieu forme ceux qu’il appellera à servir plus largement.</p>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+  <article class="section" id="disciples">
+    <header class="sec-head">
+      <p class="kicker">Chapitre 9 · Richard D. Phillips</p>
+      <h2 class="sec-title">L’homme racheté fait de ses enfants des disciples</h2>
+    </header>
+    <ul class="sommaire">
+      <li><a href="#f-charge">La charge est confiée au père</a></li>
+      <li><a href="#f-evangeliser">Évangéliser ses propres enfants</a></li>
+      <li><a href="#f-instruire">Instruire : le contenu et le moment</a></li>
+      <li><a href="#f-corriger">Corriger sans exaspérer</a></li>
+      <li><a href="#f-resultat">Ce qu’un père peut faire et ce qu’il ne peut pas faire</a></li>
+    </ul>
+
+    <h3 id="f-charge">La charge est confiée au père</h3>
+    <blockquote class="vers">Et vous, pères, n’irritez pas vos enfants, mais élevez-les en les corrigeant et en les instruisant selon le Seigneur. (Éphésiens 6.4)</blockquote>
+    <p>Paul aurait pu écrire « parents ». Il écrit « pères ». La mère instruit elle aussi, et le texte ne la met pas de côté, mais la responsabilité première est nommément assignée à l’homme. Il ne peut donc pas la déléguer à sa femme, à l’école du dimanche, à un camp d’été ou à l’Église.</p>
+    <p>Moïse décrit la méthode : les paroles de Dieu « seront dans ton cœur ; tu les inculqueras à tes enfants, et tu en parleras quand tu seras dans ta maison, quand tu iras en voyage, quand tu te coucheras et quand tu te lèveras » (Deutéronome 6.6-7). L’instruction commence dans le cœur du père — ce qu’il n’a pas, il ne le transmettra pas — et se déploie dans le quotidien plutôt que dans une leçon hebdomadaire.</p>
+
+    <h3 id="f-evangeliser">Évangéliser ses propres enfants</h3>
+    <p>Un point de doctrine commande toute la pratique : <b>les enfants de croyants ne naissent pas chrétiens</b>. Ils naissent pécheurs comme tous les autres, et ils ont besoin de naître de nouveau. Aucun rite, aucune généalogie et aucune éducation ne remplacent la régénération. C’est pourquoi le baptême est réservé à ceux qui professent personnellement la foi, et pourquoi un père n’a pas le droit de présumer la conversion de ses enfants parce qu’ils sont sages, qu’ils récitent des versets ou qu’ils fréquentent l’assemblée depuis toujours.</p>
+    <p>La conséquence est libératrice : le premier devoir d’un père n’est pas de fabriquer de bons comportements, mais de présenter Christ. Il annonce la loi qui condamne et la grâce qui sauve ; il montre à ses enfants leur cœur avant de leur montrer les règles. Un enfant simplement dressé sera un moraliste ; un enfant converti sera un frère.</p>
+    <blockquote class="vers">Dès ton enfance, tu connais les saintes lettres, qui peuvent te rendre sage à salut par la foi en Jésus-Christ. (2 Timothée 3.15)</blockquote>
+
+    <h3 id="f-instruire">Instruire : le contenu et le moment</h3>
+    <figure class="tableau">
+      <figcaption>Quatre gestes du père qui fait des disciples</figcaption>
+      <div class="tableau__scroll">
+      <table>
+        <thead><tr><th>Geste</th><th>Ce qu’il fait</th><th>Texte</th></tr></thead>
+        <tbody>
+          <tr><td>Instruire</td><td>Enseigner l’Écriture et la doctrine, répondre aux questions, expliquer le pourquoi</td><td>Deutéronome 6.6-7 ; Éphésiens 6.4</td></tr>
+          <tr><td>Corriger</td><td>Reprendre le péché avec constance et mesure, viser le cœur plutôt que l’apparence</td><td>Proverbes 13.24 ; Hébreux 12.7-11</td></tr>
+          <tr><td>Montrer</td><td>Vivre devant eux ce qu’il enseigne ; demander pardon quand il échoue</td><td>1 Corinthiens 11.1</td></tr>
+          <tr><td>Prier</td><td>Intercéder nommément pour leur conversion et leur persévérance</td><td>Job 1.5 ; Jacques 5.16</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </figure>
+    <p>Le meilleur moment pour instruire est rarement planifié : une question au souper, un conflit entre frères, un deuil, une injustice à l’école, une nouvelle entendue à la radio. Un père attentif traite ces occasions comme le programme que Dieu lui envoie.</p>
+
+    <h3 id="f-corriger">Corriger sans exaspérer</h3>
+    <blockquote class="vers">Pères, n’irritez pas vos enfants, de peur qu’ils ne se découragent. (Colossiens 3.21)</blockquote>
+    <p>Dieu prend au sérieux le risque paternel : un père peut briser un enfant. Les moyens en sont connus — l’exigence impossible à satisfaire, la sévérité inégale selon l’humeur, le sarcasme, la comparaison avec un frère, les promesses non tenues, la correction administrée dans la colère, l’absence d’affection exprimée.</p>
+    <p>La discipline biblique est l’inverse : constante, proportionnée, expliquée, jamais vengeresse, toujours suivie d’une restauration. Elle imite celle de Dieu, qui corrige ceux qu’il aime et qui produit ainsi « un fruit paisible de justice » (Hébreux 12.11).</p>
+
+    <h3 id="f-resultat">Ce qu’un père peut faire et ce qu’il ne peut pas faire</h3>
+    <div class="encadre">
+      <h4>Fidélité et souveraineté</h4>
+      <p>« Instruis l’enfant selon la voie qu’il doit suivre ; et quand il sera vieux, il ne s’en détournera pas » (Proverbes 22.6) est un proverbe : il énonce la voie ordinaire, non une garantie mécanique. Des pères fidèles ont eu des fils rebelles, et des pères négligents ont vu Dieu sauver leurs enfants. La régénération demeure l’œuvre souveraine de Dieu.</p>
+      <p style="margin-bottom:0;">Cela ne diminue en rien la responsabilité du père : il rendra compte de sa fidélité, non du résultat. Un homme dont l’enfant s’est éloigné doit continuer d’aimer, de prier, de tenir la porte ouverte et de refuser à la fois le désespoir et la culpabilité sans fin. Le Père parfait a lui-même des enfants qui se sont détournés.</p>
+    </div>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+
+  <article class="section" id="culte-familial">
+    <header class="sec-head">
+      <p class="kicker">Chapitre 10 · Joel R. Beeke</p>
+      <h2 class="sec-title">L’homme racheté progresse dans le culte familial</h2>
+    </header>
+    <ul class="sommaire">
+      <li><a href="#cf-pourquoi">Pourquoi la famille se rassemble</a></li>
+      <li><a href="#cf-elements">Les trois éléments</a></li>
+      <li><a href="#cf-pratique">La pratique : court, quotidien, tenable</a></li>
+      <li><a href="#cf-obstacles">Les obstacles réels</a></li>
+    </ul>
+
+    <h3 id="cf-pourquoi">Pourquoi la famille se rassemble</h3>
+    <p>Rien dans le Nouveau Testament ne fait du chef de famille un prêtre : le sacerdoce appartient à tous les croyants, et il n’y a qu’un seul médiateur, Jésus-Christ (1 Timothée 2.5). Mais celui à qui Dieu a confié l’instruction de ses enfants doit bien organiser le moment où elle a lieu. Le culte familial n’est pas une ordonnance ajoutée à l’Écriture : c’est simplement la forme régulière que prend l’obéissance à Deutéronome 6 et à Éphésiens 6.4.</p>
+    <p>Ce moment quotidien fait trois choses qu’aucune autre activité ne fait : il met la Parole de Dieu au centre de la maison, il place le père en position d’exercer sa charge, et il apprend aux enfants que Dieu n’est pas une affaire de dimanche matin.</p>
+
+    <h3 id="cf-elements">Les trois éléments</h3>
+    <ul class="liste">
+      <li><b>Lire</b> — un passage suivi, dans l’ordre du livre, expliqué en quelques phrases à hauteur des plus jeunes. Une ou deux questions valent mieux qu’un exposé.</li>
+      <li><b>Prier</b> — brièvement, à voix haute, en nommant des sujets réels : le travail, la maladie d’un proche, les péchés confessés, l’Église locale, les incroyants de la famille. Les enfants prient aussi.</li>
+      <li><b>Chanter</b> — « Que la parole de Christ demeure en vous dans toute sa richesse […] par des psaumes, par des hymnes, par des cantiques spirituels » (Colossiens 3.16). Même faux, même à trois voix hésitantes : ce que les enfants chantent, ils le retiendront cinquante ans.</li>
+    </ul>
+    <p>On peut y ajouter, selon l’âge, la mémorisation d’un verset ou d’une réponse de catéchisme. Rien de plus n’est requis.</p>
+
+    <h3 id="cf-pratique">La pratique : court, quotidien, tenable</h3>
+    <div class="encadre">
+      <h4>Commencer cette semaine</h4>
+      <p>Dix minutes, à heure fixe, de préférence après un repas où tout le monde est déjà assis. Un passage, quelques mots, une prière, un cantique. Le père conduit ; s’il est absent, la mère prend le relais.</p>
+      <p style="margin-bottom:0;">La régularité vaut mieux que la longueur : quinze minutes quotidiennes façonnent une famille bien davantage qu’une heure occasionnelle. Et un homme qui a manqué trois semaines recommence simplement ce soir, sans discours d’excuse.</p>
+    </div>
+    <p>Deux précisions utiles. D’abord, le culte familial ne remplace pas la lecture personnelle de l’Écriture, ni la vie de prière du couple. Ensuite, il ne remplace en aucun cas l’Église locale : la famille chrétienne n’est pas une mini-Église et le père n’est pas son pasteur. « N’abandonnons pas notre assemblée » (Hébreux 10.25) demeure entier.</p>
+
+    <h3 id="cf-obstacles">Les obstacles réels</h3>
+    <ul class="liste">
+      <li><b>Les horaires éclatés</b> — travail de soir, sports, devoirs. La réponse est de choisir le créneau le plus stable et de protéger celui-là, pas de renoncer.</li>
+      <li><b>Les enfants qui bougent</b> — un enfant de trois ans ne tiendra pas dix minutes immobile ; ce n’est pas un échec spirituel, c’est un enfant de trois ans.</li>
+      <li><b>L’adolescent réticent</b> — on n’exige pas l’enthousiasme, on maintient la présence ; la constance du père compte plus que l’humeur du moment.</li>
+      <li><b>Le sentiment d’incompétence</b> — beaucoup d’hommes n’osent pas parce qu’ils se jugent ignorants. Ils confondent le culte familial avec une prédication. Lire un texte à voix haute et prier en trois phrases est déjà l’essentiel.</li>
+      <li><b>L’hypocrisie ressentie</b> — conduire un culte le soir d’une journée où l’on a mal parlé à sa femme. La réponse n’est pas de sauter le culte : c’est de demander pardon d’abord.</li>
+    </ul>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+  <article class="section" id="amities">
+    <header class="sec-head">
+      <p class="kicker">Chapitre 11 · Michael A. G. Azad Haykin</p>
+      <h2 class="sec-title">L’homme racheté cultive ses amitiés</h2>
+    </header>
+    <ul class="sommaire">
+      <li><a href="#a-modele">L’amitié selon Christ</a></li>
+      <li><a href="#a-isolement">L’isolement masculin</a></li>
+      <li><a href="#a-marques">Les marques d’une amitié chrétienne</a></li>
+      <li><a href="#a-choisir">Choisir ses amis</a></li>
+      <li><a href="#a-cultiver">Comment on cultive une amitié</a></li>
+    </ul>
+
+    <h3 id="a-modele">L’amitié selon Christ</h3>
+    <blockquote class="vers">Il n’y a pas de plus grand amour que de donner sa vie pour ses amis. Vous êtes mes amis, si vous faites ce que je vous commande. Je ne vous appelle plus serviteurs, parce que le serviteur ne sait pas ce que fait son maître ; mais je vous ai appelés amis, parce que je vous ai fait connaître tout ce que j’ai appris de mon Père. (Jean 15.13-15)</blockquote>
+    <p>Le Seigneur définit l’amitié par deux traits : le sacrifice et l’ouverture. Un ami donne sa vie ; un ami dit ce qu’il sait. L’amitié chrétienne n’est donc ni la camaraderie de circonstance, ni le réseau utile : c’est une relation où l’on se dépense pour l’autre et où l’on ne se cache pas.</p>
+    <p>L’Ancien Testament en offre le portrait dans David et Jonathan, dont l’âme « fut liée » à celle de David (1 Samuel 18.1) — au point que Jonathan a protégé l’homme qui allait recevoir le trône qui lui revenait. Une amitié biblique peut coûter un avenir.</p>
+
+    <h3 id="a-isolement">L’isolement masculin</h3>
+    <p>Beaucoup d’hommes atteignent la quarantaine sans un seul ami à qui ils diraient la vérité sur leur mariage, leurs dettes ou leurs tentations. Ils ont des collègues, des contacts, des frères d’assemblée avec qui ils parlent de hockey — et personne devant qui ils sont connus.</p>
+    <p>Cet isolement passe souvent pour de la force ; l’Écriture le traite comme un danger. « Malheur à celui qui est seul et qui tombe, sans avoir un second pour le relever ! » (Ecclésiaste 4.10). Le péché prospère dans le secret, et un homme sans ami n’a personne pour l’avertir avant la chute.</p>
+
+    <h3 id="a-marques">Les marques d’une amitié chrétienne</h3>
+    <ul class="liste">
+      <li><b>La fidélité dans la durée</b> — « L’ami aime en tout temps, et dans le malheur il se montre un frère » (Proverbes 17.17).</li>
+      <li><b>La franchise</b> — « Les blessures d’un ami prouvent sa fidélité » (Proverbes 27.6). Un ami qui ne reprend jamais n’est pas un ami : c’est un admirateur.</li>
+      <li><b>L’aiguisement mutuel</b> — « Comme le fer aiguise le fer, ainsi un homme excite la colère d’un homme » (Proverbes 27.17) : le frottement produit du tranchant.</li>
+      <li><b>La confession réciproque</b> — « Confessez donc vos péchés les uns aux autres, et priez les uns pour les autres » (Jacques 5.16).</li>
+      <li><b>Le service concret</b> — le déménagement, la garde d’enfants, l’argent prêté sans compter, l’heure donnée à minuit.</li>
+      <li><b>L’édification spirituelle</b> — on parle de Christ, pas seulement de sport et de travail. « Veillons les uns sur les autres, pour nous exciter à l’amour et aux bonnes œuvres » (Hébreux 10.24).</li>
+    </ul>
+
+    <h3 id="a-choisir">Choisir ses amis</h3>
+    <p>L’amitié intime n’est pas indifférente : « Ne vous y trompez pas : les mauvaises compagnies corrompent les bonnes mœurs » (1 Corinthiens 15.33). Un homme demeure aimable et hospitalier envers tous — il ne se retire pas du monde —, mais il choisit avec soin ceux dont l’influence le façonne. Le Psaume 1 décrit le bienheureux par ce qu’il refuse : il ne s’assied pas en compagnie des moqueurs.</p>
+    <p>Ce discernement s’applique aussi aux amitiés anciennes qu’un homme conserve par habitude alors qu’elles le tirent vers le bas, et à la fréquentation prolongée en tête-à-tête avec une femme qui n’est pas la sienne — imprudence que beaucoup d’hommes découvrent trop tard.</p>
+
+    <h3 id="a-cultiver">Comment on cultive une amitié</h3>
+    <div class="encadre">
+      <h4>Une amitié ne se trouve pas, elle se construit</h4>
+      <p>Elle demande du <b>temps</b> répété et non spectaculaire : un déjeuner mensuel, un trajet partagé, un service rendu ensemble dans l’assemblée. Elle demande de <b>l’initiative</b> — quelqu’un doit appeler le premier, et ce peut être vous. Elle demande de la <b>transparence</b> : on ne devient pas l’ami d’un homme qui ne dit jamais rien de vrai sur lui-même.</p>
+      <p style="margin-bottom:0;">Le lieu naturel de ces amitiés est l’Église locale, où Dieu place ensemble des hommes qui ne se seraient pas choisis. « Pratiquons le bien envers tous, et surtout envers les frères en la foi » (Galates 6.10).</p>
+    </div>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+
+  <article class="section" id="temoigne">
+    <header class="sec-head">
+      <p class="kicker">Chapitre 12 · David Strain</p>
+      <h2 class="sec-title">L’homme racheté témoigne auprès des incroyants</h2>
+    </header>
+    <ul class="sommaire">
+      <li><a href="#t-mandat">Le mandat</a></li>
+      <li><a href="#t-contenu">Le contenu : ce qu’il faut dire</a></li>
+      <li><a href="#t-maniere">La manière : douceur et respect</a></li>
+      <li><a href="#t-champ">Le premier champ : la maison et le travail</a></li>
+      <li><a href="#t-liberte">La souveraineté de Dieu libère le témoin</a></li>
+    </ul>
+
+    <h3 id="t-mandat">Le mandat</h3>
+    <blockquote class="vers">Mais vous recevrez une puissance, le Saint-Esprit survenant sur vous, et vous serez mes témoins à Jérusalem, dans toute la Judée, dans la Samarie, et jusqu’aux extrémités de la terre. (Actes 1.8)</blockquote>
+    <blockquote class="vers">Allez, faites de toutes les nations des disciples, les baptisant au nom du Père, du Fils et du Saint-Esprit, et enseignez-leur à observer tout ce que je vous ai prescrit. (Matthieu 28.19-20)</blockquote>
+    <p>L’ordre n’est pas réservé aux pasteurs ni aux missionnaires. Paul rappelle la chaîne entière : on ne croit pas sans avoir entendu, et on n’entend pas sans quelqu’un qui prêche (Romains 10.14-15). Dieu a choisi d’employer des hommes ordinaires pour porter un message qu’il rend efficace lui-même.</p>
+    <blockquote class="vers">Nous faisons donc les fonctions d’ambassadeurs pour Christ, comme si Dieu exhortait par nous ; nous vous en supplions au nom de Christ : Soyez réconciliés avec Dieu ! (2 Corinthiens 5.20)</blockquote>
+    <p>Un ambassadeur ne compose pas son message : il transmet celui de son roi. Cela interdit deux libertés que les hommes se donnent facilement — retrancher ce qui déplaît, ou ajouter des promesses que Dieu n’a pas faites.</p>
+
+    <h3 id="t-contenu">Le contenu : ce qu’il faut dire</h3>
+    <p>Un témoignage chrétien n’est pas le récit de ce que la foi m’a apporté ; c’est l’annonce de ce que Dieu a fait. Le message minimal comporte quatre articulations, dont aucune ne peut être supprimée :</p>
+    <figure class="tableau">
+      <figcaption>L’Évangile, en quatre points inséparables</figcaption>
+      <div class="tableau__scroll">
+      <table>
+        <thead><tr><th>Point</th><th>Ce qu’il faut dire</th><th>Texte</th></tr></thead>
+        <tbody>
+          <tr><td>Dieu</td><td>Créateur saint, juste, souverain, devant qui tout homme rendra compte</td><td>Genèse 1.1 ; Ésaïe 6.3 ; Actes 17.24-31</td></tr>
+          <tr><td>L’homme</td><td>Pécheur par nature et par choix, coupable, incapable de se sauver, sous la colère</td><td>Romains 3.10-23 ; Éphésiens 2.1-3</td></tr>
+          <tr><td>Christ</td><td>Dieu fait homme, mort en substitut, ressuscité, seul Sauveur</td><td>1 Corinthiens 15.3-4 ; Actes 4.12 ; 2 Corinthiens 5.21</td></tr>
+          <tr><td>La réponse</td><td>Se repentir et croire — recevoir Christ comme Seigneur et Sauveur</td><td>Marc 1.15 ; Actes 20.21 ; Romains 10.9</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </figure>
+    <p>Supprimer le péché et le jugement, c’est proposer un remède à quelqu’un qui ignore qu’il est malade. Supprimer la repentance, c’est promettre un pardon sans conversion. Un homme qui aime réellement son voisin lui dit la vérité entière, même quand elle est désagréable à prononcer.</p>
+
+    <h3 id="t-maniere">La manière : douceur et respect</h3>
+    <blockquote class="vers">Mais sanctifiez dans vos cœurs Christ le Seigneur, étant toujours prêts à vous défendre avec douceur et respect, devant quiconque vous demande raison de l’espérance qui est en vous. (1 Pierre 3.15)</blockquote>
+    <blockquote class="vers">Conduisez-vous avec sagesse envers ceux du dehors, et rachetez le temps. Que votre parole soit toujours accompagnée de grâce, assaisonnée de sel, afin que vous sachiez comment il faut répondre à chacun. (Colossiens 4.5-6)</blockquote>
+    <p>Trois exigences : être <b>prêt</b> — donc connaître l’Évangile assez pour l’expliquer sans notes ; être <b>doux</b> — le témoin n’est pas un procureur et ne gagne rien à écraser son interlocuteur ; être <b>respectueux</b> — écouter la vraie question posée plutôt que de réciter un argumentaire.</p>
+    <div class="encadre">
+      <h4>Ce qui n’est pas de l’évangélisation</h4>
+      <p>Vivre honnêtement devant ses voisins est indispensable, mais une bonne conduite ne dit pas pourquoi Christ est mort : sans paroles, personne ne comprendra. Inviter quelqu’un au culte est excellent, mais cela délègue au prédicateur ce que Dieu a confié à chaque croyant. Argumenter jusqu’à gagner un débat n’a jamais converti personne.</p>
+      <p style="margin-bottom:0;">De même, manipuler la décision — pression émotive, promesse de bénédictions matérielles, prière récitée présentée comme un sésame — produit des professions de foi sans conversion, et le résultat est un homme vacciné contre l’Évangile qu’il croit déjà avoir reçu.</p>
+    </div>
+
+    <h3 id="t-champ">Le premier champ : la maison et le travail</h3>
+    <p>Le témoignage commence là où Dieu a placé l’homme. Sa femme incroyante, ses enfants non convertis, ses parents, son beau-frère, ses collègues, ses voisins : ce sont eux, sa Jérusalem. Ils ont un avantage sur tout auditoire — ils le connaissent — et c’est aussi ce qui rend le témoignage exigeant : sa vie devra tenir devant eux.</p>
+    <p>Le travail offre les occasions les plus naturelles : un homme qui travaille avec ardeur, sans mensonge, sans vol de temps, sans grossièreté, finit par être interrogé. Pierre suppose exactement cela — qu’on lui « demande raison » de son espérance. Un homme dont la vie ne suscite aucune question n’aura pas beaucoup d’occasions de répondre.</p>
+
+    <h3 id="t-liberte">La souveraineté de Dieu libère le témoin</h3>
+    <p>Un homme n’a pas le pouvoir de convertir qui que ce soit. Le fruit dépend de Dieu, qui donne la nouvelle naissance selon sa volonté. Cette vérité produit deux effets opposés à ce que l’on redoute : elle ôte l’angoisse du résultat et elle interdit le découragement.</p>
+    <p>Elle ôte l’angoisse, parce que le témoin est responsable de la fidélité de son message, non de la réponse de son interlocuteur. Elle interdit le découragement, parce qu’aucun cas n’est perdu : Dieu a des élus dans des maisons où l’on ne prie jamais, et il ressuscite des morts. « Ne nous lassons pas de faire le bien ; car nous moissonnerons au temps convenable, si nous ne nous relâchons pas » (Galates 6.9).</p>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+
+  <article class="section" id="conclusion">
+    <header class="sec-head">
+      <p class="kicker">Conclusion</p>
+      <h2 class="sec-title">Aimé, donc aimant</h2>
+    </header>
+    <p>Ces huit chapitres décrivent un seul homme dans huit directions : vers ses parents, vers lui-même dans le célibat ou dans le mariage, vers sa femme, vers ses enfants, vers ses frères, vers ceux qui ne croient pas. Le principe est chaque fois le même, et il est emprunté à Dieu : « Marchez dans l’amour, à l’exemple de Christ, qui nous a aimés, et qui s’est livré lui-même » (Éphésiens 5.2).</p>
+    <p>Un homme n’aime jamais mieux qu’il n’a compris l’amour dont il est l’objet. C’est pourquoi rien de tout cela ne s’obtient par la résolution : on n’aime pas sa femme comme Christ à force de vouloir aimer, on l’aime à mesure qu’on connaît celui qui s’est livré. La croissance dans la piété domestique n’est donc pas une branche parallèle de la vie chrétienne — c’en est le débordement.</p>
+    <blockquote class="vers">Mais par-dessus toutes ces choses, revêtez-vous de l’amour, qui est le lien de la perfection. (Colossiens 3.14)</blockquote>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+
+</main>
+
+<footer class="footer">
+  <div class="logos">
+    <a href="https://www.ebcharlesbourg.com/" target="_blank" rel="noopener" aria-label="Site de l’Église Baptiste de Charlesbourg"><img class="footer__logo" src="../../LogoEBC.avif" width="80" height="250" alt="" decoding="async" loading="lazy"></a>
+    <a href="https://ftscriptura.com/" target="_blank" rel="noopener" aria-label="Faculté de Théologie Scriptura"><img class="logos__fts" src="../../LogoScriptura.webp" width="600" height="216" alt="" decoding="async" loading="lazy"></a>
+  </div>
+  <p class="footer__church">Église Baptiste de Charlesbourg</p>
+  <p class="footer__line">Pasteur Simon Ouellette · Charlesbourg, Québec</p>
+  <p class="footer__line">Citations bibliques : Nouvelle Édition de Genève 1979 (NEG)</p>
+  <p class="footer__source">Plan des chapitres : <i>The Redeemed Man</i>, Richard D. Phillips (dir.) — « Les relations de l’homme pieux avec autrui ». Exposition rédigée dans le cadre théologique de John MacArthur (<i>La Bible d’étude MacArthur</i> ; MacArthur et Mayhue, <i>Théologie systématique</i>), conformément à la confession de foi de l’Église Baptiste de Charlesbourg.</p>
+  <p class="footer__retour" style="display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem;margin:2rem 0 .3rem;">
+    <a href="../../index.html" class="pill">&#8598;&nbsp;Études bibliques</a>
+    <a href="../../Coram%20Deo.pdf" target="_blank" rel="noopener" class="pill">Coram Deo&nbsp;&#8599;</a>
+  </p>
+  <p class="footer__sdg">Soli Deo Gloria</p>
+</footer>
+
+<script>
+  var progress = document.getElementById('progress');
+  var navProgress = document.getElementById('navProgress');
+  var nav = document.getElementById('nav');
+  var hero = document.getElementById('hero');
+
+  function onScroll(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    var pct = max > 0 ? (h.scrollTop || document.body.scrollTop) / max * 100 : 0;
+    progress.style.width = pct + '%';
+    if (navProgress) navProgress.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  if ('IntersectionObserver' in window){
+    var navObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) nav.classList.remove('show');
+        else nav.classList.add('show');
+      });
+    }, {rootMargin:'-70px 0px 0px 0px'});
+    navObs.observe(hero);
+  }
+</script>
+</body>
+</html>
