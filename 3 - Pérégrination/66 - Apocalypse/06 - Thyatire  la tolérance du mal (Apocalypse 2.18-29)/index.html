@@ -481,6 +481,16 @@
     background:rgba(232,132,60,.06);
     filter:drop-shadow(0 0 10px rgba(232,132,60,.18));
   }
+  .logos{
+    display:flex;align-items:center;justify-content:center;
+    gap:clamp(1.2rem,4vw,2.8rem);flex-wrap:wrap;
+    margin:0 auto 1.7rem;
+  }
+  .logos img{margin:0;}
+  .logos__fts{
+    display:block;width:auto;
+    height:clamp(2.4rem,5.5vw,3.4rem);
+  }
 </style>
 </head>
 <body>
@@ -794,7 +804,10 @@
 </main>
 
 <footer class="footer">
-  <img class="footer__logo" src="../00%20-%20Introduction/LogoEBC.avif" width="80" height="250" alt="" decoding="async" loading="lazy">
+  <div class="logos">
+    <a href="https://www.ebcharlesbourg.com/" target="_blank" rel="noopener" aria-label="Site de l’Église Baptiste de Charlesbourg"><img class="footer__logo" src="../00%20-%20Introduction/LogoEBC.avif" width="80" height="250" alt="" decoding="async" loading="lazy"></a>
+    <a href="https://ftscriptura.com/" target="_blank" rel="noopener" aria-label="Faculté de Théologie Scriptura"><img class="logos__fts" src="../00%20-%20Introduction/LogoScriptura.webp" width="600" height="216" alt="" decoding="async" loading="lazy"></a>
+  </div>
   <p class="footer__church">Église Baptiste de Charlesbourg</p>
   <p class="footer__line">Pasteur Simon Ouellette · Charlesbourg, Québec</p>
   <p class="footer__line">Recherche exégétique · Apocalypse 2.18-29 · 2026-06-19 · AGB</p>

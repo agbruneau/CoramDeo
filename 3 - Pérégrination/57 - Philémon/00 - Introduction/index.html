@@ -432,6 +432,16 @@
       opacity:1;animation:none;
     }
   }
+  .logos{
+    display:flex;align-items:center;justify-content:center;
+    gap:clamp(1.2rem,4vw,2.8rem);flex-wrap:wrap;
+    margin:0 auto 1.7rem;
+  }
+  .logos img{margin:0;}
+  .logos__fts{
+    display:block;width:auto;
+    height:clamp(2.4rem,5.5vw,3.4rem);
+  }
 </style>
 </head>
 <body>
@@ -716,7 +726,10 @@
 </main>
 
 <footer class="footer">
-  <img class="footer__logo" src="LogoEBC.avif" width="80" height="250" alt="" decoding="async" loading="lazy">
+  <div class="logos">
+    <a href="https://www.ebcharlesbourg.com/" target="_blank" rel="noopener" aria-label="Site de l’Église Baptiste de Charlesbourg"><img class="footer__logo" src="LogoEBC.avif" width="80" height="250" alt="" decoding="async" loading="lazy"></a>
+    <a href="https://ftscriptura.com/" target="_blank" rel="noopener" aria-label="Faculté de Théologie Scriptura"><img class="logos__fts" src="LogoScriptura.webp" width="600" height="216" alt="" decoding="async" loading="lazy"></a>
+  </div>
   <p class="footer__church">Église Baptiste de Charlesbourg</p>
   <p class="footer__line">Pasteur Simon Ouellette · Charlesbourg, Québec</p>
   <p class="footer__line">Série «&nbsp;Philémon : l'Évangile qui réconcilie&nbsp;» · Citations bibliques : Nouvelle Édition de Genève 1979 (NEG)</p>

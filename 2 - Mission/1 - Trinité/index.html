@@ -1,0 +1,991 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Trinité · L’homme racheté devant son Dieu · Église Baptiste de Charlesbourg</title>
+<meta name="description" content="L’homme racheté devant son Dieu : la repentance et la foi, la connaissance de Dieu, l’attachement à l’Écriture et la croissance en grâce, exposés dans le cadre théologique de John MacArthur. Église Baptiste de Charlesbourg.">
+<meta name="author" content="Église Baptiste de Charlesbourg">
+<style>
+  :root{
+    --nuit:#0a0a0a;
+    --nuit-1:#121212;
+    --nuit-2:#1b1b1b;
+    --encre:#f3f0ec;
+    --encre-doux:#c9c2ba;
+    --or:#e8843c;
+    --or-clair:#f6a85c;
+    --feuille:#f0b659;
+    --feuille-vif:#f7c97a;
+    --filet:rgba(232,132,60,.28);
+    --filet-fort:rgba(232,132,60,.52);
+    --max:max(58rem,84vw);
+  }
+
+  *{box-sizing:border-box;}
+  html{
+    scroll-behavior:smooth;-webkit-text-size-adjust:100%;
+    scrollbar-color:var(--or) var(--nuit);scrollbar-width:thin;
+  }
+  body{
+    margin:0;
+    font-family:"EB Garamond",Georgia,"Times New Roman",serif;
+    font-size:clamp(1.2rem,.95rem + .85vw,1.45rem);
+    line-height:1.85;
+    color:var(--encre);
+    background:var(--nuit);
+    background-image:
+      radial-gradient(120% 80% at 50% -10%, rgba(240,182,89,.10), transparent 55%),
+      radial-gradient(90% 60% at 85% 8%, rgba(232,132,60,.06), transparent 60%),
+      radial-gradient(100% 70% at 12% 35%, rgba(232,132,60,.05), transparent 58%);
+    background-attachment:fixed;
+    overflow-x:hidden;
+  }
+  .grain{
+    position:fixed;inset:0;z-index:3;pointer-events:none;
+    opacity:.03;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .vignette{
+    position:fixed;inset:0;z-index:1;pointer-events:none;
+    background:radial-gradient(135% 105% at 50% 35%, transparent 56%, rgba(0,0,0,.42) 100%);
+  }
+
+  a{color:var(--feuille);text-decoration:none;}
+  a:focus-visible,.nav__links a:focus-visible{outline:2px solid var(--or);outline-offset:3px;border-radius:3px;}
+  ::selection{background:rgba(232,132,60,.34);color:#fff;}
+  ::-webkit-scrollbar{width:12px;}
+  ::-webkit-scrollbar-track{background:var(--nuit);}
+  ::-webkit-scrollbar-thumb{background:linear-gradient(var(--or),#7a4218);border:3px solid var(--nuit);border-radius:10px;}
+  ::-webkit-scrollbar-thumb:hover{background:var(--or-clair);}
+
+  .progress{
+    position:fixed;top:0;left:0;height:3px;width:0;z-index:60;
+    background:linear-gradient(90deg,var(--or),var(--or-clair),var(--feuille));
+    box-shadow:0 0 12px rgba(232,132,60,.6);
+    transition:width .1s linear;
+  }
+
+  .nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    display:flex;align-items:center;gap:1.5rem;
+    padding:.85rem clamp(1rem,4vw,2.5rem);
+    background:rgba(10,10,10,.82);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--filet);
+    transform:translateY(-110%);
+    transition:transform .45s cubic-bezier(.2,.7,.2,1);
+  }
+  .nav.show{transform:translateY(0);}
+  .nav__progress{
+    position:absolute;left:0;bottom:-1px;height:2px;width:0;
+    background:linear-gradient(90deg,var(--or),var(--or-clair),var(--feuille));
+    box-shadow:0 0 10px rgba(232,132,60,.55);
+    transition:width .1s linear;
+  }
+  .nav__logo{flex:none;display:block;}
+  .nav__logo img{height:clamp(2.2rem,2rem + 1vw,2.9rem);width:auto;display:block;}
+  .nav__brand{
+    font-family:"Cormorant Garamond",serif;font-size:1.55rem;font-weight:600;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--or-clair);
+    white-space:nowrap;
+  }
+  .nav__links{
+    display:flex;gap:.15rem;margin-left:auto;
+    overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .nav__links::-webkit-scrollbar{display:none;}
+  .nav__links a{
+    position:relative;
+    font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--encre-doux);padding:.5rem .8rem;border-radius:2px;
+    white-space:nowrap;transition:color .25s;
+  }
+  .nav__links a::after{
+    content:"";position:absolute;left:.8rem;right:.8rem;bottom:.18rem;height:1px;
+    background:var(--or);transform:scaleX(0);transform-origin:left;transition:transform .3s;
+  }
+  .nav__links a:hover{color:var(--or-clair);}
+  .nav__links a:hover::after{transform:scaleX(1);}
+
+  .pill{
+    display:inline-block;padding:.7rem 1.7rem;
+    border:1px solid var(--filet-fort);border-radius:999px;
+    color:var(--or-clair);font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;
+    transition:border-color .3s,color .3s;
+  }
+  .pill:hover{border-color:var(--or);color:var(--feuille-vif);}
+
+  .hero{
+    position:relative;min-height:100svh;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:6rem 1.4rem 4rem;
+  }
+  .hero__frame{
+    position:absolute;inset:clamp(.9rem,3.5vw,2.4rem);
+    border:1px solid var(--filet);pointer-events:none;
+    opacity:0;animation:frameIn 1.5s ease .15s forwards;
+  }
+  .hero__frame::before,.hero__frame::after{
+    content:"";position:absolute;width:16px;height:16px;
+  }
+  .hero__frame::before{top:-1px;left:-1px;border-top:2px solid var(--or);border-left:2px solid var(--or);}
+  .hero__frame::after{bottom:-1px;right:-1px;border-bottom:2px solid var(--or);border-right:2px solid var(--or);}
+  .hero__logo{
+    height:clamp(5.5rem,12vw,8rem);width:auto;margin:0 auto 1.8rem;
+    opacity:0;animation:riseIn .95s cubic-bezier(.2,.7,.2,1) .1s forwards;
+    filter:drop-shadow(0 0 26px rgba(240,182,89,.22));
+  }
+  .hero__kicker{
+    font-size:clamp(.85rem,.65rem + .6vw,1rem);
+    letter-spacing:.42em;text-transform:uppercase;
+    color:var(--or);margin:0 0 .2em .42em;
+  }
+  .hero__title{
+    font-family:"Cormorant Garamond",serif;
+    font-weight:600;
+    font-size:clamp(3rem,6vw + 1rem,6.6rem);
+    line-height:1.02;letter-spacing:.03em;margin:0;
+    padding:.06em .08em .2em;
+    background:linear-gradient(176deg,#f9e1bb 0%,var(--or-clair) 45%,var(--or) 100%);
+    -webkit-background-clip:text;background-clip:text;
+    color:transparent;-webkit-text-fill-color:transparent;
+    filter:drop-shadow(0 0 34px rgba(240,182,89,.30)) drop-shadow(0 2px 3px rgba(0,0,0,.5));
+    text-wrap:balance;
+  }
+  .ornament{
+    display:flex;align-items:center;justify-content:center;gap:1rem;
+    margin:1.7rem 0;color:var(--or);width:min(22rem,80%);
+  }
+  .ornament::before,.ornament::after{
+    content:"";height:1px;flex:1;
+    background:linear-gradient(90deg,transparent,var(--filet-fort),transparent);
+  }
+  .ornament span{font-size:.8rem;}
+  .hero__verse{
+    font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-weight:500;
+    font-size:clamp(1.4rem,1.1rem + 1.3vw,2.05rem);
+    line-height:1.55;color:var(--encre);
+    max-width:max(46rem,72vw);margin:0 auto;
+    text-wrap:balance;
+  }
+  .hero__verse .q{color:var(--or);font-style:normal;}
+  .hero__ref{
+    margin-top:1.7rem;font-size:.95rem;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--or);
+  }
+  .hero__series{
+    margin-top:2.6rem;font-size:.88rem;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--encre-doux);text-wrap:balance;
+    max-width:42rem;
+  }
+  .hero__series b{color:var(--feuille);font-weight:600;}
+  .scrollcue{
+    position:absolute;bottom:1.7rem;left:50%;transform:translateX(-50%);
+    color:var(--or);font-size:1.3rem;opacity:.75;
+    animation:bob 2.4s ease-in-out infinite;
+  }
+  @keyframes bob{0%,100%{transform:translate(-50%,0);}50%{transform:translate(-50%,7px);}}
+  @keyframes riseIn{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
+  @keyframes frameIn{from{opacity:0;}to{opacity:1;}}
+  .hero__kicker,.hero__title,.ornament,.hero__verse,.hero__ref,.hero__series{
+    opacity:0;animation:riseIn .95s cubic-bezier(.2,.7,.2,1) forwards;
+  }
+  .hero__kicker{animation-delay:.2s;}
+  .hero__title{animation-delay:.32s;}
+  .ornament{animation-delay:.6s;}
+  .hero__verse{animation-delay:.75s;}
+  .hero__ref{animation-delay:1s;}
+  .hero__series{animation-delay:1.15s;}
+
+  main{position:relative;z-index:2;}
+  .section{
+    max-width:var(--max);margin:0 auto;
+    padding:clamp(3rem,7vw,5.5rem) clamp(1.4rem,5vw,2rem);
+    scroll-margin-top:5rem;
+  }
+  .sec-head{text-align:center;margin-bottom:2.2rem;}
+  .kicker{
+    font-size:.95rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--or);margin:0 0 .65rem;
+  }
+  .sec-title{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:clamp(2.1rem,1.4rem + 2.6vw,3.2rem);line-height:1.12;
+    color:var(--or-clair);margin:0;text-wrap:balance;
+  }
+  .sec-head .sec-title::after{
+    content:"";display:block;width:2.6rem;height:1px;
+    background:var(--filet-fort);margin:1.2rem auto 0;
+  }
+
+  .livres{
+    list-style:none;margin:0;padding:0;
+    display:grid;gap:1.1rem;
+    grid-template-columns:repeat(auto-fill,minmax(min(100%,20rem),1fr));
+  }
+  .livre{margin:0;}
+  .livre a{
+    display:flex;flex-direction:column;gap:.5rem;height:100%;
+    padding:1.4rem 1.5rem 1.5rem;
+    background:linear-gradient(180deg,rgba(232,132,60,.07),rgba(232,132,60,.03));
+    border:1px solid var(--filet);border-left:3px solid var(--or);
+    border-radius:0 6px 6px 0;color:var(--encre);
+    transition:border-left-color .3s,transform .3s,background .3s,box-shadow .3s;
+  }
+  .livre a:hover{
+    border-left-color:var(--or-clair);transform:translateY(-3px);
+    background:linear-gradient(180deg,rgba(232,132,60,.13),rgba(232,132,60,.05));
+    box-shadow:0 8px 26px rgba(0,0,0,.32);
+  }
+  .livre a:focus-visible{outline:2px solid var(--or);outline-offset:3px;}
+  .livre__num{
+    font-family:"Cormorant Garamond",serif;font-size:.8rem;letter-spacing:.26em;
+    text-transform:uppercase;color:var(--or);
+  }
+  .livre__titre{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:1.6rem;line-height:1.12;color:var(--encre);
+    transition:color .3s;
+  }
+  .livre a:hover .livre__titre{color:var(--or-clair);}
+  .livre__theme{
+    font-size:1rem;line-height:1.45;color:var(--encre-doux);
+    font-style:italic;
+  }
+  .livre__ref{
+    margin-top:auto;display:flex;align-items:center;gap:.6rem;
+    font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--encre-doux);padding-top:.4rem;
+  }
+  .livre__go{
+    margin-left:auto;color:var(--or);font-size:1.05em;
+    transition:transform .3s;
+  }
+  .livre a:hover .livre__go{transform:translateX(4px);}
+
+  /* ---- corps du texte ---- */
+  .section p{margin:0 0 1.15em;text-wrap:pretty;}
+  .section h3{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:clamp(1.75rem,1.3rem + 1.5vw,2.4rem);line-height:1.15;
+    color:var(--or-clair);margin:2.8rem 0 1.1rem;
+    padding-bottom:.5rem;border-bottom:1px solid var(--filet);
+    scroll-margin-top:5rem;text-wrap:balance;
+  }
+  .section h4{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:clamp(1.35rem,1.1rem + .8vw,1.7rem);line-height:1.2;
+    color:var(--feuille);margin:2rem 0 .7rem;
+    scroll-margin-top:5rem;text-wrap:balance;
+  }
+  .sommaire{
+    list-style:none;margin:0 0 2.6rem;padding:1.2rem 1.5rem;
+    border:1px solid var(--filet);border-left:3px solid var(--or);border-radius:0 6px 6px 0;
+    background:linear-gradient(180deg,rgba(232,132,60,.06),rgba(232,132,60,.02));
+    display:flex;flex-wrap:wrap;gap:.4rem 1.6rem;
+  }
+  .sommaire li{font-size:.95rem;letter-spacing:.02em;}
+  .sommaire a{color:var(--encre-doux);}
+  .sommaire a:hover{color:var(--or-clair);}
+  .liste{margin:0 0 1.4rem;padding-left:1.6rem;}
+  .liste li{margin:0 0 .55rem;}
+  .liste li::marker{color:var(--or);}
+  blockquote{
+    margin:1.6rem 0;padding:.4rem 0 .4rem 1.6rem;
+    border-left:2px solid var(--filet-fort);
+    color:var(--encre-doux);font-size:.96em;
+  }
+  blockquote.vers{
+    font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-size:1.05em;line-height:1.6;color:var(--encre);
+    text-align:left;
+  }
+  .encadre{
+    margin:2.2rem 0;padding:1.5rem 1.7rem;
+    border:1px solid var(--filet);border-radius:6px;
+    background:linear-gradient(180deg,rgba(232,132,60,.08),rgba(232,132,60,.02));
+  }
+  .encadre h4{margin-top:0;color:var(--or-clair);}
+  .encadre p:last-child,.encadre .liste:last-child{margin-bottom:0;}
+
+  .tableau{margin:2.4rem 0;padding:0;}
+  .tableau figcaption{
+    font-family:"Cormorant Garamond",serif;font-size:1.15rem;font-weight:600;
+    letter-spacing:.04em;color:var(--or-clair);margin-bottom:.8rem;
+  }
+  .tableau__scroll{overflow-x:auto;border:1px solid var(--filet);border-radius:6px;}
+  .tableau table{
+    border-collapse:collapse;width:100%;
+    font-size:.82rem;line-height:1.5;
+  }
+  .tableau th,.tableau td{
+    padding:.6rem .85rem;text-align:left;vertical-align:top;
+    border-bottom:1px solid rgba(232,132,60,.16);
+  }
+  .tableau th{
+    font-family:"Cormorant Garamond",serif;font-size:.9rem;font-weight:600;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--or);
+    background:rgba(232,132,60,.10);border-bottom:1px solid var(--filet-fort);
+  }
+  .tableau tbody tr:nth-child(even){background:rgba(255,255,255,.018);}
+  .tableau tbody tr:hover{background:rgba(232,132,60,.07);}
+  .tableau td{color:var(--encre-doux);}
+  .tableau td:first-child{color:var(--encre);}
+  .tableau tr.t-sect td{
+    font-family:"Cormorant Garamond",serif;font-size:.95rem;font-weight:600;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--feuille);
+    background:rgba(232,132,60,.09);
+  }
+
+  .divider{
+    display:flex;align-items:center;justify-content:center;gap:1.4rem;
+    max-width:var(--max);margin:0 auto;
+    padding:0 2rem;color:var(--or);
+  }
+  .divider::before,.divider::after{
+    content:"";height:1px;width:min(7rem,22%);
+    background:linear-gradient(90deg,transparent,var(--filet-fort),transparent);
+  }
+  .divider span{font-size:.8rem;}
+
+  .footer{
+    position:relative;z-index:2;text-align:center;
+    border-top:1px solid var(--filet);
+    margin-top:2rem;padding:3.6rem 1.4rem 3.2rem;
+    background:linear-gradient(180deg,transparent,rgba(16,16,16,.7));
+  }
+  .footer__logo{
+    display:block;width:auto;
+    height:clamp(5rem,12vw,7rem);
+    margin:0 auto 1.6rem;
+  }
+  .footer__church{
+    font-family:"Cormorant Garamond",serif;font-size:1.7rem;font-weight:600;
+    letter-spacing:.04em;color:var(--encre);margin:0 0 .3rem;
+  }
+  .footer__line{font-size:1rem;color:var(--encre-doux);margin:.2rem 0;}
+  .footer__source{
+    max-width:42rem;margin:1.4rem auto 0;
+    font-size:.88rem;font-style:italic;color:var(--encre-doux);line-height:1.5;
+  }
+  .footer__sdg{
+    margin-top:1.8rem;font-size:.86rem;letter-spacing:.36em;
+    text-transform:uppercase;color:var(--or);
+  }
+
+  @media (max-width:560px){
+    .nav__brand{font-size:1.3rem;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .scrollcue{animation:none;}
+    .hero__logo,.hero__kicker,.hero__title,.ornament,.hero__verse,.hero__ref,.hero__series,.hero__frame{
+      opacity:1;animation:none;
+    }
+  }
+  .logos{
+    display:flex;align-items:center;justify-content:center;
+    gap:clamp(1.2rem,4vw,2.8rem);flex-wrap:wrap;
+    margin:0 auto 1.7rem;
+  }
+  .logos img{margin:0;}
+  .logos__fts{
+    display:block;width:auto;
+    height:clamp(2.4rem,5.5vw,3.4rem);
+  }
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="nav__progress" id="navProgress" aria-hidden="true"></div>
+  <a class="nav__logo" href="#hero" aria-label="Église Baptiste de Charlesbourg, haut de page">
+    <img src="../../LogoEBC.avif" width="80" height="250" alt="" decoding="async">
+  </a>
+  <span class="nav__brand">EBC</span>
+  <nav class="nav__links" aria-label="Sections">
+    <a href="#se-repent-et-croit">Se repent et croit</a>
+    <a href="#connait-son-dieu">Connaît son Dieu</a>
+    <a href="#s-attache-a-la-parole">S’attache à la Parole</a>
+    <a href="#croit-en-grace">Croît en grâce</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ============ PAGE-TITRE ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__frame" aria-hidden="true"></div>
+    <p style="margin:0 0 1.6rem;">
+      <a href="../../index.html" class="pill">&#8598;&nbsp;Études bibliques</a>
+    </p>
+    <div class="logos">
+      <a href="https://www.ebcharlesbourg.com/" target="_blank" rel="noopener" aria-label="Site de l’Église Baptiste de Charlesbourg"><img class="hero__logo" src="../../LogoEBC.avif" width="80" height="250" alt="" decoding="async"></a>
+      <a href="https://ftscriptura.com/" target="_blank" rel="noopener" aria-label="Faculté de Théologie Scriptura"><img class="logos__fts" src="../../LogoScriptura.webp" width="600" height="216" alt="" decoding="async" loading="lazy"></a>
+    </div>
+    <p class="hero__kicker">L’homme racheté</p>
+    <h1 class="hero__title">La Trinité</h1>
+    <div class="ornament" aria-hidden="true"><span>&#9670;</span></div>
+    <p class="hero__verse"><span class="q">&laquo;</span>&nbsp;Or, la vie éternelle, c’est qu’ils te connaissent, toi, le seul vrai Dieu, et celui que tu as envoyé, Jésus-Christ.&nbsp;<span class="q">&raquo;</span></p>
+    <p class="hero__ref">Jean 17.3 · NEG</p>
+    <p class="hero__series">Relation de l’homme pieux avec son <b>Dieu</b></p>
+    <div class="scrollcue" aria-hidden="true">&#8595;</div>
+  </section>
+
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+
+  <article class="section" id="sommaire">
+    <header class="sec-head">
+      <p class="kicker">Plan</p>
+      <h2 class="sec-title">Les quatre chapitres</h2>
+    </header>
+    <p class="lead">Avant d’être un mari, un père, un travailleur ou un citoyen, l’homme racheté est un homme placé devant Dieu. Tout le reste en découle.</p>
+    <ul class="livres">
+      <li class="livre"><a href="#se-repent-et-croit">
+        <span class="livre__num">01</span>
+        <span class="livre__titre">Il se repent et croit</span>
+        <span class="livre__theme">La conversion · La régénération · La justification · La fausse profession</span>
+        <span class="livre__ref">Lire<span class="livre__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
+      <li class="livre"><a href="#connait-son-dieu">
+        <span class="livre__num">02</span>
+        <span class="livre__titre">Il connaît son Dieu</span>
+        <span class="livre__theme">La révélation · La Trinité · Les perfections divines · La crainte de l’Éternel</span>
+        <span class="livre__ref">Lire<span class="livre__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
+      <li class="livre"><a href="#s-attache-a-la-parole">
+        <span class="livre__num">03</span>
+        <span class="livre__titre">Il s’attache à la Parole de Dieu</span>
+        <span class="livre__theme">Inspiration · Inerrance · Suffisance · Canon clos · Discipline d’étude</span>
+        <span class="livre__ref">Lire<span class="livre__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
+      <li class="livre"><a href="#croit-en-grace">
+        <span class="livre__num">04</span>
+        <span class="livre__titre">Il croît en grâce</span>
+        <span class="livre__theme">Sanctification · Mortification · Moyens de grâce · Persévérance</span>
+        <span class="livre__ref">Lire<span class="livre__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
+    </ul>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+
+  <article class="section" id="introduction">
+    <header class="sec-head">
+      <p class="kicker">Introduction</p>
+      <h2 class="sec-title">Un homme devant la face de Dieu</h2>
+    </header>
+    <p>La virilité chrétienne ne se définit pas d’abord par ce qu’un homme accomplit, mais par la relation dans laquelle il se tient. Adam n’a pas été créé pour bâtir un empire : il a été créé pour marcher avec Dieu dans le jardin, sous sa parole, dans son alliance. Quand cette relation s’est brisée, tout le reste s’est brisé avec elle — le mariage, la paternité, le travail, le rapport à la création, la mort elle-même. La restauration suit exactement le même ordre : Dieu ne réforme pas d’abord les habitudes d’un homme, il le réconcilie d’abord avec lui-même.</p>
+    <p>C’est pourquoi cette étude ne traite ni de l’épouse, ni des enfants, ni du métier, ni de la fin de la course. Elle traite de ce qui les précède tous : un homme se repent et croit ; il apprend à connaître le Dieu auquel il a affaire ; il s’attache au livre par lequel ce Dieu parle ; et il grandit. Retirez l’un de ces quatre points, et l’homme obtiendra peut-être une réputation de piété, mais il n’aura pas la chose même.</p>
+    <p>Ces quatre chapitres ne sont pas quatre compartiments. Ils forment un seul mouvement : la conversion ouvre la connaissance, la connaissance vient par l’Écriture, l’Écriture nourrit la croissance, et la croissance ramène sans cesse l’homme à la repentance et à la foi qui l’ont fait naître. L’homme racheté ne dépasse jamais son point de départ ; il l’approfondit.</p>
+    <div class="encadre">
+      <h4>Ce qui suit et sous quelle lentille</h4>
+      <p>Les intitulés des quatre chapitres sont ceux de la table des matières de <i>The Redeemed Man</i> (Richard D. Phillips, dir.), retenus ici comme plan de travail. L’exposition, elle, est rédigée sous la <b>seule lentille de John MacArthur</b>, conformément au cadre du dépôt et à la confession de foi de l’Église : herméneutique grammatico-historique, <i>Lordship salvation</i>, sotériologie monergique, suffisance et clôture du canon, cessationnisme, baptême des croyants par immersion, eschatologie prémillénariste prétribulationniste. Là où l’ouvrage source relèverait d’une autre tradition — paedobaptisme, amillénarisme, théologie des alliances —, c’est la lecture de MacArthur qui tranche.</p>
+      <p style="margin-bottom:0;">Citations bibliques : Nouvelle Édition de Genève 1979 (NEG).</p>
+    </div>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+  <article class="section" id="se-repent-et-croit">
+    <header class="sec-head">
+      <p class="kicker">Chapitre 1 · Joel R. Beeke et Paul M. Smalley</p>
+      <h2 class="sec-title">L’homme racheté se repent et croit</h2>
+    </header>
+    <ul class="sommaire">
+      <li><a href="#r-appel">L’appel : « Repentez-vous et croyez »</a></li>
+      <li><a href="#r-contrefacons">Ce que la repentance n’est pas</a></li>
+      <li><a href="#r-metanoia">La repentance biblique</a></li>
+      <li><a href="#r-foi">La foi qui sauve</a></li>
+      <li><a href="#r-seigneurie">Recevoir Christ comme Seigneur</a></li>
+      <li><a href="#r-regeneration">La régénération précède la foi</a></li>
+      <li><a href="#r-justification">La justification : le verdict acquis</a></li>
+      <li><a href="#r-fausse">L’homme qui se croit converti sans l’être</a></li>
+      <li><a href="#r-quotidienne">Une repentance qui dure toute la vie</a></li>
+    </ul>
+
+    <p>Le premier acte d’un homme racheté n’est pas une décision d’améliorer sa vie : c’est une capitulation. Il cesse de plaider sa cause, il donne raison à Dieu contre lui-même, et il se jette sur Christ. Toute la vie chrétienne masculine — le mariage, la paternité, le travail, la persévérance jusqu’à la mort — repose sur ce qui s’est réellement passé, ou ne s’est pas passé, à ce point précis.</p>
+
+    <h3 id="r-appel">L’appel : « Repentez-vous et croyez »</h3>
+    <p>Le premier sermon rapporté du ministère public de Jésus tient en une phrase, et cette phrase contient les deux verbes :</p>
+    <blockquote class="vers">Le temps est accompli, et le royaume de Dieu est proche. Repentez-vous, et croyez à la bonne nouvelle. (Marc 1.15)</blockquote>
+    <p>Paul résume de la même façon trois années de ministère à Éphèse : il a annoncé « aux Juifs et aux Grecs la repentance envers Dieu et la foi en notre Seigneur Jésus-Christ » (Actes 20.21). Ce n’est pas un message réservé à une catégorie d’auditeurs particulièrement coupables : « Dieu […] annonce maintenant à tous les hommes, en tous lieux, qu’ils ont à se repentir » (Actes 17.30). Et l’alternative est sans nuance : « si vous ne vous repentez, vous périrez tous également » (Luc 13.3).</p>
+    <p>Repentance et foi ne sont pas deux étapes successives, comme si un homme se repentait d’abord pendant quelques mois pour croire ensuite. Ce sont les deux faces d’un seul acte de conversion : se détourner du péché, c’est déjà se tourner vers Christ ; se tourner vers Christ, c’est nécessairement tourner le dos à ce qu’il est venu détruire. On ne peut avancer vers quelqu’un sans s’éloigner d’autre chose. Quiconque prétend avoir cru sans jamais s’être repenti n’a pas cru l’Évangile ; il en a admiré la promesse en refusant sa condition.</p>
+
+    <h3 id="r-contrefacons">Ce que la repentance n’est pas</h3>
+    <p>Il existe des remords parfaitement sincères qui ne sauvent personne. Paul distingue les deux avec une précision chirurgicale :</p>
+    <blockquote class="vers">En effet, la tristesse selon Dieu produit une repentance à salut dont on ne se repent jamais, tandis que la tristesse du monde produit la mort. (2 Corinthiens 7.10)</blockquote>
+    <p>La tristesse du monde pleure les conséquences ; la tristesse selon Dieu pleure l’offense. L’une regrette d’avoir été pris, ruiné, humilié, quitté ; l’autre regrette d’avoir méprisé Dieu. Judas a éprouvé un remords si violent qu’il a rendu l’argent et s’est pendu : il n’a pas été sauvé. Pierre a pleuré amèrement et est revenu : il l’a été. La différence n’était pas l’intensité de l’émotion, mais sa direction.</p>
+    <p>Trois contrefaçons méritent d’être nommées, parce qu’elles trompent surtout les hommes religieux :</p>
+    <ul class="liste">
+      <li><b>Le remords</b> — une émotion forte, souvent réveillée par une prédication ou une crise, qui s’éteint dès que la douleur passe.</li>
+      <li><b>La réforme extérieure</b> — l’homme corrige des comportements visibles sans que son cœur ait changé de maître. Il a nettoyé la maison ; il n’en a pas changé le propriétaire.</li>
+      <li><b>La pénitence</b> — l’homme tente de compenser sa faute par des actes de dévotion, de service ou de générosité, comme s’il pouvait payer une partie de l’addition. C’est encore la justification par les œuvres, sous un vocabulaire pieux.</li>
+    </ul>
+
+    <figure class="tableau">
+      <figcaption>Discerner la repentance véritable de ses contrefaçons</figcaption>
+      <div class="tableau__scroll">
+      <table>
+        <thead><tr><th>Point d’examen</th><th>Contrefaçon</th><th>Repentance selon Dieu</th></tr></thead>
+        <tbody>
+          <tr><td>Objet du chagrin</td><td>Les conséquences subies</td><td>L’offense faite à Dieu (Ps 51.6)</td></tr>
+          <tr><td>Vue du péché</td><td>Une erreur, une faiblesse, un accident de parcours</td><td>Une rébellion contre un Dieu saint</td></tr>
+          <tr><td>Recours</td><td>Efforts, promesses, compensation</td><td>Christ seul, à mains vides</td></tr>
+          <tr><td>Durée</td><td>Le temps de la crise</td><td>Une orientation nouvelle et permanente</td></tr>
+          <tr><td>Fruit</td><td>Rien, ou un vernis qui s’écaille</td><td>Des « œuvres dignes de la repentance » (Ac 26.20)</td></tr>
+          <tr><td>Rapport à l’Église</td><td>On s’éloigne quand on est repris</td><td>On se soumet, on confesse, on demeure</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </figure>
+
+    <h3 id="r-metanoia">La repentance biblique</h3>
+    <p>Le terme grec <i>metanoia</i> désigne un changement d’intelligence — mais un changement si radical qu’il renverse les affections et la volonté avec lui. La repentance touche donc l’homme entier :</p>
+    <ul class="liste">
+      <li><b>L’intelligence</b> : il pense enfin de son péché ce que Dieu en pense, et de Christ ce que Dieu en dit.</li>
+      <li><b>Les affections</b> : ce qu’il aimait lui devient odieux, et ce qu’il méprisait lui devient précieux.</li>
+      <li><b>La volonté</b> : il abandonne le péché comme on quitte un maître, non comme on range un objet qu’on espère reprendre.</li>
+    </ul>
+    <p>Cela ne signifie pas que le converti cesse instantanément de pécher — la section sur la sanctification dira le contraire. Cela signifie qu’il a changé de camp. Le péché qu’il commet encore, il ne le défend plus ; il le combat. C’est toute la différence entre un homme qui trébuche sur le chemin et un homme qui marche tranquillement dans la direction opposée.</p>
+    <p>Il faut ajouter que la repentance elle-même est un don. « Dieu a donc accordé la repentance aussi aux païens » (Actes 11.18) ; c’est le Seigneur qui peut « leur donner la repentance pour arriver à la connaissance de la vérité » (2 Timothée 2.25). Un homme mort dans ses fautes ne produit pas de lui-même le dégoût de son propre péché.</p>
+
+    <h3 id="r-foi">La foi qui sauve</h3>
+    <p>La foi salvatrice n’est pas un optimisme religieux, ni un pari, ni un sentiment de paix intérieure. Elle comporte trois éléments inséparables :</p>
+    <ul class="liste">
+      <li><b>La connaissance</b> — il faut savoir <i>quoi</i> croire : qui est Christ, ce qu’il a fait à la croix, pourquoi il est ressuscité. « Comment croiront-ils en celui dont ils n’ont pas entendu parler ? » (Romains 10.14). Une foi sans contenu doctrinal est une foi sans objet.</li>
+      <li><b>L’assentiment</b> — il faut tenir ces vérités pour vraies, non comme un système intéressant, mais comme le verdict de Dieu sur ma situation réelle.</li>
+      <li><b>La confiance</b> — il faut se remettre personnellement à Christ, cesser de reposer sur soi. C’est ici que les démons échouent : ils ont la connaissance et l’assentiment, « ils croient aussi, et ils tremblent » (Jacques 2.19), mais ils ne se confient pas.</li>
+    </ul>
+    <p>La valeur de cette foi ne tient pas à sa force, mais à son objet. Une foi faible qui saisit un Sauveur puissant sauve ; une foi puissante qui saisit un faux espoir damne. Et cette foi non plus n’est pas produite par l’homme :</p>
+    <blockquote class="vers">Car c’est par la grâce que vous êtes sauvés, par le moyen de la foi. Et cela ne vient pas de vous, c’est le don de Dieu. Ce n’est point par les œuvres, afin que personne ne se glorifie. (Éphésiens 2.8-9)</blockquote>
+    <p>Paul dit ailleurs qu’il a été fait grâce aux Philippiens, « par rapport à Christ, non seulement de croire en lui, mais encore de souffrir pour lui » (Philippiens 1.29). Le croire lui-même est donné. Il ne reste donc à l’homme racheté aucun titre de gloire, pas même celui d’avoir eu, un jour, la lucidité de dire oui.</p>
+
+    <h3 id="r-seigneurie">Recevoir Christ comme Seigneur</h3>
+    <p>Le Nouveau Testament ne connaît pas de Christ que l’on pourrait recevoir comme Sauveur en réservant à plus tard la question de sa seigneurie. C’est un seul et même Christ, et il ne se divise pas. La confession qui sauve est celle-ci : « si tu confesses de ta bouche le Seigneur Jésus, et si tu crois dans ton cœur que Dieu l’a ressuscité des morts, tu seras sauvé » (Romains 10.9).</p>
+    <p>Jean traite d’ailleurs l’incrédulité et la désobéissance comme un même refus : « celui qui ne croit pas au Fils ne verra point la vie, mais la colère de Dieu demeure sur lui » (Jean 3.36) — le verbe employé porte le sens de refuser de se soumettre. Croire, dans l’Écriture, c’est se rendre.</p>
+    <p>Cette précision n’ajoute rien aux conditions du salut : elle refuse simplement d’en retrancher. Le salut demeure entièrement gratuit, entièrement immérité, reçu à mains vides ; mais celui qui le reçoit reçoit un Maître. C’est pourquoi Jésus décrit l’entrée dans le royaume comme un renoncement chiffré : porter sa croix, renoncer à soi-même, calculer la dépense (Luc 9.23 ; 14.28-33). Un Évangile qui promet le pardon sans la seigneurie ne produit pas des disciples, mais des hommes rassurés à tort.</p>
+
+    <h3 id="r-regeneration">La régénération précède la foi</h3>
+    <p>Pourquoi un homme se repent-il et croit-il, alors que son voisin, assis sous la même prédication, ne le fait pas ? L’Écriture ne renvoie pas la réponse à la qualité de l’auditeur, mais à l’œuvre souveraine de Dieu.</p>
+    <blockquote class="vers">Jésus lui répondit : En vérité, en vérité, je te le dis, si un homme ne naît de nouveau, il ne peut voir le royaume de Dieu. (Jean 3.3)</blockquote>
+    <blockquote class="vers">Il nous a sauvés, non à cause des œuvres de justice que nous aurions faites, mais selon sa miséricorde, par le bain de la régénération et le renouvellement du Saint-Esprit. (Tite 3.5)</blockquote>
+    <p>L’homme naturel est mort dans ses fautes (Éphésiens 2.1), aveuglé par le dieu de ce siècle (2 Corinthiens 4.4), hostile à Dieu et incapable de se soumettre à sa loi (Romains 8.7). Un mort ne se réanime pas lui-même. Il faut que Dieu, souverainement, communique la vie ; alors, et alors seulement, l’homme voit, veut et vient. La nouvelle naissance n’est pas la récompense de la foi : elle en est la cause. C’est le sens de la grâce souveraine — élection, appel efficace et régénération monergiques.</p>
+    <p>Cette vérité ne décourage pas l’évangélisation : elle la rend possible. Puisque le résultat repose sur Dieu, l’homme racheté peut annoncer l’Évangile à un beau-frère hostile, à un collègue endurci, à un fils qui s’est éloigné, sans se croire responsable de produire un miracle qu’il ne peut pas produire — et sans jamais conclure que le cas est perdu.</p>
+
+    <h3 id="r-justification">La justification : le verdict acquis</h3>
+    <p>La justification n’est pas un processus, ni une amélioration morale progressive. C’est une déclaration judiciaire, prononcée une fois pour toutes, par laquelle Dieu déclare juste le pécheur qui croit — non parce qu’il l’est devenu, mais parce qu’un échange a eu lieu :</p>
+    <blockquote class="vers">Celui qui n’a point connu le péché, il l’a fait devenir péché pour nous, afin que nous devenions en lui justice de Dieu. (2 Corinthiens 5.21)</blockquote>
+    <p>C’est la double imputation : nos péchés portés au compte de Christ à la croix, sa justice parfaite portée à notre compte. Paul refuse explicitement toute justice personnelle : il veut être trouvé en Christ « non avec ma justice, celle qui vient de la loi, mais avec celle qui s’obtient par la foi en Christ, la justice qui vient de Dieu par la foi » (Philippiens 3.9). Et le résultat est immédiat et stable : « Étant donc justifiés par la foi, nous avons la paix avec Dieu par notre Seigneur Jésus-Christ » (Romains 5.1).</p>
+    <p>Pour un homme, cette doctrine a une conséquence pratique immense. Sa position devant Dieu ne monte pas et ne descend pas avec ses performances de la semaine. Il travaille, dirige sa maison, sert dans son Église et affronte l’échec depuis une justice qui ne lui appartient pas et que personne ne peut lui retirer. Il n’a plus rien à prouver ; il a tout à recevoir.</p>
+
+    <h3 id="r-fausse">L’homme qui se croit converti sans l’être</h3>
+    <p>Le danger le plus grave, dans une Église fidèle, n’est pas l’incroyant assis au fond de la salle : c’est l’homme convaincu d’être en règle et qui ne l’est pas.</p>
+    <blockquote class="vers">Ceux qui me disent : Seigneur, Seigneur ! n’entreront pas tous dans le royaume des cieux, mais seulement celui qui fait la volonté de mon Père qui est dans les cieux. […] Alors je leur dirai ouvertement : Je ne vous ai jamais connus, retirez-vous de moi, vous qui commettez l’iniquité. (Matthieu 7.21,23)</blockquote>
+    <p>Ces hommes-là ne sont pas des marginaux : ils ont prophétisé, chassé des démons, fait des miracles — au nom de Jésus. Leur activité religieuse était intense ; leur relation avec lui, inexistante. Jean décrit la même réalité du côté de l’Église locale : « Ils sont sortis du milieu de nous, mais ils n’étaient pas des nôtres » (1 Jean 2.19). La chute n’a pas créé leur état ; elle l’a révélé.</p>
+    <p>D’où l’ordre apostolique, qu’aucun homme ne devrait esquiver : « Examinez-vous vous-mêmes, pour savoir si vous êtes dans la foi ; éprouvez-vous vous-mêmes » (2 Corinthiens 13.5). Cet examen ne consiste pas à revisiter un souvenir de décision, une date inscrite dans une Bible ou une prière faite à un camp de jeunesse. Il consiste à demander : est-ce que j’aime Christ ? est-ce que je hais mon péché ? est-ce que je persévère ? est-ce que j’aime les frères ? La première épître de Jean est écrite précisément pour cela : « afin que vous sachiez que vous avez la vie éternelle » (1 Jean 5.13).</p>
+    <div class="encadre">
+      <h4>Assurance : sur quoi elle repose, et sur quoi elle ne repose pas</h4>
+      <p>L’assurance du salut se fonde d’abord sur l’œuvre achevée de Christ et sur les promesses de Dieu — objectivement, hors de moi. Elle se confirme ensuite par le témoignage de l’Esprit (Romains 8.16) et par les marques de la vie nouvelle décrites dans 1 Jean : obéissance, amour des frères, attachement à la vérité, persévérance.</p>
+      <p style="margin-bottom:0;">Elle ne repose ni sur l’intensité d’une expérience passée, ni sur une impression subjective, ni sur le souvenir d’une prière récitée. Un homme dont la vie ne porte aucun fruit et qui s’appuie uniquement sur une décision ancienne ne doit pas être rassuré : il doit être appelé à se repentir et à croire.</p>
+    </div>
+
+    <h3 id="r-quotidienne">Une repentance qui dure toute la vie</h3>
+    <p>La repentance initiale n’est pas un péage franchi une fois pour toutes. Elle inaugure une attitude permanente. L’homme racheté vit désormais dans un mouvement quotidien de confession et de retour :</p>
+    <blockquote class="vers">Si nous disons que nous n’avons pas de péché, nous nous séduisons nous-mêmes, et la vérité n’est point en nous. Si nous confessons nos péchés, il est fidèle et juste pour nous les pardonner, et pour nous purifier de toute iniquité. (1 Jean 1.8-9)</blockquote>
+    <p>Un homme qui n’a plus rien à confesser depuis des mois n’est pas un homme avancé : c’est un homme endormi. Plus la lumière augmente, plus la poussière se voit. C’est le paradoxe de la sainteté : les croyants les plus mûrs sont ceux qui ont la plus haute idée de la grâce et la plus basse idée d’eux-mêmes.</p>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+  <article class="section" id="connait-son-dieu">
+    <header class="sec-head">
+      <p class="kicker">Chapitre 2 · Conrad Mbewe</p>
+      <h2 class="sec-title">L’homme racheté connaît son Dieu</h2>
+    </header>
+    <ul class="sommaire">
+      <li><a href="#c-vie">Connaître Dieu, c’est la vie éternelle</a></li>
+      <li><a href="#c-revelation">Dieu se donne à connaître, ou il reste inconnu</a></li>
+      <li><a href="#c-incomprehensible">Incompréhensible, et pourtant vraiment connaissable</a></li>
+      <li><a href="#c-trinite">Un seul Dieu en trois personnes</a></li>
+      <li><a href="#c-impasses">Les impasses à éviter</a></li>
+      <li><a href="#c-perfections">Les perfections de Dieu</a></li>
+      <li><a href="#c-saintete">La sainteté, attribut cardinal</a></li>
+      <li><a href="#c-crainte">La crainte de l’Éternel</a></li>
+      <li><a href="#c-cultiver">Comment un homme cultive cette connaissance</a></li>
+    </ul>
+
+    <p>Un homme peut connaître son métier, ses finances, sa mécanique, ses dossiers — et ne rien connaître de Celui devant qui il rendra compte de tout. La conversion ouvre une relation ; elle n’en donne pas d’emblée la profondeur. Le converti est un nouveau-né qui doit maintenant apprendre à connaître son Père.</p>
+
+    <h3 id="c-vie">Connaître Dieu, c’est la vie éternelle</h3>
+    <blockquote class="vers">Or, la vie éternelle, c’est qu’ils te connaissent, toi, le seul vrai Dieu, et celui que tu as envoyé, Jésus-Christ. (Jean 17.3)</blockquote>
+    <p>La vie éternelle n’est pas définie ici par sa durée, mais par son contenu : connaître Dieu. Ce verbe ne désigne ni une information froide ni une expérience sans contenu. Dans l’Écriture, connaître Dieu suppose toujours les deux : une doctrine exacte et une communion réelle. Une doctrine exacte sans communion produit le pharisien ; une communion prétendue sans doctrine produit le mystique, qui adore un dieu de sa propre fabrication.</p>
+    <p>Jérémie place cette connaissance au-dessus de tout ce dont un homme pourrait se vanter : que le sage ne se glorifie pas de sa sagesse, ni le fort de sa force, ni le riche de sa richesse, « mais que celui qui veut se glorifier se glorifie d’avoir de l’intelligence et de me connaître » (Jérémie 9.22-23). Les trois choses dont un homme tire ordinairement sa fierté — la compétence, la force, la réussite — sont exactement celles que Dieu écarte.</p>
+
+    <h3 id="c-revelation">Dieu se donne à connaître, ou il reste inconnu</h3>
+    <p>L’homme ne monte pas jusqu’à Dieu par sa réflexion. Toute connaissance véritable de Dieu est un don de sa part, et elle vient par deux canaux.</p>
+    <h4>La révélation générale</h4>
+    <p>Dieu se manifeste à tous, partout, par la création et par la conscience :</p>
+    <blockquote class="vers">En effet, les perfections invisibles de Dieu, sa puissance éternelle et sa divinité, se voient comme à l’œil nu, depuis la création du monde, quand on les considère dans ses ouvrages. Ils sont donc inexcusables, car ayant connu Dieu, ils ne l’ont point glorifié comme Dieu, et ne lui ont point rendu grâces. (Romains 1.20-21)</blockquote>
+    <p>Cette révélation est réelle et suffisante pour rendre l’homme inexcusable — mais elle ne sauve personne. Elle dit qu’il y a un Dieu puissant ; elle ne dit rien du Christ crucifié. Aucune contemplation d’un lever de soleil ne pardonne un péché.</p>
+    <h4>La révélation spéciale</h4>
+    <p>Pour connaître Dieu en Sauveur, il faut qu’il parle. Il l’a fait dans l’Écriture, et suprêmement dans son Fils :</p>
+    <blockquote class="vers">Personne n’a jamais vu Dieu ; Dieu le Fils unique, qui est dans le sein du Père, est celui qui l’a fait connaître. (Jean 1.18)</blockquote>
+    <blockquote class="vers">Après avoir autrefois, à plusieurs reprises et de plusieurs manières, parlé à nos pères par les prophètes, Dieu, dans ces derniers temps, nous a parlé par le Fils […]. Le Fils est le reflet de sa gloire et l’empreinte de sa personne. (Hébreux 1.1-3)</blockquote>
+    <p>À Philippe qui demandait une vision du Père, Jésus a répondu : « Celui qui m’a vu a vu le Père » (Jean 14.9). Un homme qui veut connaître Dieu doit donc aller là où Dieu s’est décrit lui-même : dans les Écritures qui rendent témoignage à Christ. Toute autre méthode — intuition, expérience, spéculation, spiritualité vague — construit une idole.</p>
+
+    <h3 id="c-incomprehensible">Incompréhensible, et pourtant vraiment connaissable</h3>
+    <p>Deux erreurs symétriques guettent ici. La première consiste à croire qu’on peut faire le tour de Dieu : « Les choses cachées sont à l’Éternel, notre Dieu ; les choses révélées sont à nous et à nos enfants, à perpétuité » (Deutéronome 29.28). Dieu demeure incompréhensible au sens propre : l’esprit fini ne contient pas l’infini. « Mes pensées ne sont pas vos pensées » (Ésaïe 55.8).</p>
+    <p>La seconde erreur consiste à en conclure qu’on ne peut rien savoir de sûr. Or ce que Dieu a révélé est vrai, clair et suffisant. Le croyant ne connaît pas Dieu exhaustivement, mais il le connaît véritablement — comme un enfant connaît réellement son père sans avoir fait l’inventaire de sa vie intérieure. Une théologie saine tient les deux : l’humilité devant le mystère, la certitude devant le texte.</p>
+
+    <h3 id="c-trinite">Un seul Dieu en trois personnes</h3>
+    <p>La confession fondamentale d’Israël demeure celle de l’Église : « Écoute, Israël ! l’Éternel, notre Dieu, est le seul Éternel » (Deutéronome 6.4). Dieu est un en essence. Et pourtant l’Écriture attribue les perfections divines, les noms divins et les œuvres divines à trois personnes distinctes, qui se parlent, s’aiment, s’envoient et se glorifient l’une l’autre.</p>
+    <blockquote class="vers">Allez, faites de toutes les nations des disciples, les baptisant au nom du Père, du Fils et du Saint-Esprit. (Matthieu 28.19)</blockquote>
+    <p>Un seul <i>nom</i>, trois personnes : la formule baptismale à elle seule interdit à la fois le trithéisme et le modalisme. La bénédiction de 2 Corinthiens 13.13 fait de même : « Que la grâce du Seigneur Jésus-Christ, l’amour de Dieu, et la communication du Saint-Esprit, soient avec vous tous ! »</p>
+    <p>Les trois personnes sont coéternelles et coégales en essence, en puissance et en gloire. La distinction porte sur les relations et sur les rôles, non sur la dignité. Dans l’économie du salut, le Fils se soumet volontairement au Père (Jean 5.19 ; Philippiens 2.6-8) et l’Esprit est envoyé par le Père et le Fils (Jean 15.26) — une soumission de fonction, jamais d’essence. Le serviteur n’est pas d’une nature inférieure ; il occupe un rôle assigné dans un plan éternel.</p>
+
+    <figure class="tableau">
+      <figcaption>L’œuvre trinitaire du salut : un seul salut, trois personnes</figcaption>
+      <div class="tableau__scroll">
+      <table>
+        <thead><tr><th>Personne</th><th>Œuvre dans le salut</th><th>Textes</th></tr></thead>
+        <tbody>
+          <tr><td>Le Père</td><td>Élit avant la fondation du monde, envoie le Fils, donne un peuple au Fils, adopte</td><td>Éphésiens 1.3-6 ; Jean 6.37,44 ; 1 Jean 3.1</td></tr>
+          <tr><td>Le Fils</td><td>S’incarne, obéit parfaitement, meurt en substitut, ressuscite, intercède, revient</td><td>Jean 1.14 ; 10.11 ; Romains 4.25 ; Hébreux 7.25</td></tr>
+          <tr><td>Le Saint-Esprit</td><td>Convainc de péché, régénère, habite, scelle, sanctifie, assure</td><td>Jean 16.8 ; Tite 3.5 ; Éphésiens 1.13 ; Romains 8.16</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </figure>
+    <p>Un homme prie donc <b>le Père</b>, <b>par le Fils</b>, <b>dans l’Esprit</b> (Éphésiens 2.18). La Trinité n’est pas un casse-tête réservé aux théologiens : c’est la structure même de la vie chrétienne ordinaire.</p>
+
+    <h3 id="c-impasses">Les impasses à éviter</h3>
+    <div class="encadre">
+      <h4>Trois erreurs anciennes, toujours vivantes</h4>
+      <ul class="liste">
+        <li><b>Le modalisme</b> (une seule personne portant successivement trois masques) : il rend inexplicables le baptême de Jésus, la prière de Gethsémané et Jean 17, où les personnes se parlent.</li>
+        <li><b>L’arianisme</b> (le Fils comme créature supérieure) : il se heurte à Jean 1.1, Colossiens 1.16-17 et Hébreux 1.8, où le Fils est appelé Dieu, Créateur et objet d’adoration.</li>
+        <li><b>Le trithéisme</b> (trois dieux coopérants) : il contredit Deutéronome 6.4 et l’ensemble du monothéisme biblique.</li>
+      </ul>
+      <p style="margin-bottom:0;">La formulation orthodoxe n’est pas une invention conciliaire imposée au texte : c’est le seul énoncé qui garde ensemble toutes les données de l’Écriture sans en sacrifier une.</p>
+    </div>
+
+    <h3 id="c-perfections">Les perfections de Dieu</h3>
+    <p>Les attributs ne sont pas des morceaux de Dieu ni des qualités qu’il posséderait de l’extérieur : ils sont ce qu’il est, tout entier, en chacun d’eux. Dieu n’a pas de l’amour, il est amour ; il n’a pas de la sainteté, il est saint. On les distingue traditionnellement en deux séries.</p>
+    <figure class="tableau">
+      <figcaption>Perfections incommunicables et communicables</figcaption>
+      <div class="tableau__scroll">
+      <table>
+        <thead><tr><th>Perfection</th><th>Ce qu’elle affirme</th><th>Texte</th></tr></thead>
+        <tbody>
+          <tr class="t-sect"><td colspan="3">Incommunicables — ce que Dieu seul est</td></tr>
+          <tr><td>Aséité</td><td>Il existe de lui-même, sans cause, sans besoin</td><td>Exode 3.14 ; Actes 17.25</td></tr>
+          <tr><td>Éternité</td><td>Sans commencement ni fin, hors du temps qu’il a créé</td><td>Psaume 90.2</td></tr>
+          <tr><td>Immutabilité</td><td>Il ne change ni en essence, ni en desseins, ni en promesses</td><td>Malachie 3.6 ; Jacques 1.17</td></tr>
+          <tr><td>Omniprésence</td><td>Il est tout entier présent partout</td><td>Psaume 139.7-10</td></tr>
+          <tr><td>Omniscience</td><td>Il connaît toutes choses, y compris le cœur et l’avenir</td><td>Psaume 139.1-4 ; Ésaïe 46.9-10</td></tr>
+          <tr><td>Omnipotence</td><td>Il fait tout ce qu’il veut, sans obstacle</td><td>Jérémie 32.17 ; Daniel 4.35</td></tr>
+          <tr><td>Souveraineté</td><td>Il règne sur toute l’histoire, y compris sur le mal qu’il n’approuve pas</td><td>Éphésiens 1.11 ; Genèse 50.20</td></tr>
+          <tr class="t-sect"><td colspan="3">Communicables — ce qu’il reproduit en ses rachetés</td></tr>
+          <tr><td>Sainteté</td><td>Séparation absolue d’avec le péché, pureté sans mélange</td><td>Ésaïe 6.3 ; 1 Pierre 1.15-16</td></tr>
+          <tr><td>Justice</td><td>Il fait toujours ce qui est droit et punit le mal</td><td>Deutéronome 32.4 ; Romains 3.26</td></tr>
+          <tr><td>Bonté</td><td>Il fait du bien, même à ceux qui ne le méritent pas</td><td>Psaume 145.9 ; Matthieu 5.45</td></tr>
+          <tr><td>Amour</td><td>Il se donne librement pour le bien de l’objet aimé</td><td>Jean 3.16 ; 1 Jean 4.8-10</td></tr>
+          <tr><td>Miséricorde et patience</td><td>Il retient le jugement mérité et accorde le temps de la repentance</td><td>Exode 34.6 ; 2 Pierre 3.9</td></tr>
+          <tr><td>Vérité et fidélité</td><td>Il ne ment pas et tient toutes ses promesses</td><td>Nombres 23.19 ; 2 Timothée 2.13</td></tr>
+          <tr><td>Sagesse</td><td>Il atteint toujours les meilleures fins par les meilleurs moyens</td><td>Romains 11.33-36</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </figure>
+    <p>Aucun attribut ne peut être opposé à un autre. Dieu n’est pas partagé entre son amour et sa justice, comme s’il devait renoncer à l’un pour exercer l’autre. La croix est précisément le lieu où les deux se rencontrent sans compromis : Dieu y est « juste tout en justifiant celui qui a la foi en Jésus » (Romains 3.26). Un homme qui perd cet équilibre finit par prêcher un Dieu sentimental incapable de juger, ou un Dieu sévère incapable d’aimer. Ni l’un ni l’autre n’existe.</p>
+
+    <h3 id="c-saintete">La sainteté, attribut cardinal</h3>
+    <p>Aucun attribut de Dieu n’est proclamé au superlatif triple, dans le ciel, sinon celui-là : « Saint, saint, saint est l’Éternel des armées ! toute la terre est pleine de sa gloire ! » (Ésaïe 6.3). Devant cette vision, un prophète — l’homme le plus droit de sa génération — s’effondre : « Malheur à moi ! je suis perdu, car je suis un homme dont les lèvres sont impures » (Ésaïe 6.5).</p>
+    <p>C’est la mesure d’une connaissance authentique de Dieu. Elle ne gonfle pas l’homme ; elle le met à terre, puis le relève par la grâce, comme le charbon ardent de l’autel a touché les lèvres d’Ésaïe avant que Dieu ne l’envoie. Une théologie qui rend arrogant n’est pas une connaissance de Dieu : c’est une collection d’idées à son sujet.</p>
+
+    <h3 id="c-crainte">La crainte de l’Éternel</h3>
+    <p>« La crainte de l’Éternel est le commencement de la sagesse » (Proverbes 9.10). Cette crainte n’est pas la terreur du condamné qui attend son verdict — celle-là, la croix l’a abolie pour le racheté : « il n’y a donc maintenant aucune condamnation pour ceux qui sont en Jésus-Christ » (Romains 8.1). C’est la révérence du fils devant un Père infiniment saint et redoutable, qu’il aime trop pour l’offenser à la légère.</p>
+    <p>Chez un homme, cette crainte se reconnaît à des choses très concrètes : il ne rit pas de ce que Dieu déteste, il ne traite pas le péché comme une anecdote, il ne parle pas de Dieu avec familiarité désinvolte, il ne se sert pas de la grâce comme d’une permission. « Servez l’Éternel avec crainte, et réjouissez-vous avec tremblement » (Psaume 2.11).</p>
+
+    <h3 id="c-cultiver">Comment un homme cultive cette connaissance</h3>
+    <ul class="liste">
+      <li><b>Par l’Écriture, systématiquement</b> — non pas quelques versets favoris, mais le conseil de Dieu tout entier (Actes 20.27), en lisant les livres en entier et en laissant Dieu se décrire lui-même.</li>
+      <li><b>Sous la prédication expositive</b> — il se place chaque dimanche sous un texte expliqué, dans une Église locale, plutôt que de composer sa théologie à la carte.</li>
+      <li><b>Dans la prière</b> — il répond à Dieu ce que Dieu vient de lui dire ; il adore avant de demander.</li>
+      <li><b>Par l’obéissance</b> — « Celui qui a mes commandements et qui les garde, c’est celui qui m’aime […] et je me ferai connaître à lui » (Jean 14.21). La désobéissance obscurcit la connaissance de Dieu plus sûrement que l’ignorance.</li>
+      <li><b>Par la providence</b> — les épreuves enseignent sur Dieu ce que les livres seuls n’enseignent pas ; Job a connu Dieu par ouï-dire, puis « maintenant mon œil t’a vu » (Job 42.5).</li>
+    </ul>
+    <div class="encadre">
+      <h4>Ce que « connaître Dieu » n’est pas</h4>
+      <p>Ce n’est pas une impression intérieure, une voix perçue, un songe, une « parole reçue » ni un sentiment de présence. Dieu a parlé de façon définitive dans son Fils et dans l’Écriture (Hébreux 1.1-2) ; la foi a été « transmise aux saints une fois pour toutes » (Jude 3). Les dons révélatoires et miraculeux qui accréditaient les apôtres ont cessé avec eux.</p>
+      <p style="margin-bottom:0;">Un homme qui fonde sa marche sur des impressions se rendra vulnérable à ses propres désirs, qu’il finira par baptiser du nom de Dieu. Celui qui la fonde sur le texte a un guide extérieur à lui-même, qui peut donc le contredire — et c’est exactement ce dont il a besoin.</p>
+    </div>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+  <article class="section" id="s-attache-a-la-parole">
+    <header class="sec-head">
+      <p class="kicker">Chapitre 3 · Paul M. Smalley</p>
+      <h2 class="sec-title">L’homme racheté s’attache à la Parole de Dieu</h2>
+    </header>
+    <ul class="sommaire">
+      <li><a href="#p-origine">D’où vient l’Écriture</a></li>
+      <li><a href="#p-qualites">Ce qu’elle est</a></li>
+      <li><a href="#p-suffisance">La suffisance et le canon clos</a></li>
+      <li><a href="#p-lire">Comment la lire</a></li>
+      <li><a href="#p-opere">Ce que la Parole opère</a></li>
+      <li><a href="#p-discipline">La discipline d’un homme attaché à la Parole</a></li>
+      <li><a href="#p-concurrences">Les autorités concurrentes</a></li>
+    </ul>
+
+    <p>Un homme ne peut connaître Dieu au-delà de ce que Dieu a dit de lui-même. C’est pourquoi le rapport qu’un homme entretient avec sa Bible n’est pas un détail de tempérament — certains seraient « livresques », d’autres non — mais la mesure exacte de son rapport à Dieu. On ne s’attache pas à Dieu davantage qu’on ne s’attache à sa Parole.</p>
+
+    <h3 id="p-origine">D’où vient l’Écriture</h3>
+    <blockquote class="vers">Toute Écriture est inspirée de Dieu, et utile pour enseigner, pour convaincre, pour corriger, pour instruire dans la justice, afin que l’homme de Dieu soit accompli et propre à toute bonne œuvre. (2 Timothée 3.16-17)</blockquote>
+    <p>Le mot rendu par « inspirée de Dieu » signifie littéralement <i>soufflée par Dieu</i>. L’Écriture ne devient pas Parole de Dieu quand elle me touche ; elle l’est par nature, avant même d’être lue. Et cela vaut de <b>toute</b> Écriture : non seulement des passages édifiants, mais aussi des généalogies, des lois cérémonielles et des récits difficiles.</p>
+    <blockquote class="vers">Sachez tout d’abord vous-mêmes qu’aucune prophétie de l’Écriture ne peut être un objet d’interprétation particulière, car ce n’est pas par une volonté d’homme qu’une prophétie a jamais été apportée, mais c’est poussés par le Saint-Esprit que des hommes ont parlé de la part de Dieu. (2 Pierre 1.20-21)</blockquote>
+    <p>L’inspiration est <b>verbale</b> — elle atteint les mots eux-mêmes, non seulement les idées générales ; Jésus fonde des arguments sur un temps de verbe (Matthieu 22.32) et affirme que pas un iota ne passera (Matthieu 5.18). Elle est <b>plénière</b> — elle s’étend à la totalité du texte. Et elle n’a pas supprimé les auteurs humains : leur vocabulaire, leur style, leur recherche (Luc 1.1-4) demeurent, portés par l’Esprit jusqu’à un résultat exempt d’erreur.</p>
+
+    <h3 id="p-qualites">Ce qu’elle est</h3>
+    <ul class="liste">
+      <li><b>Inerrante et infaillible</b> — parce que Dieu ne ment pas, sa Parole ne se trompe pas, en tout ce qu’elle affirme : doctrine, morale, histoire, création. « Ta parole est la vérité » (Jean 17.17).</li>
+      <li><b>Autoritaire</b> — elle ne demande pas l’assentiment de la culture pour être vraie. Elle juge le lecteur ; le lecteur ne la juge pas.</li>
+      <li><b>Claire</b> — ses vérités nécessaires au salut et à la piété sont accessibles à un homme ordinaire qui la lit avec attention : « La révélation de tes paroles éclaire, elle donne de l’intelligence aux simples » (Psaume 119.130). Cela ne signifie pas que tout y soit également facile (2 Pierre 3.16), mais que Dieu a parlé pour être compris.</li>
+      <li><b>Nécessaire</b> — sans elle, nul ne connaît l’Évangile ni la volonté de Dieu.</li>
+      <li><b>Suffisante</b> — elle contient tout ce qui est requis pour la foi et la vie.</li>
+    </ul>
+    <figure class="tableau">
+      <figcaption>Ce que la Parole est et ce qu’elle fait — Psaume 19.8-12</figcaption>
+      <div class="tableau__scroll">
+      <table>
+        <thead><tr><th>Désignation</th><th>Qualité</th><th>Effet sur l’homme</th></tr></thead>
+        <tbody>
+          <tr><td>La loi de l’Éternel</td><td>parfaite</td><td>elle restaure l’âme</td></tr>
+          <tr><td>Le témoignage de l’Éternel</td><td>véritable</td><td>il rend sage l’ignorant</td></tr>
+          <tr><td>Les ordonnances de l’Éternel</td><td>droites</td><td>elles réjouissent le cœur</td></tr>
+          <tr><td>Les commandements de l’Éternel</td><td>purs</td><td>ils éclairent les yeux</td></tr>
+          <tr><td>La crainte de l’Éternel</td><td>pure</td><td>elle subsiste à toujours</td></tr>
+          <tr><td>Les jugements de l’Éternel</td><td>vrais et tous justes</td><td>« pour qui les observe la récompense est grande »</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </figure>
+    <p>David ajoute qu’ils sont « plus précieux que l’or, que beaucoup d’or fin ; […] plus doux que le miel » (Psaume 19.11). Voilà l’estimation d’un homme selon le cœur de Dieu : la Parole vaut plus que le patrimoine et goûte meilleur que le plaisir.</p>
+
+    <h3 id="p-suffisance">La suffisance et le canon clos</h3>
+    <p>La suffisance de l’Écriture est la doctrine que le siècle attaque le plus discrètement — non en niant la Bible, mais en lui adjoignant des compléments : des révélations privées, des impressions, des songes, des « paroles de connaissance », des techniques importées de la psychologie ou du marketing.</p>
+    <p>Or Dieu a parlé une fois pour toutes. La foi a été « transmise aux saints une fois pour toutes » (Jude 3). Le fondement de l’Église a été posé par les apôtres et les prophètes, Christ étant la pierre de l’angle (Éphésiens 2.20) : un fondement ne se pose pas deux fois. La divine puissance « nous a donné tout ce qui contribue à la vie et à la piété » (2 Pierre 1.3). Le canon est clos, et les dons révélatoires et miraculeux qui authentifiaient les messagers de la révélation nouvelle ont cessé avec l’ère apostolique.</p>
+    <p>La conséquence pratique est libératrice. Un homme qui cherche la volonté de Dieu pour sa vie n’a pas à attendre un signe intérieur : il a à obéir à ce qui est écrit, à user de la sagesse formée par l’Écriture, à demander conseil aux anciens de son Église et à agir. Dieu conduit son peuple par sa Parole et par sa providence, non par des messages privés.</p>
+
+    <h3 id="p-lire">Comment la lire</h3>
+    <p>Puisque Dieu a parlé dans un texte, la tâche du lecteur est de découvrir ce que ce texte veut dire — non d’y projeter ce qu’il souhaite y trouver. C’est la méthode grammatico-historique :</p>
+    <ul class="liste">
+      <li><b>Un sens, pas plusieurs</b> — un passage a la signification que son auteur, humain et divin, lui a donnée. Les applications sont multiples ; l’interprétation est une.</li>
+      <li><b>Le sens littéral</b> — les mots gardent leur sens normal dans leur genre littéraire, y compris pour les récits de la création et pour la prophétie. Les figures de style sont lues comme telles, mais on ne spiritualise pas une promesse pour lui faire dire autre chose que ce qu’elle dit. C’est en particulier ce qui préserve la distinction entre Israël et l’Église et le sérieux des promesses non encore accomplies.</li>
+      <li><b>Le contexte</b> — le verset dans son paragraphe, le paragraphe dans son livre, le livre dans son moment de l’histoire de la révélation.</li>
+      <li><b>L’Écriture par l’Écriture</b> — un texte obscur se lit à la lumière d’un texte clair, jamais l’inverse.</li>
+      <li><b>Le sens avant l’application</b> — la question « qu’est-ce que ça me dit ? » n’a le droit d’être posée qu’après « qu’est-ce que ça dit ? ».</li>
+    </ul>
+    <div class="encadre">
+      <h4>Deux mauvaises habitudes tenaces</h4>
+      <p><b>La lecture dévotionnelle sans exégèse.</b> Ouvrir au hasard, retenir la phrase qui frappe, en faire un message personnel. Cette méthode a fait dire à l’Écriture à peu près tout ce que les hommes voulaient entendre.</p>
+      <p style="margin-bottom:0;"><b>L’allégorisation.</b> Chercher derrière le récit un sens caché que le texte ne porte pas. Elle donne l’impression de la profondeur ; elle produit en réalité l’imagination du lecteur, présentée comme la voix de Dieu.</p>
+    </div>
+
+    <h3 id="p-opere">Ce que la Parole opère</h3>
+    <ul class="liste">
+      <li><b>Elle engendre</b> : « Il nous a engendrés selon sa volonté, par la parole de vérité » (Jacques 1.18) ; « vous avez été régénérés […] par la parole vivante et permanente de Dieu » (1 Pierre 1.23).</li>
+      <li><b>Elle sanctifie</b> : « Sanctifie-les par ta vérité : ta parole est la vérité » (Jean 17.17).</li>
+      <li><b>Elle sonde</b> : « la parole de Dieu est vivante et efficace, plus tranchante qu’une épée quelconque à deux tranchants […] ; elle juge les sentiments et les pensées du cœur » (Hébreux 4.12).</li>
+      <li><b>Elle préserve du péché</b> : « Je serre ta parole dans mon cœur, afin de ne pas pécher contre toi » (Psaume 119.11).</li>
+      <li><b>Elle équipe</b> : elle rend l’homme de Dieu « accompli et propre à toute bonne œuvre » (2 Timothée 3.17).</li>
+    </ul>
+    <p>Ces effets expliquent pourquoi la négligence de l’Écriture est si coûteuse chez un homme : il ne perd pas seulement des connaissances, il perd les moyens mêmes de sa croissance, de sa protection et de son utilité.</p>
+
+    <h3 id="p-discipline">La discipline d’un homme attaché à la Parole</h3>
+    <ul class="liste">
+      <li><b>Lire</b> — un plan suivi, livre par livre, à heure fixe, plutôt qu’au gré de l’humeur. La régularité modeste bat l’élan intermittent.</li>
+      <li><b>Méditer</b> — « il médite jour et nuit » (Psaume 1.2) : ruminer un texte, le retourner, le prier, jusqu’à ce qu’il travaille l’homme et non l’inverse.</li>
+      <li><b>Mémoriser</b> — ce qui est en mémoire est disponible au moment de la tentation, du conseil à donner ou de la nuit blanche.</li>
+      <li><b>Étudier</b> — avec papier, contexte, renvois et bons outils ; l’effort d’étude est une forme de respect envers celui qui a parlé.</li>
+      <li><b>Mettre en pratique</b> — « Mettez en pratique la parole, et ne vous bornez pas à l’écouter en vous trompant vous-mêmes par de faux raisonnements » (Jacques 1.22). L’auditeur qui n’obéit pas s’illusionne ; il croit progresser parce qu’il accumule.</li>
+      <li><b>Se placer sous la prédication</b> — la lecture personnelle ne remplace pas l’exposition publique dans l’Église locale, où l’homme est enseigné par d’autres et corrigé de ses angles morts.</li>
+      <li><b>La transmettre</b> — « Que la parole de Christ demeure en vous dans toute sa richesse ; instruisez-vous et exhortez-vous les uns les autres en toute sagesse » (Colossiens 3.16). Un homme qui vit de la Parole finit par en nourrir sa femme, ses enfants et ses frères.</li>
+    </ul>
+
+    <h3 id="p-concurrences">Les autorités concurrentes</h3>
+    <p>Rien ne se présente jamais comme un rival de l’Écriture ; tout se présente comme un complément. C’est ainsi que la tradition, l’expérience, la culture ambiante, la conscience personnelle et les mouvements d’opinion prennent peu à peu la place de juge, l’Écriture étant convoquée après coup pour approuver une position déjà adoptée.</p>
+    <p>Le test est simple, et un homme honnête peut se l’appliquer seul : <i>qu’est-ce qui change quand l’Écriture contredit ce que je pense ?</i> Si le texte plie, l’autorité réelle est ailleurs. Si c’est moi qui plie, alors l’Écriture est effectivement mon autorité — et l’homme qui a appris à plier devant elle est celui qu’on pourra ensuite suivre en toute sécurité dans sa maison, dans son travail et dans son Église.</p>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+  <article class="section" id="croit-en-grace">
+    <header class="sec-head">
+      <p class="kicker">Chapitre 4 · Sinclair B. Ferguson</p>
+      <h2 class="sec-title">L’homme racheté croît en grâce</h2>
+    </header>
+    <ul class="sommaire">
+      <li><a href="#g-ordre">Un ordre, non une option</a></li>
+      <li><a href="#g-trois-temps">Les trois temps de la sanctification</a></li>
+      <li><a href="#g-operer">Dieu opère, l’homme travaille</a></li>
+      <li><a href="#g-mortifier">Faire mourir et revêtir</a></li>
+      <li><a href="#g-moyens">Les moyens de la grâce</a></li>
+      <li><a href="#g-esprit">Marcher par l’Esprit</a></li>
+      <li><a href="#g-mesure">À quoi se mesure la croissance</a></li>
+      <li><a href="#g-fausses">Ni perfectionnisme, ni découragement</a></li>
+      <li><a href="#g-esperance">La motivation : l’espérance</a></li>
+    </ul>
+
+    <p>La grâce qui sauve un homme ne le laisse jamais où elle l’a trouvé. Il n’existe pas de converti stationnaire — seulement des croyants qui avancent vite, des croyants qui avancent lentement, et des hommes qui n’ont jamais commencé.</p>
+
+    <h3 id="g-ordre">Un ordre, non une option</h3>
+    <blockquote class="vers">Mais croissez dans la grâce et dans la connaissance de notre Seigneur et Sauveur Jésus-Christ. À lui soit la gloire, maintenant et pour l’éternité ! Amen ! (2 Pierre 3.18)</blockquote>
+    <p>C’est un impératif, adressé à tous les croyants, et il porte sur deux choses inséparables : la grâce et la connaissance. Une croissance en connaissance sans croissance en grâce produit un homme dur, exact et insupportable. Une croissance en grâce sans connaissance produit un homme aimable et sans colonne vertébrale, que la première hérésie venue emportera. Pierre les tient ensemble.</p>
+    <p>Le but final n’est pas le confort du croyant, mais sa conformité au Fils :</p>
+    <blockquote class="vers">Car ceux qu’il a connus d’avance, il les a aussi prédestinés à être semblables à l’image de son Fils, afin que son Fils soit le premier-né de beaucoup de frères. (Romains 8.29)</blockquote>
+
+    <h3 id="g-trois-temps">Les trois temps de la sanctification</h3>
+    <p>Confondre ces trois temps est la source de la plupart des découragements et de la plupart des prétentions.</p>
+    <figure class="tableau">
+      <figcaption>Positionnelle, progressive, finale</figcaption>
+      <div class="tableau__scroll">
+      <table>
+        <thead><tr><th>Temps</th><th>Ce qui se produit</th><th>Quand</th><th>Textes</th></tr></thead>
+        <tbody>
+          <tr><td>Positionnelle</td><td>Le croyant est mis à part pour Dieu, déclaré saint en Christ ; son statut est acquis</td><td>À la conversion, une fois pour toutes</td><td>1 Corinthiens 1.2 ; 6.11 ; Hébreux 10.10</td></tr>
+          <tr><td>Progressive</td><td>Il devient dans les faits ce qu’il est déjà en position ; combat, revers, progrès réel</td><td>Toute la vie présente</td><td>1 Thessaloniciens 4.3 ; 2 Corinthiens 3.18 ; Philippiens 2.12-13</td></tr>
+          <tr><td>Finale</td><td>Il est rendu parfaitement semblable à Christ, sans péché possible</td><td>À sa venue, ou à la mort du croyant</td><td>1 Jean 3.2 ; Philippiens 1.6 ; 3.20-21</td></tr>
+        </tbody>
+      </table>
+      </div>
+    </figure>
+    <p>La sanctification positionnelle explique pourquoi Paul appelle « saints » des Corinthiens dont il va corriger longuement la conduite. La progressive explique pourquoi il les corrige. Et la finale explique pourquoi il ne désespère pas d’eux.</p>
+
+    <h3 id="g-operer">Dieu opère, l’homme travaille</h3>
+    <blockquote class="vers">Ainsi, mes bien-aimés, comme vous avez toujours obéi, mettez en œuvre votre salut avec crainte et tremblement […] ; car c’est Dieu qui produit en vous le vouloir et le faire, selon son bon plaisir. (Philippiens 2.12-13)</blockquote>
+    <p>Ces deux versets tiennent ensemble ce que les hommes séparent sans cesse. La régénération est monergique : Dieu seul l’accomplit. La sanctification, elle, engage réellement le croyant — il obéit, il combat, il s’exerce — mais l’énergie qui rend cet effort possible est celle de Dieu à l’œuvre en lui. On ne travaille pas <i>pour</i> obtenir le salut ; on travaille <i>parce que</i> Dieu travaille.</p>
+    <p>Deux déviations symétriques sont à écarter :</p>
+    <ul class="liste">
+      <li><b>Le quiétisme</b> — « cesse de lutter, lâche prise et laisse Dieu agir ». L’Écriture, elle, ordonne de courir, de combattre, de veiller, de faire mourir, de revêtir. La passivité n’est jamais présentée comme la voie de la sainteté.</li>
+      <li><b>Le légalisme</b> — l’effort déconnecté de la grâce, où l’homme cherche à mériter la faveur qu’il possède déjà. Il finit épuisé, ou orgueilleux, et souvent les deux.</li>
+    </ul>
+
+    <h3 id="g-mortifier">Faire mourir et revêtir</h3>
+    <p>La sanctification a un versant négatif et un versant positif, et négliger l’un ruine l’autre.</p>
+    <blockquote class="vers">Si vous vivez selon la chair, vous mourrez ; mais si par l’Esprit vous faites mourir les actions du corps, vous vivrez. (Romains 8.13)</blockquote>
+    <blockquote class="vers">Faites donc mourir ce qui, dans vos membres, est terrestre, la débauche, l’impureté, les passions, les mauvais désirs, et la cupidité, qui est une idolâtrie. (Colossiens 3.5)</blockquote>
+    <p>Le verbe est violent, et il est délibéré : on ne négocie pas avec ce qu’on doit mettre à mort. Pour un homme, cela veut dire nommer précisément le péché plutôt que de parler de « faiblesses » en général, couper les accès — écrans, horaires, fréquentations, secrets —, et rendre des comptes à quelqu’un plutôt que de compter sur sa propre vigilance.</p>
+    <p>Mais Colossiens 3 ne s’arrête pas là : après avoir dépouillé le vieil homme, il faut revêtir « des entrailles de miséricorde, de bonté, d’humilité, de douceur, de patience » (v. 12). Un homme qui se contente d’arracher sans planter obtient un champ propre et stérile ; les mauvaises herbes y reviendront d’elles-mêmes.</p>
+
+    <h3 id="g-moyens">Les moyens de la grâce</h3>
+    <p>Dieu sanctifie par des moyens ordinaires, dont aucun n’est spectaculaire et dont aucun ne peut être sauté.</p>
+    <ul class="liste">
+      <li><b>La Parole</b> — premier instrument de la sanctification (Jean 17.17). Un homme ne croîtra pas au-delà de ce qu’il connaît de l’Écriture.</li>
+      <li><b>La prière</b> — non comme complément, mais comme respiration : adoration, confession, action de grâces, requêtes (Philippiens 4.6).</li>
+      <li><b>L’Église locale</b> — la sanctification n’est pas un projet privé. Prédication, exhortation mutuelle, discipline, service : « n’abandonnons pas notre assemblée » (Hébreux 10.24-25).</li>
+      <li><b>Les ordonnances</b> — le baptême du croyant par immersion, qui proclame publiquement l’union à Christ dans sa mort et sa résurrection, et la table du Seigneur, qui rappelle régulièrement à quel prix il a été racheté et l’oblige à s’examiner (1 Corinthiens 11.28).</li>
+      <li><b>Le service</b> — le don spirituel reçu s’exerce pour l’utilité commune (1 Pierre 4.10) ; un homme qui ne sert nulle part s’atrophie.</li>
+      <li><b>La providence et l’épreuve</b> — Dieu se sert des difficultés comme d’un instrument de sculpture : « tout châtiment semble d’abord un sujet de tristesse, et non de joie ; mais il produit plus tard pour ceux qui ont été ainsi exercés un fruit paisible de justice » (Hébreux 12.11 ; voir Jacques 1.2-4).</li>
+    </ul>
+
+    <h3 id="g-esprit">Marcher par l’Esprit</h3>
+    <blockquote class="vers">Je dis donc : Marchez selon l’Esprit, et vous n’accomplirez pas les désirs de la chair. (Galates 5.16)</blockquote>
+    <blockquote class="vers">Mais le fruit de l’Esprit, c’est l’amour, la joie, la paix, la patience, la bonté, la bienveillance, la foi, la douceur, la maîtrise de soi. (Galates 5.22-23)</blockquote>
+    <p>Le fruit est au singulier : ce n’est pas un assortiment où chacun choisirait ses points forts, mais un caractère unique produit par l’Esprit dans tout croyant véritable.</p>
+    <p>Comment un homme est-il « rempli de l’Esprit » (Éphésiens 5.18) ? Le parallèle entre Éphésiens 5.18-21 et Colossiens 3.16 répond : les mêmes effets — chants, actions de grâces, soumission mutuelle — sont attribués d’un côté au fait d’être rempli de l’Esprit, de l’autre au fait que « la parole de Christ demeure en vous dans toute sa richesse ». Être rempli de l’Esprit, c’est être gouverné par la Parole du Christ. Ce n’est ni une expérience seconde, ni une émotion à rechercher, ni un don spectaculaire à convoiter.</p>
+
+    <h3 id="g-mesure">À quoi se mesure la croissance</h3>
+    <blockquote class="vers">Nous tous dont le visage découvert reflète la gloire du Seigneur, nous sommes transformés en la même image, de gloire en gloire, par l’Esprit du Seigneur. (2 Corinthiens 3.18)</blockquote>
+    <p>La croissance ne se mesure ni au volume de connaissances accumulées, ni à l’intensité des émotions religieuses, ni à la quantité d’activités d’Église. Elle se mesure à la ressemblance avec Christ, qui se vérifie dans des lieux très concrets :</p>
+    <ul class="liste">
+      <li>l’humilité — l’homme accepte d’être repris sans se défendre aussitôt ;</li>
+      <li>la maîtrise de la langue et de la colère, surtout à la maison ;</li>
+      <li>l’amour effectif des frères, y compris ceux qu’il ne choisirait pas (1 Jean 3.14) ;</li>
+      <li>la pureté du regard et de l’imagination, là où personne ne le voit ;</li>
+      <li>la constance dans les engagements ordinaires : sa parole tenue, son travail fait, sa femme et ses enfants aimés ;</li>
+      <li>la patience dans l’épreuve, sans amertume contre Dieu.</li>
+    </ul>
+    <p>Et cette croissance est réelle, mais rarement linéaire : elle ressemble moins à une pente régulière qu’à une marée qui monte par vagues, dont certaines semblent reculer.</p>
+
+    <h3 id="g-fausses">Ni perfectionnisme, ni découragement</h3>
+    <div class="encadre">
+      <h4>Trois fausses pistes</h4>
+      <ul class="liste">
+        <li><b>Le perfectionnisme</b> — prétendre atteindre ici-bas un état sans péché. « Si nous disons que nous n’avons pas de péché, nous nous séduisons nous-mêmes » (1 Jean 1.8). Cette prétention n’élève pas la sainteté : elle abaisse la loi de Dieu jusqu’à la mesure de l’homme.</li>
+        <li><b>La seconde bénédiction</b> — attendre une expérience ultérieure qui ferait entrer dans une catégorie supérieure de chrétiens. Le baptême de l’Esprit intervient à la conversion : « nous avons tous été baptisés dans un seul Esprit, pour former un seul corps » (1 Corinthiens 12.13). Il n’existe pas deux classes de rachetés.</li>
+        <li><b>Le découragement</b> — conclure de ses échecs répétés que rien ne change. « Je suis persuadé que celui qui a commencé en vous cette bonne œuvre la rendra parfaite pour le jour de Jésus-Christ » (Philippiens 1.6). L’œuvre n’est pas la nôtre ; son achèvement ne dépend donc pas de notre constance.</li>
+      </ul>
+      <p style="margin-bottom:0;">Le remède, dans les trois cas, est le même : revenir à l’Évangile. Ni la vantardise ni le désespoir ne survivent longtemps à une vue claire de la croix.</p>
+    </div>
+
+    <h3 id="g-esperance">La motivation : l’espérance</h3>
+    <blockquote class="vers">Car la grâce de Dieu, source de salut pour tous les hommes, a été manifestée. Elle nous enseigne à renoncer à l’impiété et aux convoitises mondaines, et à vivre dans le siècle présent selon la sagesse, la justice et la piété, en attendant la bienheureuse espérance, et la manifestation de la gloire de notre grand Dieu et Sauveur Jésus-Christ. (Tite 2.11-13)</blockquote>
+    <p>C’est la grâce elle-même qui enseigne à renoncer — et elle enseigne en orientant le regard vers l’avenir. L’attente du retour du Seigneur n’est pas une curiosité prophétique réservée aux amateurs : c’est un moteur de sainteté.</p>
+    <blockquote class="vers">Bien-aimés, nous sommes maintenant enfants de Dieu, et ce que nous serons n’a pas encore été manifesté ; mais nous savons que, lorsqu’il paraîtra, nous serons semblables à lui, parce que nous le verrons tel qu’il est. Quiconque a cette espérance en lui se purifie, comme lui-même est pur. (1 Jean 3.2-3)</blockquote>
+    <p>Le Seigneur revient chercher les siens ; sa venue est imminente, littérale et corporelle, et rien ne doit encore s’accomplir avant qu’il ne rassemble son Église (1 Thessaloniciens 4.16-18). Vient ensuite le tribunal de Christ, où le croyant ne comparaît pas pour son salut — celui-ci est acquis — mais pour l’évaluation de son œuvre (2 Corinthiens 5.10 ; 1 Corinthiens 3.12-15). Un homme qui vit devant cette double perspective ne gère pas son temps, son argent, sa maison et sa fidélité de la même façon que celui qui n’attend rien.</p>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+
+  <article class="section" id="conclusion">
+    <header class="sec-head">
+      <p class="kicker">Conclusion</p>
+      <h2 class="sec-title">Coram Deo</h2>
+    </header>
+    <p>Les quatre chapitres qui précèdent ne sont pas quatre sujets, mais un seul homme vu sous quatre angles. Il s’est repenti et il a cru — et il continue de le faire chaque jour. Il connaît Dieu — et cette connaissance le rend humble, non savant. Il s’attache à l’Écriture — parce que c’est là que ce Dieu parle. Il croît — parce que la grâce qui l’a saisi ne s’arrête pas en chemin.</p>
+    <p>Rien de ce qui vient ensuite — le mariage, la paternité, le culte familial, l’amitié, le témoignage, le travail, les finances, les loisirs, la citoyenneté, la santé, la persévérance, la retraite, la mort — ne tient sans cela. Un homme qui bâtit sa vie d’époux et de père sans être en règle avec Dieu bâtit soigneusement sur du sable. Et un homme qui se tient devant Dieu, quelles que soient ses faiblesses par ailleurs, a déjà l’essentiel : il est racheté, il est connu, il est conduit, et il sera achevé.</p>
+    <blockquote class="vers">Je suis persuadé que celui qui a commencé en vous cette bonne œuvre la rendra parfaite pour le jour de Jésus-Christ. (Philippiens 1.6)</blockquote>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+
+</main>
+
+<footer class="footer">
+  <div class="logos">
+    <a href="https://www.ebcharlesbourg.com/" target="_blank" rel="noopener" aria-label="Site de l’Église Baptiste de Charlesbourg"><img class="footer__logo" src="../../LogoEBC.avif" width="80" height="250" alt="" decoding="async" loading="lazy"></a>
+    <a href="https://ftscriptura.com/" target="_blank" rel="noopener" aria-label="Faculté de Théologie Scriptura"><img class="logos__fts" src="../../LogoScriptura.webp" width="600" height="216" alt="" decoding="async" loading="lazy"></a>
+  </div>
+  <p class="footer__church">Église Baptiste de Charlesbourg</p>
+  <p class="footer__line">Pasteur Simon Ouellette · Charlesbourg, Québec</p>
+  <p class="footer__line">Citations bibliques : Nouvelle Édition de Genève 1979 (NEG)</p>
+  <p class="footer__source">Plan des chapitres : <i>The Redeemed Man</i>, Richard D. Phillips (dir.) — « La relation de l’homme pieux avec Dieu ». Exposition rédigée dans le cadre théologique de John MacArthur (<i>La Bible d’étude MacArthur</i> ; MacArthur et Mayhue, <i>Théologie systématique</i>), conformément à la confession de foi de l’Église Baptiste de Charlesbourg.</p>
+  <p class="footer__retour" style="display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem;margin:2rem 0 .3rem;">
+    <a href="../../index.html" class="pill">&#8598;&nbsp;Études bibliques</a>
+    <a href="../../Coram%20Deo.pdf" target="_blank" rel="noopener" class="pill">Coram Deo&nbsp;&#8599;</a>
+  </p>
+  <p class="footer__sdg">Soli Deo Gloria</p>
+</footer>
+
+<script>
+  var progress = document.getElementById('progress');
+  var navProgress = document.getElementById('navProgress');
+  var nav = document.getElementById('nav');
+  var hero = document.getElementById('hero');
+
+  function onScroll(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    var pct = max > 0 ? (h.scrollTop || document.body.scrollTop) / max * 100 : 0;
+    progress.style.width = pct + '%';
+    if (navProgress) navProgress.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  if ('IntersectionObserver' in window){
+    var navObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) nav.classList.remove('show');
+        else nav.classList.add('show');
+      });
+    }, {rootMargin:'-70px 0px 0px 0px'});
+    navObs.observe(hero);
+  }
+</script>
+</body>
+</html>
