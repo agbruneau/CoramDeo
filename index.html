@@ -263,6 +263,35 @@
   }
   .livre a:hover .livre__go{transform:translateX(4px);}
 
+  .division{
+    max-width:var(--max);margin:0 auto;
+    padding:clamp(3.5rem,8vw,6rem) clamp(1.4rem,5vw,2rem) 0;
+    text-align:center;scroll-margin-top:5rem;
+  }
+  .division__part{
+    font-size:.82rem;letter-spacing:.42em;text-transform:uppercase;
+    color:var(--or);margin:0 0 .9rem .42em;
+  }
+  .division__titre{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:clamp(2.4rem,1.6rem + 3vw,3.9rem);line-height:1.06;
+    letter-spacing:.02em;margin:0;padding:.04em .06em .14em;
+    background:linear-gradient(176deg,#f9e1bb 0%,var(--or-clair) 45%,var(--or) 100%);
+    -webkit-background-clip:text;background-clip:text;
+    color:transparent;-webkit-text-fill-color:transparent;
+    filter:drop-shadow(0 0 28px rgba(240,182,89,.24)) drop-shadow(0 2px 3px rgba(0,0,0,.5));
+    text-wrap:balance;
+  }
+  .division__filet{
+    display:flex;align-items:center;justify-content:center;gap:1rem;
+    margin:1.5rem auto 0;color:var(--or);width:min(20rem,70%);
+  }
+  .division__filet::before,.division__filet::after{
+    content:"";height:1px;flex:1;
+    background:linear-gradient(90deg,transparent,var(--filet-fort),transparent);
+  }
+  .division__filet span{font-size:.8rem;}
+
   .divider{
     display:flex;align-items:center;justify-content:center;gap:1.4rem;
     max-width:var(--max);margin:0 auto;
@@ -341,6 +370,7 @@
   <nav class="nav__links" aria-label="Corpus">
     <a href="#vision">Vision - Providence</a>
     <a href="#mission">Mission - Oeuvre</a>
+    <a href="#peregrination">Pérégrination - Communion</a>
     <a href="#at">Ancien Testament</a>
     <a href="#evangiles">Évangiles</a>
     <a href="#histoire">Histoire</a>
@@ -376,13 +406,13 @@
     <div class="scrollcue" aria-hidden="true">&#8595;</div>
   </section>
 
-  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+  <header class="division" id="vision">
+    <p class="division__part">Première partie</p>
+    <h2 class="division__titre">Vision - Providence</h2>
+    <div class="division__filet" aria-hidden="true"><span>&#9670;</span></div>
+  </header>
 
-  <article class="section reveal" id="vision">
-    <header class="sec-head">
-      <p class="kicker">Doctrine</p>
-      <h2 class="sec-title">Vision - Providence</h2>
-    </header>
+  <article class="section reveal">
     <p class="lead">Les fondements doctrinaux qui gouvernent nos expositions : qui est Christ, qui est le Saint-Esprit, et ce qu'est son Église.</p>
     <ul class="livres">
       <li class="livre"><a href="1%20-%20Vision/1%20-%20Christologie/index.html">
@@ -406,13 +436,13 @@
     </ul>
   </article>
 
-  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+  <header class="division" id="mission">
+    <p class="division__part">Deuxième partie</p>
+    <h2 class="division__titre">Mission - Oeuvre</h2>
+    <div class="division__filet" aria-hidden="true"><span>&#9670;</span></div>
+  </header>
 
-  <article class="section reveal" id="mission">
-    <header class="sec-head">
-      <p class="kicker">Doctrine</p>
-      <h2 class="sec-title">Mission - Oeuvre</h2>
-    </header>
+  <article class="section reveal">
     <p class="lead">L'homme racheté devant Dieu, devant les siens, dans son ouvrage et jusqu'au bout de sa course.</p>
     <ul class="livres">
       <li class="livre"><a href="2%20-%20Mission/1%20-%20Trinit%C3%A9/index.html">
@@ -442,12 +472,16 @@
     </ul>
   </article>
 
-  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+  <header class="division" id="peregrination">
+    <p class="division__part">Troisième partie</p>
+    <h2 class="division__titre">Pérégrination - Communion</h2>
+    <div class="division__filet" aria-hidden="true"><span>&#9670;</span></div>
+  </header>
 
   <article class="section reveal" id="at">
     <header class="sec-head">
       <p class="kicker">Corpus</p>
-      <h2 class="sec-title">Ancien Testament</h2>
+      <h3 class="sec-title">Ancien Testament</h3>
     </header>
     <p class="lead">Des séries de l'Ancien Testament, lues dans leur contexte d'alliance puis tracées jusqu'à Christ.</p>
     <ul class="livres">
@@ -477,7 +511,7 @@
   <article class="section reveal" id="evangiles">
     <header class="sec-head">
       <p class="kicker">Corpus</p>
-      <h2 class="sec-title">Évangiles</h2>
+      <h3 class="sec-title">Évangiles</h3>
     </header>
     <p class="lead">Quatre portraits du Christ : le Roi, le Serviteur, le Sauveur des perdus et le Verbe fait chair.</p>
     <ul class="livres">
@@ -513,7 +547,7 @@
   <article class="section reveal" id="histoire">
     <header class="sec-head">
       <p class="kicker">Corpus</p>
-      <h2 class="sec-title">Histoire</h2>
+      <h3 class="sec-title">Histoire</h3>
     </header>
     <p class="lead">Les Actes du Saint-Esprit à travers les apôtres : l'Évangile de Jérusalem jusqu'aux nations.</p>
     <ul class="livres">
@@ -531,7 +565,7 @@
   <article class="section reveal" id="paul">
     <header class="sec-head">
       <p class="kicker">Corpus</p>
-      <h2 class="sec-title">Épîtres pauliniennes</h2>
+      <h3 class="sec-title">Épîtres pauliniennes</h3>
     </header>
     <p class="lead">De Galates à 2 Timothée, dans l'ordre où Paul les a écrites : l'Évangile de la grâce déployé pour l'Église et ses serviteurs.</p>
     <ul class="livres">
@@ -621,7 +655,7 @@
   <article class="section reveal" id="generales">
     <header class="sec-head">
       <p class="kicker">Corpus</p>
-      <h2 class="sec-title">Épîtres générales</h2>
+      <h3 class="sec-title">Épîtres générales</h3>
     </header>
     <p class="lead">De Jacques à 3 Jean, dans l'ordre de rédaction : la persévérance de la foi authentique au milieu de l'épreuve et des faux docteurs.</p>
     <ul class="livres">
@@ -681,7 +715,7 @@
   <article class="section reveal" id="apocalypse">
     <header class="sec-head">
       <p class="kicker">Corpus</p>
-      <h2 class="sec-title">Apocalypse</h2>
+      <h3 class="sec-title">Apocalypse</h3>
     </header>
     <p class="lead">La révélation de Christ glorifié et la souveraineté de Dieu sur toute l'histoire.</p>
     <ul class="livres">
