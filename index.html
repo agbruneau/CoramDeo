@@ -292,6 +292,18 @@
   }
   .division__filet span{font-size:.8rem;}
 
+  .schema{margin:0 auto;max-width:44rem;padding:0;}
+  .schema svg{display:block;width:100%;height:auto;}
+  .schema .trait{fill:none;stroke:var(--or);stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round;}
+  .schema .trait-fin{fill:none;stroke:var(--filet-fort);stroke-width:2;stroke-linecap:round;}
+  .schema .croix{fill:var(--feuille-vif);opacity:.92;}
+  .schema text{font-family:"Cormorant Garamond",Georgia,serif;fill:var(--encre);}
+  .schema .personne{fill:var(--or-clair);font-size:34px;font-weight:600;}
+  .schema .renvoi{fill:var(--encre-doux);font-size:26px;font-style:italic;}
+  .schema .axe{fill:var(--feuille);font-size:28px;font-weight:600;}
+  .schema .vertu{font-size:26px;}
+  .schema .marge{fill:var(--or);font-size:54px;font-weight:600;letter-spacing:.5em;}
+
   .divider{
     display:flex;align-items:center;justify-content:center;gap:1.4rem;
     max-width:var(--max);margin:0 auto;
@@ -477,6 +489,42 @@
     <h2 class="division__titre">Pérégrination - Communion</h2>
     <div class="division__filet" aria-hidden="true"><span>&#9670;</span></div>
   </header>
+
+  <article class="section reveal">
+    <figure class="schema">
+      <svg viewBox="0 0 900 660" role="img" aria-labelledby="schemaTitre schemaDesc">
+        <title id="schemaTitre">Trinité</title>
+        <desc id="schemaDesc">Triangle dont les sommets sont le Père, en haut, le Fils, en bas à gauche, et le Saint-Esprit, en bas à droite. Au centre, une croix; sous elle, l’axe Parole – Père – Paraclet, puis la dédication, la prière et la piété. En marge du triangle : Genèse 1 à 11 à gauche, Psaume 19 et Psaume 119 à droite.</desc>
+
+        <path class="trait" d="M450 110 L760 540 L140 540 Z"/>
+
+        <rect class="croix" x="437" y="165" width="26" height="140"/>
+        <rect class="croix" x="390" y="205" width="120" height="26"/>
+
+        <text class="personne" x="450" y="80" text-anchor="middle">Père</text>
+        <text class="personne" x="105" y="578" text-anchor="middle">Fils</text>
+        <text class="personne" x="818" y="566" text-anchor="middle">Saint</text>
+        <text class="personne" x="818" y="602" text-anchor="middle">Esprit</text>
+
+        <text class="marge" x="66" y="330" text-anchor="middle" transform="rotate(-90 66 330)">Trinité</text>
+        <text class="renvoi" x="118" y="182">Genèse 1 à 11</text>
+        <text class="renvoi" x="600" y="152">Psaume 19</text>
+        <text class="renvoi" x="618" y="212">Psaume 119</text>
+
+        <text class="axe" x="450" y="388" text-anchor="middle">Parole &#8212; Père &#8212; Paraclet</text>
+
+        <path class="trait-fin" d="M332 416 V520 M568 416 V520"/>
+        <path class="trait-fin" d="M332 443 H370 M530 443 H568"/>
+        <text class="vertu" x="450" y="443" text-anchor="middle" dominant-baseline="middle">Dédication</text>
+        <path class="trait-fin" d="M332 481 H400 M500 481 H568"/>
+        <text class="vertu" x="450" y="481" text-anchor="middle" dominant-baseline="middle">Prière</text>
+        <path class="trait-fin" d="M332 519 H402 M568 519 H498 M508 512 L498 519 L508 526"/>
+        <text class="vertu" x="450" y="519" text-anchor="middle" dominant-baseline="middle">Piété</text>
+      </svg>
+    </figure>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
 
   <article class="section reveal" id="at">
     <header class="sec-head">
