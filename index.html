@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Exposition de l'Écriture · Église Baptiste de Charlesbourg</title>
+<title>Bible, Piété et Église locale</title>
 <meta name="description" content="Exposition de l'Écriture à l'Église Baptiste de Charlesbourg (pasteur Simon Ouellette) : expositions suivies, livre par livre, du Nouveau Testament en entier et de séries de l'Ancien Testament, dans le cadre théologique de John MacArthur.">
 <meta name="author" content="Église Baptiste de Charlesbourg">
 <style>
@@ -214,10 +214,9 @@
 
   .livres{
     list-style:none;margin:0;padding:0;
-    display:grid;gap:1.1rem;
-    grid-template-columns:repeat(auto-fill,minmax(min(100%,20rem),1fr));
+    display:flex;flex-wrap:wrap;justify-content:center;gap:1.1rem;
   }
-  .livre{margin:0;}
+  .livre{margin:0;flex:0 1 min(100%,20rem);}
   .livre a{
     display:flex;flex-direction:column;gap:.5rem;height:100%;
     padding:1.4rem 1.5rem 1.5rem;
@@ -392,7 +391,7 @@
       <a href="https://www.ebcharlesbourg.com/" target="_blank" rel="noopener" aria-label="Site de l’Église Baptiste de Charlesbourg"><img class="hero__logo" src="LogoEBC.avif" width="80" height="250" alt="" decoding="async"></a>
       <a href="https://ftscriptura.com/" target="_blank" rel="noopener" aria-label="Faculté de Théologie Scriptura"><img class="logos__fts" src="LogoScriptura.webp" width="600" height="216" alt="" decoding="async"></a>
     </div>
-    <h1 class="hero__title">Exposition de l'Écriture</h1>
+    <h1 class="hero__title">Bible, Piété et Église locale</h1>
     <div class="ornament" aria-hidden="true"><span>&#9670;</span></div>
     <p class="hero__verse">
       <span class="q">&laquo;</span>&nbsp;Ta parole est une lampe à mes pieds, et une lumière sur mon sentier.&nbsp;<span class="q">&raquo;</span>
@@ -411,22 +410,28 @@
   </header>
 
   <article class="section reveal">
-    <p class="lead">Les fondements doctrinaux qui gouvernent nos expositions : qui est Christ, qui est le Saint-Esprit, et ce qu'est son Église.</p>
+    <p class="lead">Les fondements doctrinaux qui gouvernent nos expositions : ce qu'est sa Parole, qui est Christ, qui est le Saint-Esprit et ce qu'est son Église.</p>
     <ul class="livres">
-      <li class="livre"><a href="1%20-%20Vision/1%20-%20Christologie/index.html">
+      <li class="livre"><a href="1%20-%20Vision/1%20-%20Bibliologie/index.html">
         <span class="livre__num">01</span>
+        <span class="livre__titre">Bibliologie</span>
+        <span class="livre__theme">La Parole de Dieu : inspirée, faisant autorité, inerrante</span>
+        <span class="livre__ref">2 Timothée 3.16<span class="livre__go" aria-hidden="true">&#8594;</span></span>
+      </a></li>
+      <li class="livre"><a href="1%20-%20Vision/2%20-%20Christologie/index.html">
+        <span class="livre__num">02</span>
         <span class="livre__titre">Christologie</span>
         <span class="livre__theme">Dieu le Fils : préincarné, incarné, glorifié</span>
         <span class="livre__ref">Apocalypse 19.10<span class="livre__go" aria-hidden="true">&#8594;</span></span>
       </a></li>
-      <li class="livre"><a href="1%20-%20Vision/2%20-%20Pneumatologie/index.html">
-        <span class="livre__num">02</span>
+      <li class="livre"><a href="1%20-%20Vision/3%20-%20Pneumatologie/index.html">
+        <span class="livre__num">03</span>
         <span class="livre__titre">Pneumatologie</span>
         <span class="livre__theme">Dieu le Saint-Esprit : sa personne, son œuvre, ses dons</span>
         <span class="livre__ref">Jean 16.13<span class="livre__go" aria-hidden="true">&#8594;</span></span>
       </a></li>
-      <li class="livre"><a href="1%20-%20Vision/3%20-%20Eccl%C3%A9siologie/index.html">
-        <span class="livre__num">03</span>
+      <li class="livre"><a href="1%20-%20Vision/4%20-%20Eccl%C3%A9siologie/index.html">
+        <span class="livre__num">04</span>
         <span class="livre__titre">Ecclésiologie</span>
         <span class="livre__theme">L'Église : son but, son autorité, sa vie</span>
         <span class="livre__ref">Éphésiens 5.25<span class="livre__go" aria-hidden="true">&#8594;</span></span>
@@ -460,7 +465,7 @@
         <span class="livre__theme">Vocation, ardeur, service dans l'Église, ressources, loisirs, citoyenneté</span>
         <span class="livre__ref">Colossiens 3.23<span class="livre__go" aria-hidden="true">&#8594;</span></span>
       </a></li>
-      <li class="livre"><a href="2%20-%20Mission/4%20-%20Fin/index.html">
+      <li class="livre"><a href="2%20-%20Mission/4%20-%20H%C3%A9ritage/index.html">
         <span class="livre__num">04</span>
         <span class="livre__titre">Héritage</span>
         <span class="livre__theme">Santé, persévérance, retraite, préparation à la mort</span>

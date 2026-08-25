@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bibliologie · Église Baptiste de Charlesbourg</title>
+<meta name="description" content="Bibliologie — La Parole de Dieu (Théologie systématique), Église Baptiste de Charlesbourg.">
+<meta name="author" content="Église Baptiste de Charlesbourg">
+<style>
+  :root{
+    --nuit:#0a0a0a;
+    --nuit-1:#121212;
+    --nuit-2:#1b1b1b;
+    --encre:#f3f0ec;
+    --encre-doux:#c9c2ba;
+    --or:#e8843c;
+    --or-clair:#f6a85c;
+    --feuille:#f0b659;
+    --feuille-vif:#f7c97a;
+    --filet:rgba(232,132,60,.28);
+    --filet-fort:rgba(232,132,60,.52);
+    --max:max(58rem,84vw);
+  }
+
+  *{box-sizing:border-box;}
+  html{
+    scroll-behavior:smooth;-webkit-text-size-adjust:100%;
+    scrollbar-color:var(--or) var(--nuit);scrollbar-width:thin;
+  }
+  body{
+    margin:0;
+    font-family:"EB Garamond",Georgia,"Times New Roman",serif;
+    font-size:clamp(1.2rem,.95rem + .85vw,1.45rem);
+    line-height:1.85;
+    color:var(--encre);
+    background:var(--nuit);
+    background-image:
+      radial-gradient(120% 80% at 50% -10%, rgba(240,182,89,.10), transparent 55%),
+      radial-gradient(90% 60% at 85% 8%, rgba(232,132,60,.06), transparent 60%),
+      radial-gradient(100% 70% at 12% 35%, rgba(232,132,60,.05), transparent 58%);
+    background-attachment:fixed;
+    overflow-x:hidden;
+  }
+  .grain{
+    position:fixed;inset:0;z-index:3;pointer-events:none;
+    opacity:.03;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .vignette{
+    position:fixed;inset:0;z-index:1;pointer-events:none;
+    background:radial-gradient(135% 105% at 50% 35%, transparent 56%, rgba(0,0,0,.42) 100%);
+  }
+
+  a{color:var(--feuille);text-decoration:none;}
+  a:focus-visible,.nav__links a:focus-visible{outline:2px solid var(--or);outline-offset:3px;border-radius:3px;}
+  ::selection{background:rgba(232,132,60,.34);color:#fff;}
+  ::-webkit-scrollbar{width:12px;}
+  ::-webkit-scrollbar-track{background:var(--nuit);}
+  ::-webkit-scrollbar-thumb{background:linear-gradient(var(--or),#7a4218);border:3px solid var(--nuit);border-radius:10px;}
+  ::-webkit-scrollbar-thumb:hover{background:var(--or-clair);}
+
+  .progress{
+    position:fixed;top:0;left:0;height:3px;width:0;z-index:60;
+    background:linear-gradient(90deg,var(--or),var(--or-clair),var(--feuille));
+    box-shadow:0 0 12px rgba(232,132,60,.6);
+    transition:width .1s linear;
+  }
+
+  .nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    display:flex;align-items:center;gap:1.5rem;
+    padding:.85rem clamp(1rem,4vw,2.5rem);
+    background:rgba(10,10,10,.82);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--filet);
+    transform:translateY(-110%);
+    transition:transform .45s cubic-bezier(.2,.7,.2,1);
+  }
+  .nav.show{transform:translateY(0);}
+  .nav__progress{
+    position:absolute;left:0;bottom:-1px;height:2px;width:0;
+    background:linear-gradient(90deg,var(--or),var(--or-clair),var(--feuille));
+    box-shadow:0 0 10px rgba(232,132,60,.55);
+    transition:width .1s linear;
+  }
+  .nav__logo{flex:none;display:block;}
+  .nav__logo img{height:clamp(2.2rem,2rem + 1vw,2.9rem);width:auto;display:block;}
+  .nav__brand{
+    font-family:"Cormorant Garamond",serif;font-size:1.55rem;font-weight:600;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--or-clair);
+    white-space:nowrap;
+  }
+  .nav__links{
+    display:flex;gap:.15rem;margin-left:auto;
+    overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .nav__links::-webkit-scrollbar{display:none;}
+  .nav__links a{
+    position:relative;
+    font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--encre-doux);padding:.5rem .8rem;border-radius:2px;
+    white-space:nowrap;transition:color .25s;
+  }
+  .nav__links a::after{
+    content:"";position:absolute;left:.8rem;right:.8rem;bottom:.18rem;height:1px;
+    background:var(--or);transform:scaleX(0);transform-origin:left;transition:transform .3s;
+  }
+  .nav__links a:hover{color:var(--or-clair);}
+  .nav__links a:hover::after{transform:scaleX(1);}
+
+  .pill{
+    display:inline-block;padding:.7rem 1.7rem;
+    border:1px solid var(--filet-fort);border-radius:999px;
+    color:var(--or-clair);font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;
+    transition:border-color .3s,color .3s;
+  }
+  .pill:hover{border-color:var(--or);color:var(--feuille-vif);}
+
+  .hero{
+    position:relative;min-height:100svh;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:6rem 1.4rem 4rem;
+  }
+  .hero__frame{
+    position:absolute;inset:clamp(.9rem,3.5vw,2.4rem);
+    border:1px solid var(--filet);pointer-events:none;
+    opacity:0;animation:frameIn 1.5s ease .15s forwards;
+  }
+  .hero__frame::before,.hero__frame::after{
+    content:"";position:absolute;width:16px;height:16px;
+  }
+  .hero__frame::before{top:-1px;left:-1px;border-top:2px solid var(--or);border-left:2px solid var(--or);}
+  .hero__frame::after{bottom:-1px;right:-1px;border-bottom:2px solid var(--or);border-right:2px solid var(--or);}
+  .hero__logo{
+    height:clamp(5.5rem,12vw,8rem);width:auto;margin:0 auto 1.8rem;
+    opacity:0;animation:riseIn .95s cubic-bezier(.2,.7,.2,1) .1s forwards;
+    filter:drop-shadow(0 0 26px rgba(240,182,89,.22));
+  }
+  .hero__kicker{
+    font-size:clamp(.85rem,.65rem + .6vw,1rem);
+    letter-spacing:.42em;text-transform:uppercase;
+    color:var(--or);margin:0 0 .2em .42em;
+  }
+  .hero__title{
+    font-family:"Cormorant Garamond",serif;
+    font-weight:600;
+    font-size:clamp(3rem,6vw + 1rem,6.6rem);
+    line-height:1.02;letter-spacing:.03em;margin:0;
+    padding:.06em .08em .2em;
+    background:linear-gradient(176deg,#f9e1bb 0%,var(--or-clair) 45%,var(--or) 100%);
+    -webkit-background-clip:text;background-clip:text;
+    color:transparent;-webkit-text-fill-color:transparent;
+    filter:drop-shadow(0 0 34px rgba(240,182,89,.30)) drop-shadow(0 2px 3px rgba(0,0,0,.5));
+    text-wrap:balance;
+  }
+  .ornament{
+    display:flex;align-items:center;justify-content:center;gap:1rem;
+    margin:1.7rem 0;color:var(--or);width:min(22rem,80%);
+  }
+  .ornament::before,.ornament::after{
+    content:"";height:1px;flex:1;
+    background:linear-gradient(90deg,transparent,var(--filet-fort),transparent);
+  }
+  .ornament span{font-size:.8rem;}
+  .hero__verse{
+    font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-weight:500;
+    font-size:clamp(1.4rem,1.1rem + 1.3vw,2.05rem);
+    line-height:1.55;color:var(--encre);
+    max-width:max(46rem,72vw);margin:0 auto;
+    text-wrap:balance;
+  }
+  .hero__verse .q{color:var(--or);font-style:normal;}
+  .hero__ref{
+    margin-top:1.7rem;font-size:.95rem;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--or);
+  }
+  .hero__series{
+    margin-top:2.6rem;font-size:.88rem;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--encre-doux);text-wrap:balance;
+    max-width:42rem;
+  }
+  .hero__series b{color:var(--feuille);font-weight:600;}
+  .scrollcue{
+    position:absolute;bottom:1.7rem;left:50%;transform:translateX(-50%);
+    color:var(--or);font-size:1.3rem;opacity:.75;
+    animation:bob 2.4s ease-in-out infinite;
+  }
+  @keyframes bob{0%,100%{transform:translate(-50%,0);}50%{transform:translate(-50%,7px);}}
+  @keyframes riseIn{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
+  @keyframes frameIn{from{opacity:0;}to{opacity:1;}}
+  .hero__kicker,.hero__title,.ornament,.hero__verse,.hero__ref,.hero__series{
+    opacity:0;animation:riseIn .95s cubic-bezier(.2,.7,.2,1) forwards;
+  }
+  .hero__kicker{animation-delay:.2s;}
+  .hero__title{animation-delay:.32s;}
+  .ornament{animation-delay:.6s;}
+  .hero__verse{animation-delay:.75s;}
+  .hero__ref{animation-delay:1s;}
+  .hero__series{animation-delay:1.15s;}
+
+  main{position:relative;z-index:2;}
+  .section{
+    max-width:var(--max);margin:0 auto;
+    padding:clamp(3rem,7vw,5.5rem) clamp(1.4rem,5vw,2rem);
+    scroll-margin-top:5rem;
+  }
+  .sec-head{text-align:center;margin-bottom:2.2rem;}
+  .kicker{
+    font-size:.95rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--or);margin:0 0 .65rem;
+  }
+  .sec-title{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:clamp(2.1rem,1.4rem + 2.6vw,3.2rem);line-height:1.12;
+    color:var(--or-clair);margin:0;text-wrap:balance;
+  }
+  .sec-head .sec-title::after{
+    content:"";display:block;width:2.6rem;height:1px;
+    background:var(--filet-fort);margin:1.2rem auto 0;
+  }
+
+  .livres{
+    list-style:none;margin:0;padding:0;
+    display:grid;gap:1.1rem;
+    grid-template-columns:repeat(auto-fill,minmax(min(100%,20rem),1fr));
+  }
+  .livre{margin:0;}
+  .livre a{
+    display:flex;flex-direction:column;gap:.5rem;height:100%;
+    padding:1.4rem 1.5rem 1.5rem;
+    background:linear-gradient(180deg,rgba(232,132,60,.07),rgba(232,132,60,.03));
+    border:1px solid var(--filet);border-left:3px solid var(--or);
+    border-radius:0 6px 6px 0;color:var(--encre);
+    transition:border-left-color .3s,transform .3s,background .3s,box-shadow .3s;
+  }
+  .livre a:hover{
+    border-left-color:var(--or-clair);transform:translateY(-3px);
+    background:linear-gradient(180deg,rgba(232,132,60,.13),rgba(232,132,60,.05));
+    box-shadow:0 8px 26px rgba(0,0,0,.32);
+  }
+  .livre a:focus-visible{outline:2px solid var(--or);outline-offset:3px;}
+  .livre__num{
+    font-family:"Cormorant Garamond",serif;font-size:.8rem;letter-spacing:.26em;
+    text-transform:uppercase;color:var(--or);
+  }
+  .livre__titre{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:1.6rem;line-height:1.12;color:var(--encre);
+    transition:color .3s;
+  }
+  .livre a:hover .livre__titre{color:var(--or-clair);}
+  .livre__theme{
+    font-size:1rem;line-height:1.45;color:var(--encre-doux);
+    font-style:italic;
+  }
+  .livre__ref{
+    margin-top:auto;display:flex;align-items:center;gap:.6rem;
+    font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--encre-doux);padding-top:.4rem;
+  }
+  .livre__go{
+    margin-left:auto;color:var(--or);font-size:1.05em;
+    transition:transform .3s;
+  }
+  .livre a:hover .livre__go{transform:translateX(4px);}
+
+  /* ---- corps du texte ---- */
+  .section p{margin:0 0 1.15em;text-wrap:pretty;}
+  .section p:not(.kicker),.liste li,blockquote{text-align:justify;}
+  .section h3{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:clamp(1.75rem,1.3rem + 1.5vw,2.4rem);line-height:1.15;
+    color:var(--or-clair);margin:2.8rem 0 1.1rem;
+    padding-bottom:.5rem;border-bottom:1px solid var(--filet);
+    scroll-margin-top:5rem;text-wrap:balance;
+  }
+  .section h4{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:clamp(1.35rem,1.1rem + .8vw,1.7rem);line-height:1.2;
+    color:var(--feuille);margin:2rem 0 .7rem;
+    scroll-margin-top:5rem;text-wrap:balance;
+  }
+  .sommaire{
+    list-style:none;margin:0 0 2.6rem;padding:1.2rem 1.5rem;
+    border:1px solid var(--filet);border-left:3px solid var(--or);border-radius:0 6px 6px 0;
+    background:linear-gradient(180deg,rgba(232,132,60,.06),rgba(232,132,60,.02));
+    display:flex;flex-wrap:wrap;gap:.4rem 1.6rem;
+  }
+  .sommaire li{font-size:.95rem;letter-spacing:.02em;}
+  .sommaire a{color:var(--encre-doux);}
+  .sommaire a:hover{color:var(--or-clair);}
+  .liste{margin:0 0 1.4rem;padding-left:1.6rem;}
+  .liste li{margin:0 0 .55rem;}
+  .liste li::marker{color:var(--or);}
+  blockquote{
+    margin:1.6rem 0;padding:.4rem 0 .4rem 1.6rem;
+    border-left:2px solid var(--filet-fort);
+    color:var(--encre-doux);font-size:.96em;
+  }
+  blockquote.vers{
+    font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-size:1.05em;line-height:1.6;color:var(--encre);
+    text-align:left;
+  }
+  .encadre{
+    margin:2.2rem 0;padding:1.5rem 1.7rem;
+    border:1px solid var(--filet);border-radius:6px;
+    background:linear-gradient(180deg,rgba(232,132,60,.08),rgba(232,132,60,.02));
+  }
+  .encadre h4{margin-top:0;color:var(--or-clair);}
+  .encadre p:last-child,.encadre .liste:last-child{margin-bottom:0;}
+
+  .tableau{margin:2.4rem 0;padding:0;}
+  .tableau figcaption{
+    font-family:"Cormorant Garamond",serif;font-size:1.15rem;font-weight:600;
+    letter-spacing:.04em;color:var(--or-clair);margin-bottom:.8rem;
+  }
+  .tableau__scroll{overflow-x:auto;border:1px solid var(--filet);border-radius:6px;}
+  .tableau table{
+    border-collapse:collapse;width:100%;
+    font-size:.82rem;line-height:1.5;
+  }
+  .tableau th,.tableau td{
+    padding:.6rem .85rem;text-align:left;vertical-align:top;
+    border-bottom:1px solid rgba(232,132,60,.16);
+  }
+  .tableau th{
+    font-family:"Cormorant Garamond",serif;font-size:.9rem;font-weight:600;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--or);
+    background:rgba(232,132,60,.10);border-bottom:1px solid var(--filet-fort);
+  }
+  .tableau tbody tr:nth-child(even){background:rgba(255,255,255,.018);}
+  .tableau tbody tr:hover{background:rgba(232,132,60,.07);}
+  .tableau td{color:var(--encre-doux);}
+  .tableau td:first-child{color:var(--encre);}
+  .tableau tr.t-sect td{
+    font-family:"Cormorant Garamond",serif;font-size:.95rem;font-weight:600;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--feuille);
+    background:rgba(232,132,60,.09);
+  }
+
+  .divider{
+    display:flex;align-items:center;justify-content:center;gap:1.4rem;
+    max-width:var(--max);margin:0 auto;
+    padding:0 2rem;color:var(--or);
+  }
+  .divider::before,.divider::after{
+    content:"";height:1px;width:min(7rem,22%);
+    background:linear-gradient(90deg,transparent,var(--filet-fort),transparent);
+  }
+  .divider span{font-size:.8rem;}
+
+  .footer{
+    position:relative;z-index:2;text-align:center;
+    border-top:1px solid var(--filet);
+    margin-top:2rem;padding:3.6rem 1.4rem 3.2rem;
+    background:linear-gradient(180deg,transparent,rgba(16,16,16,.7));
+  }
+  .footer__logo{
+    display:block;width:auto;
+    height:clamp(5rem,12vw,7rem);
+    margin:0 auto 1.6rem;
+  }
+  .footer__church{
+    font-family:"Cormorant Garamond",serif;font-size:1.7rem;font-weight:600;
+    letter-spacing:.04em;color:var(--encre);margin:0 0 .3rem;
+  }
+  .footer__line{font-size:1rem;color:var(--encre-doux);margin:.2rem 0;}
+  .footer__source{
+    max-width:42rem;margin:1.4rem auto 0;
+    font-size:.88rem;font-style:italic;color:var(--encre-doux);line-height:1.5;
+  }
+  .footer__sdg{
+    margin-top:1.8rem;font-size:.86rem;letter-spacing:.36em;
+    text-transform:uppercase;color:var(--or);
+  }
+
+  @media (max-width:560px){
+    .nav__brand{font-size:1.3rem;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .scrollcue{animation:none;}
+    .hero__logo,.hero__kicker,.hero__title,.ornament,.hero__verse,.hero__ref,.hero__series,.hero__frame{
+      opacity:1;animation:none;
+    }
+  }
+  .logos{
+    display:flex;align-items:center;justify-content:center;
+    gap:clamp(1.2rem,4vw,2.8rem);flex-wrap:wrap;
+    margin:0 auto 1.7rem;
+  }
+  .logos img{margin:0;}
+  .logos__fts{
+    display:block;width:auto;
+    height:clamp(2.8rem,6.6vw,4.2rem);
+  }
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="nav__progress" id="navProgress" aria-hidden="true"></div>
+  <a class="nav__logo" href="#hero" aria-label="Église Baptiste de Charlesbourg, haut de page">
+    <img src="../../LogoEBC.avif" width="80" height="250" alt="" decoding="async">
+  </a>
+  <span class="nav__brand">EBC</span>
+  <nav class="nav__links" aria-label="Sections">
+    <a href="#inspiration">Inspiration</a>
+    <a href="#autorite">Autorité</a>
+    <a href="#inerrance">Inerrance</a>
+    <a href="#preservation">Préservation</a>
+    <a href="#enseignement-predication">Enseignement et prédication</a>
+    <a href="#obligations">Obligations</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ============ PAGE-TITRE ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__frame" aria-hidden="true"></div>
+    <p style="margin:0 0 1.6rem;">
+      <a href="../../index.html" class="pill">&#8598;&nbsp;Exposition de l'Écriture</a>
+    </p>
+    <div class="logos">
+      <a href="https://www.ebcharlesbourg.com/" target="_blank" rel="noopener" aria-label="Site de l’Église Baptiste de Charlesbourg"><img class="hero__logo" src="../../LogoEBC.avif" width="80" height="250" alt="" decoding="async"></a>
+      <a href="https://ftscriptura.com/" target="_blank" rel="noopener" aria-label="Faculté de Théologie Scriptura"><img class="logos__fts" src="../../LogoScriptura.webp" width="600" height="216" alt="" decoding="async"></a>
+    </div>
+    <p class="hero__kicker">La Parole de Dieu</p>
+    <h1 class="hero__title">Bibliologie</h1>
+    <div class="ornament" aria-hidden="true"><span>&#9670;</span></div>
+    <p class="hero__verse"><span class="q">&laquo;</span>&nbsp;Toute Écriture est inspirée de Dieu, et utile pour enseigner, pour convaincre, pour corriger, pour instruire dans la justice.&nbsp;<span class="q">&raquo;</span></p>
+    <p class="hero__ref">2 Timothée 3.16 · NEG</p>
+    <p class="hero__series"><b>Théologie systématique</b></p>
+    <div class="scrollcue" aria-hidden="true">&#8595;</div>
+  </section>
+
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+
+  <article class="section" id="introduction">
+<p>Toute la théologie chrétienne dépend de ce chapitre. Si Dieu n’a pas parlé, rien de ce qui suit ne se sait; s’il a parlé et que sa parole se trompe, rien de ce qui suit ne tient. La bibliologie répond donc à six questions dans l’ordre: comment l’Écriture nous est venue (inspiration), de quel droit elle commande (autorité), jusqu’où elle est vraie (inerrance), comment elle nous est parvenue intacte (préservation), comment elle doit être transmise (enseignement et prédication), et ce qu’elle exige de celui qui la reçoit (obligations).</p>
+</article>
+
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+
+<article class="section" id="inspiration">
+<header class="sec-head"><p class="kicker">Bibliologie</p><h2 class="sec-title">L’inspiration de l’Écriture</h2></header>
+<ul class="sommaire"><li><a href="#inspiration-revelation">Révélation et inspiration</a></li><li><a href="#inspiration-definition">Définition de l’inspiration</a></li><li><a href="#inspiration-preparation">Préparation en vue de l’inspiration</a></li><li><a href="#inspiration-preuves">Preuves de l’inspiration</a></li></ul>
+<h3 id="inspiration-revelation">Révélation et inspiration</h3>
+<p>Les deux mots ne sont pas synonymes. La <strong>révélation</strong> est l’acte par lequel Dieu dévoile ce que l’homme ne pouvait découvrir seul; l’<strong>inspiration</strong> est le moyen par lequel cette révélation a été consignée sans erreur par écrit. Dieu s’est fait connaître de tous par la création (Ps 19.2–7), par la providence (Ac 14.17) et par la conscience (Ro 2.14,15) — révélation <em>générale</em>, suffisante pour rendre inexcusable (Ro 1.20), insuffisante pour sauver. Il s’est fait connaître de façon <em>spéciale</em> par ses actes, par ses paroles, par son Fils (Hé 1.1,2) et par l’Écriture. Seule cette dernière forme demeure aujourd’hui accessible: la révélation spéciale est close, et « les choses cachées sont à l’Éternel, notre Dieu; les choses révélées sont à nous et à nos enfants » (De 29.29).</p>
+<p>L’ordre logique est donc: Dieu révèle, l’Esprit inspire, l’Église reconnaît le canon, le lecteur reçoit l’illumination. L’illumination n’ajoute rien au texte; elle ouvre l’intelligence à ce qui y est déjà écrit (1 Co 2.12–14). Confondre révélation et illumination — prétendre recevoir aujourd’hui une parole nouvelle de Dieu — revient à rouvrir un canon que Dieu a fermé. Et ce que la clôture exclut se nomme: il n’y a plus de révélations nouvelles, plus de visions, plus de paroles de prophétie. Les dons révélatoires, les langues comprises, appartenaient à l’âge apostolique: ils attestaient un message qui n’était pas encore écrit, et ils ont cessé avec ceux qui le portaient.</p>
+<h3 id="inspiration-definition">Définition de l’inspiration</h3>
+<p>Deux textes la définissent. <strong>2 Timothée 3.16</strong>: « Toute Écriture est inspirée de Dieu ». Le grec <em>theopneustos</em> ne dit pas que Dieu a insufflé quelque chose dans des écrits humains, mais que l’Écriture est <em>expirée</em> de Dieu — soufflée hors de lui. L’origine n’est pas humaine puis divinisée; elle est divine dès la source. <strong>2 Pierre 1.20,21</strong> décrit le procédé: aucune prophétie n’est venue par une volonté d’homme, mais « c’est poussés par le Saint-Esprit que des hommes ont parlé de la part de Dieu ». Le verbe <em>pherō</em> décrit un navire porté par le vent: les auteurs ont tenu la plume, l’Esprit a tenu le cap.</p>
+<p>L’inspiration est <strong>verbale</strong> — elle atteint les mots eux-mêmes, non seulement les idées; <strong>plénière</strong> — elle s’étend également à toutes les parties, généalogies comprises, et non aux seuls passages doctrinaux; <strong>confluente</strong> — Dieu s’est servi du tempérament, du vocabulaire, de la culture et de la recherche de chaque auteur sans jamais laisser passer d’erreur; et elle porte sur les <strong>manuscrits originaux</strong>. D’où la définition: le Saint-Esprit a si bien surveillé les auteurs humains que, employant leur propre personnalité et leur propre style, ils ont composé et consigné sans erreur la révélation de Dieu aux hommes dans les mots des autographes.</p>
+<p>Deux erreurs encadrent cette définition. La <strong>dictée mécanique</strong> réduit les auteurs à des secrétaires: elle n’explique pas l’écart de style entre Ésaïe et Amos, entre Luc et Jean. L’inspiration <strong>partielle</strong> — l’Écriture <em>contient</em> la parole de Dieu sans l’<em>être</em> — laisse au lecteur le soin de trier, et le fait donc juge du texte qui devait le juger.</p>
+<h3 id="inspiration-preparation">Préparation en vue de l’inspiration</h3>
+<p>Dieu n’a pas saisi des hommes au hasard: il les a préparés toute leur vie durant pour l’heure où ils écriraient. Moïse « fut instruit dans toute la sagesse des Égyptiens » (Ac 7.22) avant de rédiger le Pentateuque. Jérémie était connu et consacré « avant que je t’aie formé dans le ventre de ta mère » (Jé 1.5). Paul a été mis à part « dès le sein de ma mère » (Ga 1.15), puis formé aux pieds de Gamaliel (Ac 22.3). David a gardé les brebis avant d’écrire les psaumes du berger; Amos était bouvier et cultivateur de sycomores (Am 7.14); Luc, médecin et historien, a fait « des recherches exactes sur toutes ces choses depuis leur origine » (Lu 1.3). Le Psaume 139.16 dit la règle générale: les jours de chacun étaient inscrits dans le livre de Dieu avant qu’un seul existât.</p>
+<p>La providence est donc le long préambule de l’inspiration. Elle explique pourquoi les livres bibliques portent la marque d’un homme réel sans porter la marque de son erreur.</p>
+<h3 id="inspiration-preuves">Preuves de l’inspiration</h3>
+<p><strong>Le témoignage de l’Écriture sur elle-même.</strong> L’Ancien Testament revendique une origine divine avec une insistance sans parallèle: « Ainsi parle l’Éternel » et les formules équivalentes y reviennent des milliers de fois. Le prophète qui parlait de lui-même était faux prophète, et l’épreuve était mortelle (De 18.20–22).</p>
+<p><strong>Le témoignage de Christ.</strong> Il a déclaré n’être pas venu abolir la loi, et que rien n’en disparaîtrait — « un seul iota ou un seul trait de lettre » — avant que tout soit arrivé (Mt 5.17,18). Il a rangé sous « les Écritures » la loi de Moïse, les prophètes et les psaumes (Lu 24.44). Il a tranché un débat en posant que « l’Écriture ne peut être anéantie » (Jn 10.35). Nul argument contre l’inspiration ne peut être tenu sans être tenu contre lui.</p>
+<p><strong>Le témoignage des apôtres.</strong> Le Nouveau Testament cite l’Ancien en l’attribuant directement à Dieu ou à l’Esprit (Ac 4.24,25; Hé 1.5–13; 3.7). Il range aussi ses propres écrits parmi les Écritures: Paul cite Luc 10.7 en l’appelant « l’Écriture » (1 Ti 5.18), et Pierre place les épîtres de Paul à côté des « autres Écritures » (2 Pi 3.15,16).</p>
+<p><strong>Les preuves de fait.</strong> Soixante-six livres, rédigés sur quelque quinze siècles par une quarantaine d’auteurs de conditions très diverses, sur trois continents et en trois langues, présentent une unité de dessein qu’aucune collaboration humaine n’aurait pu produire. S’y ajoutent la prophétie accomplie — en particulier les prophéties messianiques —, la survie du texte à travers la persécution, la corroboration archéologique répétée, et la puissance transformatrice de la Parole, qui est « vivante et efficace » (Hé 4.12). Ces preuves ne créent pas la foi; elles la confirment.</p>
+</article>
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+<article class="section" id="autorite">
+<header class="sec-head"><p class="kicker">Bibliologie</p><h2 class="sec-title">L’autorité de l’Écriture</h2></header>
+<ul class="sommaire"><li><a href="#autorite-sources-secondaires">Sources secondaires</a></li><li><a href="#autorite-source-principale">Source principale</a></li></ul>
+<p>L’autorité découle de l’inspiration: si l’Écriture est expirée de Dieu, elle porte l’autorité de Dieu. Toute la question est de savoir ce qui, dans la vie du chrétien, détient le dernier mot.</p>
+<h3 id="autorite-sources-secondaires">Sources secondaires</h3>
+<p>Cinq prétendantes se présentent. La <strong>tradition</strong>: Rome fait du magistère et de la tradition des autorités parallèles à l’Écriture — or Christ a reproché aux pharisiens d’annuler la parole de Dieu par leur tradition (Mc 7.13). La <strong>raison</strong>: le rationalisme et le libéralisme font du jugement humain le juge du texte, alors que la pensée de Dieu dépasse la nôtre autant que les cieux dépassent la terre (És 55.8,9). L’<strong>expérience</strong>: le mysticisme fait de l’impression intérieure une révélation, mais le cœur est « tortueux par-dessus tout » (Jé 17.9). La <strong>culture</strong>: elle change à chaque génération et n’a jamais eu autorité sur ce qui ne change pas. La <strong>conscience</strong>: elle est un témoin réel (Ro 2.15), mais elle peut être faible, souillée ou cautérisée (1 Co 8.7; Tit 1.15; 1 Ti 4.2), et doit donc être formée par l’Écriture avant d’être écoutée.</p>
+<p>Rien de tout cela n’est sans valeur. Les symboles de foi, les confessions, les commentaires, les enseignants fidèles et la conscience éclairée sont des secours véritables. Mais leur autorité est <em>dérivée</em>: elle vaut exactement dans la mesure où elle reproduit l’Écriture, et cesse au premier point de divergence.</p>
+<h3 id="autorite-source-principale">Source principale</h3>
+<p>L’Écriture seule est l’autorité première, parce qu’elle est la parole de Dieu même. Christ lui-même s’y est soumis: aux trois assauts du désert il n’a opposé ni raisonnement ni miracle, mais « Il est écrit » (Mt 4.4,7,10). Il a fondé une doctrine sur un seul mot (Jn 10.34,35), sur le temps d’un verbe (Mt 22.31,32), sur la plus petite lettre du texte (Mt 5.18). Il a prié: « Sanctifie-les par ta vérité: ta parole est la vérité » (Jn 17.17).</p>
+<p>De cette autorité découle la <strong>suffisance</strong>: l’Écriture rend l’homme de Dieu « accompli et propre à toute bonne œuvre » (2 Ti 3.17), et la divine puissance de Dieu nous a donné « tout ce qui contribue à la vie et à la piété » (2 Pi 1.3). Elle n’est donc pas une source parmi d’autres à compléter, mais la norme qui juge toutes les autres. Rien n’y est à ajouter, rien n’en est à retrancher (De 4.2; Pr 30.5,6; Ap 22.18,19).</p>
+<p>Mais la suffisance ne se réduit pas à une préséance de la norme. On peut concéder à l’Écriture le dernier mot et lui retirer en pratique tout le terrain: lui laisser la doctrine, et confier ailleurs le soin de l’âme et la conduite du ministère. Elle porte sur le domaine autant que sur la norme, et c’est elle-même qui revendique le domaine: « La loi de l’Éternel est parfaite, elle restaure l’âme; le témoignage de l’Éternel est véritable, il rend sage l’ignorant » (Ps 19.8) — la restauration de l’âme et la sagesse pratique, c’est-à-dire précisément ce que l’on va chercher au dehors. Trois emprunts la contredisent donc également. La <strong>révélation nouvelle</strong> — visions, songes, paroles de prophétie données pour actuelles — ajoute au canon clos ce que Dieu n’a pas jugé bon d’y mettre. La <strong>psychologie</strong> substitue au diagnostic biblique du cœur une anthropologie sans péché ni régénération: les deux systèmes ne se mêlent pas sans que la suffisance soit abandonnée en chemin, et le thérapeute professionnel ne remplace pas les hommes que l’Esprit a doués, ni ses techniques la sagesse biblique et la puissance de Dieu. Le <strong>pragmatisme</strong>, enfin, ne conteste rien: il remplace « qu’est-ce qui est écrit? » par « qu’est-ce qui fonctionne? », et cette seule substitution met l’Écriture de côté sans jamais avoir eu à la nier. La seule réponse cohérente est la soumission: écouter l’Écriture, c’est écouter Dieu; lui résister, c’est lui résister à lui.</p>
+</article>
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+<article class="section" id="inerrance">
+<header class="sec-head"><p class="kicker">Bibliologie</p><h2 class="sec-title">L’inerrance de l’Écriture</h2></header>
+<ul class="sommaire"><li><a href="#inerrance-accommodation">Accommodation et inerrance</a></li><li><a href="#inerrance-infaillibilite">Infaillibilité et inerrance</a></li><li><a href="#inerrance-jesus">Jésus et l’inerrance</a></li><li><a href="#inerrance-explication">Explication de l’inerrance</a></li></ul>
+<p>L’inerrance n’est pas un supplément apporté à la doctrine de l’inspiration: elle en est la conséquence nécessaire. Dieu n’est point un homme pour mentir (No 23.19); il ne ment point (Tit 1.2); il lui est impossible de mentir (Hé 6.18). Une parole expirée d’un tel Dieu ne peut être fausse en quoi que ce soit.</p>
+<h3 id="inerrance-accommodation">Accommodation et inerrance</h3>
+<p>Dieu a bel et bien accommodé sa révélation à la capacité de l’homme. Il parle en langues humaines, use d’anthropomorphismes — sa main, son bras, ses yeux —, emploie le langage des apparences: le soleil « se lève » (Ec 1.5), la terre a « quatre coins » (Ap 7.1). Les nombres sont parfois arrondis, les citations libres, la matière disposée par thème plutôt que par chronologie.</p>
+<p>Mais il faut distinguer deux choses que la théologie libérale confond. S’accommoder à la <strong>capacité</strong> humaine n’est pas s’accommoder à l’<strong>erreur</strong> humaine. Un père qui explique à son enfant que la lune se lève ne lui ment pas; il lui parle vrai à sa mesure. Prétendre au contraire que Dieu a laissé les auteurs bibliques consigner les erreurs scientifiques ou historiques de leur époque, c’est faire de Dieu le garant de la fausseté et rendre inutile toute la doctrine de l’inspiration.</p>
+<h3 id="inerrance-infaillibilite">Infaillibilité et inerrance</h3>
+<p>Les deux termes ont longtemps été synonymes. On les a séparés au XX<sup>e</sup> siècle pour restreindre la portée du second: l’Écriture serait <em>infaillible</em> — elle ne trompe pas en matière de foi et de conduite — sans être <em>inerrante</em> — elle pourrait se tromper en histoire, en géographie, en chronologie ou en science. Cette « inerrance limitée » est un repli, non une nuance.</p>
+<p>Elle échoue pour trois raisons. D’abord elle est <strong>impraticable</strong>: l’Écriture ne sépare jamais ses affirmations spirituelles de leur assise historique — la résurrection est un fait de doctrine <em>parce qu’</em>elle est un fait d’histoire (1 Co 15.14,17). Ensuite elle est <strong>arbitraire</strong>: elle exige un critère extérieur pour trier le fiable de l’erroné, et remet ce critère entre les mains du lecteur. Enfin elle est <strong>insoutenable</strong>: si l’Écriture erre là où on peut la vérifier, on n’a aucune raison de la croire là où on ne le peut pas. La Déclaration de Chicago sur l’inerrance biblique (1978) a formulé la position historique de l’Église en réponse précisément à ce glissement.</p>
+<h3 id="inerrance-jesus">Jésus et l’inerrance</h3>
+<p>Christ a traité les récits de l’Ancien Testament comme des faits, et non comme des mythes édifiants: la création d’Adam et d’Ève (Mt 19.4,5), le meurtre d’Abel (Lu 11.51), Noé et le déluge (Mt 24.37–39), Abraham (Jn 8.56), Lot et la destruction de Sodome (Lu 17.28–32), Moïse et le buisson ardent (Mc 12.26), la manne (Jn 6.31), le serpent d’airain (Jn 3.14), Jonas dans le grand poisson (Mt 12.40), Daniel (Mt 24.15) — soit précisément les passages que la critique juge les plus invraisemblables.</p>
+<p>Plus décisif encore est l’usage qu’il fait du texte. Il suspend un argument au pluriel d’un seul mot (Jn 10.34,35), un autre au temps présent d’un verbe — « Je suis le Dieu d’Abraham » (Mt 22.31,32) —, et il déclare que pas la moindre lettre ni le moindre trait ne tombera (Mt 5.18). On ne raisonne ainsi que sur un texte tenu pour exact jusque dans son détail. Rejeter l’inerrance, c’est donc reprocher au Fils de Dieu d’avoir mal jugé de la parole de Dieu.</p>
+<h3 id="inerrance-explication">Explication de l’inerrance</h3>
+<p>L’inerrance signifie que l’Écriture, dans les manuscrits originaux et correctement interprétée, est entièrement vraie dans tout ce qu’elle affirme — en doctrine comme en histoire, en géographie et dans les domaines qu’elle touche à la science. « Correctement interprétée » désigne une méthode précise et non une clause de sauvegarde : l’interprétation littérale, grammaticale et historique, appliquée avec diligence et constance, sous l’illumination du Saint-Esprit. Un passage reçoit plusieurs applications, il n’a qu’une seule interprétation vraie ; et son application juste lie toutes les générations. C’est l’Écriture qui juge les hommes, jamais les hommes qui la jugent.</p>
+<p>Quatre précisions la protègent des faux procès. Elle porte sur les <strong>autographes</strong>, non sur les copies ni sur les traductions, dont les fautes se corrigent par la critique textuelle. Elle porte sur ce que le texte <strong>affirme</strong>, non sur ce qu’il rapporte simplement: l’Écriture consigne fidèlement les paroles de Satan (Ge 3.4) et les conseils erronés des amis de Job sans les approuver. Elle admet le <strong>langage courant</strong>: approximations, arrondis, citations libres, irrégularités grammaticales, ordre thématique. Elle n’exige pas l’<strong>uniformité</strong>: quatre Évangiles rapportent la même scène avec des détails complémentaires — un témoignage partiel n’est pas un témoignage faux.</p>
+<p>La difficulté non résolue n’est pas une erreur démontrée. L’honnêteté oblige à reconnaître qu’il reste des passages difficiles; l’histoire de l’exégèse et de l’archéologie oblige à reconnaître que la difficulté a presque toujours tenu à notre information, non au texte. Le prix du refus, lui, est immédiat: nier l’inerrance atteint le caractère de Dieu, ruine l’autorité de l’Écriture et retire au croyant tout terrain ferme sous les pieds.</p>
+</article>
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+<article class="section" id="preservation">
+<header class="sec-head"><p class="kicker">Bibliologie</p><h2 class="sec-title">La préservation de l’Écriture</h2></header>
+<ul class="sommaire"><li><a href="#preservation-explication">Explication de la préservation</a></li><li><a href="#preservation-canonicite">Canonicité et préservation</a></li><li><a href="#preservation-critique-textuelle">Critique textuelle et préservation</a></li></ul>
+<h3 id="preservation-explication">Explication de la préservation</h3>
+<p>Dieu s’est engagé à garder sa parole autant qu’à la donner. « À toujours, ô Éternel! Ta parole subsiste dans les cieux » (Ps 119.89). « L’herbe sèche, la fleur tombe; mais la parole de notre Dieu subsiste éternellement » (És 40.8). « Le ciel et la terre passeront, mais mes paroles ne passeront point » (Mt 24.35; cf. 1 Pi 1.23–25).</p>
+<p>Cette préservation est <em>providentielle</em>, non miraculeuse. Aucun autographe n’a survécu — Dieu n’a manifestement pas voulu qu’on les vénère —, mais le texte, lui, a traversé les siècles par la multiplication des copies, la discipline des scribes et la dispersion des manuscrits. Jérémie 36 en donne l’image: Jehojakim découpe et brûle le rouleau au brasier, et Dieu le fait réécrire, « et beaucoup de paroles semblables y furent encore ajoutées » (v. 32). On peut brûler une copie; on ne peut pas éteindre la parole.</p>
+<h3 id="preservation-canonicite">Canonicité et préservation</h3>
+<p>Le mot <em>kanōn</em> désigne le roseau qui sert de règle à mesurer. Le canon est la liste des livres que Dieu a donnés — et le point capital est celui-ci: l’Église n’a pas <strong>conféré</strong> l’autorité aux livres, elle a <strong>reconnu</strong> celle qu’ils possédaient déjà. Un livre n’est pas canonique parce que l’Église l’a reçu; l’Église l’a reçu parce qu’il était canonique.</p>
+<p>Quatre critères ont guidé cette reconnaissance: l’<strong>origine divine</strong> — le livre porte-t-il la marque de Dieu et se donne-t-il pour sa parole? —, l’<strong>autorité de l’auteur</strong> — prophète, apôtre ou proche associé d’un apôtre —, la <strong>cohérence</strong> avec la révélation déjà donnée, et la <strong>réception</strong> par le peuple de Dieu dans son ensemble.</p>
+<p>Le canon de l’Ancien Testament — trente-neuf livres, comptés vingt-quatre dans la tradition hébraïque — était fixé et non contesté au temps de Christ, qui le désigne par ses trois parties (Lu 24.44) et le parcourt d’un bout à l’autre en allant « du sang d’Abel jusqu’au sang de Zacharie » (Mt 23.35), c’est-à-dire de la Genèse aux Chroniques. Les apocryphes n’en ont jamais fait partie: ni Christ ni les apôtres ne les citent comme Écriture, le judaïsme ne les a pas reçus, et ils portent des enseignements contraires au reste du canon. Le canon du Nouveau Testament — vingt-sept livres — s’est imposé par l’usage des Églises bien avant d’être énuméré par Athanase (367) et confirmé par les conciles d’Hippone (393) et de Carthage (397): ces assemblées ont enregistré un consensus, elles ne l’ont pas créé.</p>
+<h3 id="preservation-critique-textuelle">Critique textuelle et préservation</h3>
+<p>La critique textuelle est la discipline qui rétablit le texte original à partir des copies conservées. Elle n’est pas une menace pour la Bible: elle est l’instrument par lequel la préservation providentielle se vérifie.</p>
+<p>Pour l’Ancien Testament, les Massorètes ont copié le texte hébreu avec une méticulosité extrême, comptant lettres et versets pour détecter toute omission. Les manuscrits de la mer Morte, découverts en 1947, ont livré un rouleau d’Ésaïe antérieur d’un millénaire aux plus anciennes copies alors connues: le texte s’est révélé substantiellement identique. Pour le Nouveau Testament, on dispose de plus de cinq mille manuscrits grecs, auxquels s’ajoutent les versions anciennes et les dizaines de milliers de citations patristiques — une richesse documentaire sans équivalent dans toute la littérature antique, où la plupart des œuvres reposent sur quelques dizaines de copies tardives.</p>
+<p>Cette abondance produit des variantes, et c’est précisément ce qu’il faut attendre: plus il y a de témoins, plus il y a d’écarts, mais plus le texte original est récupérable. L’immense majorité des variantes touche l’orthographe ou l’ordre des mots; la portion qui reste douteuse est infime, et aucune doctrine chrétienne n’en dépend. Le croyant qui ouvre sa Bible aujourd’hui tient donc, en substance, ce que les prophètes et les apôtres ont écrit.</p>
+</article>
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+<article class="section" id="enseignement-predication">
+<header class="sec-head"><p class="kicker">Bibliologie</p><h2 class="sec-title">L’enseignement et la prédication de l’Écriture</h2></header>
+<ul class="sommaire"><li><a href="#enseignement">Enseignement</a></li><li><a href="#predication">Prédication</a></li></ul>
+<p>Ce que l’on croit de l’Écriture détermine ce que l’on en fait en chaire. Si elle est expirée de Dieu, inerrante et souveraine, la seule tâche du serviteur est de la faire entendre — non de l’illustrer par ses idées, ni de l’adapter aux attentes de l’auditoire.</p>
+<p>C’est ici que le <strong>pragmatisme</strong> entre. Il ne renie pas la Parole; il la juge seulement insuffisante à rassembler, et choisit dès lors ses moyens sur leur rendement: l’assemblée devient un public, le message un produit, et l’on cherche des hommes capables de vendre là où il fallait des hommes capables d’enseigner. Paul a refusé cette voie par avance: sa prédication ne reposait pas « sur les discours persuasifs de la sagesse, mais sur une démonstration d’Esprit et de puissance, afin que votre foi soit fondée, non sur la sagesse des hommes, mais sur la puissance de Dieu » (1 Co 2.4,5). Une méthode qui rassemble des foules par des moyens que le texte ne prescrit pas n’a rien prouvé, sinon que les moyens fonctionnent — et une foi bâtie sur ce qui fonctionne repose sur ce qui cédera.</p>
+<h3 id="enseignement">Enseignement</h3>
+<p>Esdras 7.10 en donne l’ordre exact et irremplaçable: il « avait appliqué son cœur à étudier la loi de l’Éternel, à la mettre en pratique, et à enseigner au milieu d’Israël les lois et les ordonnances ». Étudier, pratiquer, enseigner — dans cet ordre. L’enseignant qui saute la deuxième étape enseigne ce qu’il ne vit pas, et Jacques avertit que ceux qui enseignent « seront jugés plus sévèrement » (Ja 3.1).</p>
+<p>La norme de l’ouvrier est fixée en 2 Timothée 2.15: se présenter devant Dieu « comme un homme éprouvé, un ouvrier qui n’a point à rougir, qui dispense droitement la parole de la vérité ». Le verbe <em>orthotomeō</em> évoque la coupe droite: il n’y a pas de fidélité sans exactitude. À quoi s’ajoutent la garde du dépôt (1 Ti 6.20; 2 Ti 1.13,14) et sa transmission — « ce que tu as entendu de moi... confie-le à des hommes fidèles, qui soient capables de l’enseigner aussi à d’autres » (2 Ti 2.2), quatre générations de doctrine en un seul verset. Dieu a d’ailleurs donné ce ministère à l’Église comme un don: pasteurs et docteurs, pour « le perfectionnement des saints » (Ép 4.11,12).</p>
+<h3 id="predication">Prédication</h3>
+<p>La prédication expositive est la seule méthode pleinement cohérente avec l’inspiration: si le texte est la parole de Dieu, le rôle du prédicateur est d’en expliquer le sens, non de le remplacer par le sien. Néhémie 8.8 en donne le modèle: « Ils lisaient distinctement dans le livre de la loi de Dieu, et ils en donnaient le sens pour faire comprendre ce qu’ils avaient lu » — lecture, explication, compréhension.</p>
+<p>La charge est solennelle: « Je t’en conjure devant Dieu et devant Jésus-Christ, qui doit juger les vivants et les morts... prêche la parole, insiste en toute occasion, favorable ou non, reprends, censure, exhorte, avec toute douceur et en instruisant » (2 Ti 4.1,2). Le verbe <em>kēryssō</em> désigne le héraut, qui ne compose pas le message qu’il proclame. S’y ajoutent l’application à « la lecture, à l’exhortation, à l’enseignement » (1 Ti 4.13), et la mesure du contenu, que Paul revendique devant les anciens d’Éphèse: « je vous ai annoncé tout le conseil de Dieu » (Ac 20.27) — tout, y compris ce qui déplaît.</p>
+<p>Deux interdits l’encadrent. On ne <strong>falsifie</strong> pas la parole de Dieu pour en tirer profit (2 Co 2.17), on n’a point une conduite astucieuse et l’on n’altère pas la parole de Dieu (2 Co 4.2). Et l’on ne se prêche pas soi-même: « nous ne nous prêchons pas nous-mêmes; c’est Jésus-Christ le Seigneur que nous prêchons » (2 Co 4.5). Le texte suivi verset après verset protège l’auditoire des marottes du prédicateur et protège le prédicateur de lui-même.</p>
+</article>
+  <div class="divider" aria-hidden="true"><span>&#9670;</span></div>
+<article class="section" id="obligations">
+<header class="sec-head"><p class="kicker">Bibliologie</p><h2 class="sec-title">Les obligations envers l’Écriture</h2></header>
+<ul class="sommaire"><li><a href="#obligation-recevoir">Recevoir</a></li><li><a href="#obligation-prier">Prier</a></li><li><a href="#obligation-nourrir">S’en nourrir</a></li><li><a href="#obligation-obeir">Obéir</a></li><li><a href="#obligation-honorer">Honorer</a></li><li><a href="#obligation-etudier">Étudier</a></li><li><a href="#obligation-precher">Prêcher/enseigner</a></li><li><a href="#obligation-contraindre">Contraindre</a></li><li><a href="#obligation-disciples">Faire des disciples</a></li><li><a href="#obligation-trembler">Trembler</a></li></ul>
+<p>La doctrine de l’Écriture ne s’achève pas dans la conviction, mais dans la conduite. Dix devoirs en découlent, du premier accueil jusqu’à la crainte qui en est le sommet.</p>
+<h3 id="obligation-recevoir">Recevoir</h3>
+<p>« Recevez avec douceur la parole qui a été plantée en vous » (Ja 1.21). Les Thessaloniciens l’ont reçue « non comme la parole des hommes, mais... comme la parole de Dieu » (1 Th 2.13); les Béréens, « avec beaucoup d’empressement », en examinant chaque jour les Écritures (Ac 17.11). Recevoir suppose d’abandonner tout droit de veto sur le texte.</p>
+<h3 id="obligation-prier">Prier</h3>
+<p>« Ouvre mes yeux, pour que je contemple les merveilles de ta loi! » (Ps 119.18). Le même psaume demande six fois: « Enseigne-moi tes statuts ». L’auteur de la Bible est disponible pour l’expliquer; l’étude qui commence sans prière traite l’Écriture comme un document ordinaire.</p>
+<h3 id="obligation-nourrir">S’en nourrir</h3>
+<p>« J’ai recueilli tes paroles, et je les ai dévorées » (Jé 15.16). Ézéchiel mange le rouleau, et il est dans sa bouche « doux comme du miel » (Éz 3.1–3; cf. Ap 10.9,10). « L’homme ne vivra pas de pain seulement, mais de toute parole qui sort de la bouche de Dieu » (Mt 4.4). Il y a le lait pour les nouveau-nés (1 Pi 2.2) et la nourriture solide pour les adultes (Hé 5.12–14): rester au lait, c’est refuser de grandir.</p>
+<h3 id="obligation-obeir">Obéir</h3>
+<p>« Mettez en pratique la parole, et ne vous bornez pas à l’écouter, en vous trompant vous-mêmes par de faux raisonnements » (Ja 1.22). « Que ce livre de la loi ne s’éloigne point de ta bouche; médite-le jour et nuit, pour agir fidèlement selon tout ce qui y est écrit » (Jos 1.8). Christ lie l’amour à l’obéissance: « Si vous m’aimez, gardez mes commandements » (Jn 14.15), et il déclare heureux « ceux qui écoutent la parole de Dieu, et qui la gardent » (Lu 11.28).</p>
+<h3 id="obligation-honorer">Honorer</h3>
+<p>Dieu a exalté sa parole à la hauteur de son nom même (Ps 138.2), et il regarde « celui qui a l’esprit abattu et qui tremble à ma parole » (És 66.2). Job dit avoir fait plier sa volonté aux paroles de la bouche de Dieu (Job 23.12). Honorer l’Écriture, c’est lui laisser le dernier mot lorsqu’elle contredit ce que nous préférions croire.</p>
+<h3 id="obligation-etudier">Étudier</h3>
+<p>« Efforce-toi de te présenter devant Dieu comme un homme éprouvé » (2 Ti 2.15). Le bienheureux du Psaume 1 « médite jour et nuit » la loi de l’Éternel (Ps 1.2), et Esdras y avait « appliqué son cœur » (Esd 7.10). L’étude est un travail: il n’existe pas de raccourci spirituel qui dispense de l’effort.</p>
+<h3 id="obligation-precher">Prêcher/enseigner</h3>
+<p>« Prêche la parole, insiste en toute occasion, favorable ou non » (2 Ti 4.2). Ce devoir n’est pas réservé à la chaire: « Que la parole de Christ demeure en vous dans toute sa richesse; instruisez-vous et exhortez-vous les uns les autres en toute sagesse » (Col 3.16). Tout croyant transmet à quelqu’un ce qu’il a reçu.</p>
+<h3 id="obligation-contraindre">Contraindre</h3>
+<p>La Parole ne se contente pas d’informer: elle presse. « Connaissant donc la crainte du Seigneur, nous cherchons à convaincre les hommes » (2 Co 5.11), car « l’amour de Christ nous presse » (2 Co 5.14). L’ancien doit être « capable d’exhorter selon la saine doctrine et de réfuter les contradicteurs » (Tit 1.9), et les croyants sont exhortés « à combattre pour la foi qui a été transmise aux saints une fois pour toutes » (Jude 3).</p>
+<h3 id="obligation-disciples">Faire des disciples</h3>
+<p>Le mandat missionnaire ne s’arrête pas au baptême: « leur apprenant à observer tout ce que je vous ai prescrit » (Mt 28.19,20). Ce que Timothée a entendu, il doit le confier à des hommes fidèles capables de l’enseigner à d’autres (2 Ti 2.2). L’Écriture se transmet de génération en génération ou elle s’éteint dans la nôtre.</p>
+<h3 id="obligation-trembler">Trembler</h3>
+<p>Le sommet des obligations est une disposition du cœur: « Voici sur qui je porterai mes regards: sur celui qui souffre et qui a l’esprit abattu, sur celui qui craint ma parole » (És 66.2). Esdras s’assied consterné devant la parole (Esd 9.3,4); le psalmiste confesse: « Ma chair frissonne de l’effroi que tu m’inspires, et je crains tes jugements » (Ps 119.120). Là où la Parole est reçue sans tremblement, elle est tôt ou tard reçue sans obéissance.</p>
+</article>
+</main>
+
+<footer class="footer">
+  <div class="logos">
+    <a href="https://www.ebcharlesbourg.com/" target="_blank" rel="noopener" aria-label="Site de l’Église Baptiste de Charlesbourg"><img class="footer__logo" src="../../LogoEBC.avif" width="80" height="250" alt="" decoding="async" loading="lazy"></a>
+    <a href="https://ftscriptura.com/" target="_blank" rel="noopener" aria-label="Faculté de Théologie Scriptura"><img class="logos__fts" src="../../LogoScriptura.webp" width="600" height="216" alt="" decoding="async" loading="lazy"></a>
+  </div>
+  <p class="footer__church">Église Baptiste de Charlesbourg</p>
+  <p class="footer__line">Pasteur Simon Ouellette · Charlesbourg, Québec</p>
+  <p class="footer__line">Citations bibliques : Nouvelle Édition de Genève 1979 (NEG)</p>
+  <p class="footer__source">MacArthur, John &amp; Richard Mayhue. 2018. Théologie systématique. (Trans.) Antoine Doriath. Trois-Rivières, QC: Éditions Impact.</p>
+  <p class="footer__retour" style="display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem;margin:2rem 0 .3rem;">
+    <a href="../../index.html" class="pill">&#8598;&nbsp;Exposition de l'Écriture</a>
+    <a href="../../Coram%20Deo.pdf" target="_blank" rel="noopener" class="pill">Coram Deo&nbsp;&#8599;</a>
+  </p>
+  <p class="footer__sdg">Soli Deo Gloria</p>
+</footer>
+
+<script>
+  var progress = document.getElementById('progress');
+  var navProgress = document.getElementById('navProgress');
+  var nav = document.getElementById('nav');
+  var hero = document.getElementById('hero');
+
+  function onScroll(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    var pct = max > 0 ? (h.scrollTop || document.body.scrollTop) / max * 100 : 0;
+    progress.style.width = pct + '%';
+    if (navProgress) navProgress.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  if ('IntersectionObserver' in window){
+    var navObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) nav.classList.remove('show');
+        else nav.classList.add('show');
+      });
+    }, {rootMargin:'-70px 0px 0px 0px'});
+    navObs.observe(hero);
+  }
+</script>
+</body>
+</html>
