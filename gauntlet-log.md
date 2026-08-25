@@ -71,3 +71,74 @@ nulle. Le partage 4/3 conforme à l'alternance reste le meilleur indice qu'ils o
 | Autrui | La correction corporelle présentée comme option substituable ; MacArthur la tient pour le moyen prescrit et pose une fenêtre d'âge (Pr 19.18) | **Arbitré à la source.** Le tour 1 avait retiré la limite d'âge comme non sourcée ; elle l'est (gty 80-69). Rétablie, avec la nuance d'A216 (la verge n'est pas la seule forme). |
 | Travail | « La chute n'a pas introduit le travail : elle l'a maudit » ferait du travail l'objet de la malédiction, alors que Gn 3.17 maudit le sol | **Arbitré à la source.** Les deux sermons disent ensemble : le sol est maudit, la *nature* du travail l'est devenue, le travail lui-même n'est pas la punition. Le tour 2 n'avait gardé que la moitié polémique. Reformulé. |
 | Fin | Hé 3.13 retiré du tableau des moyens ; chez MacArthur le v. 12 démasque le professant et le v. 13 met les croyants à l'exhorter chaque jour | Corrigé au lissage |
+
+---
+
+# Volet 2 — « 3 - Pérégrination » (916 pages, 3 281 009 mots)
+
+Plafond fixé avant lancement : ~60 agents, une séance. Consommé : **26**.
+
+Portée retenue face au changement d'échelle (139 fois le volume du volet 1) : triage par signature
+sur les 916 pages, plus un gauntlet pilote complet sur la série Genèse 1-11 (13 pages, 45 392 mots).
+
+## Triage — 6 agents, 67 pages signalées, 109 déclenchements
+
+Signature bâtie sur les écarts trouvés au volet 1 : easy-believism, charismatique ouvert,
+amillénarisme, théologie du remplacement, paedobaptisme, mandat culturel, sabbatarisme, dîme
+obligatoire, expiation générale, salut perdable, état intermédiaire.
+
+**Résultat : 108 réfutations légitimes, 1 seul écart réel.** La signature détecte massivement des
+pages qui nomment l'erreur pour la trancher — « ni sommeil de l'âme, ni purgatoire » déclenche
+« purgatoire », Romains 11 déclenche « nouvel Israël » parce qu'il le réfute.
+
+Écart corrigé : `46 - 1 Corinthiens/16 - La honte des procès entre frères` qualifiait l'Église de
+« nouvel Israël spirituel », sans réserve, dans une page par ailleurs franchement prémillénariste.
+
+*Limite de ce triage, à déclarer :* une signature ne détecte que des erreurs **affirmées**. Les plus
+gros écarts du volet 1 étaient des **omissions**, et une omission ne se grep pas.
+
+## Gauntlet pilote Genèse — 20 agents
+
+| Passe | Agents | Résultat |
+|---|---|---|
+| Tour 1 (bâtisseurs + critiques) | 10 | 18 écarts corrigés, 5 écarts restants nommés |
+| Tour 2 (bâtisseurs) | 5 | 21 écarts corrigés |
+| Vérification JMA | 3 | 246 attributions vérifiées, 10 corrigées |
+| Résolution + lissage | 2 | 8 arbitrages appliqués, 41 lignes lissées |
+
+**Le mode d'échec propre à ces pages n'est pas celui du volet 1.** Ici l'écart dominant est la
+**mésattribution** : la page prête à MacArthur une hypothèse qu'il rapporte sans la faire sienne
+(le dais de vapeur d'eau, celui de Whitcomb et Morris), une lecture qu'il rejette nommément
+(les langues d'Actes 2 renversant Babel), ou durcit en thèse ce qu'il donne pour légende rabbinique.
+
+## Deux corrections de méthode, à consigner
+
+**1. La borne « source non récupérable » était fausse.** J'avais dit aux agents que *La Bible
+d'étude MacArthur* n'était pas récupérable et qu'une attribution invérifiable devait donc être
+classée ∅. Or 30 fichiers `JMA - <Livre>.md` sont dans le dépôt, un par livre. Des dizaines
+d'attributions ont été laissées non vérifiées alors que la source était à deux répertoires de là.
+La passe de vérification a rattrapé 246 attributions sur les 13 pages Genèse.
+
+**2. Le corpus MacArthur se contredit lui-même.** Sur sept points de Genèse, les notes de la Bible
+d'étude et les sermons Grace to You divergent réellement :
+
+| Point | Bible d'étude | Chaire |
+|---|---|---|
+| Dais de vapeur | « Il pourrait s'agir d'un nuage de vapeur… prolongeant la vie » | « I don't know… you can't be dogmatic about it » |
+| Longévité (5.5) | « s'explique par l'environnement antérieur au déluge » | Croissance de la population, transmission de la vérité |
+| Généalogie Gn 5 | « vise la représentativité plutôt que l'exhaustivité » | « there are no gaps here, no breaks » |
+| Repos du 7e jour | « institue la nécessité de se reposer » pour l'homme | « no command is given to man to rest » |
+| Localisation d'Éden | Région de Babylone, repère = Moïse rédacteur | Repère = la Terre promise ; localisation impossible |
+| « Tentes de Sem » (9.27) | Bénédictions spirituelles transmises à Japhet | Relation pacifique avec les Sémites |
+| Ivresse de Noé | Fermentation peut-être ignorée | « Sure he did [know] » |
+
+**Règle tranchée par l'auteur : le sermon prime.** C'est l'échelle de sources déjà déclarée par le
+skill `sermon-research` — niveau 1 = sermon GTY, autorité pleine ; niveau 3 = notes de la Bible
+d'étude, « position condensée, trancher oui, nuancer non ». Les huit points où la vérification JMA
+avait fait primer la note ont été ramenés au côté chaire.
+
+## Ce qui reste
+
+903 pages non auditées. Le triage les couvre contre les erreurs affirmées, pas contre les
+omissions ni les mésattributions — or c'est la vérification d'attribution contre les fichiers JMA
+locaux qui a mordu sur Genèse, et elle n'a pas été passée ailleurs.
