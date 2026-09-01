@@ -4,8 +4,11 @@ ruvector.db
 # Copies de sauvegarde Windows (« - Copie »)
 * - Copie*
 
-# Outillage local Claude Code (config propre à la machine, verrous transitoires)
-.claude/
+# Outillage local Claude Code (config propre à la machine, verrous transitoires),
+# sauf les skills versionnés et la bibliothèque partagée dont leurs scripts dépendent.
+**/.claude/*
+!**/.claude/skills/
+!**/.claude/shared/
 
 # Cache de bytecode Python (artefacts de build)
 __pycache__/

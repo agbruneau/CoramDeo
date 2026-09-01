@@ -1,0 +1,863 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Psaume 119.1-8 · Heureux, et pourtant suppliant · Recherche exégétique</title>
+<meta name="description" content="Recherche exégétique du Psaume 119.1-8, strophe Aleph, dans la perspective de John MacArthur : la béatitude de l'homme intègre, le pivot du verset 4, l'obéissance demandée en prière et la crainte d'être laissé.">
+<meta name="author" content="André-Guy Bruneau">
+<style>
+  :root{
+    /* ---- Palette Noir + orange ---- */
+    --nuit:#0a0a0a;        /* fond noir profond */
+    --nuit-1:#121212;
+    --nuit-2:#1b1b1b;      /* panneaux */
+    --encre:#f3f0ec;       /* texte principal, contraste élevé */
+    --encre-doux:#c9c2ba;  /* texte secondaire, demeure lisible */
+    --or:#e8843c;          /* orange chaud (accent principal) */
+    --or-clair:#f6a85c;
+    --feuille:#f0b659;     /* ambre lumineux (accent secondaire) */
+    --feuille-vif:#f7c97a;
+    --filet:rgba(232,132,60,.28);
+    --filet-fort:rgba(232,132,60,.52);
+    /* Largeur de contenu proportionnelle : ~80% de l'écran sur grand écran,
+       plancher 58rem pour que mobile/tablette gardent une lecture confortable */
+    --max:max(58rem,80vw);
+  }
+
+  *{box-sizing:border-box;}
+  html{
+    scroll-behavior:smooth;-webkit-text-size-adjust:100%;
+    scrollbar-color:var(--or) var(--nuit);scrollbar-width:thin;
+  }
+
+  body{
+    margin:0;
+    font-family:"EB Garamond",Georgia,"Times New Roman",serif;
+    /* Lecture confortable pour personnes aînées : grands caractères, interligne aéré */
+    font-size:clamp(1.2rem,.95rem + .85vw,1.45rem);
+    line-height:1.85;
+    color:var(--encre);
+    background:var(--nuit);
+    background-image:
+      radial-gradient(120% 80% at 50% -10%, rgba(240,182,89,.10), transparent 55%),
+      radial-gradient(90% 60% at 85% 8%, rgba(232,132,60,.06), transparent 60%),
+      radial-gradient(100% 70% at 12% 35%, rgba(232,132,60,.05), transparent 58%);
+    background-attachment:fixed;
+    overflow-x:hidden;
+  }
+
+  /* Grain de parchemin, très discret pour ne pas gêner la lecture */
+  .grain{
+    position:fixed;inset:0;z-index:3;pointer-events:none;
+    opacity:.03;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  /* Voile sombre sur les bords, pour la profondeur */
+  .vignette{
+    position:fixed;inset:0;z-index:1;pointer-events:none;
+    background:radial-gradient(135% 105% at 50% 35%, transparent 56%, rgba(0,0,0,.42) 100%);
+  }
+
+  a{color:var(--feuille);text-decoration:none;}
+  a:focus-visible,.nav__links a:focus-visible{outline:2px solid var(--or);outline-offset:3px;border-radius:3px;}
+
+  ::selection{background:rgba(232,132,60,.34);color:#fff;}
+  ::-webkit-scrollbar{width:12px;}
+  ::-webkit-scrollbar-track{background:var(--nuit);}
+  ::-webkit-scrollbar-thumb{background:linear-gradient(var(--or),#7a4218);border:3px solid var(--nuit);border-radius:10px;}
+  ::-webkit-scrollbar-thumb:hover{background:var(--or-clair);}
+
+  /* ---- Barre de progression ---- */
+  .progress{
+    position:fixed;top:0;left:0;height:3px;width:0;z-index:60;
+    background:linear-gradient(90deg,var(--or),var(--or-clair),var(--feuille));
+    box-shadow:0 0 12px rgba(232,132,60,.6);
+    transition:width .1s linear;
+  }
+
+  /* ---- Navigation ---- */
+  .nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    display:flex;align-items:center;gap:1.5rem;
+    padding:.85rem clamp(1rem,4vw,2.5rem);
+    background:rgba(10,10,10,.82);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--filet);
+    transform:translateY(-110%);
+    transition:transform .45s cubic-bezier(.2,.7,.2,1);
+  }
+  .nav.show{transform:translateY(0);}
+  /* Barre de progression de lecture, intégrée au bas de la navigation */
+  .nav__progress{
+    position:absolute;left:0;bottom:-1px;height:2px;width:0;
+    background:linear-gradient(90deg,var(--or),var(--or-clair),var(--feuille));
+    box-shadow:0 0 10px rgba(232,132,60,.55);
+    transition:width .1s linear;
+  }
+  .nav__logo{
+    flex:none;display:block;
+  }
+  .nav__logo img{height:clamp(2.2rem,2rem + 1vw,2.9rem);width:auto;display:block;}
+  .nav__brand{
+    font-family:"Cormorant Garamond",serif;font-size:1.55rem;font-weight:600;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--or-clair);
+    white-space:nowrap;
+  }
+  .nav__links{
+    display:flex;gap:.15rem;margin-left:auto;
+    overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .nav__links::-webkit-scrollbar{display:none;}
+  .nav__links a{
+    position:relative;
+    font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--encre-doux);padding:.5rem .8rem;border-radius:2px;
+    white-space:nowrap;transition:color .25s;
+  }
+  .nav__links a::after{
+    content:"";position:absolute;left:.8rem;right:.8rem;bottom:.18rem;height:1px;
+    background:var(--or);transform:scaleX(0);transform-origin:left;transition:transform .3s;
+  }
+  .nav__links a:hover{color:var(--or-clair);}
+  .nav__links a:hover::after{transform:scaleX(1);}
+
+  /* ---- Hero / page-titre ---- */
+  .hero{
+    position:relative;min-height:100svh;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:6rem 1.4rem 4rem;
+  }
+  .hero__frame{
+    position:absolute;inset:clamp(.9rem,3.5vw,2.4rem);
+    border:1px solid var(--filet);pointer-events:none;
+    opacity:0;animation:frameIn 1.5s ease .15s forwards;
+  }
+  .hero__frame::before,.hero__frame::after{
+    content:"";position:absolute;width:16px;height:16px;
+  }
+  .hero__frame::before{top:-1px;left:-1px;border-top:2px solid var(--or);border-left:2px solid var(--or);}
+  .hero__frame::after{bottom:-1px;right:-1px;border-bottom:2px solid var(--or);border-right:2px solid var(--or);}
+
+  .hero__kicker{
+    font-size:clamp(.85rem,.65rem + .6vw,1rem);
+    letter-spacing:.42em;text-transform:uppercase;
+    color:var(--or);margin:0 0 .2em .42em;
+  }
+  .hero__title{
+    font-family:"Cormorant Garamond",serif;
+    font-weight:600;
+    font-size:clamp(3.8rem,8vw + 1rem,9rem);
+    line-height:1;letter-spacing:.04em;margin:0;
+    /* Espace bas/côtés pour que les jambages du J et du q ne soient pas rognés par background-clip:text */
+    padding:.06em .08em .2em;
+    background:linear-gradient(176deg,#f9e1bb 0%,var(--or-clair) 45%,var(--or) 100%);
+    -webkit-background-clip:text;background-clip:text;
+    color:transparent;-webkit-text-fill-color:transparent;
+    filter:drop-shadow(0 0 34px rgba(240,182,89,.30)) drop-shadow(0 2px 3px rgba(0,0,0,.5));
+  }
+  .ornament{
+    display:flex;align-items:center;justify-content:center;gap:1rem;
+    margin:1.7rem 0;color:var(--or);width:min(22rem,80%);
+  }
+  .ornament::before,.ornament::after{
+    content:"";height:1px;flex:1;
+    background:linear-gradient(90deg,transparent,var(--filet-fort),transparent);
+  }
+  .ornament span{font-size:.8rem;}
+
+  .hero__verse{
+    font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-weight:500;
+    font-size:clamp(1.5rem,1.1rem + 1.5vw,2.25rem);
+    line-height:1.55;color:var(--encre);
+    max-width:max(46rem,72vw);margin:0 auto;
+    text-wrap:balance;
+  }
+  .hero__verse .q{color:var(--or);font-style:normal;}
+  .hero__ref{
+    margin-top:1.7rem;font-size:.95rem;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--or);
+  }
+  .hero__series{
+    margin-top:2.6rem;font-size:.88rem;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--encre-doux);
+  }
+  .hero__series b{color:var(--feuille);font-weight:600;}
+  .scrollcue{
+    position:absolute;bottom:1.7rem;left:50%;transform:translateX(-50%);
+    color:var(--or);font-size:1.3rem;opacity:.75;
+    animation:bob 2.4s ease-in-out infinite;
+  }
+  @keyframes bob{0%,100%{transform:translate(-50%,0);}50%{transform:translate(-50%,7px);}}
+
+  /* Entrée orchestrée du hero (douce) */
+  @keyframes riseIn{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
+  @keyframes frameIn{from{opacity:0;}to{opacity:1;}}
+  .hero__kicker,.hero__title,.ornament,.hero__verse,.hero__ref,.hero__series,.hero__meta{
+    opacity:0;animation:riseIn .95s cubic-bezier(.2,.7,.2,1) forwards;
+  }
+  .hero__kicker{animation-delay:.15s;}
+  .hero__title{animation-delay:.3s;}
+  .ornament{animation-delay:.6s;}
+  .hero__verse{animation-delay:.75s;}
+  .hero__ref{animation-delay:1s;}
+  .hero__series{animation-delay:1.15s;}
+  .hero__meta{animation-delay:1.3s;}
+
+  /* ---- Sections ---- */
+  main{position:relative;z-index:2;}
+  .section{
+    max-width:var(--max);margin:0 auto;
+    padding:clamp(3.5rem,9vw,7rem) clamp(1.4rem,5vw,2rem);
+    scroll-margin-top:5rem;
+  }
+  .sec-head{text-align:center;margin-bottom:2.8rem;}
+  .sec-num{
+    display:flex;align-items:center;justify-content:center;gap:1rem;
+    font-family:"Cormorant Garamond",serif;font-weight:500;
+    font-size:clamp(2.8rem,2rem + 3vw,4.2rem);line-height:1;
+    color:var(--or);letter-spacing:.05em;margin-bottom:.4rem;
+    filter:drop-shadow(0 0 22px rgba(232,132,60,.28));
+  }
+  .sec-num::before,.sec-num::after{
+    content:"";width:clamp(1.6rem,6vw,3rem);height:1px;
+    background:linear-gradient(90deg,transparent,var(--filet-fort));
+  }
+  .sec-num::after{background:linear-gradient(90deg,var(--filet-fort),transparent);}
+  .kicker{
+    font-size:.95rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--or);margin:0 0 .65rem;
+  }
+  .sec-title{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:clamp(2.1rem,1.4rem + 2.6vw,3.2rem);line-height:1.12;
+    color:var(--encre);margin:0;text-wrap:balance;
+  }
+  .sec-head .sec-title::after{
+    content:"";display:block;width:2.6rem;height:1px;
+    background:var(--filet-fort);margin:1.2rem auto 0;
+  }
+  .ref{
+    margin:1rem 0 0;font-size:.92rem;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--encre-doux);
+  }
+
+  .lead{
+    font-size:1.22em;line-height:1.72;color:#faf3ec;
+    font-weight:500;
+    border-left:3px solid var(--or);
+    padding-left:1.3rem;margin:0 0 2.2rem;
+    text-wrap:pretty;
+  }
+  .section p{margin:0 0 1.45rem;text-wrap:pretty;}
+  .section .body p:first-of-type::first-letter{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    float:left;font-size:3.6em;line-height:.66;
+    padding:.06em .14em 0 0;margin-top:.04em;
+    color:var(--or-clair);
+    text-shadow:0 0 22px rgba(232,132,60,.32);
+  }
+
+  /* ---- Points de forme structurés (repérage rapide) ---- */
+  .points{list-style:none;margin:0 0 2.2rem;padding:0;}
+  .points li{
+    position:relative;margin:0 0 1.5rem;padding-left:2rem;
+    text-wrap:pretty;
+  }
+  .points li:last-child{margin-bottom:0;}
+  .points li::before{
+    content:"\25C6";position:absolute;left:.2rem;top:.55em;
+    font-size:.6em;color:var(--or);
+    filter:drop-shadow(0 0 8px rgba(232,132,60,.4));
+  }
+  .points b{color:var(--or-clair);font-weight:600;}
+
+  /* ---- Texte souligné (mise en évidence) ; ajouter .italique pour l'italique ---- */
+  .surligne{
+    text-decoration:underline;
+    text-decoration-color:var(--or);
+    text-decoration-thickness:.08em;
+    text-underline-offset:.18em;
+  }
+  .surligne.italique{font-style:italic;}
+
+  /* ---- Texte justifié (lecture confortable, gauche et droite) ----
+     `.section > p` et `.section .body p` visent le corps du texte sans
+     toucher aux titres : les <p> de .sec-head sont des petits-enfants
+     de .section et restent donc centrés. */
+  .lead,.points li,.section > p,.section .body p{
+    text-align:justify;-webkit-hyphens:auto;hyphens:auto;
+  }
+
+  /* ---- Versets ---- */
+  .verses{margin:2.4rem 0;}
+  .verse{
+    position:relative;margin:0 0 1.1rem;
+    padding:1.3rem 1.4rem 1.3rem 1.6rem;
+    background:linear-gradient(180deg,rgba(232,132,60,.07),rgba(232,132,60,.03));
+    border:1px solid var(--filet);border-left:3px solid var(--or);
+    border-radius:0 5px 5px 0;
+    transition:border-left-color .3s,transform .3s,background .3s;
+  }
+  .verse:hover{border-left-color:var(--or-clair);transform:translateX(3px);}
+  .verse__text{
+    font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-size:1.25em;line-height:1.55;color:var(--encre);margin:0;
+  }
+  .verse__text::before{content:"\201C";color:var(--or);font-size:1.1em;}
+  .verse__text::after{content:"\201D";color:var(--or);font-size:1.1em;}
+  .verse__ref{
+    display:block;margin-top:.8rem;
+    font-family:"EB Garamond",serif;font-style:normal;
+    font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--or);
+  }
+
+  /* ---- Séparateur ---- */
+  .divider{
+    display:flex;align-items:center;justify-content:center;gap:1.4rem;
+    max-width:var(--max);margin:0 auto;
+    padding:0 2rem;color:var(--or);
+  }
+  .divider::before,.divider::after{
+    content:"";height:1px;width:min(7rem,22%);
+    background:linear-gradient(90deg,transparent,var(--filet-fort),transparent);
+  }
+  .divider span{font-size:.8rem;}
+
+  /* Variantes intro / conclusion */
+  .section--intro .sec-title,.section--conclusion .sec-title{color:var(--or-clair);}
+
+  /* ---- Pied de page ---- */
+  .footer{
+    position:relative;z-index:2;text-align:center;
+    border-top:1px solid var(--filet);
+    margin-top:2rem;padding:3.6rem 1.4rem 3.2rem;
+    background:linear-gradient(180deg,transparent,rgba(16,16,16,.7));
+  }
+  .footer__logo{
+    display:block;width:auto;
+    height:clamp(5rem,12vw,7rem);
+    margin:0 auto 1.6rem;
+  }
+  .footer__church{
+    font-family:"Cormorant Garamond",serif;font-size:1.7rem;font-weight:600;
+    letter-spacing:.04em;color:var(--encre);margin:0 0 .3rem;
+  }
+  .footer__line{font-size:1rem;color:var(--encre-doux);margin:.2rem 0;}
+  .footer__sdg{
+    margin-top:1.8rem;font-size:.86rem;letter-spacing:.36em;
+    text-transform:uppercase;color:var(--or);
+  }
+
+  /* ---- Révélation au défilement (groupes de contenu en cascade douce) ---- */
+  .reveal > *{
+    opacity:0;transform:translateY(16px);
+    transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.2,1);
+  }
+  .reveal.in > *{opacity:1;transform:none;}
+  .reveal.in > *:nth-child(1){transition-delay:.04s;}
+  .reveal.in > *:nth-child(2){transition-delay:.13s;}
+  .reveal.in > *:nth-child(3){transition-delay:.22s;}
+  .reveal.in > *:nth-child(4){transition-delay:.31s;}
+  .reveal.in > *:nth-child(5){transition-delay:.40s;}
+  .reveal.in > *:nth-child(6){transition-delay:.49s;}
+
+  @media (max-width:560px){
+    .nav__brand{font-size:1.3rem;}
+    .lead{padding-left:1rem;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal > *{opacity:1;transform:none;transition:none;}
+    .scrollcue{animation:none;}
+    .hero__kicker,.hero__title,.ornament,.hero__verse,.hero__ref,.hero__series,.hero__meta,.hero__frame{
+      opacity:1;animation:none;
+    }
+  }
+
+  /* ============================================================
+     COMPOSANTS PROPRES À LA PAGE DE RECHERCHE
+     (s'ajoutent au gabarit, dans le même langage visuel)
+     ============================================================ */
+
+  /* Titre-héros thématique (plus long) + marque de nav (référence) */
+  .hero__title{font-size:clamp(3rem,5vw + 1.4rem,6rem);text-wrap:balance;}
+  .nav__brand{font-size:clamp(1.05rem,.9rem + .55vw,1.4rem);letter-spacing:.08em;}
+  .hero__meta{
+    margin-top:1.4rem;font-size:.8rem;letter-spacing:.26em;
+    text-transform:uppercase;color:var(--encre-doux);
+  }
+
+  /* ---- Tableau des mots-clés ---- */
+  .table-wrap{
+    margin:2.4rem 0 0;overflow-x:auto;-webkit-overflow-scrolling:touch;
+    border:1px solid var(--filet);border-radius:6px;
+  }
+  .mots{border-collapse:collapse;width:100%;min-width:52rem;}
+  .mots th,.mots td{
+    padding:1rem 1.15rem;text-align:left;vertical-align:top;
+    border-bottom:1px solid var(--filet);
+  }
+  .mots thead th{
+    background:var(--nuit-2);
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--or);border-bottom:1px solid var(--filet-fort);
+    white-space:nowrap;
+  }
+  .mots tbody tr:last-child td{border-bottom:none;}
+  .mots tbody tr:hover{background:rgba(232,132,60,.045);}
+  .mots td{font-size:.98rem;line-height:1.6;color:var(--encre-doux);}
+  .mot-fr{display:block;font-weight:600;color:var(--encre);}
+  .mot-gr{
+    display:block;margin-top:.25rem;
+    font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-size:1.12em;color:var(--or-clair);
+  }
+  .col-sens{min-width:12rem;color:var(--encre);}
+  .trad{display:flex;flex-direction:column;gap:.3rem;font-size:.84rem;white-space:nowrap;}
+  .trad b{color:var(--or-clair);font-weight:600;letter-spacing:.03em;}
+
+  /* ---- Renvois / passages parallèles ---- */
+  .renvois{display:grid;gap:1.1rem;margin:2.4rem 0 0;grid-template-columns:1fr;}
+  @media (min-width:48rem){.renvois{grid-template-columns:1fr 1fr;}}
+  .renvoi{
+    border:1px solid var(--filet);border-left:3px solid var(--or);
+    border-radius:0 6px 6px 0;padding:1.1rem 1.3rem;
+    background:linear-gradient(180deg,rgba(232,132,60,.06),rgba(232,132,60,.015));
+  }
+  .renvoi__head{
+    display:flex;align-items:baseline;justify-content:space-between;
+    gap:.7rem;flex-wrap:wrap;margin-bottom:.55rem;
+  }
+  .renvoi__ref{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:1.2rem;color:var(--or-clair);letter-spacing:.02em;
+  }
+  .renvoi__tag{
+    font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--or);border:1px solid var(--filet-fort);
+    border-radius:999px;padding:.22rem .65rem;white-space:nowrap;
+  }
+  .renvoi__desc{margin:0;font-size:.95rem;line-height:1.6;color:var(--encre-doux);text-align:justify;hyphens:auto;}
+
+  /* ---- Thèmes théologiques (deux volets : texte / assemblée) ---- */
+  .theme{
+    margin:0;padding:1.6rem 1.7rem 1.5rem;
+    border:1px solid var(--filet);border-radius:9px;
+    background:linear-gradient(180deg,rgba(27,27,27,.55),rgba(18,18,18,.35));
+  }
+  .theme + .theme{margin-top:1.6rem;}
+  .theme__title{
+    display:flex;align-items:center;gap:.75rem;margin:0 0 1.2rem;
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:clamp(1.4rem,1.1rem + .9vw,1.8rem);color:var(--or-clair);
+  }
+  .theme__title::before{
+    content:"\25C6";font-size:.52em;color:var(--or);
+    filter:drop-shadow(0 0 8px rgba(232,132,60,.4));
+  }
+  .theme__grid{display:grid;gap:1.2rem;}
+  @media (min-width:47rem){.theme__grid{grid-template-columns:1fr 1fr;align-items:start;}}
+  .theme__label{
+    display:flex;align-items:center;gap:.6rem;margin:0 0 .55rem;
+    font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or);
+  }
+  .theme__label::after{content:"";flex:1;height:1px;background:var(--filet);}
+  .theme__part p{margin:0;font-size:.95rem;line-height:1.64;color:var(--encre-doux);text-align:justify;hyphens:auto;}
+  .theme__part--app{
+    padding:1.05rem 1.15rem;border:1px solid var(--filet);border-radius:6px;
+    background:linear-gradient(180deg,rgba(232,132,60,.07),transparent);
+  }
+
+  /* ---- Pistes de réflexion (questions numérotées) ---- */
+  .questions{list-style:none;counter-reset:q;margin:2.4rem 0 0;padding:0;display:grid;gap:1.5rem;}
+  .questions li{
+    position:relative;counter-increment:q;padding-left:3.6rem;
+    text-align:justify;-webkit-hyphens:auto;hyphens:auto;
+  }
+  .questions li::before{
+    content:counter(q);position:absolute;left:0;top:-.15rem;
+    width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;
+    font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.35rem;
+    color:var(--or);border:1px solid var(--filet-fort);border-radius:50%;
+    background:rgba(232,132,60,.06);
+    filter:drop-shadow(0 0 10px rgba(232,132,60,.18));
+  }
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="nav" id="nav">
+  <div class="nav__progress" id="navProgress" aria-hidden="true"></div>
+  <span class="nav__brand">Psaume 119.1-8</span>
+  <nav class="nav__links" aria-label="Sections">
+    <a href="#contexte">Contexte</a>
+    <a href="#arriere-plan">Arrière-plan</a>
+    <a href="#mots-cles">Mots-clés</a>
+    <a href="#commentateurs">Commentateurs</a>
+    <a href="#renvois">Parallèles</a>
+    <a href="#themes">Thèmes</a>
+    <a href="#reflexion">Réflexion</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ============ PAGE-TITRE ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__frame" aria-hidden="true"></div>
+    <p class="hero__kicker">Recherche · Psaume 119.1-8</p>
+    <h1 class="hero__title">Heureux, et pourtant suppliant</h1>
+    <div class="ornament" aria-hidden="true"><span>◆</span></div>
+    <p class="hero__verse">
+      <span class="q">«</span>&nbsp;Heureux ceux qui sont intègres dans leur voie, Qui marchent selon la loi de l'Eternel!&nbsp;<span class="q">»</span>
+    </p>
+    <p class="hero__ref">Psaume 119.1 · NEG</p>
+    <p class="hero__series">Série : <b>Psaume 119, strophe Aleph</b></p>
+    <p class="hero__meta">Recherche exégétique · 1<sup>er</sup> septembre 2026 · André-Guy Bruneau</p>
+    <div class="scrollcue" aria-hidden="true">↓</div>
+  </section>
+
+  <!-- ============ CONTEXTE DU PASSAGE ============ -->
+  <article class="section section--intro reveal" id="contexte">
+    <header class="sec-head">
+      <p class="kicker">Le passage</p>
+      <h2 class="sec-title">Contexte du passage</h2>
+      <p class="ref">Psaume 119.1-8</p>
+    </header>
+    <div class="verses">
+      <figure class="verse">
+        <p class="verse__text">Heureux ceux qui gardent ses préceptes, Qui le cherchent de tout leur cœur,</p>
+        <cite class="verse__ref">Psaume 119.2 · NEG</cite>
+      </figure>
+      <figure class="verse">
+        <p class="verse__text">Je veux garder tes statuts: Ne m'abandonne pas entièrement!</p>
+        <cite class="verse__ref">Psaume 119.8 · NEG</cite>
+      </figure>
+    </div>
+    <p class="lead">Le Psaume 119 est le plus long chapitre de la Bible, cent soixante-seize versets que les notes de <i>La Bible d'étude MacArthur</i> appellent le mont Everest du psautier.</p>
+    <div class="body">
+      <p>Son auteur n'est pas connu : les noms de David, de Daniel et d'Esdras ont été avancés, sans certitude. Le psalmiste écrit apparemment pendant un temps de détresse particulière, ce que confirment les versets 23, 51, 61, 87, 95, 110, 121 et 161 : des princes parlent contre lui, des orgueilleux le raillent, des méchants l'entourent de leurs pièges. Le psaume appartient au cinquième livre du psautier et relève du genre sapientiel, avec les Psaumes 1 et 37. Il rejoint les Psaumes 1 et 19 dans l'exaltation de la Parole de Dieu.</p>
+      <p>La forme gouverne le découpage. Le psaume est un acrostiche complet : vingt-deux strophes de huit versets, une strophe par consonne de l'alphabet hébreu, et à l'intérieur de chaque strophe les huit versets commencent tous par la même lettre. Les versets 1 à 8 forment la strophe <i>Aleph</i>. Ce passage n'est donc pas une découpe de commodité : c'est l'unité que le texte lui-même délimite. Huit termes reviennent tout au long du psaume pour désigner l'Écriture : loi, lois, préceptes, statuts, commandements, jugements, parole, ordonnances. Six d'entre eux paraissent déjà dans cette première strophe.</p>
+      <p>À l'intérieur de la strophe, le mouvement est net. Les versets 1 à 3 parlent à la troisième personne et décrivent l'homme heureux. Le verset 4 est le pivot : seul verset où Dieu est le sujet de l'action, il énonce ce que Dieu a prescrit. Les versets 5 à 8 passent à la première personne, et la description devient prière. Les notes de <i>La Bible d'étude</i> relèvent d'ailleurs sur les versets 5 et 6 qu'il est parfois difficile de distinguer où le témoignage du psalmiste se termine et où commence la prière. La strophe s'ouvre sur le bonheur de l'homme intègre et se ferme sur une supplication : ne m'abandonne pas entièrement.</p>
+    </div>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ ARRIÈRE-PLAN HISTORIQUE ET CULTUREL ============ -->
+  <article class="section reveal" id="arriere-plan">
+    <header class="sec-head">
+      <p class="kicker">Monde de l'Israël ancien</p>
+      <h2 class="sec-title">Arrière-plan historique et culturel</h2>
+      <p class="ref">Psaume 119.1 · 119.6 · 119.8</p>
+    </header>
+    <p class="lead">L'acrostiche est un dispositif de mémoire avant d'être un ornement. Les notes de <i>La Bible d'étude</i> le disent : cette construction littéraire facilitait la mémorisation et indiquait que le sujet avait été traité depuis A jusqu'à Z.</p>
+    <div class="body">
+      <p>Dans une culture où le texte se recevait par l'audition publique et se conservait dans la mémoire plutôt que sur une étagère, la forme alphabétique était fonctionnelle. Le lecteur français perd cette dimension entièrement : les huit versets qui commencent tous par <i>aleph</i> ne laissent aucune trace en traduction. Ce qui se lit comme une effusion spontanée est en réalité une contrainte formelle tenue sur cent soixante-seize versets, sans une seule défaillance. Le psaume est un travail, non un épanchement.</p>
+    </div>
+    <p>Trois détails échappent au lecteur moderne.</p>
+    <ul class="points">
+      <li><b>Une félicitation, non un sentiment.</b> «&nbsp;Heureux&nbsp;», aux versets 1 et 2, traduit <i>ashrei</i>. Ce n'est pas la description d'un état affectif mais une formule de félicitation publique, une déclaration sur l'état objectif de quelqu'un. C'est le premier mot du psautier entier, en Psaume 1.1, et les notes de <i>La Bible d'étude</i> signalent que le début du Psaume 119 est similaire à celui du Psaume 1.1-3. Un auditeur israélite entendait donc, dès la première syllabe, que le psaume se plaçait dans le sillage de l'ouverture du recueil.</li>
+      <li><b>Rougir est un statut, non une gêne.</b> Au verset 6, «&nbsp;je ne rougirai point, à la vue de tous tes commandements&nbsp;» : dans une société d'honneur et de honte, rougir n'est pas un embarras privé, c'est une perte de rang devant témoins. Le psalmiste se représente les commandements comme une assemblée devant laquelle il comparaît.</li>
+      <li><b>Un verbe d'alliance, non de sentiment religieux.</b> Au verset 8, «&nbsp;ne m'abandonne pas entièrement&nbsp;» emploie <i>azab</i>, le verbe de la rupture d'alliance en Deutéronome 31.16-17. La demande appartient au vocabulaire juridique de l'alliance : le psalmiste demande à Dieu de ne pas rompre.</li>
+    </ul>
+    <p>Ces trois observations relèvent du travail grammatico-historique. Les notes de <i>La Bible d'étude</i> ne commentent ni le verset 3 ni le verset 6, et l'on ne dispose d'aucune exposition de John MacArthur sur cette strophe : ce qui précède n'est donné que pour ce qu'il est.</p>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ ÉTUDE DES MOTS-CLÉS ============ -->
+  <article class="section reveal" id="mots-cles">
+    <header class="sec-head">
+      <p class="kicker">Vocabulaire</p>
+      <h2 class="sec-title">Étude des mots-clés</h2>
+      <p class="ref">Cinq termes hébreux</p>
+    </header>
+    <p class="lead">Cinq mots portent le poids de la strophe : l'intégrité qui n'est pas la perfection (<i>tamim</i>), la voie qui est une conduite (<i>derek</i>), l'instruction que «&nbsp;loi&nbsp;» rétrécit (<i>torah</i>), les préceptes qui sont des témoignages (<i>edot</i>), et le verbe d'alliance sur lequel la strophe se ferme (<i>azab</i>).</p>
+    <div class="table-wrap">
+      <table class="mots">
+        <thead>
+          <tr>
+            <th scope="col">Français · translit.</th>
+            <th scope="col">Sens littéral</th>
+            <th scope="col">Champ sémantique</th>
+            <th scope="col">Traductions comparées</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><span class="mot-fr">intègres</span><span class="mot-gr">tamim</span></th>
+            <td class="col-sens">complet, entier, achevé, sans défaut</td>
+            <td>Employé des victimes sacrificielles sans défaut (Lévitique 1.3), de Noé (Genèse 6.9) et de l'ordre donné à Abram : «&nbsp;marche devant ma face et sois intègre&nbsp;» (Genèse 17.1). Ne désigne pas l'absence de péché mais l'absence de division : une vie d'une seule pièce, sans double allégeance. La même racine revient au verset 80 pour le cœur.</td>
+            <td><span class="trad"><span><b>S21</b> conduite intègre</span><span><b>NEG79</b> intègres</span><span><b>Darby</b> intègres</span><span><b>LSG</b> intègres</span><span><b>KJF</b> vertueux</span></span></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="mot-fr">voie</span><span class="mot-gr">derek</span></th>
+            <td class="col-sens">chemin, route, et par extension conduite habituelle de vie</td>
+            <td>Terme de base de la littérature de sagesse (Psaume 1.1, 1.6). La strophe l'emploie trois fois : la voie du bienheureux (v. 1), les voies de Dieu (v. 3), les voies du psalmiste (v. 5). Au verset 5 l'hébreu dit «&nbsp;mes voies&nbsp;», que la NEG79 et la LSG rendent par «&nbsp;mes actions&nbsp;», tandis que Darby garde «&nbsp;mes voies&nbsp;». Les notes de <i>La Bible d'étude</i> précisent sur le verset 1 que «&nbsp;marchent&nbsp;» renvoie à la façon de vivre habituelle.</td>
+            <td><span class="trad"><span><b>S21</b> conduite</span><span><b>NEG79</b> voie</span><span><b>Darby</b> voie</span><span><b>LSG</b> voie</span><span><b>KJF</b> voie</span></span></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="mot-fr">loi</span><span class="mot-gr">torah</span></th>
+            <td class="col-sens">instruction, enseignement, direction donnée</td>
+            <td>De la racine <i>yarah</i>, diriger ou enseigner. Premier des huit termes que le psaume emploie pour désigner l'Écriture. Le mot déborde le sens juridique : il désigne l'enseignement de Dieu dans son entier, récit et promesse compris, non un code pénal. Traduire par «&nbsp;loi&nbsp;» seul rétrécit ce que le psalmiste dit aimer.</td>
+            <td><span class="trad"><span><b>S21</b> loi</span><span><b>NEG79</b> loi</span><span><b>Darby</b> loi</span><span><b>LSG</b> loi</span><span><b>KJF</b> loi</span></span></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="mot-fr">préceptes</span><span class="mot-gr">edot</span></th>
+            <td class="col-sens">témoignages, attestations solennelles</td>
+            <td>De la racine <i>oud</i>, témoigner. Le terme apparenté désigne les tables de la loi déposées dans l'arche, appelée pour cette raison «&nbsp;arche du témoignage&nbsp;» (Exode 25.16, 25.22). Ce que Dieu prescrit n'est pas seulement une règle donnée, c'est une déposition sur lui-même. Les versions se séparent nettement ici, et la divergence porte sur ce point précis.</td>
+            <td><span class="trad"><span><b>S21</b> instructions</span><span><b>NEG79</b> préceptes</span><span><b>Darby</b> témoignages</span><span><b>LSG</b> préceptes</span><span><b>KJF</b> témoignages</span></span></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="mot-fr">abandonne</span><span class="mot-gr">azab</span></th>
+            <td class="col-sens">quitter, délaisser, laisser derrière soi</td>
+            <td>Verbe de la rupture d'alliance (Deutéronome 31.16-17) et du cri du Psaume 22.2. Le verset 8 le nie par <i>ad meod</i>, jusqu'à l'extrême : ne me laisse pas jusqu'au bout. Darby rend «&nbsp;délaisse&nbsp;», ce qui conserve mieux la nuance de laisser derrière que le verbe «&nbsp;abandonner&nbsp;» en français contemporain.</td>
+            <td><span class="trad"><span><b>S21</b> abandonne</span><span><b>NEG79</b> abandonne</span><span><b>Darby</b> délaisse</span><span><b>LSG</b> abandonne</span><span><b>KJF</b> abandonne</span></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ APPORTS DES COMMENTATEURS ============ -->
+  <article class="section reveal" id="commentateurs">
+    <header class="sec-head">
+      <p class="kicker">Perspective MacArthur</p>
+      <h2 class="sec-title">Apports des commentateurs</h2>
+      <p class="ref">Psaume 119.1-8</p>
+    </header>
+    <p class="lead"><b>Niveau de source :</b> Niveau 3, notes de <i>La Bible d'étude MacArthur</i> sur Psaume 119.1-176, 119.1-2, 119.1, 119.2, 119.4, 119.5-6 et 119.7. Aucun sermon Grace to You n'expose le Psaume 119.1-8.</p>
+    <div class="table-wrap">
+      <table class="mots">
+        <thead>
+          <tr>
+            <th scope="col">Code</th>
+            <th scope="col">Sermon</th>
+            <th scope="col">Passage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><span class="mot-fr">GTY120</span></th>
+            <td><a href="https://www.gty.org/library/sermons-library/GTY120/the-power-and-sufficiency-of-gods-word" target="_blank" rel="noopener">The Power and Sufficiency of God's Word</a></td>
+            <td>Psaume 19.7-9, renvoi en passant au Psaume 119</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="body">
+      <p>Aucune exposition suivie du Psaume 119 n'existe dans le corpus de John MacArthur. Il a prêché le Nouveau Testament verset par verset, entreprise achevée le 5 juin 2011; l'Ancien Testament n'est couvert que par séries choisies, et le Psaume 119 n'en fait pas partie. Dans le sermon ci-dessus, qui expose le Psaume 19.7-9, il traite le Psaume 119 comme le témoignage le plus étendu de l'Écriture sur elle-même et écarte explicitement l'idée de le parcourir : cent soixante-seize versets seraient trop pour une seule prédication. Ce qui reste pour notre passage, ce sont les notes de <i>La Bible d'étude MacArthur</i>. Position condensée : suffisante pour trancher, insuffisante pour nuancer.</p>
+      <p>La question interprétative principale de la strophe est posée par les versets 1 à 3. Ils décrivent un homme intègre dans sa voie, qui ne commet point d'iniquité. S'agit-il d'un idéal hors d'atteinte, d'un portrait de perfection sans péché, ou de la description du croyant réel? La note sur le verset 1 tranche la question par un seul mot : «&nbsp;marchent&nbsp;» renvoie à la façon de vivre habituelle. Le verset décrit une orientation constante, non un état sans faute. Cette lecture est confirmée par la strophe elle-même : l'homme des versets 1 à 3 est le même que celui qui demande au verset 8 de ne pas être abandonné. Le texte ne connaît aucune contradiction entre l'intégrité qu'il décrit et la dépendance qu'il avoue.</p>
+      <p>Le passage de la description à la prière est le mouvement décisif. Le verset 4 énonce ce que Dieu a prescrit : «&nbsp;Tu as prescrit tes ordonnances, pour qu'on les observe avec soin.&nbsp;» Le verset 5 ne répond pas par une résolution mais par une supplication : «&nbsp;Puissent mes actions être bien réglées.&nbsp;» Les notes relèvent sur les versets 5 et 6 qu'il est parfois difficile de distinguer où le témoignage se termine et où commence la prière, et sur le verset 4 que le psalmiste désirait passionnément obéir à la parole de Dieu. La conséquence est directe : ce que Dieu commande, le psalmiste ne se le promet pas, il le demande. Le commandement crée l'obligation, il ne crée pas la capacité; celle-ci se demande. Toute application de cette strophe qui s'arrête à l'exhortation renverse l'ordre du texte.</p>
+      <p>Deux notes éclairent encore le verset 2 et le verset 7. Sur «&nbsp;de tout leur cœur&nbsp;», elles précisent que le cœur désignait à la fois l'intellect, la volonté et les émotions, et que cet engagement complet est mentionné six fois dans le psaume : la recherche de Dieu dont parle le verset 2 n'est ni une adhésion intellectuelle seule, ni une ferveur seule. Sur le verset 7, elles observent que les Écritures suscitent le chant, les actions de grâces, les réjouissances et la louange, et que la Parole de Dieu reflète la personne de Dieu, en particulier sa justice. «&nbsp;Les lois de ta justice&nbsp;», au verset 7, ne sont donc pas un barème à exécuter : elles sont le caractère de Dieu rendu lisible. On n'apprend pas d'abord des règles, on apprend Dieu, et c'est ce qui produit la louange de la première moitié du verset.</p>
+      <p>Ce que le niveau 3 ne permet pas doit être dit également. Les notes ne commentent ni le verset 3 ni le verset 6, et ne se prononcent pas sur la structure interne de la strophe. Ce qui est avancé ici sur le pivot du verset 4, sur le vocabulaire de l'alliance au verset 8 et sur la culture d'honneur et de honte au verset 6 relève du travail grammatico-historique, non d'une exposition de MacArthur, et n'est donné que comme tel.</p>
+    </div>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ RENVOIS ET PASSAGES PARALLÈLES ============ -->
+  <article class="section reveal" id="renvois">
+    <header class="sec-head">
+      <p class="kicker">Échos bibliques</p>
+      <h2 class="sec-title">Renvois et passages parallèles</h2>
+      <p class="ref">Huit passages</p>
+    </header>
+    <p class="lead">Huit passages éclairent la strophe, du psaume jumeau qui ouvre le psautier jusqu'aux textes d'alliance qui donnent son poids au dernier mot du verset 8.</p>
+    <div class="renvois">
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Psaume 1.1-3</span><span class="renvoi__tag">Parallèle direct</span></div>
+        <p class="renvoi__desc">Même ouverture par «&nbsp;heureux&nbsp;», même contraste des deux voies, même homme dont le délice est dans la loi. Les notes de <i>La Bible d'étude</i> signalent explicitement la similitude.</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Psaume 19.8-12</span><span class="renvoi__tag">Parallèle direct</span></div>
+        <p class="renvoi__desc">L'autre grand psaume de la Parole, qui énumère les désignations de l'Écriture et leur effet sur le croyant. C'est ce psaume que MacArthur a exposé plutôt que le Psaume 119.</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Genèse 17.1</span><span class="renvoi__tag">Arrière-plan AT</span></div>
+        <p class="renvoi__desc">«&nbsp;Marche devant ma face et sois intègre&nbsp;» : les deux verbes du verset 1 réunis dans l'ordre donné à Abram, ce qui fixe le sens de <i>tamim</i>.</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Deutéronome 6.4-9</span><span class="renvoi__tag">Arrière-plan AT</span></div>
+        <p class="renvoi__desc">La loi mise dans le cœur, enseignée aux enfants et portée sur soi. C'est le programme dont la strophe décrit l'accomplissement.</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Josué 1.7-8</span><span class="renvoi__tag">Arrière-plan AT</span></div>
+        <p class="renvoi__desc">Prendre courage pour agir selon toute la loi, la méditer jour et nuit : même liaison entre méditation du texte et réussite de la voie.</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Deutéronome 31.16-17</span><span class="renvoi__tag">Arrière-plan AT</span></div>
+        <p class="renvoi__desc">Le verbe <i>azab</i> du verset 8 dans son emploi d'alliance, où l'abandon est la sanction de la rupture. Éclaire ce que le psalmiste redoute.</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Romains 7.22</span><span class="renvoi__tag">Lien thématique</span></div>
+        <p class="renvoi__desc">«&nbsp;Je prends plaisir à la loi de Dieu selon l'homme intérieur&nbsp;» : la même affection pour la Parole, chez un homme qui décrit en même temps son incapacité.</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Jacques 1.22-25</span><span class="renvoi__tag">Lien thématique</span></div>
+        <p class="renvoi__desc">Celui qui met en pratique la loi parfaite de la liberté «&nbsp;sera heureux dans son activité&nbsp;» : la béatitude du verset 1 reprise et rattachée à la pratique.</p>
+      </article>
+    </div>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ THÈMES THÉOLOGIQUES ============ -->
+  <article class="section reveal" id="themes">
+    <header class="sec-head">
+      <p class="kicker">Doctrine</p>
+      <h2 class="sec-title">Thèmes théologiques</h2>
+      <p class="ref">Cinq axes</p>
+    </header>
+    <p class="lead">Cinq axes dogmatiques traversent la strophe. Pour chacun, ce que le texte affirme, puis ce qu'il demande à l'assemblée.</p>
+
+    <section class="theme">
+      <h3 class="theme__title">Le bonheur déclaré par Dieu, non mesuré par la circonstance</h3>
+      <div class="theme__grid">
+        <div class="theme__part">
+          <p class="theme__label">Dans le texte</p>
+          <p>La strophe s'ouvre deux fois par «&nbsp;heureux&nbsp;», et le psaume est écrit en temps de détresse : des princes parlent contre le psalmiste, des orgueilleux le raillent. La béatitude n'est donc pas un constat sur ses conditions de vie, c'est une déclaration sur son état devant Dieu. Ancrage doctrinal : bibliologie et théologie propre.</p>
+        </div>
+        <div class="theme__part theme__part--app">
+          <p class="theme__label">Pour votre assemblée</p>
+          <p>Pour une assemblée qui mesure la faveur de Dieu à sa situation, le verset 1 déplace le critère. L'homme heureux du psaume est un homme en difficulté.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="theme">
+      <h3 class="theme__title">La suffisance de l'Écriture pour la conduite entière</h3>
+      <div class="theme__grid">
+        <div class="theme__part">
+          <p class="theme__label">Dans le texte</p>
+          <p>Six des huit termes que le psaume emploie pour désigner l'Écriture paraissent déjà dans ces huit versets, et l'acrostiche indique, selon les notes de <i>La Bible d'étude</i>, que le sujet est traité depuis A jusqu'à Z. Rien de la vie du psalmiste n'est laissé hors du champ de la Parole. Ancrage doctrinal : bibliologie.</p>
+        </div>
+        <div class="theme__part theme__part--app">
+          <p class="theme__label">Pour votre assemblée</p>
+          <p>La forme du psaume est elle-même un argument : il n'existe pas de domaine de la conduite pour lequel il faudrait aller chercher ailleurs une autre autorité.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="theme">
+      <h3 class="theme__title">L'intégrité comme absence de division, non comme perfection</h3>
+      <div class="theme__grid">
+        <div class="theme__part">
+          <p class="theme__label">Dans le texte</p>
+          <p><i>Tamim</i> au verset 1 et «&nbsp;de tout leur cœur&nbsp;» au verset 2 disent la même chose par deux voies : une vie d'une seule pièce, un cœur non partagé. Les notes précisent que le cœur couvre l'intellect, la volonté et les émotions, et que «&nbsp;marchent&nbsp;» désigne la façon de vivre habituelle. Ancrage doctrinal : anthropologie et sanctification progressive.</p>
+        </div>
+        <div class="theme__part theme__part--app">
+          <p class="theme__label">Pour votre assemblée</p>
+          <p>Le texte ne demande pas à l'assemblée de n'avoir jamais failli, il lui demande de ne pas être partagée. Ce sont deux examens de conscience très différents.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="theme">
+      <h3 class="theme__title">L'obéissance demandée avant d'être promise</h3>
+      <div class="theme__grid">
+        <div class="theme__part">
+          <p class="theme__label">Dans le texte</p>
+          <p>Le verset 4 énonce ce que Dieu a prescrit, le verset 5 le reprend au mode de la supplication : «&nbsp;Puissent mes actions être bien réglées.&nbsp;» Le psalmiste ne répond pas au commandement par une résolution mais par une prière. Ancrage doctrinal : sotériologie et pneumatologie, sanctification progressive par l'Esprit au moyen de la Parole.</p>
+        </div>
+        <div class="theme__part theme__part--app">
+          <p class="theme__label">Pour votre assemblée</p>
+          <p>Toute application qui s'arrête à l'exhortation renverse l'ordre du texte. Ce que Dieu commande au verset 4, il faut le lui demander au verset 5.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="theme">
+      <h3 class="theme__title">La crainte d'être laissé</h3>
+      <div class="theme__grid">
+        <div class="theme__part">
+          <p class="theme__label">Dans le texte</p>
+          <p>La strophe se ferme sur «&nbsp;ne m'abandonne pas entièrement&nbsp;», avec le verbe de la rupture d'alliance et l'adverbe «&nbsp;jusqu'à l'extrême&nbsp;». L'homme dont la voie est intègre est le même qui redoute d'être laissé. Ancrage doctrinal : théologie propre et persévérance des saints.</p>
+        </div>
+        <div class="theme__part theme__part--app">
+          <p class="theme__label">Pour votre assemblée</p>
+          <p>La persévérance ne se vit pas comme une certitude tranquille, elle se demande comme une grâce. Le verset 8 est une prière, non un doute sur la fidélité de Dieu.</p>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ PISTES DE RÉFLEXION ============ -->
+  <article class="section section--conclusion reveal" id="reflexion">
+    <header class="sec-head">
+      <p class="kicker">Vers la chaire</p>
+      <h2 class="sec-title">Pistes de réflexion</h2>
+      <p class="ref">Sept questions pour la prédication</p>
+    </header>
+    <p class="lead">Sept questions pour conduire du texte à la chaire : non des réponses toutes faites, mais les tensions que la prédication devra tenir.</p>
+    <ol class="questions">
+      <li>Les versets 1 à 3 décrivent un homme qui ne commet point d'iniquité, et le verset 8 est une supplication de ce même homme. Une prédication qui traite les versets 1 à 3 comme un idéal et le verset 8 comme un aveu de faiblesse coupe la strophe en deux. Comment la tenir d'un seul tenant?</li>
+      <li>Le psaume est écrit en temps de détresse et s'ouvre par «&nbsp;heureux&nbsp;». Qu'est-ce que l'assemblée présuppose sur le bonheur, que l'auditoire d'origine ne présupposait pas?</li>
+      <li>L'acrostiche est invisible en français. Est-ce un détail d'érudition à mentionner en passant, ou la forme dit-elle quelque chose que le contenu ne dit pas, et qu'il faut alors faire entendre autrement?</li>
+      <li>Le verset 5 transforme en prière ce que le verset 4 énonce comme prescription. Si l'application prêchée appelle l'effort de l'auditeur, sur lequel des deux versets est-elle construite?</li>
+      <li>Les versions se séparent au verset 2 : «&nbsp;préceptes&nbsp;» chez la NEG79, «&nbsp;témoignages&nbsp;» chez Darby, «&nbsp;instructions&nbsp;» à la S21. Le choix change ce que l'on entend garder. Lequel gouverne l'exposition, et pourquoi?</li>
+      <li>Aucun sermon de MacArthur n'expose ce passage. Où l'exposition s'appuie-t-elle sur les notes de <i>La Bible d'étude</i>, et où poursuit-elle seule? La distinction est-elle tenue jusqu'au bout?</li>
+      <li>Le verset 6 parle de ne pas rougir à la vue des commandements. Devant qui l'assemblée craint-elle aujourd'hui de rougir, et le texte déplace-t-il ce tribunal?</li>
+    </ol>
+  </article>
+
+</main>
+
+<footer class="footer">
+  <p class="footer__line">André-Guy Bruneau</p>
+  <p class="footer__line">Recherche exégétique · Psaume 119.1-8 · 1<sup>er</sup> septembre 2026</p>
+  <p class="footer__line">Série «&nbsp;Psaume 119, strophe Aleph&nbsp;» · Citations bibliques : Nouvelle Édition de Genève 1979 (NEG)</p>
+  <p class="footer__sdg">Soli Deo Gloria</p>
+</footer>
+
+<script>
+  // Barre de progression de lecture
+  var progress = document.getElementById('progress');
+  var navProgress = document.getElementById('navProgress');
+  var nav = document.getElementById('nav');
+  var hero = document.getElementById('hero');
+
+  function onScroll(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    var pct = max > 0 ? (h.scrollTop || document.body.scrollTop) / max * 100 : 0;
+    progress.style.width = pct + '%';
+    if (navProgress) navProgress.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // Apparition de la navigation après le hero
+  if ('IntersectionObserver' in window){
+    var navObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) nav.classList.remove('show');
+        else nav.classList.add('show');
+      });
+    }, {rootMargin:'-70px 0px 0px 0px'});
+    navObs.observe(hero);
+
+    // Révélation au défilement
+    var revObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('in'); revObs.unobserve(e.target); }
+      });
+    }, {threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(function(el){ revObs.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+</script>
+</body>
+</html>

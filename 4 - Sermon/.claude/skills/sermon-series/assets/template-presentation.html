@@ -1,0 +1,849 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jacques 1.1-12 · La joie au creuset de l'épreuve · Recherche exégétique</title>
+<meta name="description" content="Recherche exégétique de Jacques 1.1-12 dans la perspective de John MacArthur : la joie au creuset de l'épreuve, la sagesse demandée, la persévérance des saints et la couronne de vie. Église Baptiste de Charlesbourg.">
+<meta name="author" content="André-Guy Bruneau · Église Baptiste de Charlesbourg">
+<style>
+  :root{
+    /* ---- Palette Noir + orange ---- */
+    --nuit:#0a0a0a;        /* fond noir profond */
+    --nuit-1:#121212;
+    --nuit-2:#1b1b1b;      /* panneaux */
+    --encre:#f3f0ec;       /* texte principal, contraste élevé */
+    --encre-doux:#c9c2ba;  /* texte secondaire, demeure lisible */
+    --or:#e8843c;          /* orange chaud (accent principal) */
+    --or-clair:#f6a85c;
+    --feuille:#f0b659;     /* ambre lumineux (accent secondaire) */
+    --feuille-vif:#f7c97a;
+    --filet:rgba(232,132,60,.28);
+    --filet-fort:rgba(232,132,60,.52);
+    /* Largeur de contenu proportionnelle : ~80% de l'écran sur grand écran,
+       plancher 58rem pour que mobile/tablette gardent une lecture confortable */
+    --max:max(58rem,80vw);
+  }
+
+  *{box-sizing:border-box;}
+  html{
+    scroll-behavior:smooth;-webkit-text-size-adjust:100%;
+    scrollbar-color:var(--or) var(--nuit);scrollbar-width:thin;
+  }
+
+  body{
+    margin:0;
+    font-family:"EB Garamond",Georgia,"Times New Roman",serif;
+    /* Lecture confortable pour personnes aînées : grands caractères, interligne aéré */
+    font-size:clamp(1.2rem,.95rem + .85vw,1.45rem);
+    line-height:1.85;
+    color:var(--encre);
+    background:var(--nuit);
+    background-image:
+      radial-gradient(120% 80% at 50% -10%, rgba(240,182,89,.10), transparent 55%),
+      radial-gradient(90% 60% at 85% 8%, rgba(232,132,60,.06), transparent 60%),
+      radial-gradient(100% 70% at 12% 35%, rgba(232,132,60,.05), transparent 58%);
+    background-attachment:fixed;
+    overflow-x:hidden;
+  }
+
+  /* Grain de parchemin, très discret pour ne pas gêner la lecture */
+  .grain{
+    position:fixed;inset:0;z-index:3;pointer-events:none;
+    opacity:.03;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  /* Voile sombre sur les bords, pour la profondeur */
+  .vignette{
+    position:fixed;inset:0;z-index:1;pointer-events:none;
+    background:radial-gradient(135% 105% at 50% 35%, transparent 56%, rgba(0,0,0,.42) 100%);
+  }
+
+  a{color:var(--feuille);text-decoration:none;}
+  a:focus-visible,.nav__links a:focus-visible{outline:2px solid var(--or);outline-offset:3px;border-radius:3px;}
+
+  ::selection{background:rgba(232,132,60,.34);color:#fff;}
+  ::-webkit-scrollbar{width:12px;}
+  ::-webkit-scrollbar-track{background:var(--nuit);}
+  ::-webkit-scrollbar-thumb{background:linear-gradient(var(--or),#7a4218);border:3px solid var(--nuit);border-radius:10px;}
+  ::-webkit-scrollbar-thumb:hover{background:var(--or-clair);}
+
+  /* ---- Barre de progression ---- */
+  .progress{
+    position:fixed;top:0;left:0;height:3px;width:0;z-index:60;
+    background:linear-gradient(90deg,var(--or),var(--or-clair),var(--feuille));
+    box-shadow:0 0 12px rgba(232,132,60,.6);
+    transition:width .1s linear;
+  }
+
+  /* ---- Navigation ---- */
+  .nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    display:flex;align-items:center;gap:1.5rem;
+    padding:.85rem clamp(1rem,4vw,2.5rem);
+    background:rgba(10,10,10,.82);
+    backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--filet);
+    transform:translateY(-110%);
+    transition:transform .45s cubic-bezier(.2,.7,.2,1);
+  }
+  .nav.show{transform:translateY(0);}
+  /* Barre de progression de lecture, intégrée au bas de la navigation */
+  .nav__progress{
+    position:absolute;left:0;bottom:-1px;height:2px;width:0;
+    background:linear-gradient(90deg,var(--or),var(--or-clair),var(--feuille));
+    box-shadow:0 0 10px rgba(232,132,60,.55);
+    transition:width .1s linear;
+  }
+  .nav__logo{
+    flex:none;display:block;
+  }
+  .nav__logo img{height:clamp(2.2rem,2rem + 1vw,2.9rem);width:auto;display:block;}
+  .nav__brand{
+    font-family:"Cormorant Garamond",serif;font-size:1.55rem;font-weight:600;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--or-clair);
+    white-space:nowrap;
+  }
+  .nav__links{
+    display:flex;gap:.15rem;margin-left:auto;
+    overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .nav__links::-webkit-scrollbar{display:none;}
+  .nav__links a{
+    position:relative;
+    font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--encre-doux);padding:.5rem .8rem;border-radius:2px;
+    white-space:nowrap;transition:color .25s;
+  }
+  .nav__links a::after{
+    content:"";position:absolute;left:.8rem;right:.8rem;bottom:.18rem;height:1px;
+    background:var(--or);transform:scaleX(0);transform-origin:left;transition:transform .3s;
+  }
+  .nav__links a:hover{color:var(--or-clair);}
+  .nav__links a:hover::after{transform:scaleX(1);}
+
+  /* ---- Hero / page-titre ---- */
+  .hero{
+    position:relative;min-height:100svh;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:6rem 1.4rem 4rem;
+  }
+  .hero__frame{
+    position:absolute;inset:clamp(.9rem,3.5vw,2.4rem);
+    border:1px solid var(--filet);pointer-events:none;
+    opacity:0;animation:frameIn 1.5s ease .15s forwards;
+  }
+  .hero__frame::before,.hero__frame::after{
+    content:"";position:absolute;width:16px;height:16px;
+  }
+  .hero__frame::before{top:-1px;left:-1px;border-top:2px solid var(--or);border-left:2px solid var(--or);}
+  .hero__frame::after{bottom:-1px;right:-1px;border-bottom:2px solid var(--or);border-right:2px solid var(--or);}
+
+  .hero__kicker{
+    font-size:clamp(.85rem,.65rem + .6vw,1rem);
+    letter-spacing:.42em;text-transform:uppercase;
+    color:var(--or);margin:0 0 .2em .42em;
+  }
+  .hero__title{
+    font-family:"Cormorant Garamond",serif;
+    font-weight:600;
+    font-size:clamp(3.8rem,8vw + 1rem,9rem);
+    line-height:1;letter-spacing:.04em;margin:0;
+    /* Espace bas/côtés pour que les jambages du J et du q ne soient pas rognés par background-clip:text */
+    padding:.06em .08em .2em;
+    background:linear-gradient(176deg,#f9e1bb 0%,var(--or-clair) 45%,var(--or) 100%);
+    -webkit-background-clip:text;background-clip:text;
+    color:transparent;-webkit-text-fill-color:transparent;
+    filter:drop-shadow(0 0 34px rgba(240,182,89,.30)) drop-shadow(0 2px 3px rgba(0,0,0,.5));
+  }
+  .ornament{
+    display:flex;align-items:center;justify-content:center;gap:1rem;
+    margin:1.7rem 0;color:var(--or);width:min(22rem,80%);
+  }
+  .ornament::before,.ornament::after{
+    content:"";height:1px;flex:1;
+    background:linear-gradient(90deg,transparent,var(--filet-fort),transparent);
+  }
+  .ornament span{font-size:.8rem;}
+
+  .hero__verse{
+    font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-weight:500;
+    font-size:clamp(1.5rem,1.1rem + 1.5vw,2.25rem);
+    line-height:1.55;color:var(--encre);
+    max-width:max(46rem,72vw);margin:0 auto;
+    text-wrap:balance;
+  }
+  .hero__verse .q{color:var(--or);font-style:normal;}
+  .hero__ref{
+    margin-top:1.7rem;font-size:.95rem;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--or);
+  }
+  .hero__series{
+    margin-top:2.6rem;font-size:.88rem;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--encre-doux);
+  }
+  .hero__series b{color:var(--feuille);font-weight:600;}
+  .scrollcue{
+    position:absolute;bottom:1.7rem;left:50%;transform:translateX(-50%);
+    color:var(--or);font-size:1.3rem;opacity:.75;
+    animation:bob 2.4s ease-in-out infinite;
+  }
+  @keyframes bob{0%,100%{transform:translate(-50%,0);}50%{transform:translate(-50%,7px);}}
+
+  /* Entrée orchestrée du hero (douce) */
+  @keyframes riseIn{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
+  @keyframes frameIn{from{opacity:0;}to{opacity:1;}}
+  .hero__kicker,.hero__title,.ornament,.hero__verse,.hero__ref,.hero__series,.hero__meta{
+    opacity:0;animation:riseIn .95s cubic-bezier(.2,.7,.2,1) forwards;
+  }
+  .hero__kicker{animation-delay:.15s;}
+  .hero__title{animation-delay:.3s;}
+  .ornament{animation-delay:.6s;}
+  .hero__verse{animation-delay:.75s;}
+  .hero__ref{animation-delay:1s;}
+  .hero__series{animation-delay:1.15s;}
+  .hero__meta{animation-delay:1.3s;}
+
+  /* ---- Sections ---- */
+  main{position:relative;z-index:2;}
+  .section{
+    max-width:var(--max);margin:0 auto;
+    padding:clamp(3.5rem,9vw,7rem) clamp(1.4rem,5vw,2rem);
+    scroll-margin-top:5rem;
+  }
+  .sec-head{text-align:center;margin-bottom:2.8rem;}
+  .sec-num{
+    display:flex;align-items:center;justify-content:center;gap:1rem;
+    font-family:"Cormorant Garamond",serif;font-weight:500;
+    font-size:clamp(2.8rem,2rem + 3vw,4.2rem);line-height:1;
+    color:var(--or);letter-spacing:.05em;margin-bottom:.4rem;
+    filter:drop-shadow(0 0 22px rgba(232,132,60,.28));
+  }
+  .sec-num::before,.sec-num::after{
+    content:"";width:clamp(1.6rem,6vw,3rem);height:1px;
+    background:linear-gradient(90deg,transparent,var(--filet-fort));
+  }
+  .sec-num::after{background:linear-gradient(90deg,var(--filet-fort),transparent);}
+  .kicker{
+    font-size:.95rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--or);margin:0 0 .65rem;
+  }
+  .sec-title{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:clamp(2.1rem,1.4rem + 2.6vw,3.2rem);line-height:1.12;
+    color:var(--encre);margin:0;text-wrap:balance;
+  }
+  .sec-head .sec-title::after{
+    content:"";display:block;width:2.6rem;height:1px;
+    background:var(--filet-fort);margin:1.2rem auto 0;
+  }
+  .ref{
+    margin:1rem 0 0;font-size:.92rem;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--encre-doux);
+  }
+
+  .lead{
+    font-size:1.22em;line-height:1.72;color:#faf3ec;
+    font-weight:500;
+    border-left:3px solid var(--or);
+    padding-left:1.3rem;margin:0 0 2.2rem;
+    text-wrap:pretty;
+  }
+  .section p{margin:0 0 1.45rem;text-wrap:pretty;}
+  .section .body p:first-of-type::first-letter{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    float:left;font-size:3.6em;line-height:.66;
+    padding:.06em .14em 0 0;margin-top:.04em;
+    color:var(--or-clair);
+    text-shadow:0 0 22px rgba(232,132,60,.32);
+  }
+
+  /* ---- Points de forme structurés (repérage rapide) ---- */
+  .points{list-style:none;margin:0 0 2.2rem;padding:0;}
+  .points li{
+    position:relative;margin:0 0 1.5rem;padding-left:2rem;
+    text-wrap:pretty;
+  }
+  .points li:last-child{margin-bottom:0;}
+  .points li::before{
+    content:"\25C6";position:absolute;left:.2rem;top:.55em;
+    font-size:.6em;color:var(--or);
+    filter:drop-shadow(0 0 8px rgba(232,132,60,.4));
+  }
+  .points b{color:var(--or-clair);font-weight:600;}
+
+  /* ---- Texte souligné (mise en évidence) ; ajouter .italique pour l'italique ---- */
+  .surligne{
+    text-decoration:underline;
+    text-decoration-color:var(--or);
+    text-decoration-thickness:.08em;
+    text-underline-offset:.18em;
+  }
+  .surligne.italique{font-style:italic;}
+
+  /* ---- Texte justifié (lecture confortable, gauche et droite) ---- */
+  .lead,.points li{text-align:justify;-webkit-hyphens:auto;hyphens:auto;}
+
+  /* ---- Versets ---- */
+  .verses{margin:2.4rem 0;}
+  .verse{
+    position:relative;margin:0 0 1.1rem;
+    padding:1.3rem 1.4rem 1.3rem 1.6rem;
+    background:linear-gradient(180deg,rgba(232,132,60,.07),rgba(232,132,60,.03));
+    border:1px solid var(--filet);border-left:3px solid var(--or);
+    border-radius:0 5px 5px 0;
+    transition:border-left-color .3s,transform .3s,background .3s;
+  }
+  .verse:hover{border-left-color:var(--or-clair);transform:translateX(3px);}
+  .verse__text{
+    font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-size:1.25em;line-height:1.55;color:var(--encre);margin:0;
+  }
+  .verse__text::before{content:"\201C";color:var(--or);font-size:1.1em;}
+  .verse__text::after{content:"\201D";color:var(--or);font-size:1.1em;}
+  .verse__ref{
+    display:block;margin-top:.8rem;
+    font-family:"EB Garamond",serif;font-style:normal;
+    font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--or);
+  }
+
+  /* ---- Séparateur ---- */
+  .divider{
+    display:flex;align-items:center;justify-content:center;gap:1.4rem;
+    max-width:var(--max);margin:0 auto;
+    padding:0 2rem;color:var(--or);
+  }
+  .divider::before,.divider::after{
+    content:"";height:1px;width:min(7rem,22%);
+    background:linear-gradient(90deg,transparent,var(--filet-fort),transparent);
+  }
+  .divider span{font-size:.8rem;}
+
+  /* Variantes intro / conclusion */
+  .section--intro .sec-title,.section--conclusion .sec-title{color:var(--or-clair);}
+
+  /* ---- Pied de page ---- */
+  .footer{
+    position:relative;z-index:2;text-align:center;
+    border-top:1px solid var(--filet);
+    margin-top:2rem;padding:3.6rem 1.4rem 3.2rem;
+    background:linear-gradient(180deg,transparent,rgba(16,16,16,.7));
+  }
+  .footer__logo{
+    display:block;width:auto;
+    height:clamp(5rem,12vw,7rem);
+    margin:0 auto 1.6rem;
+  }
+  .footer__church{
+    font-family:"Cormorant Garamond",serif;font-size:1.7rem;font-weight:600;
+    letter-spacing:.04em;color:var(--encre);margin:0 0 .3rem;
+  }
+  .footer__line{font-size:1rem;color:var(--encre-doux);margin:.2rem 0;}
+  .footer__sdg{
+    margin-top:1.8rem;font-size:.86rem;letter-spacing:.36em;
+    text-transform:uppercase;color:var(--or);
+  }
+
+  /* ---- Révélation au défilement (groupes de contenu en cascade douce) ---- */
+  .reveal > *{
+    opacity:0;transform:translateY(16px);
+    transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.2,1);
+  }
+  .reveal.in > *{opacity:1;transform:none;}
+  .reveal.in > *:nth-child(1){transition-delay:.04s;}
+  .reveal.in > *:nth-child(2){transition-delay:.13s;}
+  .reveal.in > *:nth-child(3){transition-delay:.22s;}
+  .reveal.in > *:nth-child(4){transition-delay:.31s;}
+  .reveal.in > *:nth-child(5){transition-delay:.40s;}
+  .reveal.in > *:nth-child(6){transition-delay:.49s;}
+
+  @media (max-width:560px){
+    .nav__brand{font-size:1.3rem;}
+    .lead{padding-left:1rem;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal > *{opacity:1;transform:none;transition:none;}
+    .scrollcue{animation:none;}
+    .hero__kicker,.hero__title,.ornament,.hero__verse,.hero__ref,.hero__series,.hero__meta,.hero__frame{
+      opacity:1;animation:none;
+    }
+  }
+
+  /* ============================================================
+     COMPOSANTS PROPRES À LA PAGE DE RECHERCHE
+     (s'ajoutent au gabarit, dans le même langage visuel)
+     ============================================================ */
+
+  /* Titre-héros thématique (plus long) + marque de nav (référence) */
+  .hero__title{font-size:clamp(3rem,5vw + 1.4rem,6rem);text-wrap:balance;}
+  .nav__brand{font-size:clamp(1.05rem,.9rem + .55vw,1.4rem);letter-spacing:.08em;}
+  .hero__meta{
+    margin-top:1.4rem;font-size:.8rem;letter-spacing:.26em;
+    text-transform:uppercase;color:var(--encre-doux);
+  }
+
+  /* ---- Tableau des mots-clés ---- */
+  .table-wrap{
+    margin:2.4rem 0 0;overflow-x:auto;-webkit-overflow-scrolling:touch;
+    border:1px solid var(--filet);border-radius:6px;
+  }
+  .mots{border-collapse:collapse;width:100%;min-width:52rem;}
+  .mots th,.mots td{
+    padding:1rem 1.15rem;text-align:left;vertical-align:top;
+    border-bottom:1px solid var(--filet);
+  }
+  .mots thead th{
+    background:var(--nuit-2);
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--or);border-bottom:1px solid var(--filet-fort);
+    white-space:nowrap;
+  }
+  .mots tbody tr:last-child td{border-bottom:none;}
+  .mots tbody tr:hover{background:rgba(232,132,60,.045);}
+  .mots td{font-size:.98rem;line-height:1.6;color:var(--encre-doux);}
+  .mot-fr{display:block;font-weight:600;color:var(--encre);}
+  .mot-gr{
+    display:block;margin-top:.25rem;
+    font-family:"Cormorant Garamond",serif;font-style:italic;
+    font-size:1.12em;color:var(--or-clair);
+  }
+  .col-sens{min-width:12rem;color:var(--encre);}
+  .trad{display:flex;flex-direction:column;gap:.3rem;font-size:.84rem;white-space:nowrap;}
+  .trad b{color:var(--or-clair);font-weight:600;letter-spacing:.03em;}
+
+  /* ---- Renvois / passages parallèles ---- */
+  .renvois{display:grid;gap:1.1rem;margin:2.4rem 0 0;grid-template-columns:1fr;}
+  @media (min-width:48rem){.renvois{grid-template-columns:1fr 1fr;}}
+  .renvoi{
+    border:1px solid var(--filet);border-left:3px solid var(--or);
+    border-radius:0 6px 6px 0;padding:1.1rem 1.3rem;
+    background:linear-gradient(180deg,rgba(232,132,60,.06),rgba(232,132,60,.015));
+  }
+  .renvoi__head{
+    display:flex;align-items:baseline;justify-content:space-between;
+    gap:.7rem;flex-wrap:wrap;margin-bottom:.55rem;
+  }
+  .renvoi__ref{
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:1.2rem;color:var(--or-clair);letter-spacing:.02em;
+  }
+  .renvoi__tag{
+    font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--or);border:1px solid var(--filet-fort);
+    border-radius:999px;padding:.22rem .65rem;white-space:nowrap;
+  }
+  .renvoi__desc{margin:0;font-size:.95rem;line-height:1.6;color:var(--encre-doux);text-align:justify;hyphens:auto;}
+
+  /* ---- Thèmes théologiques (deux volets : texte / assemblée) ---- */
+  .theme{
+    margin:0;padding:1.6rem 1.7rem 1.5rem;
+    border:1px solid var(--filet);border-radius:9px;
+    background:linear-gradient(180deg,rgba(27,27,27,.55),rgba(18,18,18,.35));
+  }
+  .theme + .theme{margin-top:1.6rem;}
+  .theme__title{
+    display:flex;align-items:center;gap:.75rem;margin:0 0 1.2rem;
+    font-family:"Cormorant Garamond",serif;font-weight:600;
+    font-size:clamp(1.4rem,1.1rem + .9vw,1.8rem);color:var(--or-clair);
+  }
+  .theme__title::before{
+    content:"\25C6";font-size:.52em;color:var(--or);
+    filter:drop-shadow(0 0 8px rgba(232,132,60,.4));
+  }
+  .theme__grid{display:grid;gap:1.2rem;}
+  @media (min-width:47rem){.theme__grid{grid-template-columns:1fr 1fr;align-items:start;}}
+  .theme__label{
+    display:flex;align-items:center;gap:.6rem;margin:0 0 .55rem;
+    font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--or);
+  }
+  .theme__label::after{content:"";flex:1;height:1px;background:var(--filet);}
+  .theme__part p{margin:0;font-size:.95rem;line-height:1.64;color:var(--encre-doux);text-align:justify;hyphens:auto;}
+  .theme__part--app{
+    padding:1.05rem 1.15rem;border:1px solid var(--filet);border-radius:6px;
+    background:linear-gradient(180deg,rgba(232,132,60,.07),transparent);
+  }
+
+  /* ---- Pistes de réflexion (questions numérotées) ---- */
+  .questions{list-style:none;counter-reset:q;margin:2.4rem 0 0;padding:0;display:grid;gap:1.5rem;}
+  .questions li{
+    position:relative;counter-increment:q;padding-left:3.6rem;
+    text-align:justify;-webkit-hyphens:auto;hyphens:auto;
+  }
+  .questions li::before{
+    content:counter(q);position:absolute;left:0;top:-.15rem;
+    width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;
+    font-family:"Cormorant Garamond",serif;font-weight:600;font-size:1.35rem;
+    color:var(--or);border:1px solid var(--filet-fort);border-radius:50%;
+    background:rgba(232,132,60,.06);
+    filter:drop-shadow(0 0 10px rgba(232,132,60,.18));
+  }
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="nav__progress" id="navProgress" aria-hidden="true"></div>
+  <a class="nav__logo" href="#hero" aria-label="Église Baptiste de Charlesbourg, haut de page">
+    <img src="../00%20-%20Introduction/LogoEBC.avif" width="80" height="250" alt="" decoding="async">
+  </a>
+  <span class="nav__brand">Jacques 1.1-12</span>
+  <nav class="nav__links" aria-label="Sections">
+    <a href="#contexte">Contexte</a>
+    <a href="#arriere-plan">Arrière-plan</a>
+    <a href="#mots-cles">Mots-clés</a>
+    <a href="#commentateurs">Commentateurs</a>
+    <a href="#renvois">Parallèles</a>
+    <a href="#themes">Thèmes</a>
+    <a href="#reflexion">Réflexion</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ============ PAGE-TITRE ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__frame" aria-hidden="true"></div>
+    <p class="hero__kicker">Recherche · Jacques 1.1-12</p>
+    <h1 class="hero__title">La joie au creuset de l'épreuve</h1>
+    <div class="ornament" aria-hidden="true"><span>◆</span></div>
+    <p class="hero__verse">
+      <span class="q">«</span>&nbsp;Heureux l'homme qui supporte patiemment la tentation; car, après avoir été éprouvé, il recevra la couronne de vie, que le Seigneur a promise à ceux qui l'aiment.&nbsp;<span class="q">»</span>
+    </p>
+    <p class="hero__ref">Jacques 1.12 · NEG</p>
+    <p class="hero__series">Série : <b>La foi qui agit</b></p>
+    <p class="hero__meta">Recherche exégétique · 6 juin 2026 · AGB · EBC</p>
+    <div class="scrollcue" aria-hidden="true">↓</div>
+  </section>
+
+  <!-- ============ CONTEXTE DU PASSAGE ============ -->
+  <article class="section section--intro reveal" id="contexte">
+    <header class="sec-head">
+      <p class="kicker">Le passage</p>
+      <h2 class="sec-title">Contexte du passage</h2>
+      <p class="ref">Jacques 1.1-12</p>
+    </header>
+    <div class="verses">
+      <figure class="verse">
+        <p class="verse__text">Mes frères, regardez comme un sujet de joie complète les diverses épreuves auxquelles vous pouvez être exposés,</p>
+        <cite class="verse__ref">Jacques 1.2 · NEG</cite>
+      </figure>
+      <figure class="verse">
+        <p class="verse__text">Heureux l'homme qui supporte patiemment la tentation; car, après avoir été éprouvé, il recevra la couronne de vie, que le Seigneur a promise à ceux qui l'aiment.</p>
+        <cite class="verse__ref">Jacques 1.12 · NEG</cite>
+      </figure>
+    </div>
+    <p class="lead">L'auteur se présente sobrement comme «&nbsp;Jacques, serviteur de Dieu et du Seigneur Jésus-Christ&nbsp;» (1.1) : ce titre dit déjà la thèse de tout le livre, car la foi authentique se traduit en soumission concrète à la seigneurie de Christ, et sa première preuve est la manière dont elle traverse l'épreuve.</p>
+    <div class="body">
+      <p>La lecture de MacArthur identifie sans hésitation ce Jacques au demi-frère du Seigneur (Matthieu 13.55; Galates 1.19), devenu après la résurrection (1 Corinthiens 15.7) le pilier reconnu de l'Église de Jérusalem (Actes 15.13; Galates 2.9). Le silence de l'épître sur sa parenté charnelle n'est pas un hasard : celui qui aurait pu se réclamer du sang de Jésus se range parmi ses esclaves (<i>doulos</i>).</p>
+      <p>Les destinataires sont «&nbsp;les douze tribus qui sont dans la dispersion&nbsp;» (1.1), c'est-à-dire des croyants juifs messianiques dispersés hors de la Palestine, peut-être à la suite du martyre d'Étienne (Actes 8.1), plus vraisemblablement des persécutions sous Hérode Agrippa Ier (Actes 12, vers 44). MacArthur situe Jacques très tôt, vers 44-49 apr. J.-C., ce qui en fait probablement le premier écrit du Nouveau Testament. La distinction Israël/Église chère au cadre dispensationaliste n'est pas gommée : l'expression «&nbsp;douze tribus&nbsp;» garde sa portée ethnique, même si ces Juifs sont désormais membres de l'Église par la foi en leur Messie. L'épître appartient au genre de la parénèse, une exhortation morale dense, et s'apparente à la littérature de sagesse de l'Ancien Testament, particulièrement aux Proverbes et au Sermon sur la montagne, dont elle reprend l'esprit impératif et imagé.</p>
+      <p>Notre péricope (1.1-12) ouvre l'argument. Après la salutation (1.1), Jacques pose immédiatement la question de l'épreuve (1.2-4), de la sagesse demandée dans l'épreuve (1.5-8), puis du renversement des valeurs qu'opère l'épreuve chez le pauvre comme chez le riche (1.9-11), avant de sceller la section par une béatitude promettant la couronne de vie à celui qui persévère (1.12). Les bornes sont nettes : le verset 12 conclut le thème de l'épreuve extérieure (<i>peirasmos</i>) par une promesse eschatologique, tandis que le verset 13 opère un basculement décisif vers la tentation intérieure au péché. La péricope fonctionne ainsi comme la prémisse de toute l'épître. La foi se vérifie, et sa première vérification est le creuset de l'épreuve.</p>
+    </div>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ ARRIÈRE-PLAN HISTORIQUE ET CULTUREL ============ -->
+  <article class="section reveal" id="arriere-plan">
+    <header class="sec-head">
+      <p class="kicker">Monde du premier siècle</p>
+      <h2 class="sec-title">Arrière-plan historique et culturel</h2>
+      <p class="ref">Jacques 1.1 · 1.3 · 1.9-11</p>
+    </header>
+    <p class="lead">Les premiers lecteurs étaient des Juifs convertis qui avaient tout perdu en confessant Jésus comme Messie : la sécurité de la synagogue, souvent le réseau familial et économique, parfois la terre.</p>
+    <div class="body">
+      <p>Disséminés dans les cités de l'Empire, beaucoup figuraient parmi les petits gens, journaliers et artisans, dont la subsistance dépendait du salaire de la veille. L'épreuve dont parle Jacques (1.2) n'est donc pas une abstraction spirituelle : ce sont des pressions économiques, sociales et religieuses bien réelles, l'oppression par les riches propriétaires (préfigurant Jacques 5.1-6) et l'hostilité de leurs anciens coreligionnaires. MacArthur insiste sur ce caractère extérieur et concret des «&nbsp;diverses épreuves&nbsp;» : il s'agit d'adversités qui assaillent le croyant du dehors, non encore de la sollicitation au mal qui surgira en 1.13.</p>
+    </div>
+    <p>Trois détails échappent au lecteur moderne.</p>
+    <ul class="points">
+      <li><b>L'épreuve de l'or.</b> L'image du <i>dokimion</i> (1.3, «&nbsp;épreuve&nbsp;» au sens de mise à l'essai) renvoie au vocabulaire de l'orfèvre qui passe le métal au feu pour en éliminer les scories et en certifier la pureté. Pour l'auditeur du premier siècle, familier des places de change et du travail des métaux précieux, le terme évoquait spontanément un test destiné à prouver l'authenticité, non à détruire.</li>
+      <li><b>La fleur brûlée par le sirocco.</b> La «&nbsp;fleur de l'herbe&nbsp;» qui se flétrit sous le «&nbsp;vent brûlant&nbsp;» (1.10-11) décrit le sirocco, ce vent du désert qui, en une matinée, dessèche la végétation printanière de Palestine; le riche qui s'y croit à l'abri ignore qu'il est aussi périssable que cette herbe.</li>
+      <li><b>La couronne de l'athlète.</b> Le <i>stephanos</i>, la «&nbsp;couronne de vie&nbsp;» (1.12), n'est pas le diadème royal (<i>diadema</i>) mais la couronne de feuillage décernée à l'athlète vainqueur ou au citoyen honoré; l'image situe la persévérance du croyant dans le registre de la victoire récompensée, non du mérite acquis.</li>
+    </ul>
+    <p>Le contexte religieux est tout aussi déterminant. Ces croyants venaient d'un judaïsme où l'épreuve était couramment lue comme un châtiment ou un signe de disgrâce divine. Jacques renverse cette grille : l'épreuve n'est pas la marque de la colère de Dieu sur le croyant, mais l'instrument souverain par lequel Dieu éprouve et affermit une foi véritable. Cette relecture suppose une doctrine de la providence et de la souveraineté divines que MacArthur situe au cœur du texte : rien dans l'épreuve du saint n'échappe au dessein sage et bon du Père des lumières (1.17).</p>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ ÉTUDE DES MOTS-CLÉS ============ -->
+  <article class="section reveal" id="mots-cles">
+    <header class="sec-head">
+      <p class="kicker">Vocabulaire</p>
+      <h2 class="sec-title">Étude des mots-clés</h2>
+      <p class="ref">Cinq termes grecs</p>
+    </header>
+    <p class="lead">Cinq mots portent le poids théologique de la péricope. Les isoler, c'est tenir le fil de l'argument de Jacques : de l'épreuve qui prouve la foi (<i>peirasmos</i>, <i>dokimion</i>) à la couronne promise (<i>stephanos</i>), en passant par la persévérance (<i>hupomone</i>), la maturité visée (<i>teleios</i>) et le cœur sans partage (<i>dipsuchos</i>).</p>
+    <div class="table-wrap">
+      <table class="mots">
+        <thead>
+          <tr>
+            <th scope="col">Français · translit.</th>
+            <th scope="col">Sens littéral</th>
+            <th scope="col">Champ sémantique</th>
+            <th scope="col">Traductions comparées</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><span class="mot-fr">épreuves</span><span class="mot-gr">peirasmois (peirasmos)</span></th>
+            <td class="col-sens">mise à l'essai, test; circonstance qui éprouve</td>
+            <td>Le mot couvre un spectre : en 1.2 il désigne l'épreuve extérieure qui assaille le croyant (adversité, persécution); le verbe apparenté <i>peirazo</i> en 1.13-14 bascule vers la tentation intérieure, la sollicitation au péché. MacArthur souligne que c'est le contexte, non le mot, qui tranche : ici, épreuve providentielle; là, séduction qui ne vient jamais de Dieu.</td>
+            <td><span class="trad"><span><b>S21</b> épreuves</span><span><b>NEG79</b> épreuves</span><span><b>Darby</b> tentations</span><span><b>LSG</b> épreuves</span><span><b>KJF</b> tentations</span></span></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="mot-fr">patience</span><span class="mot-gr">hupomone</span></th>
+            <td class="col-sens">le fait de demeurer sous (une charge); endurance, persévérance</td>
+            <td>Non pas une résignation passive mais une fermeté active qui tient bon sous le poids de l'épreuve (Romains 5.3-4; Hébreux 12.1). MacArthur y voit la qualité produite par l'épreuve éprouvée de la foi (1.3) et le ressort de la persévérance des saints : la foi véritable endure jusqu'au bout parce qu'elle est gardée par Dieu.</td>
+            <td><span class="trad"><span><b>S21</b> persévérance</span><span><b>NEG79</b> patience</span><span><b>Darby</b> patience</span><span><b>LSG</b> patience</span><span><b>KJF</b> patience</span></span></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="mot-fr">parfaits</span><span class="mot-gr">teleios</span></th>
+            <td class="col-sens">achevé, arrivé à son terme, mûr; complet quant à sa fin</td>
+            <td>Ne désigne pas la perfection sans péché mais la maturité spirituelle, l'état d'une chose parvenue au but pour lequel elle existe (Matthieu 5.48; Colossiens 1.28). En 1.4 la patience doit avoir son œuvre <i>teleion</i> afin que le croyant soit <i>teleios</i> : l'épreuve mène la foi à maturité, elle ne la fabrique pas.</td>
+            <td><span class="trad"><span><b>S21</b> parfaits</span><span><b>NEG79</b> parfaits</span><span><b>Darby</b> parfaits</span><span><b>LSG</b> parfaits</span><span><b>KJF</b> parfaits</span></span></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="mot-fr">doute</span><span class="mot-gr">diakrinomenos / dipsuchos</span></th>
+            <td class="col-sens"><i>diakrino</i> : être partagé, hésiter; <i>dipsuchos</i> : littéralement «&nbsp;à deux âmes&nbsp;», l'homme à l'âme double</td>
+            <td>Le verbe <i>diakrinomenos</i> (1.6) décrit celui qui hésite, ballotté comme le flot de la mer; <i>dipsuchos</i> (1.8), terme rare, peut-être forgé par Jacques, qualifie l'homme «&nbsp;inconstant dans toutes ses voies&nbsp;». MacArthur n'y voit pas le croyant éprouvé qui lutte, mais l'homme dont la duplicité trahit l'absence de foi véritable : il veut Dieu et le monde à la fois.</td>
+            <td><span class="trad"><span><b>S21</b> doute</span><span><b>NEG79</b> doute</span><span><b>Darby</b> doute</span><span><b>LSG</b> doute</span><span><b>KJF</b> vacille</span></span></td>
+          </tr>
+          <tr>
+            <th scope="row"><span class="mot-fr">couronne</span><span class="mot-gr">stephanos</span></th>
+            <td class="col-sens">couronne de vainqueur, guirlande de l'athlète; non le diadème royal</td>
+            <td>Image athlétique de la récompense décernée au vainqueur (1 Corinthiens 9.25; 2 Timothée 4.8; Apocalypse 2.10). En 1.12, «&nbsp;la couronne de vie&nbsp;» est un génitif épexégétique : la couronne qui consiste en la vie éternelle. MacArthur y lit une promesse eschatologique faite à celui qui, ayant été éprouvé (<i>dokimos</i>), persévère; la récompense couronne la foi véritable, elle ne l'achète pas.</td>
+            <td><span class="trad"><span><b>S21</b> couronne</span><span><b>NEG79</b> couronne</span><span><b>Darby</b> couronne</span><span><b>LSG</b> couronne</span><span><b>KJF</b> couronne</span></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ APPORTS DES COMMENTATEURS ============ -->
+  <article class="section reveal" id="commentateurs">
+    <header class="sec-head">
+      <p class="kicker">Perspective MacArthur</p>
+      <h2 class="sec-title">Apports des commentateurs</h2>
+      <p class="ref">Jacques 1.2-12</p>
+    </header>
+    <p class="lead">La question interprétative centrale de la péricope est celle-ci : pourquoi un croyant devrait-il «&nbsp;regarder comme un sujet de joie complète&nbsp;» les épreuves qui l'accablent (1.2)? La réponse que MacArthur expose comme le sens même du texte tient dans la chaîne causale des versets 2 à 4, une véritable gradatio.</p>
+    <div class="body">
+      <p>La joie n'est pas une émotion plaquée sur la douleur ni un déni de la souffrance; elle est un jugement de la raison renouvelée (le verbe <i>hegesasthe</i>, «&nbsp;regardez, estimez&nbsp;», est un acte délibéré de l'esprit) fondé sur ce que le croyant sait (<i>ginoskontes</i>, 1.3) du dessein de Dieu. Le croyant se réjouit non de l'épreuve elle-même, mais de son fruit certain : l'épreuve de la foi produit la persévérance (<i>hupomone</i>), la persévérance menée à son terme rend le croyant mûr (<i>teleios</i>), accompli, ne manquant de rien. Dieu ordonne donc l'épreuve non pour briser la foi mais pour la prouver et la conduire à maturité.</p>
+      <p>Sur ce point, MacArthur tranche avec netteté : l'épreuve révèle et affermit une foi déjà donnée, elle ne la crée pas. Le <i>dokimion</i> (1.3) est le test qui certifie l'authenticité, comme le feu de l'orfèvre certifie l'or. Cette lecture relie directement le texte à la persévérance des saints : la foi véritable, parce qu'elle est l'œuvre de Dieu, endure l'épreuve et en sort affinée, tandis que la fausse foi s'effondre. C'est pourquoi le verset 12 promet la couronne de vie «&nbsp;à l'homme qui supporte patiemment l'épreuve&nbsp;» et qui, «&nbsp;après avoir été éprouvé&nbsp;» (<i>dokimos genomenos</i>), reçoit la récompense. La persévérance n'est pas la condition méritoire du salut; elle en est la preuve, le fruit visible de l'élection et de la grâce efficace.</p>
+      <p>Le cœur de la section est l'invitation à demander la sagesse (1.5). Il ne s'agit pas d'une sagesse spéculative mais de la sagesse pratique qui sait discerner le dessein de Dieu dans l'épreuve et y répondre avec foi. Dieu la donne «&nbsp;à tous libéralement et sans faire de reproche&nbsp;». Mais cette demande exige la foi «&nbsp;sans douter&nbsp;» (1.6), et c'est ici que Jacques introduit le contraste décisif de la péricope : le <i>dipsuchos</i>, l'homme à l'âme double (1.8). MacArthur, dans la ligne de <i>The Gospel According to Jesus</i>, refuse d'y voir le simple croyant aux prises avec le doute; l'homme à deux âmes est celui dont la duplicité radicale, qui veut à la fois Dieu et le monde, révèle qu'il n'a pas la foi salvatrice. Ballotté comme la vague, «&nbsp;inconstant dans toutes ses voies&nbsp;», il ne recevra rien du Seigneur. Le texte oppose ainsi la foi stable et persévérante du saint éprouvé à l'instabilité de l'incroyant qui se croit pieux.</p>
+      <p>Enfin, le renversement social des versets 9 à 11 sert le même propos. Le frère «&nbsp;de condition humble&nbsp;» doit se glorifier de son élévation en Christ; le riche, de son abaissement, car il passera comme la fleur de l'herbe sous le sirocco. MacArthur lit ici une application de la souveraineté de Dieu qui relativise toute richesse terrestre : l'épreuve dépouille le croyant des fausses sécurités pour l'attacher à la seule sécurité durable, l'héritage promis. La péricope tout entière pose donc la prémisse de l'épître : la foi authentique se prouve, et sa première épreuve est le creuset de l'adversité, traversé avec joie, sagesse et persévérance, dans l'attente de la couronne de vie.</p>
+    </div>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ RENVOIS ET PASSAGES PARALLÈLES ============ -->
+  <article class="section reveal" id="renvois">
+    <header class="sec-head">
+      <p class="kicker">Échos bibliques</p>
+      <h2 class="sec-title">Renvois et passages parallèles</h2>
+      <p class="ref">Huit passages</p>
+    </header>
+    <p class="lead">Huit passages éclairent la péricope, du parallèle apostolique presque mot pour mot jusqu'à l'arrière-plan vétérotestamentaire qui nourrit ses images.</p>
+    <div class="renvois">
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">1 Pierre 1.6-7</span><span class="renvoi__tag">Parallèle direct</span></div>
+        <p class="renvoi__desc">Pierre développe exactement la même image : la foi éprouvée par le feu, plus précieuse que l'or périssable, en vue de la louange au jour de la révélation de Christ. Parallèle apostolique le plus proche de Jacques 1.2-4.</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Romains 5.3-4</span><span class="renvoi__tag">Parallèle direct</span></div>
+        <p class="renvoi__desc">Paul reprend la même gradatio : la tribulation produit la persévérance, la persévérance la fidélité éprouvée, et celle-ci l'espérance. Confirme la chaîne épreuve-persévérance-maturité.</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Matthieu 5.11-12</span><span class="renvoi__tag">Lien thématique</span></div>
+        <p class="renvoi__desc">Le Sermon sur la montagne ordonne déjà de se réjouir dans la persécution à cause de la récompense céleste; arrière-plan immédiat de l'exhortation à la joie de Jacques 1.2.</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Jean 10.28-29</span><span class="renvoi__tag">Lien thématique</span></div>
+        <p class="renvoi__desc">La sécurité du croyant gardé par la main du Père fonde la persévérance des saints que présuppose la couronne promise au persévérant (1.12).</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Apocalypse 2.10</span><span class="renvoi__tag">Lien thématique</span></div>
+        <p class="renvoi__desc">Christ promet «&nbsp;la couronne de vie&nbsp;» au fidèle jusqu'à la mort dans l'épreuve; même expression (<i>stephanos tes zoes</i>) et même cadre eschatologique qu'en Jacques 1.12.</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Proverbes 2.3-6</span><span class="renvoi__tag">Arrière-plan AT</span></div>
+        <p class="renvoi__desc">La sagesse se demande à Dieu qui la donne; modèle vétérotestamentaire de la prière pour la sagesse en Jacques 1.5, dans la tradition sapientiale dont Jacques relève.</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Ésaïe 40.6-8</span><span class="renvoi__tag">Arrière-plan AT</span></div>
+        <p class="renvoi__desc">«&nbsp;Toute chair est comme l'herbe... l'herbe sèche, la fleur tombe&nbsp;»; source directe de l'image du riche flétri par le vent brûlant en Jacques 1.10-11.</p>
+      </article>
+      <article class="renvoi">
+        <div class="renvoi__head"><span class="renvoi__ref">Genèse 22.1-12</span><span class="renvoi__tag">Arrière-plan AT</span></div>
+        <p class="renvoi__desc">Dieu «&nbsp;éprouve&nbsp;» Abraham pour prouver et révéler sa foi, non pour la fabriquer; paradigme vétérotestamentaire du <i>peirasmos</i> providentiel qui certifie l'authenticité de la foi.</p>
+      </article>
+    </div>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ THÈMES THÉOLOGIQUES ============ -->
+  <article class="section reveal" id="themes">
+    <header class="sec-head">
+      <p class="kicker">Doctrine</p>
+      <h2 class="sec-title">Thèmes théologiques</h2>
+      <p class="ref">Cinq axes</p>
+    </header>
+    <p class="lead">Cinq axes dogmatiques traversent la péricope. Pour chacun, ce que le texte affirme, puis ce qu'il demande à l'assemblée.</p>
+
+    <section class="theme">
+      <h3 class="theme__title">La souveraineté de Dieu dans l'épreuve</h3>
+      <div class="theme__grid">
+        <div class="theme__part">
+          <p class="theme__label">Dans le texte</p>
+          <p>L'impératif «&nbsp;regardez comme un sujet de joie&nbsp;» (1.2) ne tient que si l'épreuve sert un dessein bon et certain; le texte présuppose un Dieu qui ordonne et oriente l'adversité du croyant vers sa maturité (1.3-4).</p>
+        </div>
+        <div class="theme__part theme__part--app">
+          <p class="theme__label">Pour votre assemblée</p>
+          <p>Pour une assemblée traversée par la maladie, la perte d'emploi ou l'hostilité, ce thème déloge l'idée que l'épreuve signale l'abandon de Dieu. Selon <i>Biblical Doctrine</i>, la providence enveloppe toute circonstance du saint dans un dessein sage. La réponse n'est pas l'effort stoïcien mais le repos dans la bonté souveraine du Père des lumières (1.17), qui ne change pas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="theme">
+      <h3 class="theme__title">La persévérance des saints</h3>
+      <div class="theme__grid">
+        <div class="theme__part">
+          <p class="theme__label">Dans le texte</p>
+          <p>L'épreuve produit la patience (<i>hupomone</i>, 1.3), et la couronne de vie est promise à celui qui «&nbsp;supporte patiemment l'épreuve&nbsp;» après avoir été éprouvé (<i>dokimos</i>, 1.12) : la foi véritable endure et en ressort certifiée.</p>
+        </div>
+        <div class="theme__part theme__part--app">
+          <p class="theme__label">Pour votre assemblée</p>
+          <p>L'épreuve prouve la foi, elle ne la fabrique pas. Pour le croyant tenté de douter de son salut quand il souffre, la doctrine de la persévérance enseigne que c'est précisément l'endurance, fruit de la grâce efficace et non de la volonté propre, qui atteste l'authenticité de la foi. L'assurance repose sur une foi qui tient, gardée par Dieu (Jean 10.28-29).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="theme">
+      <h3 class="theme__title">Foi authentique contre âme double</h3>
+      <div class="theme__grid">
+        <div class="theme__part">
+          <p class="theme__label">Dans le texte</p>
+          <p>Le <i>dipsuchos</i> (1.8), l'homme à deux âmes, ballotté comme la vague et inconstant dans toutes ses voies, est opposé à celui qui demande «&nbsp;avec foi, sans douter&nbsp;» (1.6); il ne recevra rien du Seigneur.</p>
+        </div>
+        <div class="theme__part theme__part--app">
+          <p class="theme__label">Pour votre assemblée</p>
+          <p>Le texte refuse l'<i>easy-believism</i> : une foi partagée entre Dieu et le monde n'est pas une foi faible mais une fausse foi. Conformément à la Lordship Salvation, la foi salvatrice est entière et soumise à Christ comme Seigneur. La piste pastorale n'est pas de mieux se concentrer en priant, mais de s'examiner soi-même : à qui mon âme appartient-elle?</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="theme">
+      <h3 class="theme__title">La sagesse donnée d'en haut</h3>
+      <div class="theme__grid">
+        <div class="theme__part">
+          <p class="theme__label">Dans le texte</p>
+          <p>«&nbsp;Si quelqu'un manque de sagesse, qu'il la demande à Dieu, qui donne à tous simplement et sans reproche&nbsp;» (1.5) : la sagesse pour traverser l'épreuve n'est pas acquise mais reçue de Dieu par la prière de foi.</p>
+        </div>
+        <div class="theme__part theme__part--app">
+          <p class="theme__label">Pour votre assemblée</p>
+          <p>Ancrée dans la suffisance de l'Écriture, cette sagesse n'est pas une intuition mystique mais le discernement que l'Esprit donne par la Parole pour lire l'épreuve à la lumière du dessein de Dieu. L'assemblée est appelée non à se débrouiller par sa propre prudence, mais à demander, dans la dépendance, ce que Dieu se réjouit de donner libéralement.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="theme">
+      <h3 class="theme__title">La caducité de la richesse terrestre</h3>
+      <div class="theme__grid">
+        <div class="theme__part">
+          <p class="theme__label">Dans le texte</p>
+          <p>Le riche passera «&nbsp;comme la fleur de l'herbe&nbsp;» desséchée par le vent brûlant (1.10-11), tandis que le frère humble doit se glorifier de son élévation en Christ (1.9).</p>
+        </div>
+        <div class="theme__part theme__part--app">
+          <p class="theme__label">Pour votre assemblée</p>
+          <p>L'épreuve dépouille des fausses sécurités. Pour une assemblée tentée de mesurer la faveur de Dieu à la prospérité, ce renversement rappelle que l'héritage durable n'est pas terrestre. L'obéissance qui en découle, le détachement des biens, n'est pas un ascétisme moralisant mais le fruit d'une espérance fixée sur la couronne de vie et l'union à Christ.</p>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <div class="divider" aria-hidden="true"><span>◆</span></div>
+
+  <!-- ============ PISTES DE RÉFLEXION ============ -->
+  <article class="section section--conclusion reveal" id="reflexion">
+    <header class="sec-head">
+      <p class="kicker">Vers la chaire</p>
+      <h2 class="sec-title">Pistes de réflexion</h2>
+      <p class="ref">Sept questions pour la prédication</p>
+    </header>
+    <p class="lead">Sept questions pour conduire du texte à la chaire : non des réponses toutes faites, mais les tensions que la prédication devra tenir.</p>
+    <ol class="questions">
+      <li>Votre assemblée entend-elle «&nbsp;épreuve&nbsp;» (1.2) comme une tentation au péché, alors que le texte vise l'adversité extérieure? Comment garderez-vous nette la frontière avec le basculement de 1.13, qui ouvre la péricope de la semaine suivante?</li>
+      <li>La joie commandée en 1.2 est un jugement de la raison renouvelée, non une émotion. Prêchez-vous une joie qui nie la douleur, ou une joie qui voit, par-delà la douleur, le dessein certain de Dieu?</li>
+      <li>Si l'épreuve prouve la foi sans la fabriquer, que dites-vous au croyant qui s'effondre sous l'épreuve? Le texte vous conduit-il vers l'auto-examen (foi véritable ou âme double) plutôt que vers un simple encouragement à tenir bon?</li>
+      <li>Le <i>dipsuchos</i> de 1.8 est-il pour vous un croyant fragile ou un incroyant masqué? Votre application change radicalement selon la réponse : réconfort, ou appel à la repentance?</li>
+      <li>La sagesse de 1.5 risque d'être prêchée comme une technique de décision. Comment montrerez-vous qu'il s'agit du discernement du dessein de Dieu dans l'épreuve, reçu par la prière de foi et la Parole?</li>
+      <li>La couronne de vie (1.12) est une récompense, non un salaire mérité. Votre prédication préserve-t-elle la gratuité de la grâce tout en honorant la promesse faite au persévérant?</li>
+      <li>Le renversement riche/pauvre (1.9-11) est-il appliqué moralement (faites moins cas de l'argent) ou théologiquement (votre seule sécurité durable est l'héritage en Christ)? Laquelle des deux le texte autorise-t-il?</li>
+    </ol>
+  </article>
+
+</main>
+
+<footer class="footer">
+  <img class="footer__logo" src="../00%20-%20Introduction/LogoEBC.avif" width="80" height="250" alt="" decoding="async" loading="lazy">
+  <p class="footer__church">Église Baptiste de Charlesbourg</p>
+  <p class="footer__line">Pasteur Simon Ouellette · Charlesbourg, Québec</p>
+  <p class="footer__line">Recherche exégétique · Jacques 1.1-12 · 6 juin 2026 · AGB</p>
+  <p class="footer__line">Série «&nbsp;La foi qui agit&nbsp;» · Citations bibliques : Nouvelle Édition de Genève 1979 (NEG)</p>
+  <p class="footer__retour" style="display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem;margin:2rem 0 .3rem;">
+    <a href="../00%20-%20Introduction/index.html" style="display:inline-block;padding:.7rem 1.7rem;border:1px solid var(--filet-fort);border-radius:999px;color:var(--or-clair);font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;">&#8592;&nbsp;Vue d'ensemble de l'épître</a>
+    <a href="Recherche-MacArthur-Jacques-1-1-12.pdf" target="_blank" rel="noopener" style="display:inline-block;padding:.7rem 1.7rem;border:1px solid var(--filet-fort);border-radius:999px;color:var(--or-clair);font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;">Version PDF&nbsp;&#8599;</a>
+  </p>
+  <p class="footer__sdg">Soli Deo Gloria</p>
+</footer>
+
+<script>
+  // Barre de progression de lecture
+  var progress = document.getElementById('progress');
+  var navProgress = document.getElementById('navProgress');
+  var nav = document.getElementById('nav');
+  var hero = document.getElementById('hero');
+
+  function onScroll(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    var pct = max > 0 ? (h.scrollTop || document.body.scrollTop) / max * 100 : 0;
+    progress.style.width = pct + '%';
+    if (navProgress) navProgress.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // Apparition de la navigation après le hero
+  if ('IntersectionObserver' in window){
+    var navObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) nav.classList.remove('show');
+        else nav.classList.add('show');
+      });
+    }, {rootMargin:'-70px 0px 0px 0px'});
+    navObs.observe(hero);
+
+    // Révélation au défilement
+    var revObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('in'); revObs.unobserve(e.target); }
+      });
+    }, {threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(function(el){ revObs.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+</script>
+</body>
+</html>
