@@ -140,6 +140,10 @@
     filter:drop-shadow(0 0 34px rgba(240,182,89,.30)) drop-shadow(0 2px 3px rgba(0,0,0,.5));
     text-wrap:balance;
   }
+  .hero__pano{
+    display:block;width:min(100%,72rem);height:auto;
+    margin:2.2rem auto 0;border:1px solid var(--filet);border-radius:4px;
+  }
   .ornament{
     display:flex;align-items:center;justify-content:center;gap:1rem;
     margin:1.7rem 0;color:var(--or);width:min(22rem,80%);
@@ -176,10 +180,11 @@
   @keyframes bob{0%,100%{transform:translate(-50%,0);}50%{transform:translate(-50%,7px);}}
   @keyframes riseIn{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
   @keyframes frameIn{from{opacity:0;}to{opacity:1;}}
-  .hero__title,.ornament,.hero__verse,.hero__ref,.hero__series{
+  .hero__title,.hero__pano,.ornament,.hero__verse,.hero__ref,.hero__series{
     opacity:0;animation:riseIn .95s cubic-bezier(.2,.7,.2,1) forwards;
   }
   .hero__title{animation-delay:.32s;}
+  .hero__pano{animation-delay:.46s;}
   .ornament{animation-delay:.6s;}
   .hero__verse{animation-delay:.75s;}
   .hero__ref{animation-delay:1s;}
@@ -341,7 +346,7 @@
     html{scroll-behavior:auto;}
     .reveal > *{opacity:1;transform:none;transition:none;}
     .scrollcue{animation:none;}
-    .hero__logo,.hero__title,.ornament,.hero__verse,.hero__ref,.hero__series,.hero__frame{
+    .hero__logo,.hero__title,.hero__pano,.ornament,.hero__verse,.hero__ref,.hero__series,.hero__frame{
       opacity:1;animation:none;
     }
   }
@@ -392,6 +397,7 @@
       <a href="https://ftscriptura.com/" target="_blank" rel="noopener" aria-label="Faculté de Théologie Scriptura"><img class="logos__fts" src="LogoScriptura.webp" width="600" height="216" alt="" decoding="async"></a>
     </div>
     <h1 class="hero__title">Bible, Piété, Église locale et Théologie systématique</h1>
+    <img class="hero__pano" src="indexPanorama.jpg" width="2816" height="1536" alt="" decoding="async" fetchpriority="high">
     <div class="ornament" aria-hidden="true"><span>&#9670;</span></div>
     <p class="hero__verse">
       <span class="q">&laquo;</span>&nbsp;Ta parole est une lampe à mes pieds, et une lumière sur mon sentier.&nbsp;<span class="q">&raquo;</span>
